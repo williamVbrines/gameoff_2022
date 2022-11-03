@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4iu3yf6du6jj"]
+[gd_scene load_steps=11 format=3 uid="uid://b4iu3yf6du6jj"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_votbs"]
 [ext_resource type="Texture2D" uid="uid://m4sfn6ki3g75" path="res://textures/kenney_prototypetextures/PNG/Green/texture_01.png" id="2_lrnsi"]
+[ext_resource type="Texture2D" uid="uid://clejixii0g6pt" path="res://textures/kenney_prototypetextures/PNG/Red/texture_01.png" id="3_28hed"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_twb2u"]
 
@@ -14,6 +15,13 @@ albedo_texture = ExtResource("2_lrnsi")
 size = Vector3(1, 2, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cmn5u"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_j73yf"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qr5oe"]
+albedo_texture = ExtResource("3_28hed")
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_votbs")
@@ -35,11 +43,21 @@ mesh = SubResource("BoxMesh_0s10i")
 
 [node name="Boomarm" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.849893, 0.526956, 0, -0.526956, 0.849893, 0, 2, 0)
-visible = false
 collision_mask = 2
 shape = SubResource("SphereShape3D_cmn5u")
 spring_length = 3.0
 
+[node name="LookCast" type="RayCast3D" parent="Boomarm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.76837e-07, 3)
+target_position = Vector3(0, 0, -30)
+collision_mask = 2
+collide_with_areas = true
+
 [node name="Camera" type="Camera3D" parent="Boomarm"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.57628e-07, 3)
 current = true
+
+[node name="LookBall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.65153, 4.13409)
+mesh = SubResource("SphereMesh_j73yf")
+surface_material_override/0 = SubResource("StandardMaterial3D_qr5oe")
