@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4iu3yf6du6jj"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_votbs"]
+[ext_resource type="Texture2D" uid="uid://m4sfn6ki3g75" path="res://textures/kenney_prototypetextures/PNG/Green/texture_01.png" id="2_lrnsi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_twb2u"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kixqp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twia1"]
+albedo_texture = ExtResource("2_lrnsi")
+
+[sub_resource type="BoxMesh" id="BoxMesh_0s10i"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cmn5u"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_votbs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+shape = SubResource("CapsuleShape3D_twb2u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_kixqp")
+surface_material_override/0 = SubResource("StandardMaterial3D_twia1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("BoxMesh_0s10i")
+
+[node name="Boomarm" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.849893, 0.526956, 0, -0.526956, 0.849893, 0, 2, 0)
+visible = false
+collision_mask = 2
+shape = SubResource("SphereShape3D_cmn5u")
+spring_length = 3.0
+
+[node name="Camera" type="Camera3D" parent="Boomarm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+current = true
