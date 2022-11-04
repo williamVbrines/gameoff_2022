@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bon47yu4y25ot"]
+[gd_scene load_steps=14 format=3 uid="uid://bon47yu4y25ot"]
 
 [ext_resource type="Texture2D" uid="uid://bd6hi7rsytdqg" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_v6ur4"]
 [ext_resource type="PackedScene" uid="uid://b4iu3yf6du6jj" path="res://scenes/player.tscn" id="1_xdy7h"]
 [ext_resource type="Texture2D" uid="uid://b338ukeo6xxbr" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_bj56h"]
+[ext_resource type="PackedScene" uid="uid://6qpqkfue6q4s" path="res://scenes/InteractablesTest.tscn" id="4_kd7fx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6tvoo"]
 size = Vector3(3, 2, 1)
@@ -39,7 +40,7 @@ size = Vector3(3, 1, 2)
 [node name="TestArea" type="Node3D" parent="."]
 
 [node name="Wall" type="MeshInstance3D" parent="TestArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.311254, 1, -4.718)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.311254, 1, -10.8739)
 mesh = SubResource("BoxMesh_6tvoo")
 surface_material_override/0 = SubResource("StandardMaterial3D_rk3sv")
 
@@ -64,13 +65,15 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_411px")
 
 [node name="Inclines" type="Node3D" parent="TestArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21646, -0.00337744, 2.34157)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97325, -0.00337744, 2.34157)
+metadata/_edit_group_ = true
 
 [node name="60_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, 3.444, 0.685, -5)
 mesh = SubResource("BoxMesh_5oor7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_nwnlv")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/60_Incline"]
 collision_layer = 3
@@ -84,6 +87,7 @@ transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 
 mesh = SubResource("BoxMesh_5oor7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_nwnlv")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/45_Incline"]
 collision_layer = 3
@@ -97,6 +101,7 @@ transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 3.444, 0.2
 mesh = SubResource("BoxMesh_5oor7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_nwnlv")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/30_Incline"]
 collision_layer = 3
@@ -110,6 +115,7 @@ transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 3.
 mesh = SubResource("BoxMesh_5oor7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_nwnlv")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/20_Incline"]
 collision_layer = 3
@@ -123,6 +129,7 @@ transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 
 mesh = SubResource("BoxMesh_5oor7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_nwnlv")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/10_Incline"]
 collision_layer = 3
@@ -130,6 +137,24 @@ collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/10_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
+
+[node name="InteractableTests" type="Node3D" parent="TestArea"]
+
+[node name="InteractableTest4" parent="TestArea/InteractableTests" instance=ExtResource("4_kd7fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -3)
+detection_groups = []
+
+[node name="InteractableTest" parent="TestArea/InteractableTests" instance=ExtResource("4_kd7fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0.784711)
+detection_groups = ["Player"]
+
+[node name="InteractableTest2" parent="TestArea/InteractableTests" instance=ExtResource("4_kd7fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 4.94712)
+detection_groups = ["PickupAera"]
+
+[node name="InteractableTest3" parent="TestArea/InteractableTests" instance=ExtResource("4_kd7fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 9.37932)
+detection_groups = ["PickupPointer"]
 
 [node name="Player" parent="." instance=ExtResource("1_xdy7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.277984, 0)

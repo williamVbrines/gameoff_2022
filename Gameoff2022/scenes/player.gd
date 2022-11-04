@@ -35,7 +35,7 @@ func turn(delta : float) -> void:
 	Input.get_action_strength("rotate_anticlockwise") \
 	- Input.get_action_strength("rotate_clockwise");
 	
-	if Input.is_action_pressed("mouse_left") && Input.is_action_pressed("foward") &&  boomarm.rotation.y != 0.0:
+	if !Input.is_action_pressed("mouse_left") && Input.is_action_pressed("foward") &&  boomarm.rotation.y != 0.0:
 		rotation.y += boomarm.rotation.y;
 		boomarm.rotation.y = 0.0;
 	
@@ -44,7 +44,7 @@ func turn(delta : float) -> void:
 	rotation.y = wrapf(rotation.y, 0, 2 * PI);
 	
 	
-func movement(delta : float) -> void:
+func movement(_delta : float) -> void:
 	var input_dir := Input.get_vector("left", "right", "foward", "backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var movment := direction * default_move_speed;
@@ -59,10 +59,11 @@ func movement(delta : float) -> void:
 	
 func camera_event(event : InputEvent) -> void:
 	if event.is_action_pressed("zoom_in"):
-		boomarm.spring_length += zoom_step;
+		boomarm.spring_length = max(0,boomarm.spring_length - zoom_step);
+		
 		
 	if event.is_action_pressed("zoom_out"):
-		boomarm.spring_length = max(0,boomarm.spring_length - zoom_step);
+		boomarm.spring_length += zoom_step;
 		
 	if event.is_action_pressed("mouse_left"):
 		drag_orgin = get_viewport().get_mouse_position();
@@ -79,9 +80,9 @@ func camera_event(event : InputEvent) -> void:
 func look_event(event : InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var pos = event.position;
-
+		
 		look_cast.global_rotation = Vector3.ZERO;
-		look_cast.target_position = camera.project_ray_normal(pos)* 2000;
+		look_cast.target_position = camera.project_ray_normal(pos) * 2000;
 		
 
 

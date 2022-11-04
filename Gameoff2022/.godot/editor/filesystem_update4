@@ -1,3 +1,6 @@
 res://scenes/player.tscn
 res://scenes/main.tscn
 res://scenes/player.gd
+res://scenes/InteractablesTest.tscn
+res://scenes/InteractablesTest.gd
+res://scenes/InteractableArea3D.gd

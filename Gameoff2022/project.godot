@@ -8,6 +8,16 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Area3D",
+"class": &"InteractableArea3D",
+"language": &"GDScript",
+"path": "res://scenes/InteractableArea3D.gd"
+}]
+_global_script_class_icons={
+"InteractableArea3D": ""
+}
+
 [application]
 
 config/name="Gameoff2022"
@@ -66,3 +76,8 @@ mouse_left={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_3="Interactables"
