@@ -19,14 +19,17 @@ func set_is_hovered(val : bool):
 		area_hovered.emit();
 	else:
 		_num_hovered -= 1;
+		
 		if _num_hovered <= 0:
+			
+			
 			area_unhovered.emit();
 			_num_hovered = 0;
+			_num_pressed = 0;
 			is_hovered = val;
 	
 	
 func set_is_pressed(val : bool):
-	is_pressed = val;
 	if val == true:
 		_num_pressed += 1;
 		is_pressed = val;
@@ -36,7 +39,6 @@ func set_is_pressed(val : bool):
 		if _num_pressed <= 0:
 			_num_pressed = 0;
 			is_pressed = val;
-			
 			area_released.emit();
 	
 	

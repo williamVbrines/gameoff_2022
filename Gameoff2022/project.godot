@@ -12,7 +12,7 @@ _global_script_classes=[{
 "base": "Area3D",
 "class": &"InteractableArea3D",
 "language": &"GDScript",
-"path": "res://scenes/InteractableArea3D.gd"
+"path": "res://scripts/InteractableArea3D.gd"
 }]
 _global_script_class_icons={
 "InteractableArea3D": ""
