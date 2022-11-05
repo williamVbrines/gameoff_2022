@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://bch2cs5ag0dmh"]
 
 [ext_resource type="Script" path="res://scripts/InteractablesTest.gd" id="1_4x3bm"]
 [ext_resource type="Texture2D" uid="uid://detd4i4qfl7yh" path="res://textures/kenney_prototypetextures/PNG/Light/texture_02.png" id="2_sghps"]

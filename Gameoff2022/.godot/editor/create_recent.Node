@@ -1,13 +1,19 @@
 Node3D
-InteractableArea3D (InteractableArea3D.gd)
-InteractableArea3D (InteractablesTest.gd)
+SubViewport
+Label
+MeshInstance3D
+Sprite3D
+Camera3D
 CollisionShape3D
 Area3D
-MeshInstance3D
+Button
+VBoxContainer
+Control
+InteractableArea3D (InteractableArea3D.gd)
+InteractableArea3D (InteractablesTest.gd)
 RayCast3D
 SpringArm3D
 StaticBody3D
-Camera3D
 RigidBody3D
 DirectionalLight3D
 CharacterBody3D

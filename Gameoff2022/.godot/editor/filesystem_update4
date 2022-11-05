@@ -1,4 +1,5 @@
+res://scenes/panel_3d.tscn
 res://scenes/main.tscn
-res://scripts/InteractableArea3D.gd
-res://scenes/InteractableArea3D.gd
-res://scenes/player.tscn
+res://scripts/Canvase3D.gd
+res://scenes/Canvas3D.tscn
+res://scenes/main_menu.tscn
