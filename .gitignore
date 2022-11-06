@@ -6,8 +6,6 @@ export_presets.cfg
 
 #Excluded folders
 progressGIFs/
-textures/
-models/
 SnapShots/
 
 # Mono-specific ignores

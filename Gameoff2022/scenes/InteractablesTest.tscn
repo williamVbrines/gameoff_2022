@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://bch2cs5ag0dmh"]
 
 [ext_resource type="Script" path="res://scripts/InteractablesTest.gd" id="1_4x3bm"]
-[ext_resource type="Texture2D" uid="uid://detd4i4qfl7yh" path="res://textures/kenney_prototypetextures/PNG/Light/texture_02.png" id="2_sghps"]
+[ext_resource type="Texture2D" uid="uid://pesrx20hc7vx" path="res://textures/kenney_prototypetextures/PNG/Light/texture_01.png" id="2_y156e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g417q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4ca4j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0qkl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kclm7"]
 resource_local_to_scene = true
 albedo_color = Color(0.705882, 1, 1, 1)
-albedo_texture = ExtResource("2_sghps")
+albedo_texture = ExtResource("2_y156e")
 uv1_triplanar = true
 
 [node name="InteractableTest" type="Area3D"]
@@ -23,7 +23,7 @@ shape = SubResource("BoxShape3D_g417q")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_4ca4j")
-surface_material_override/0 = SubResource("StandardMaterial3D_w0qkl")
+surface_material_override/0 = SubResource("StandardMaterial3D_kclm7")
 
 [connection signal="area_hovered" from="." to="." method="_on_area_hovered"]
 [connection signal="area_pressed" from="." to="." method="_on_area_pressed"]

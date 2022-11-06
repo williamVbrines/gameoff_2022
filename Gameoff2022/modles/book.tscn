@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://csl5u8uumwyx2"]
+
+[ext_resource type="ArrayMesh" uid="uid://dkvkqb1cs4y1i" path="res://meshes/BookMesh.obj" id="1_caxsk"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_tu0ql"]
+[ext_resource type="Texture2D" uid="uid://c1v7iwfs1ybyg" path="res://Textures/BookTexture.png" id="3_eoc0g"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_svkc6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v064s"]
+render_priority = 0
+shader = ExtResource("2_tu0ql")
+shader_parameter/albedo_texture = ExtResource("3_eoc0g")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_svkc6")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Book" type="MeshInstance3D"]
+mesh = ExtResource("1_caxsk")
+surface_material_override/0 = SubResource("ShaderMaterial_v064s")

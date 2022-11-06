@@ -8,7 +8,7 @@ size = Vector2(0.89, 0.5)
 [sub_resource type="ViewportTexture" id="ViewportTexture_66x5r"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgjfx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tsmxu"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_66x5r")
 
@@ -26,7 +26,7 @@ render_target_update_mode = 4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("QuadMesh_ltajb")
-surface_material_override/0 = SubResource("StandardMaterial3D_qgjfx")
+surface_material_override/0 = SubResource("StandardMaterial3D_tsmxu")
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
 collision_layer = 134217728

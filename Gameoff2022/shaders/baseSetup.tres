@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ctwngv8qhfq3q"]
+
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="1_efai6"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="2_fy32d"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_efai6")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("2_fy32d")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0

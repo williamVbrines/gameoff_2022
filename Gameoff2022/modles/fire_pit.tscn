@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckkiiaynmkpsy"]
+
+[ext_resource type="ArrayMesh" uid="uid://82ppyl37imsf" path="res://meshes/FirePitMesh.obj" id="1_wpdig"]
+
+[node name="FirePit" type="MeshInstance3D"]
+mesh = ExtResource("1_wpdig")

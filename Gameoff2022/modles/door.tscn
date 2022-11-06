@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://blfbj6w4wfnt7"]
+
+[ext_resource type="ArrayMesh" uid="uid://far6e86l4doq" path="res://meshes/DoorMesh.obj" id="1_208pb"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_0x00h"]
+[ext_resource type="Texture2D" uid="uid://biqnqga1dlvta" path="res://Textures/DoorTexture.png" id="3_go8ti"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="3_tl1rk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6snix"]
+render_priority = 0
+shader = ExtResource("2_0x00h")
+shader_parameter/albedo_texture = ExtResource("3_go8ti")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("3_tl1rk")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Door" type="MeshInstance3D"]
+mesh = ExtResource("1_208pb")
+surface_material_override/0 = SubResource("ShaderMaterial_6snix")

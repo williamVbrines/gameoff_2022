@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfcuprff715cc"
+path="res://.godot/imported/DresserMesh.obj-74d9b2d8bf725f9ebac17084a048f4c5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/DresserMesh.obj-74d9b2d8bf725f9ebac17084a048f4c5.mesh"]
+
+source_file="res://meshes/DresserMesh.obj"
+dest_files=["res://.godot/imported/DresserMesh.obj-74d9b2d8bf725f9ebac17084a048f4c5.mesh", "res://.godot/imported/DresserMesh.obj-74d9b2d8bf725f9ebac17084a048f4c5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

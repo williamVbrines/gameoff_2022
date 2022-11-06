@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jrb1af8jt22p"
+path="res://.godot/imported/AlarmClockMesh.obj-60319a727d5c53d6dd7d1ffecbd1dace.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AlarmClockMesh.obj-60319a727d5c53d6dd7d1ffecbd1dace.mesh"]
+
+source_file="res://meshes/AlarmClockMesh.obj"
+dest_files=["res://.godot/imported/AlarmClockMesh.obj-60319a727d5c53d6dd7d1ffecbd1dace.mesh", "res://.godot/imported/AlarmClockMesh.obj-60319a727d5c53d6dd7d1ffecbd1dace.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

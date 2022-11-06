@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqtaajsabkpu4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd70buxvdwfj0" path="res://meshes/TreasureChestMesh.obj" id="1_3q8qt"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_us6ak"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="3_h63ju"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xh2d"]
+render_priority = 0
+shader = ExtResource("2_us6ak")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("3_h63ju")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Chest" type="MeshInstance3D"]
+mesh = ExtResource("1_3q8qt")
+surface_material_override/0 = SubResource("ShaderMaterial_5xh2d")

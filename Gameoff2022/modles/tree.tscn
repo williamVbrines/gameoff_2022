@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://i6ahailelpw6"]
+
+[ext_resource type="ArrayMesh" uid="uid://cliivstvnw6o7" path="res://meshes/Tree01Mesh.obj" id="1_4a3gi"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_6icsy"]
+[ext_resource type="Texture2D" uid="uid://dwkxlo0cus6jl" path="res://Textures/Tree01Texture.png" id="3_q3anb"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_bhklh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mjl6x"]
+render_priority = 0
+shader = ExtResource("2_6icsy")
+shader_parameter/albedo_texture = ExtResource("3_q3anb")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_bhklh")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Tree" type="MeshInstance3D"]
+mesh = ExtResource("1_4a3gi")
+surface_material_override/0 = SubResource("ShaderMaterial_mjl6x")

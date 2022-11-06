@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkvkqb1cs4y1i"
+path="res://.godot/imported/BookMesh.obj-8d585c3ec7e5c5d2c9318da83c41c236.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BookMesh.obj-8d585c3ec7e5c5d2c9318da83c41c236.mesh"]
+
+source_file="res://meshes/BookMesh.obj"
+dest_files=["res://.godot/imported/BookMesh.obj-8d585c3ec7e5c5d2c9318da83c41c236.mesh", "res://.godot/imported/BookMesh.obj-8d585c3ec7e5c5d2c9318da83c41c236.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

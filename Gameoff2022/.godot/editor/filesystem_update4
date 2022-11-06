@@ -1,5 +1,5 @@
-res://scenes/panel_3d.tscn
-res://scenes/main.tscn
-res://scripts/Canvase3D.gd
 res://scenes/Canvas3D.tscn
-res://scenes/main_menu.tscn
+res://scenes/main.tscn
+res://scenes/tests/ShaderPractice.tscn
+res://scenes/player.tscn
+res://scenes/InteractablesTest.tscn

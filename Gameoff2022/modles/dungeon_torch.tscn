@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgqvtur01clt8"]
+
+[ext_resource type="ArrayMesh" uid="uid://dmhq2rikv0rfr" path="res://meshes/DungeonTorchMesh.obj" id="1_j77v5"]
+
+[node name="DungeonTorch" type="MeshInstance3D"]
+mesh = ExtResource("1_j77v5")

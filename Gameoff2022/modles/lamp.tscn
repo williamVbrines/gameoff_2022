@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://n6g3mwokncgt"]
+
+[ext_resource type="ArrayMesh" uid="uid://dt8drerssphl7" path="res://meshes/LampMesh.obj" id="1_grw0e"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_euj4b"]
+[ext_resource type="Texture2D" uid="uid://7b6aik8twg1a" path="res://Textures/LampTexture.png" id="3_ymntu"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_a06wc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mor4b"]
+render_priority = 0
+shader = ExtResource("2_euj4b")
+shader_parameter/albedo_texture = ExtResource("3_ymntu")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_a06wc")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Lamp" type="MeshInstance3D"]
+mesh = ExtResource("1_grw0e")
+surface_material_override/0 = SubResource("ShaderMaterial_mor4b")

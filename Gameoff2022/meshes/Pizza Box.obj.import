@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnqj571cstdi0"
+path="res://.godot/imported/Pizza Box.obj-3c3d2cc840ce370d72d17979ff177a83.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pizza Box.obj-3c3d2cc840ce370d72d17979ff177a83.mesh"]
+
+source_file="res://meshes/Pizza Box.obj"
+dest_files=["res://.godot/imported/Pizza Box.obj-3c3d2cc840ce370d72d17979ff177a83.mesh", "res://.godot/imported/Pizza Box.obj-3c3d2cc840ce370d72d17979ff177a83.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
