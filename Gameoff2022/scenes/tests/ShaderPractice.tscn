@@ -185,7 +185,7 @@ spot_angle = 46.4063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, 0, 5.01533)
 
 [node name="Monitor" parent="Room" instance=ExtResource("17_ln60p")]
-transform = Transform3D(0.823057, 0, 0.567959, 0, 1, 0, -0.567959, 0, 0.823057, -6.02518, 2.33129, 0.596168)
+transform = Transform3D(0.191238, 0, -0.981544, 0, 1, 0, 0.981544, 0, 0.191238, -1.37777, 3.10061, 6.49353)
 
 [node name="ComputerLight" type="OmniLight3D" parent="Room/Monitor"]
 transform = Transform3D(0.992891, 0, -0.119028, 0, 1, 0, 0.119028, 0, 0.992891, 0.311351, 0.202284, 0.820784)
