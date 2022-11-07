@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://2an54g77dr47"]
+[gd_scene load_steps=25 format=3 uid="uid://2an54g77dr47"]
 
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_kewhu"]
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="4_sn03i"]
@@ -12,8 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bgtu76l55emde" path="res://modles/key_board.tscn" id="11_v4ukx"]
 [ext_resource type="PackedScene" uid="uid://usded07kcbok" path="res://modles/mouse.tscn" id="12_t8si4"]
 [ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_7xkwk"]
-[ext_resource type="PackedScene" uid="uid://cpc7t82lkl8xu" path="res://modles/pizza.tscn" id="14_jlt4y"]
-[ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="15_r6wsb"]
 [ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="16_12f0l"]
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="17_ln60p"]
 [ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_m8kpq"]
@@ -182,12 +180,6 @@ light_color = Color(1, 0.984314, 0.811765, 1)
 light_energy = 2.845
 spot_range = 5.86071
 spot_angle = 46.4063
-
-[node name="Pizza" parent="Room" instance=ExtResource("14_jlt4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06846, 2.84018, 7.66841)
-
-[node name="PizzaBox" parent="Room" instance=ExtResource("15_r6wsb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34526, 2.69778, 7.04545)
 
 [node name="Rug" parent="Room" instance=ExtResource("16_12f0l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, 0, 5.01533)
