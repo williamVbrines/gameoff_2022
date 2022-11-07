@@ -1,1 +1,4 @@
 res://scenes/tests/ShaderPractice.tscn
+res://shaders/ArtShader.gdshader
+res://shaders/artshader_noisetexture.tres
+res://shaders/ArtShader_Trans.gdshader
