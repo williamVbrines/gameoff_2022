@@ -1,9 +1,8 @@
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
-res://modles/Crate.tscn
-res://shaders/ArtShader.gdshader
-res://modles/VillageHouseGreen.tscn
+res://modles/villageporch.tscn
 res://scenes/levels/VillageScene.tscn
+res://shaders/ArtShader.gdshader
 res://scenes/main.tscn
 res://modles/book.tscn
 res://scenes/levels/RoomScene.tscn
