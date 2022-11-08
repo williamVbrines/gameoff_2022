@@ -1,0 +1,354 @@
+[gd_scene load_steps=40 format=3 uid="uid://2an54g77dr47"]
+
+[ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
+[ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
+[ext_resource type="PackedScene" uid="uid://csl5u8uumwyx2" path="res://modles/book.tscn" id="3_7uc24"]
+[ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
+[ext_resource type="PackedScene" uid="uid://dohk55w2v4jar" path="res://modles/desk.tscn" id="5_8jjll"]
+[ext_resource type="PackedScene" uid="uid://cnntxn1gqo2l5" path="res://modles/desk_chair.tscn" id="6_1pfs0"]
+[ext_resource type="PackedScene" uid="uid://di2yossccrpdk" path="res://modles/desk_paper.tscn" id="7_iycir"]
+[ext_resource type="PackedScene" uid="uid://f3olkhor585g" path="res://modles/dresser.tscn" id="8_fj1gn"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="9_l43cy"]
+[ext_resource type="Texture2D" uid="uid://bs7n32125yvb" path="res://textures/DresserTexture.png" id="10_flbw3"]
+[ext_resource type="PackedScene" uid="uid://bgtu76l55emde" path="res://modles/key_board.tscn" id="11_y8fwa"]
+[ext_resource type="PackedScene" uid="uid://usded07kcbok" path="res://modles/mouse.tscn" id="12_fl6cs"]
+[ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_ao8j1"]
+[ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="14_6xceb"]
+[ext_resource type="Texture2D" uid="uid://csughb021ergy" path="res://textures/RugforRoomTexture.png" id="15_gm4mk"]
+[ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="16_xh2ma"]
+[ext_resource type="Texture2D" uid="uid://yllcxgk88mvt" path="res://textures/MonitorTexture.png" id="17_ytfcg"]
+[ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_xi7mj"]
+[ext_resource type="Texture2D" uid="uid://biqnqga1dlvta" path="res://textures/DoorTexture.png" id="19_4781p"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="20_hik4s"]
+[ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="21_kfrrn"]
+[ext_resource type="PackedScene" uid="uid://cpc7t82lkl8xu" path="res://modles/pizza.tscn" id="22_garrg"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tk41j"]
+panorama = ExtResource("1_w4l0p")
+
+[sub_resource type="Sky" id="33"]
+sky_material = SubResource("PanoramaSkyMaterial_tk41j")
+radiance_size = 2
+
+[sub_resource type="Environment" id="34"]
+background_mode = 2
+background_energy_multiplier = 0.0
+sky = SubResource("33")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.2
+ambient_light_energy = 0.15
+glow_strength = 1.79
+glow_bloom = 0.44
+
+[sub_resource type="FastNoiseLite" id="1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q1hcp"]
+width = 40
+height = 40
+seamless = true
+as_normal_map = true
+bump_strength = 0.2
+noise = SubResource("1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1jah"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("17_ytfcg")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = SubResource("NoiseTexture2D_q1hcp")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 1.0
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ayyvb"]
+width = 80
+height = 80
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mebd7"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("10_flbw3")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = SubResource("NoiseTexture2D_ayyvb")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 2.0
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sl82f"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("15_gm4mk")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_83pps"]
+width = 40
+height = 40
+seamless = true
+as_normal_map = true
+bump_strength = 0.2
+noise = SubResource("1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_igroj"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("19_4781p")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = SubResource("NoiseTexture2D_83pps")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 1.0
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_c1e8n"]
+size = Vector2(10, 11)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ry8ee"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.427451, 0.427451, 0.427451, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[sub_resource type="PlaneMesh" id="32"]
+
+[sub_resource type="ShaderMaterial" id="31"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/animated = true
+shader_parameter/light_bias = Vector3(0, 0, 0)
+shader_parameter/light_tint = null
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = Vector3(0, 0, 0)
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = null
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(0.211765, 0.211765, 0.211765, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="PlaneMesh" id="17"]
+
+[sub_resource type="ShaderMaterial" id="18"]
+render_priority = 0
+shader = ExtResource("9_l43cy")
+shader_parameter/animated = true
+shader_parameter/light_bias = Vector3(0, 0, 0)
+shader_parameter/light_tint = null
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = Vector3(0, 0, 0)
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = null
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(0.262745, 0.262745, 0.262745, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[node name="Practice" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("34")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.719468, 0.360127, -0.593864, 0.00521976, 0.852236, 0.523131, 0.694506, -0.379476, 0.611277, -13.3396, 9.00808, 16.2482)
+fov = 49.8757
+
+[node name="Room" type="Node3D" parent="."]
+
+[node name="GeneralRoomLight" type="SpotLight3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, -9.8568e-08, 1, 0, -1, -9.8568e-08, -4.75893, 9.32859, 5.48163)
+light_color = Color(0.458824, 1, 0.8, 1)
+light_indirect_energy = 8.0
+light_specular = 16.0
+spot_range = 18.2852
+spot_angle = 47.5255
+
+[node name="Bed" parent="Room" instance=ExtResource("4_grb64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
+skeleton = NodePath("../..")
+
+[node name="DeskChair" parent="Room" instance=ExtResource("6_1pfs0")]
+transform = Transform3D(-0.992828, 0, 0.119547, 0, 1, 0, -0.119547, 0, -0.992828, -3.80776, 0, 3.09442)
+
+[node name="Desk" parent="Room" instance=ExtResource("5_8jjll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)
+
+[node name="DeskPaper1" parent="Room/Desk" instance=ExtResource("7_iycir")]
+transform = Transform3D(0.927419, 0, -0.374024, 0, 1, 0, 0.374024, 0, 0.927419, 1.08067, 1.90476, -0.212475)
+skeleton = NodePath("../..")
+
+[node name="DeskPaper2" parent="Room/Desk" instance=ExtResource("7_iycir")]
+transform = Transform3D(0.967317, 0, 0.253572, 0, 1, 0, -0.253572, 0, 0.967317, 0.853072, 1.89694, -0.312819)
+skeleton = NodePath("../..")
+
+[node name="Mouse" parent="Room/Desk" instance=ExtResource("12_fl6cs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.850761, 1.88739, 0.589468)
+skeleton = NodePath("../..")
+
+[node name="KeyBoard" parent="Room/Desk" instance=ExtResource("11_y8fwa")]
+transform = Transform3D(-2.6235e-08, -2.03637e-13, -0.6, -0.0149629, 0.599813, 6.54049e-10, 0.599813, 0.0149629, -2.62268e-08, -0.16791, 1.88664, 0.470445)
+skeleton = NodePath("../..")
+
+[node name="Monitor" parent="Room/Desk" instance=ExtResource("16_xh2ma")]
+transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.423819)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_f1jah")
+
+[node name="ComputerLight" type="OmniLight3D" parent="Room/Desk/Monitor"]
+transform = Transform3D(0.992891, 0, -0.119028, 0, 1, 0, 0.119028, 0, 0.992891, 0.311351, 0.202284, 0.820784)
+light_color = Color(0.72549, 0.980392, 1, 1)
+light_energy = 2.0
+omni_range = 1.25447
+
+[node name="TallDresser" parent="Room" instance=ExtResource("8_fj1gn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.593158, 0, 6.09851)
+surface_material_override/0 = SubResource("ShaderMaterial_mebd7")
+
+[node name="PizzaBox" parent="Room/TallDresser" instance=ExtResource("21_kfrrn")]
+transform = Transform3D(0.556799, 0, -0.22355, 0, 0.6, 0, 0.22355, 0, 0.556799, -0.144279, 2.68022, -0.55816)
+skeleton = NodePath("../../..")
+
+[node name="Pizza" parent="Room/TallDresser/PizzaBox" instance=ExtResource("22_garrg")]
+transform = Transform3D(0.618666, 0, 0.248389, 0, 0.666667, 0, -0.248389, 0, 0.618666, -0.037256, 0.0384307, 0.0523024)
+skeleton = NodePath("../../../..")
+
+[node name="Alarm" parent="Room/TallDresser" instance=ExtResource("2_r7s0e")]
+transform = Transform3D(0.20659, 0, 0.217533, 0, 0.3, 0, -0.217533, 0, 0.20659, -0.403348, 2.62837, 0.94349)
+skeleton = NodePath("../..")
+
+[node name="AlarmClockLight" type="OmniLight3D" parent="Room/TallDresser/Alarm"]
+transform = Transform3D(-3.32571, 0, -0.225324, 0, 3.33333, 0, 0.225324, 0, -3.32571, -0.781782, 0.337091, -0.0375471)
+light_color = Color(1, 0.12549, 0.12549, 1)
+light_size = 0.222
+omni_range = 0.367801
+
+[node name="WideDresser" parent="Room" instance=ExtResource("8_fj1gn")]
+transform = Transform3D(-1.00255, 0, -1.37442e-07, 0, 0.596537, 0, 8.76455e-08, 0, -1.57215, -8.0942, 0, 8.97187)
+
+[node name="StackedBook1" parent="Room/WideDresser" instance=ExtResource("3_7uc24")]
+transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, -0.0517902, 2.6054, -0.930151)
+skeleton = NodePath("../..")
+
+[node name="StackedBook2" parent="Room/WideDresser/StackedBook1" instance=ExtResource("3_7uc24")]
+transform = Transform3D(0.952129, 0.305695, 3.55271e-15, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.3831, 0, 0)
+skeleton = NodePath("../../..")
+
+[node name="LayingBook1" parent="Room/WideDresser" instance=ExtResource("3_7uc24")]
+transform = Transform3D(-2.11245e-08, -0.483273, -0.872566, 1.67634, -7.32752e-08, -3.54979e-22, -2.43222e-08, -0.556428, 0.308179, 0.0496588, 2.68919, 0.18945)
+skeleton = NodePath("../..")
+
+[node name="BookPaper" parent="Room/WideDresser/LayingBook1" instance=ExtResource("7_iycir")]
+transform = Transform3D(-4.10492e-08, 1, 1.50219e-08, -0.939095, -4.37114e-08, 0.34366, 0.34366, -3.13027e-14, 0.939095, 0.060298, 0.662106, -0.0748367)
+skeleton = NodePath("../../..")
+
+[node name="Lamp" parent="Room" instance=ExtResource("13_ao8j1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10671, 0, 1.00407)
+
+[node name="LampLight" type="SpotLight3D" parent="Room/Lamp"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0671444, 3.83939, 0.0847137)
+light_color = Color(1, 0.984314, 0.811765, 1)
+spot_range = 5.86071
+spot_angle = 46.4063
+
+[node name="Rug" parent="Room" instance=ExtResource("14_6xceb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, -0.0635431, 5.01533)
+surface_material_override/0 = SubResource("StandardMaterial3D_sl82f")
+
+[node name="Door" parent="Room" instance=ExtResource("18_xi7mj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983248, 0, 2.07006)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_igroj")
+
+[node name="Walls" type="Node3D" parent="Room"]
+
+[node name="Floor" type="MeshInstance3D" parent="Room/Walls"]
+transform = Transform3D(0.912377, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.46038, 0, 5.54615)
+mesh = SubResource("QuadMesh_c1e8n")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("ShaderMaterial_ry8ee")
+
+[node name="Wall" type="MeshInstance3D" parent="Room/Walls"]
+transform = Transform3D(-4.37114e-08, -1, 0, 2.84073, -1.24172e-07, 0, 0, 0, 5.50491, 0.0415249, 2.814, 5.54493)
+mesh = SubResource("32")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("31")
+
+[node name="Wall2" type="MeshInstance3D" parent="Room/Walls"]
+transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.83376, -9.90186e-23, 1, -1.23868e-07, -4.519, 2.837, 0.068)
+mesh = SubResource("17")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("18")

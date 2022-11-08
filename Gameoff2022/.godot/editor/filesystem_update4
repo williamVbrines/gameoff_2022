@@ -1,6 +1,6 @@
 res://scenes/tests/ShaderPractice.tscn
 res://shaders/artshader_noisetexture.tres
+res://scenes/levels/RoomScene.tscn
+res://modles/desk_paper.tscn
 res://modles/pizza_box.tscn
-res://modles/pizza.tscn
-res://modles/bed.tscn
-res://modles/dresser.tscn
+res://scenes/levels/DungeonScene.tscn
