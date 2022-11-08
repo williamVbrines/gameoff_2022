@@ -33,6 +33,9 @@ albedo_texture = ExtResource("4_yi21f")
 
 [node name="NPC" type="Node3D"]
 script = ExtResource("1_fjrty")
+damage_dist = {
+"charm": 0.5
+}
 
 [node name="InteractableArea3D" type="Area3D" parent="."]
 collision_layer = 4

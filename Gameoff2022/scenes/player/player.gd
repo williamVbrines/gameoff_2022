@@ -19,7 +19,7 @@ var disabled = false;
 func _ready() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
 	
-func _on_start_combat(cmaera : Camera3D) -> void:
+func _on_start_combat(with : String, cmaera : Camera3D) -> void:
 	disabled = true;
 
 func _input(event: InputEvent) -> void:

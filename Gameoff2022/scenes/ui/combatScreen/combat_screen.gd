@@ -5,19 +5,39 @@ extends Control
 @onready var attack_comand: LineEdit = $UI/AttackComand
 
 @onready var ui: Control = $UI
+@onready var queue_label: Label = $UI/VBoxContainer/QueueLabel
 
 @onready var pers_label: Label = $UI/VBoxContainer/PersLabel
 @onready var annoy_label: Label = $UI/VBoxContainer/AnnoyLabel
+var opponent : String = "";
+var queue = [0,0,0,0,0,0,0,0,0,0,]
+var player_place = 0;
+var opponate_place = 1;
 
 func _ready() -> void:
 	ui.visible = false;
 	
+	player_place = min(queue.size()-1, player_place);
+	queue[player_place] = 1;
+	
+	opponate_place = min(queue.size()-1, opponate_place);
+	queue[opponate_place] = 2;
+	
+	queue_label.set_text(str(queue));
+	
 	EventManager.start_combat.connect(_on_start_combat);
+	EventManager.persuasion_changed.connect(_on_persuasion_changed);
+	EventManager.annoyance_changed.connect(_on_annoyance_changed)
+	
+	
 	attack_comand.text_submitted.connect(_on_attack_entered);
 	attack_comand.text_changed.connect(_on_attack_line_changed);
 	
-func _on_start_combat(camera : Camera3D) -> void:
+func _on_start_combat(with : String, camera : Camera3D) -> void:
 	var tween = create_tween();
+	
+	opponent = with;
+	
 	tween.pause();
 	tween.tween_property(color_rect,"color",Color(0, 0, 0, 1),fade_time);
 	tween.tween_property(color_rect,"color",Color(0, 0, 0, 1),fade_time);
@@ -35,7 +55,6 @@ func set_attack_useable(val : bool) -> void:
 	attack_comand.set_editable(true);
 	
 	
-	
 func _on_attack_line_changed(text : String) -> void:
 	text = "{" + text + "}";
 	var data = JSON.parse_string(text);
@@ -44,20 +63,41 @@ func _on_attack_line_changed(text : String) -> void:
 	
 	
 	if data:
-		if data.size() == 2 && data.has_all(["type","amount"]):
+		if data.size() == 3 && data.has_all(["type","amt","cost"]):
 			color = Color.LAWN_GREEN;
 	
 	attack_comand.set("theme_override_colors/font_color", color);
 		
 		
-
+func _on_persuasion_changed(val : float) -> void:
+	pers_label.set_text("Persuasion " + str(val));
+	
+func _on_annoyance_changed(val : float) -> void:
+	annoy_label.set_text("Annoyance " + str(val));
+	
+	
 func _on_attack_entered(text : String) -> void:
 	
 	text = "{" + text + "}";
 	var data = JSON.parse_string(text);
-	print("!!Attack!!")
-	print(data)
-	if data.size() == 2 && data.has_all(["type","amount"]):
-		EventManager.attack.emit("Player", data, self);
+#	"type" : "charm", "amt" : 100, "cost" : 2
+	if data.size() == 3 && data.has_all(["type","amt","cost"]):
+		EventManager.attack.emit(opponent, data, self);
 		attack_comand.set_text("");
 		
+		queue[min(queue.size()-1,player_place)] = 0;
+		player_place = min(queue.size()-1, player_place + data.cost);
+	
+		if queue[player_place] != 0:
+			if player_place == queue.size()-1:
+				queue[player_place-1] = 2;
+			else:
+				player_place += 1;
+			
+		
+		queue[player_place] = 1;
+		
+		queue_label.set_text(str(queue));
+		
+		print("!!Attack!!")
+		print(data)

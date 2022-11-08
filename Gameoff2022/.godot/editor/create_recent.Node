@@ -1,8 +1,8 @@
+Label
 LineEdit
 Control
 Button
 VBoxContainer
-Label
 ColorRect
 Camera3D
 Node3D

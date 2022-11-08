@@ -7,10 +7,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_l1agn")
 
 [node name="UI" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,6 +37,13 @@ offset_right = 345.0
 offset_bottom = 140.0
 theme_override_font_sizes/font_size = 47
 text = "Persuasion: 0%"
+
+[node name="QueueLabel" type="Label" parent="UI/VBoxContainer"]
+offset_top = 144.0
+offset_right = 345.0
+offset_bottom = 201.0
+theme_override_font_sizes/font_size = 39
+text = "[1,2,0,0,0,0,0,0,0,0]"
 
 [node name="AttackComand" type="LineEdit" parent="UI"]
 anchors_preset = 12
