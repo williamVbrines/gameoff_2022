@@ -1,4 +1,6 @@
 res://scenes/tests/ShaderPractice.tscn
-res://shaders/ArtShader.gdshader
 res://shaders/artshader_noisetexture.tres
-res://shaders/ArtShader_Trans.gdshader
+res://modles/pizza_box.tscn
+res://modles/pizza.tscn
+res://modles/bed.tscn
+res://modles/dresser.tscn

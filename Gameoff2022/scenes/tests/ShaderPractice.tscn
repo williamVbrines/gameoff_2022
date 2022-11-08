@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://2an54g77dr47"]
+[gd_scene load_steps=40 format=3 uid="uid://2an54g77dr47"]
 
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_7jpkn"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_kewhu"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://yllcxgk88mvt" path="res://textures/MonitorTexture.png" id="17_n7w1f"]
 [ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_m8kpq"]
 [ext_resource type="Texture2D" uid="uid://biqnqga1dlvta" path="res://textures/DoorTexture.png" id="19_v8t7q"]
+[ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="21_ie5jl"]
+[ext_resource type="PackedScene" uid="uid://cpc7t82lkl8xu" path="res://modles/pizza.tscn" id="22_ew25x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tk41j"]
 panorama = ExtResource("1_7jpkn")
@@ -33,8 +35,8 @@ background_energy_multiplier = 0.0
 sky = SubResource("33")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.28
-ambient_light_energy = 0.2
+ambient_light_sky_contribution = 0.2
+ambient_light_energy = 0.15
 glow_strength = 1.79
 glow_bloom = 0.44
 
@@ -59,14 +61,14 @@ shader_parameter/metallic = 0.0
 shader_parameter/normal_bias = null
 shader_parameter/normal_map = SubResource("NoiseTexture2D_ayyvb")
 shader_parameter/rimlight_blend = 0.01
-shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_color = Color(0.611765, 0.611765, 0.611765, 1)
 shader_parameter/rimlight_size = 0.1
-shader_parameter/shadow_blend = 1.0
+shader_parameter/shadow_blend = 2.0
 shader_parameter/shadow_color = null
 shader_parameter/shadow_extra_intensity = 0.0
 shader_parameter/shadow_size = 0.045
 shader_parameter/time_scale = 0.02
-shader_parameter/tint = Color(1, 1, 1, 0.94902)
+shader_parameter/tint = Color(0.87451, 1, 1, 0.94902)
 shader_parameter/use_normalmap = true
 shader_parameter/use_view = true
 shader_parameter/view_bias = Color(1, 0, 1, 1)
@@ -142,30 +144,6 @@ shader_parameter/use_view = true
 shader_parameter/view_bias = Color(1, 0, 1, 1)
 shader_parameter/view_multiplier = -1.0
 
-[sub_resource type="PlaneMesh" id="32"]
-
-[sub_resource type="ShaderMaterial" id="31"]
-render_priority = 0
-shader = ExtResource("2_kewhu")
-shader_parameter/animated = true
-shader_parameter/light_bias = Vector3(0, 0, 0)
-shader_parameter/light_tint = null
-shader_parameter/metallic = 0.0
-shader_parameter/normal_bias = Vector3(0, 0, 0)
-shader_parameter/rimlight_blend = 0.01
-shader_parameter/rimlight_color = null
-shader_parameter/rimlight_size = 0.921
-shader_parameter/shadow_blend = 0.001
-shader_parameter/shadow_color = null
-shader_parameter/shadow_extra_intensity = 0.0
-shader_parameter/shadow_size = 0.045
-shader_parameter/time_scale = 0.02
-shader_parameter/tint = Color(0.211765, 0.211765, 0.211765, 1)
-shader_parameter/use_normalmap = true
-shader_parameter/use_view = true
-shader_parameter/view_bias = Color(1, 0, 1, 1)
-shader_parameter/view_multiplier = -1.0
-
 [sub_resource type="QuadMesh" id="QuadMesh_c1e8n"]
 size = Vector2(10, 11)
 
@@ -190,6 +168,30 @@ shader_parameter/use_normalmap = null
 shader_parameter/use_view = null
 shader_parameter/view_bias = null
 shader_parameter/view_multiplier = null
+
+[sub_resource type="PlaneMesh" id="32"]
+
+[sub_resource type="ShaderMaterial" id="31"]
+render_priority = 0
+shader = ExtResource("2_kewhu")
+shader_parameter/animated = true
+shader_parameter/light_bias = Vector3(0, 0, 0)
+shader_parameter/light_tint = null
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = Vector3(0, 0, 0)
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = null
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(0.211765, 0.211765, 0.211765, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
 
 [sub_resource type="PlaneMesh" id="17"]
 
@@ -228,12 +230,11 @@ fov = 49.8757
 [node name="Room" type="Node3D" parent="."]
 
 [node name="GeneralRoomLight" type="SpotLight3D" parent="Room"]
-transform = Transform3D(1, 0, 0, 0, -9.8568e-08, 1, 0, -1, -9.8568e-08, -4.75893, 7.67342, 5.48163)
-light_color = Color(0.501961, 1, 0.811765, 1)
-light_energy = 1.147
-light_indirect_energy = 7.165
+transform = Transform3D(1, 0, 0, 0, -9.8568e-08, 1, 0, -1, -9.8568e-08, -4.75893, 9.32859, 5.48163)
+light_color = Color(0.458824, 1, 0.8, 1)
+light_indirect_energy = 8.0
 light_specular = 16.0
-spot_range = 13.256
+spot_range = 18.2852
 spot_angle = 47.5255
 
 [node name="Alarm" parent="Room" instance=ExtResource("4_sn03i")]
@@ -260,7 +261,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)
 
 [node name="DeskChair" parent="Room" instance=ExtResource("8_or4hv")]
-transform = Transform3D(-0.893073, 0, 0.449911, 0, 1, 0, -0.449911, 0, -0.893073, -3.80776, 0, 2.93377)
+transform = Transform3D(-0.992828, 0, 0.119547, 0, 1, 0, -0.119547, 0, -0.992828, -3.80776, 0, 3.09442)
 
 [node name="DeskPaper" parent="Room" instance=ExtResource("9_sqbfx")]
 transform = Transform3D(0.927419, 0, -0.374024, 0, 1, 0, 0.374024, 0, 0.927419, -4.18944, 1.90476, 0.801981)
@@ -282,7 +283,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59388, 1.88739, 1.76425)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10671, 0, 1.00407)
 
 [node name="LampLight" type="SpotLight3D" parent="Room/Lamp"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.144199, 3.328, 0.444024)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.107136, 3.83939, 0.0138042)
 light_color = Color(1, 0.984314, 0.811765, 1)
 spot_range = 5.86071
 spot_angle = 46.4063
@@ -302,11 +303,17 @@ light_energy = 2.0
 omni_range = 1.25447
 
 [node name="Door" parent="Room" instance=ExtResource("18_m8kpq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983248, 0, 2.83687)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983248, 0, 2.07006)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_igroj")
 
 [node name="Walls" type="Node3D" parent="Room"]
+
+[node name="Floor" type="MeshInstance3D" parent="Room/Walls"]
+transform = Transform3D(0.912377, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.46038, 0, 5.54615)
+mesh = SubResource("QuadMesh_c1e8n")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("ShaderMaterial_ry8ee")
 
 [node name="Wall" type="MeshInstance3D" parent="Room/Walls"]
 transform = Transform3D(-4.37114e-08, -1, 0, 2.84073, -1.24172e-07, 0, 0, 0, 5.50491, 0.0415249, 2.814, 5.54493)
@@ -314,14 +321,15 @@ mesh = SubResource("32")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("31")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/Walls"]
-transform = Transform3D(0.912377, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.46038, 0, 5.54615)
-mesh = SubResource("QuadMesh_c1e8n")
-skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_ry8ee")
-
 [node name="Wall2" type="MeshInstance3D" parent="Room/Walls"]
 transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.83376, -9.90186e-23, 1, -1.23868e-07, -4.519, 2.837, 0.068)
 mesh = SubResource("17")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("18")
+
+[node name="PizzaBox" parent="." instance=ExtResource("21_ie5jl")]
+transform = Transform3D(0.556799, 0, -0.22355, 0, 0.6, 0, 0.22355, 0, 0.556799, -0.737437, 2.68022, 5.54035)
+
+[node name="Pizza" parent="PizzaBox" instance=ExtResource("22_ew25x")]
+transform = Transform3D(0.618666, 0, 0.248389, 0, 0.666667, 0, -0.248389, 0, 0.618666, -0.037256, 0.0384307, 0.0523024)
+skeleton = NodePath("../..")

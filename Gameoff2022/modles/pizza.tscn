@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://rwvvwwrng7d" path="res://meshes/Pizza02.obj" id="1_vyxrs"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_qk01y"]
-[ext_resource type="Texture2D" uid="uid://bbi4fds0vomxf" path="res://Textures/PizzaTexture.png" id="3_btxum"]
+[ext_resource type="Texture2D" uid="uid://bbi4fds0vomxf" path="res://textures/PizzaTexture.png" id="3_btxum"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_3lgk5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74uqn"]
@@ -18,7 +18,7 @@ shader_parameter/normal_map = ExtResource("4_3lgk5")
 shader_parameter/rimlight_blend = 0.01
 shader_parameter/rimlight_color = Color(1, 1, 1, 1)
 shader_parameter/rimlight_size = 0.921
-shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_blend = 2.0
 shader_parameter/shadow_color = null
 shader_parameter/shadow_extra_intensity = 0.0
 shader_parameter/shadow_size = 0.045
