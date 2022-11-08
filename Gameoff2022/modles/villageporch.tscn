@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://bknogsetv18b0" path="res://meshes/VillageHousePorch.obj" id="1_lk7x0"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_n6320"]
-[ext_resource type="Texture2D" uid="uid://oh5erarlkjkr" path="res://textures/VillagePorchTexture.png" id="3_2q3ub"]
+[ext_resource type="Texture2D" uid="uid://knewbs1jo6yu" path="res://textures/VillagePorchTexture.png" id="3_2q3ub"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_xc7f6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a3xtt"]

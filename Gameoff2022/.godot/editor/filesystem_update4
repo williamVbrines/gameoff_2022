@@ -1,8 +1,6 @@
+res://modles/villageporch.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
-res://modles/villageporch.tscn
-res://scenes/levels/VillageScene.tscn
-res://shaders/ArtShader.gdshader
 res://scenes/main.tscn
-res://modles/book.tscn
 res://scenes/levels/RoomScene.tscn
+res://scenes/levels/VillageScene.tscn
