@@ -1,13 +1,85 @@
-[gd_scene load_steps=3 format=3 uid="uid://drxxebvuve4i1"]
+[gd_scene load_steps=13 format=3 uid="uid://drxxebvuve4i1"]
 
-[sub_resource type="Sky" id="1"]
+[ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
+[ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_2m2qn"]
+[ext_resource type="Shader" uid="uid://d6t6aevet6j4" path="res://shaders/Pixelation.tres" id="2_g32fl"]
+[ext_resource type="Texture2D" uid="uid://bye3sl2u4rd7k" path="res://icon.svg" id="3_ia1mj"]
+[ext_resource type="PackedScene" uid="uid://cvkbkuv2ch0jk" path="res://modles/crate.tscn" id="6_r3p86"]
 
-[sub_resource type="Environment" id="2"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
+panorama = ExtResource("1_fjwfa")
+
+[sub_resource type="Sky" id="Sky_163l6"]
+sky_material = SubResource("PanoramaSkyMaterial_f8xgp")
+
+[sub_resource type="Environment" id="Environment_ujh50"]
 background_mode = 2
-sky = SubResource("1")
-fog_enabled = true
+sky = SubResource("Sky_163l6")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 2.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bvxwv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4nof"]
+render_priority = 0
+shader = ExtResource("2_2m2qn")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(0.647059, 1, 0.835294, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.596078, 1, 0.556863, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tyom5"]
+shader = ExtResource("2_g32fl")
+shader_parameter/Pixelation_Amount = 256.0
 
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("2")
+environment = SubResource("Environment_ujh50")
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(65.8524, 0, 0, 0, 1.00072, 0, 0, 0, 58.8107, 14.1818, 0, -26.1939)
+mesh = SubResource("PlaneMesh_bvxwv")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_n4nof")
+
+[node name="VillageHouseGreen2" parent="." instance=ExtResource("1_eln33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.4363)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.705357, 0.502465, -0.5, -0.00246826, 0.707103, 0.707107, 0.708848, -0.497529, 0.5, -12.732, 21.2004, 4.83732)
+fov = 52.3883
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera3D"]
+material = SubResource("ShaderMaterial_tyom5")
+position = Vector2(960.5, 542)
+scale = Vector2(15.0078, 8.40625)
+texture = ExtResource("3_ia1mj")
+
+[node name="Crate" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.27931, -0.0378013, -11.7118)
+
+[node name="Crate2" parent="Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00185776, 0, -1.12904)
+
+[node name="Crate3" parent="Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0882, 0, -0.723562)
+
+[node name="Crate4" parent="Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.390471, 1.00136, -0.515475)

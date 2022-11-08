@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btws7h7h82dtq"
+path="res://.godot/imported/VillageHouse.obj-3a9fd47e3f9d3f6502285974aad2c4ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/VillageHouse.obj-3a9fd47e3f9d3f6502285974aad2c4ef.mesh"]
+
+source_file="res://meshes/VillageHouse.obj"
+dest_files=["res://.godot/imported/VillageHouse.obj-3a9fd47e3f9d3f6502285974aad2c4ef.mesh", "res://.godot/imported/VillageHouse.obj-3a9fd47e3f9d3f6502285974aad2c4ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,4 +1,9 @@
-res://scenes/levels/RoomScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
+res://modles/Crate.tscn
+res://shaders/ArtShader.gdshader
+res://modles/VillageHouseGreen.tscn
+res://scenes/levels/VillageScene.tscn
 res://scenes/main.tscn
+res://modles/book.tscn
+res://scenes/levels/RoomScene.tscn
