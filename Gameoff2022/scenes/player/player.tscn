@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwr5wpxa0e78p"]
+[gd_scene load_steps=14 format=3 uid="uid://c1ynlnisg2qox"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_votbs"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_votbs"]
 [ext_resource type="Texture2D" uid="uid://c2mc33gk55p47" path="res://textures/kenney_prototypetextures/PNG/Green/texture_01.png" id="2_lrnsi"]
 [ext_resource type="Texture2D" uid="uid://bbuev6ybnit55" path="res://textures/kenney_prototypetextures/PNG/Red/texture_01.png" id="3_28hed"]
 
@@ -8,11 +8,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kixqp"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g41hh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qymvg"]
 albedo_texture = ExtResource("2_lrnsi")
-
-[sub_resource type="BoxMesh" id="BoxMesh_0s10i"]
-size = Vector3(1, 2, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cmn5u"]
 
@@ -51,15 +48,11 @@ shape = SubResource("CapsuleShape3D_twb2u")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_kixqp")
-surface_material_override/0 = SubResource("StandardMaterial3D_g41hh")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
-mesh = SubResource("BoxMesh_0s10i")
+surface_material_override/0 = SubResource("StandardMaterial3D_qymvg")
 
 [node name="Boomarm" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
 collision_mask = 2
 shape = SubResource("SphereShape3D_cmn5u")
 spring_length = 0.0
@@ -75,6 +68,7 @@ collide_with_areas = true
 
 [node name="LookBall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.65153, 4.13409)
+visible = false
 mesh = SubResource("SphereMesh_j73yf")
 surface_material_override/0 = SubResource("StandardMaterial3D_1xja0")
 
@@ -85,6 +79,7 @@ monitoring = false
 shape = SubResource("SphereShape3D_7116p")
 
 [node name="PickupArea" type="Area3D" parent="." groups=["PickupAera"]]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
 shape = SubResource("SphereShape3D_2ieio")

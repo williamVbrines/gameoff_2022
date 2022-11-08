@@ -14,20 +14,28 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var acceleration: Vector3 = Vector3.ZERO;
 var drag_orgin =  Vector2.ZERO;
+var disabled = false;
+
+func _ready() -> void:
+	EventManager.start_combat.connect(_on_start_combat);
+	
+func _on_start_combat(cmaera : Camera3D) -> void:
+	disabled = true;
 
 func _input(event: InputEvent) -> void:
-	camera_event(event);
-	look_event(event);
+	if !disabled:
+		camera_event(event);
+		look_event(event);
 
 func _physics_process(delta: float) -> void:
-	
-	if look_cast.is_colliding():
-		look_ball.global_position = look_cast.get_collision_point()
-	
-	turn(delta);
-	movement(delta);
-	
-	move_and_slide()
+	if !disabled:
+		if look_cast.is_colliding():
+			look_ball.global_position = look_cast.get_collision_point()
+		
+		turn(delta);
+		movement(delta);
+		
+		move_and_slide()
 	
 	
 func turn(delta : float) -> void:

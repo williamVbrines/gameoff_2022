@@ -12,7 +12,7 @@ _global_script_classes=[{
 "base": "Area3D",
 "class": &"InteractableArea3D",
 "language": &"GDScript",
-"path": "res://scripts/InteractableArea3D.gd"
+"path": "res://scenes/interactableArea3D/interactableArea3D.gd"
 }]
 _global_script_class_icons={
 "InteractableArea3D": ""
@@ -21,9 +21,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Gameoff2022"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+EventManager="*res://scenes/eventManager/event_manager.gd"
 
 [display]
 

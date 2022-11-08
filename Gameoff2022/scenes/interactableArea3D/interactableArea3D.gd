@@ -7,6 +7,7 @@ var is_hovered : bool = false : set = set_is_hovered;
 var is_pressed : bool = false : set = set_is_pressed;
 var _num_hovered : int = 0;
 var _num_pressed : int = 0;
+
 signal area_pressed();
 signal area_hovered();
 signal area_unhovered();

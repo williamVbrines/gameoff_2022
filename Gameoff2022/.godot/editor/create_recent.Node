@@ -1,15 +1,17 @@
-Node3D
-SubViewport
-Label
-MeshInstance3D
-Sprite3D
-Camera3D
-CollisionShape3D
-Area3D
+LineEdit
+Control
 Button
 VBoxContainer
-Control
+Label
+ColorRect
+Camera3D
+Node3D
+CollisionShape3D
 InteractableArea3D (InteractableArea3D.gd)
+MeshInstance3D
+SubViewport
+Sprite3D
+Area3D
 InteractableArea3D (InteractablesTest.gd)
 RayCast3D
 SpringArm3D

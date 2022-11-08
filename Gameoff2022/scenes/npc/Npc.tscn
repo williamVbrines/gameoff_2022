@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://bbj28uci0nilm"]
+
+[ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="1_fjrty"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="2_7h7bl"]
+[ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="3_f42oo"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="4_faq21"]
+[ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="4_yi21f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvl1m"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_88fxp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mrhn"]
+render_priority = 0
+shader = ExtResource("4_faq21")
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kkd6"]
+next_pass = SubResource("ShaderMaterial_2mrhn")
+albedo_texture = ExtResource("3_f42oo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4s6q"]
+albedo_texture = ExtResource("3_f42oo")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8g1ad"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woobe"]
+albedo_texture = ExtResource("4_yi21f")
+
+[node name="NPC" type="Node3D"]
+script = ExtResource("1_fjrty")
+
+[node name="InteractableArea3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("2_7h7bl")
+detection_groups = ["PickupPointer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_jvl1m")
+
+[node name="NpcMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_88fxp")
+surface_material_override/0 = SubResource("StandardMaterial3D_4kkd6")
+
+[node name="PlayerPose" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.13414)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PlayerPose"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_88fxp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_f4s6q")
+
+[node name="PointMesh" type="MeshInstance3D" parent="PlayerPose"]
+mesh = SubResource("CylinderMesh_8g1ad")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_woobe")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(0.370541, -0.579343, 0.72599, 2.51807e-08, 0.781629, 0.623743, -0.928816, -0.231123, 0.289626, 1.5214, 3.13559, 2.35337)

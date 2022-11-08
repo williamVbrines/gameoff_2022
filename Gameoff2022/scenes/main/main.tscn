@@ -1,11 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://b8bve3tvtkx1o"]
+[gd_scene load_steps=21 format=3 uid="uid://ba0pkrwnomxo8"]
 
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_v6ur4"]
-[ext_resource type="PackedScene" uid="uid://dwr5wpxa0e78p" path="res://scenes/player.tscn" id="1_xdy7h"]
 [ext_resource type="Texture2D" uid="uid://cisgxwxj5w5h4" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_bj56h"]
-[ext_resource type="PackedScene" uid="uid://bch2cs5ag0dmh" path="res://scenes/InteractablesTest.tscn" id="4_kd7fx"]
-[ext_resource type="PackedScene" uid="uid://dbyyp4yomg46n" path="res://scenes/Canvas3D.tscn" id="5_nm8jm"]
-[ext_resource type="PackedScene" uid="uid://bm5mc0kla7kgl" path="res://scenes/main_menu.tscn" id="6_cgnqo"]
+[ext_resource type="PackedScene" uid="uid://bbj28uci0nilm" path="res://scenes/npc/Npc.tscn" id="5_fxv3h"]
+[ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
+[ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="6_cgnqo"]
+[ext_resource type="PackedScene" uid="uid://dkrvdhjdx56xh" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6tvoo"]
 size = Vector3(3, 2, 1)
@@ -36,12 +36,6 @@ uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6wxw"]
 size = Vector3(3, 1, 2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ysq52"]
-size = Vector3(1, 0.75, 0.2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vn3at"]
-albedo_color = Color(0.141176, 0.141176, 0.113725, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ubijr"]
 size = Vector3(0.1, 0.75, 0.2)
@@ -156,47 +150,45 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/10_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="InteractableTests" type="Node3D" parent="TestArea"]
+[node name="ScreenFrame" type="Node3D" parent="TestArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.323954, 1.60488, -10.3513)
 
-[node name="InteractableTest" parent="TestArea/InteractableTests" instance=ExtResource("4_kd7fx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.82299, 1.70446, 0.892291)
-detection_groups = []
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505156, 0, 0.0260954)
+mesh = SubResource("BoxMesh_ubijr")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501145, 0, 0.0336633)
+mesh = SubResource("BoxMesh_vsuqc")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000521407, -0.318482, 0.0299761)
+mesh = SubResource("BoxMesh_04hax")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00850236, 0.318214, 0.0293298)
+mesh = SubResource("BoxMesh_inp17")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
+
+[node name="MainMenu" parent="TestArea/ScreenFrame" instance=ExtResource("6_cgnqo")]
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.607001, 0.794701, 0, -0.794701, 0.607001, 0, 10.0199, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00173295, 1.51358, -6.04123)
+[node name="Player" parent="." instance=ExtResource("5_un27h")]
 
-[node name="Player" parent="." instance=ExtResource("1_xdy7h")]
+[node name="NPC" parent="." instance=ExtResource("5_fxv3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97675, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05369, -0.80766)
-mesh = SubResource("BoxMesh_ysq52")
-surface_material_override/0 = SubResource("StandardMaterial3D_vn3at")
-
-[node name="Canvas3D" parent="MeshInstance3D" instance=ExtResource("5_nm8jm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.100814)
-
-[node name="MainMenu" parent="MeshInstance3D/Canvas3D" instance=ExtResource("6_cgnqo")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505156, 0, 0.0260954)
-mesh = SubResource("BoxMesh_ubijr")
-surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501145, 0, 0.0336633)
-mesh = SubResource("BoxMesh_vsuqc")
-surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000521407, -0.318482, 0.0299761)
-mesh = SubResource("BoxMesh_04hax")
-surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00850236, 0.318214, 0.0293298)
-mesh = SubResource("BoxMesh_inp17")
-surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
+[node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
+grow_horizontal = 2
+grow_vertical = 2
