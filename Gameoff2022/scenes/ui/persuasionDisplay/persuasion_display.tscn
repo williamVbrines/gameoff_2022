@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfdd5v0qqs58a"]
+
+[ext_resource type="Script" path="res://scenes/ui/persuasionDisplay/persuasion_display.gd" id="1_qdhnh"]
+
+[node name="PersuasionDisplay" type="Label"]
+offset_right = 345.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 47
+text = "Persuasion: 0%"
+script = ExtResource("1_qdhnh")

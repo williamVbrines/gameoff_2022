@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://71j1khq8u4ub"]
+
+[ext_resource type="Script" path="res://scenes/ui/annoyanceDisplay/annoyance_display.gd" id="1_f1ely"]
+
+[node name="AnnoyanceDisplay" type="Label"]
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 366.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 47
+text = "Annoyance: 0%"
+script = ExtResource("1_f1ely")

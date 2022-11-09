@@ -1,11 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://ba0pkrwnomxo8"]
+[gd_scene load_steps=32 format=3 uid="uid://cnvjktnuwa6ni"]
 
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_v6ur4"]
 [ext_resource type="Texture2D" uid="uid://cisgxwxj5w5h4" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_bj56h"]
-[ext_resource type="PackedScene" uid="uid://bbj28uci0nilm" path="res://scenes/npc/Npc.tscn" id="5_fxv3h"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
 [ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="6_cgnqo"]
 [ext_resource type="PackedScene" uid="uid://dkrvdhjdx56xh" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
+[ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="6_xjnsc"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="7_1anla"]
+[ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="8_ngpto"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="9_cdgjy"]
+[ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="10_pcumj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6tvoo"]
 size = Vector3(3, 2, 1)
@@ -51,6 +55,31 @@ size = Vector3(1, 0.11, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_inp17"]
 size = Vector3(1, 0.11, 0.2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ihbgs"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_epeb6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mrhn"]
+render_priority = 0
+shader = ExtResource("9_cdgjy")
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aqb8a"]
+next_pass = SubResource("ShaderMaterial_2mrhn")
+albedo_texture = ExtResource("8_ngpto")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1mwx"]
+albedo_texture = ExtResource("8_ngpto")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2phym"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15tw"]
+albedo_texture = ExtResource("10_pcumj")
 
 [node name="Main" type="Node3D"]
 
@@ -186,7 +215,40 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("5_un27h")]
 
-[node name="NPC" parent="." instance=ExtResource("5_fxv3h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97675, 0, 0)
-
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
+
+[node name="NPC" type="Node3D" parent="."]
+script = ExtResource("6_xjnsc")
+
+[node name="InteractableArea3D" type="Area3D" parent="NPC"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("7_1anla")
+detection_groups = ["PickupPointer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC/InteractableArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ihbgs")
+
+[node name="NpcMesh" type="MeshInstance3D" parent="NPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_epeb6")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_aqb8a")
+
+[node name="PlayerPose" type="Node3D" parent="NPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.13414)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="NPC/PlayerPose"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_epeb6")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_n1mwx")
+
+[node name="PointMesh" type="MeshInstance3D" parent="NPC/PlayerPose"]
+mesh = SubResource("CylinderMesh_2phym")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_u15tw")
+
+[node name="Camera" type="Camera3D" parent="NPC"]
+transform = Transform3D(0.370541, -0.579343, 0.72599, 2.51807e-08, 0.781629, 0.623744, -0.928816, -0.231123, 0.289626, 1.5214, 3.13559, 2.35337)

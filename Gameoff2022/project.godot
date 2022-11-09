@@ -13,9 +13,33 @@ _global_script_classes=[{
 "class": &"InteractableArea3D",
 "language": &"GDScript",
 "path": "res://scenes/interactableArea3D/interactableArea3D.gd"
+}, {
+"base": "Node3D",
+"class": &"NPC",
+"language": &"GDScript",
+"path": "res://scenes/npc/Npc.gd"
+}, {
+"base": "Resource",
+"class": &"NPCData",
+"language": &"GDScript",
+"path": "res://scenes/resources/npc/npc_data.gd"
+}, {
+"base": "Resource",
+"class": &"NPCTactics",
+"language": &"GDScript",
+"path": "res://scenes/resources/npc/npc_tactics_resource.gd"
+}, {
+"base": "Resource",
+"class": &"TacticsData",
+"language": &"GDScript",
+"path": "res://scenes/resources/tactics/tactics_data.gd"
 }]
 _global_script_class_icons={
-"InteractableArea3D": ""
+"InteractableArea3D": "",
+"NPC": "",
+"NPCData": "",
+"NPCTactics": "",
+"TacticsData": ""
 }
 
 [application]

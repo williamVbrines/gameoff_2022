@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/resources/npc/npc_data.gd" id="1_kgrgx"]
+
+[resource]
+script = ExtResource("1_kgrgx")
+name = "NPC"
+damage_dist = null
+attack_cost = 1
+attack_amount = 0
+heal_cost = 1
+heal_percent = 0
+heal_flat = 0
+guard_cost = 1
+guard_amount = 1
+guard_percent = 0.0
+guard_flat = 0
+dialog_pool = ["Hello the re"]

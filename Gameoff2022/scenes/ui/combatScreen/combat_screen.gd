@@ -6,8 +6,6 @@ extends Control
 
 @onready var ui: Control = $UI
 
-@onready var pers_label: Label = $UI/PersLabel
-@onready var annoy_label: Label = $UI/AnnoyLabel
 var opponent : String = "";
 var annoyance := 0;
 
@@ -17,8 +15,6 @@ func _ready() -> void:
 	
 func connect_signals() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
-	EventManager.persuasion_changed.connect(_on_persuasion_changed);
-	EventManager.annoyance_changed.connect(_on_annoyance_changed)
 	EventManager.combat_state_changed.connect(_on_combat_state_changed);
 	EventManager.attack.connect(_on_attack);
 	
@@ -26,7 +22,6 @@ func connect_signals() -> void:
 	attack_comand.text_changed.connect(_on_attack_line_changed);
 	
 	
-
 func _on_combat_state_changed(state : String) ->void:
 	
 	match state.to_upper():
@@ -119,19 +114,9 @@ func _on_attack_entered(text : String) -> void:
 		attack_comand.set_text("");
 		
 		EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-		EventManager.attack.emit(opponent, data, self);
-		
+		EventManager.attack.emit(opponent, data, self);	
 	
 	
-	
-func _on_persuasion_changed(val : float) -> void:
-	pers_label.set_text("Persuasion " + str(val));
-	
-func _on_annoyance_changed(val : float) -> void:
-	annoy_label.set_text("Annoyance " + str(val));
-	
-	
-
 func _change_state(state : String): EventManager.combat_state_changed.emit(state);
 	
 	

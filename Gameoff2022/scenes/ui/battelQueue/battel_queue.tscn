@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://scenes/ui/battelQueue/battel_queue.gd" id="1_7gq41"]
 
 [node name="BattelQueue" type="Label"]
-offset_top = 144.0
-offset_right = 345.0
-offset_bottom = 201.0
+offset_right = 336.0
+offset_bottom = 57.0
 theme_override_font_sizes/font_size = 39
 text = "[1,2,0,0,0,0,0,0,0,0]"
 script = ExtResource("1_7gq41")

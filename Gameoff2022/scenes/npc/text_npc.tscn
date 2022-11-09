@@ -1,27 +1,27 @@
 [gd_scene load_steps=13 format=3 uid="uid://bbj28uci0nilm"]
 
-[ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="1_fjrty"]
-[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="2_7h7bl"]
-[ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="3_f42oo"]
-[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="4_faq21"]
-[ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="4_yi21f"]
+[ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="1_nsc3b"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="2_fom28"]
+[ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="3_6cm7x"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="4_yqwrk"]
+[ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="5_wtxg2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jvl1m"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_88fxp"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mrhn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2otpy"]
 render_priority = 0
-shader = ExtResource("4_faq21")
+shader = ExtResource("4_yqwrk")
 shader_parameter/highlight_color = Color(0, 0, 0, 1)
 shader_parameter/str = 300.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kkd6"]
-next_pass = SubResource("ShaderMaterial_2mrhn")
-albedo_texture = ExtResource("3_f42oo")
+next_pass = SubResource("ShaderMaterial_2otpy")
+albedo_texture = ExtResource("3_6cm7x")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4s6q"]
-albedo_texture = ExtResource("3_f42oo")
+albedo_texture = ExtResource("3_6cm7x")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8g1ad"]
 top_radius = 0.25
@@ -29,18 +29,16 @@ bottom_radius = 0.25
 height = 0.001
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woobe"]
-albedo_texture = ExtResource("4_yi21f")
+albedo_texture = ExtResource("5_wtxg2")
 
-[node name="NPC" type="Node3D"]
-script = ExtResource("1_fjrty")
-damage_dist = {
-"charm": 0.5
-}
+[node name="TestNPC" type="Node3D"]
+script = ExtResource("1_nsc3b")
+npc_mesh = NodePath("NpcMesh")
 
 [node name="InteractableArea3D" type="Area3D" parent="."]
 collision_layer = 4
 collision_mask = 5
-script = ExtResource("2_7h7bl")
+script = ExtResource("2_fom28")
 detection_groups = ["PickupPointer"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D"]
