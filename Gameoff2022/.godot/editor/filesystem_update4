@@ -1,9 +1,8 @@
-res://scenes/npc/Npc.tscn
-res://scenes/npc/Npc.gd
-res://scenes/main/main.tscn
-res://scenes/interactableArea3D/interactablesTest.tscn
-res://scenes/player/player.tscn
 res://scenes/ui/combatScreen/combat_screen.tscn
 res://scenes/ui/combatScreen/combat_screen.gd
 res://scenes/eventManager/event_manager.gd
-res://scenes/player/player.gd
+res://scenes/ui/battelQueue/battel_queue.tscn
+res://scenes/ui/battelQueue/battel_queue.gd
+res://scenes/npc/Npc.tscn
+res://scenes/npc/Npc.gd
+res://scenes/main/main.tscn

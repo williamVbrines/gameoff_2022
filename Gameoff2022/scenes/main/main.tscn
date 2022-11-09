@@ -190,5 +190,3 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97675, 0, 0)
 
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
-grow_horizontal = 2
-grow_vertical = 2
