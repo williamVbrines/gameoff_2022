@@ -1,3 +1,5 @@
+RigidBody3D
+GPUParticles3D
 MeshInstance3D
 DirectionalLight3D
 DirectionalLight2D
@@ -20,5 +22,4 @@ InteractableArea3D (InteractablesTest.gd)
 RayCast3D
 SpringArm3D
 StaticBody3D
-RigidBody3D
 CharacterBody3D

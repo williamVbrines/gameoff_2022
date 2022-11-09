@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyunu6ujwa5a5"]
+
+[ext_resource type="ArrayMesh" uid="uid://do6ukhbgsqf56" path="res://meshes/Tree2Mesh.obj" id="1_btpsy"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_tf6ff"]
+[ext_resource type="Texture2D" uid="uid://be1bo2avsubdy" path="res://textures/Tree02Texture3.png" id="3_x8u05"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_273xy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4lfur"]
+render_priority = 0
+shader = ExtResource("2_tf6ff")
+shader_parameter/albedo_texture = ExtResource("3_x8u05")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_273xy")
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = null
+
+[node name="smalltree" type="Node3D"]
+
+[node name="Tree2Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = ExtResource("1_btpsy")
+surface_material_override/0 = SubResource("ShaderMaterial_4lfur")
