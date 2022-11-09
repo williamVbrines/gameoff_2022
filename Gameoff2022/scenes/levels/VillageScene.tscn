@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://drxxebvuve4i1"]
+[gd_scene load_steps=26 format=3 uid="uid://djbmdy8nxh17b"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bq8jiliucs2l6" path="res://modles/woodplank.tscn" id="11_23cxe"]
 [ext_resource type="PackedScene" uid="uid://cfmnbk2r5ajeh" path="res://modles/landbump.tscn" id="12_e1n4y"]
 [ext_resource type="PackedScene" uid="uid://bnff6pafaf1e6" path="res://modles/woodpost.tscn" id="13_tjw8x"]
+[ext_resource type="PackedScene" uid="uid://bxk526ikuqwq" path="res://modles/pumpkin.tscn" id="14_60j31"]
+[ext_resource type="Shader" uid="uid://dk6q2e0vkitc8" path="res://shaders/water.tres" id="15_fo0cu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
 panorama = ExtResource("1_fjwfa")
@@ -31,6 +33,30 @@ ambient_light_energy = 1.6
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tyom5"]
 shader = ExtResource("2_g32fl")
 shader_parameter/Pixelation_Amount = 350.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eqk65"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpm7w"]
+render_priority = 0
+shader = ExtResource("2_2m2qn")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.741176, 0.14902, 0, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujybd"]
 
@@ -56,6 +82,16 @@ shader_parameter/use_view = null
 shader_parameter/view_bias = null
 shader_parameter/view_multiplier = null
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_mfalq"]
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_koqwv"]
+render_priority = 0
+shader = ExtResource("15_fo0cu")
+shader_parameter/ColorParameter = null
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -63,6 +99,7 @@ environment = SubResource("Environment_ujh50")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 31.9638, 38.8136, 20.4819)
+visible = false
 fov = 36.7416
 
 [node name="Pixelation" type="Sprite2D" parent="Camera3D"]
@@ -70,6 +107,25 @@ material = SubResource("ShaderMaterial_tyom5")
 position = Vector2(960.5, 542)
 scale = Vector2(15.0078, 8.40625)
 texture = ExtResource("3_ia1mj")
+
+[node name="Camera3D Dialogue Example" type="Camera3D" parent="."]
+transform = Transform3D(0.570532, -0.49426, 0.655896, 0.0428637, 0.815463, 0.577219, -0.820156, -0.301208, 0.486434, 32.7558, 15.9238, 14.6983)
+fov = 35.0649
+
+[node name="Pixelation" type="Sprite2D" parent="Camera3D Dialogue Example"]
+material = SubResource("ShaderMaterial_tyom5")
+position = Vector2(960.5, 542)
+scale = Vector2(15.0078, 8.40625)
+texture = ExtResource("3_ia1mj")
+
+[node name="PlayerEx" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.5798, 1.54381, 5.06765)
+mesh = SubResource("CapsuleMesh_eqk65")
+
+[node name="NPCEx" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.5798, 1.54381, -1.9335)
+mesh = SubResource("CapsuleMesh_eqk65")
+surface_material_override/0 = SubResource("ShaderMaterial_kpm7w")
 
 [node name="villageporch" parent="." instance=ExtResource("7_mrn34")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.0388789, 1)
@@ -116,7 +172,7 @@ transform = Transform3D(0.342708, 0, -0.722878, 0, 0.8, 0, 0.722878, 0, 0.342708
 transform = Transform3D(0.53548, 0, 1.1295, 0, 1.25, 0, -1.1295, 0, 0.53548, -6.90051, -0.13355, 9.57788)
 
 [node name="smalltree7" parent="smalltree/smalltree2/smalltree3/smalltree4/smalltree5/smalltree6" instance=ExtResource("8_w4f88")]
-transform = Transform3D(-0.0307428, 0, -0.599212, 0, 0.6, 0, 0.599212, 0, -0.0307428, 1.22641, 0.220742, 5.068)
+transform = Transform3D(-0.0307428, 0, -0.599212, 0, 0.6, 0, 0.599212, 0, -0.0307428, 1.22641, 0.0989361, 5.068)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.980532, 0.160901, 0.112553, 0.194369, 0.876741, 0.439939, -0.0278929, 0.453251, -0.890946, 13.1257, 11.4182, 0)
@@ -177,3 +233,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -37.0061)
 
 [node name="woodpost" parent="." instance=ExtResource("13_tjw8x")]
 transform = Transform3D(0.642574, 0, 0.766224, 0, 1, 0, -0.766224, 0, 0.642574, 6.59786, 0, -10.4257)
+
+[node name="pumpkin" parent="." instance=ExtResource("14_60j31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27642, 0.708117, 1.32503)
+
+[node name="Waterplane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3686, 0.113008, 10.66)
+mesh = SubResource("PlaneMesh_mfalq")
+surface_material_override/0 = SubResource("ShaderMaterial_koqwv")
