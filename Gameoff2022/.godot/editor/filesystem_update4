@@ -1,6 +1,10 @@
-res://modles/villageporch.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
+res://modles/smalltree.tscn
+res://scenes/levels/VillageScene.tscn
 res://scenes/main.tscn
 res://scenes/levels/RoomScene.tscn
-res://scenes/levels/VillageScene.tscn
+res://modles/smallrock.tscn
+res://modles/smalltreedarkercolor.tscn
+res://modles/woodplank.tscn
+res://modles/landbump.tscn

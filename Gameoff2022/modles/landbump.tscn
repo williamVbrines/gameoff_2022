@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfmnbk2r5ajeh"]
+
+[ext_resource type="ArrayMesh" uid="uid://db1r5yi1i8o2c" path="res://meshes/LandBumpMesh.obj" id="1_15ede"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_dxr66"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="3_q376x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iahlw"]
+render_priority = 0
+shader = ExtResource("2_dxr66")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(0.290196, 0.290196, 0.290196, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("3_q376x")
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.67451, 1, 0.611765, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[node name="landbump" type="Node3D"]
+
+[node name="LandBumpMesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_15ede")
+surface_material_override/0 = SubResource("ShaderMaterial_iahlw")

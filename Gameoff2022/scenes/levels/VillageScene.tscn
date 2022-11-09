@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drxxebvuve4i1"]
+[gd_scene load_steps=19 format=3 uid="uid://drxxebvuve4i1"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -6,10 +6,12 @@
 [ext_resource type="Shader" uid="uid://d6t6aevet6j4" path="res://shaders/Pixelation.tres" id="2_g32fl"]
 [ext_resource type="Texture2D" uid="uid://bye3sl2u4rd7k" path="res://icon.svg" id="3_ia1mj"]
 [ext_resource type="PackedScene" uid="uid://cvkbkuv2ch0jk" path="res://modles/crate.tscn" id="6_r3p86"]
-[ext_resource type="ArrayMesh" uid="uid://bfthcwclf13s7" path="res://meshes/GroundVillageTest1.obj" id="7_kdioi"]
 [ext_resource type="PackedScene" uid="uid://b83liv0gvm2hb" path="res://modles/villageporch.tscn" id="7_mrn34"]
-[ext_resource type="Texture2D" uid="uid://0mdpqaysxpr4" path="res://textures/GroundTextureVillage.png" id="9_pxiwg"]
-[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="10_apcmm"]
+[ext_resource type="PackedScene" uid="uid://d2088j2i35ij3" path="res://modles/smalltree.tscn" id="8_w4f88"]
+[ext_resource type="PackedScene" uid="uid://dx40fhvq7xq4m" path="res://modles/smallrock.tscn" id="9_q35t0"]
+[ext_resource type="PackedScene" uid="uid://8f54kt0m0nku" path="res://modles/smalltreedarkercolor.tscn" id="10_lj1id"]
+[ext_resource type="PackedScene" uid="uid://bq8jiliucs2l6" path="res://modles/woodplank.tscn" id="11_23cxe"]
+[ext_resource type="PackedScene" uid="uid://cfmnbk2r5ajeh" path="res://modles/landbump.tscn" id="12_e1n4y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
 panorama = ExtResource("1_fjwfa")
@@ -27,18 +29,18 @@ ambient_light_energy = 1.6
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tyom5"]
 shader = ExtResource("2_g32fl")
-shader_parameter/Pixelation_Amount = 256.0
+shader_parameter/Pixelation_Amount = 350.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0e6f"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujybd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mocg1"]
 render_priority = 0
 shader = ExtResource("2_2m2qn")
-shader_parameter/albedo_texture = ExtResource("9_pxiwg")
 shader_parameter/animated = null
 shader_parameter/light_bias = null
-shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/light_tint = Color(0.262745, 0.262745, 0.262745, 1)
 shader_parameter/metallic = null
 shader_parameter/normal_bias = null
-shader_parameter/normal_map = ExtResource("10_apcmm")
 shader_parameter/rimlight_blend = null
 shader_parameter/rimlight_color = Color(1, 1, 1, 1)
 shader_parameter/rimlight_size = null
@@ -47,8 +49,8 @@ shader_parameter/shadow_color = null
 shader_parameter/shadow_extra_intensity = null
 shader_parameter/shadow_size = null
 shader_parameter/time_scale = null
-shader_parameter/tint = Color(0.686275, 1, 0.847059, 1)
-shader_parameter/use_normalmap = true
+shader_parameter/tint = Color(0.67451, 1, 0.611765, 1)
+shader_parameter/use_normalmap = null
 shader_parameter/use_view = null
 shader_parameter/view_bias = null
 shader_parameter/view_multiplier = null
@@ -59,17 +61,17 @@ shader_parameter/view_multiplier = null
 environment = SubResource("Environment_ujh50")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.979693, 0.143476, -0.140055, -0.0109804, 0.73587, 0.677033, 0.200201, -0.661747, 0.722503, 11.8047, 38.8136, 36.3662)
-fov = 52.3883
+transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 31.9638, 38.8136, 20.4819)
+fov = 36.7416
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera3D"]
+[node name="Pixelation" type="Sprite2D" parent="Camera3D"]
 material = SubResource("ShaderMaterial_tyom5")
 position = Vector2(960.5, 542)
 scale = Vector2(15.0078, 8.40625)
 texture = ExtResource("3_ia1mj")
 
 [node name="villageporch" parent="." instance=ExtResource("7_mrn34")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.1013, -0.137985, 29.6311)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.0388789, 1)
 
 [node name="VillageHouseGreen" parent="villageporch" instance=ExtResource("1_eln33")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13644, 2.46336, -0.200328)
@@ -87,10 +89,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0882, 0, -0.723562)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00185752, 0, -1.12904)
 
 [node name="villageporch2" parent="." instance=ExtResource("7_mrn34")]
-transform = Transform3D(0.453462, 0, -0.891276, 0, 1, 0, 0.891276, 0, 0.453462, 41.4507, 7.59463, -13.0518)
+transform = Transform3D(0.783704, 0, 0.621134, 0, 1, 0, -0.621134, 0, 0.783704, 1, 9.42956, -35.234)
 
 [node name="VillageHouseGreen" parent="villageporch2" instance=ExtResource("1_eln33")]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, 3.13644, 2.46336, -0.200327)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13644, 2.46336, -0.200328)
 
 [node name="Crate" parent="villageporch2/VillageHouseGreen" instance=ExtResource("6_r3p86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70866, -0.0767541, -1.31783)
@@ -104,16 +106,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0882, 0, -0.723562)
 [node name="Crate2" parent="villageporch2/VillageHouseGreen/Crate" instance=ExtResource("6_r3p86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00185752, 0, -1.12904)
 
-[node name="GroundVillageTest1" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.1, 0, 0, 0, 2.77233, 0, 0, 0, 2, 93.1541, 0, 0)
-mesh = ExtResource("7_kdioi")
-surface_material_override/0 = SubResource("ShaderMaterial_q0e6f")
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ujybd")
+surface_material_override/0 = SubResource("ShaderMaterial_mocg1")
 
-[node name="VillageHouseGreen3" parent="." instance=ExtResource("1_eln33")]
-transform = Transform3D(0.643576, 0, 0.765382, 0, 1, 0, -0.765382, 0, 0.643576, 1.35361, -0.0681152, -12.8685)
+[node name="smalltree" parent="." instance=ExtResource("8_w4f88")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.9527, 0.192469, 5.3253)
 
-[node name="VillageHouseGreen6" parent="." instance=ExtResource("1_eln33")]
-transform = Transform3D(0.0959847, 0, 0.995383, 0, 1, 0, -0.995383, 0, 0.0959847, -1.56179, -0.0681152, -1.64031)
+[node name="smalltree2" parent="." instance=ExtResource("8_w4f88")]
+transform = Transform3D(3.52184, 0, 1.89648, 0, 4, 0, -1.89648, 0, 3.52184, -17.214, 0.192469, -10.4272)
 
-[node name="VillageHouseGreen5" parent="." instance=ExtResource("1_eln33")]
-transform = Transform3D(0.684611, 0, -0.728909, 0, 1, 0, 0.728909, 0, 0.684611, 16.8512, 0.17669, -11.6869)
+[node name="smalltree5" parent="." instance=ExtResource("8_w4f88")]
+transform = Transform3D(3.52184, 0, 1.89648, 0, 4, 0, -1.89648, 0, 3.52184, -17.214, 0.192469, -27.9742)
+
+[node name="smalltree3" parent="." instance=ExtResource("8_w4f88")]
+transform = Transform3D(2.64138, 0, 1.42236, 0, 3, 0, -1.42236, 0, 2.64138, -8.35896, -0.341732, -12.8972)
+
+[node name="smalltree4" parent="." instance=ExtResource("8_w4f88")]
+transform = Transform3D(-0.25619, 0, 4.99343, 0, 5, 0, -4.99343, 0, -0.25619, -29.2347, -0.341732, -6.35579)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.980532, 0.160901, 0.112553, 0.194369, 0.876741, 0.439939, -0.0278929, 0.453251, -0.890946, 13.1257, 11.4182, 0)
+
+[node name="smallrock" parent="." instance=ExtResource("9_q35t0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.8127, 0, 2.29597)
+
+[node name="smallrock2" parent="." instance=ExtResource("9_q35t0")]
+transform = Transform3D(1.58727, 0, -2.5457, 0, 5, 0, 2.5457, 0, 1.58727, -10.3264, 0, 0.132565)
+
+[node name="smalltreedarkercolor" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 3, -21.079, -9.53674e-07, 0.0464401)
+
+[node name="smalltreedarkercolor2" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 3, -18.781, -9.53674e-07, -17.0692)
+
+[node name="smalltreedarkercolor4" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 3, -7.35201, 9.17356, -31.1316)
+
+[node name="smalltreedarkercolor3" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(4, 0, 0, 0, 5.333, 0, 0, 0, 4, -30.8244, -9.53674e-07, -15.2724)
+
+[node name="smalltreedarkercolor5" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(4, 0, 0, 0, 5.333, 0, 0, 0, 4, -22.3172, -9.53674e-07, -36.1376)
+
+[node name="woodplank" parent="." instance=ExtResource("11_23cxe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.89, 0, -2.88501)
+
+[node name="woodplank2" parent="woodplank" instance=ExtResource("11_23cxe")]
+transform = Transform3D(0.981922, 0, 0.189284, 0, 1, 0, -0.189284, 0, 0.981922, 0.095531, 0, 2.16286)
+
+[node name="woodplank3" parent="woodplank/woodplank2" instance=ExtResource("11_23cxe")]
+transform = Transform3D(0.980574, 0, 0.196151, 0, 1, 0, -0.196151, 0, 0.980574, 0.126535, 0, 2.10717)
+
+[node name="landbump" parent="." instance=ExtResource("12_e1n4y")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -37.0061)
