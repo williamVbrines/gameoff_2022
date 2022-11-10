@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://cnvjktnuwa6ni"]
+[gd_scene load_steps=34 format=3 uid="uid://cnvjktnuwa6ni"]
 
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_v6ur4"]
 [ext_resource type="Texture2D" uid="uid://cisgxwxj5w5h4" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_bj56h"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
 [ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="6_cgnqo"]
+[ext_resource type="PackedScene" uid="uid://bhcfyawh66n7t" path="res://scenes/ui/explorationHUD/exploration_hud.tscn" id="6_gw26p"]
 [ext_resource type="PackedScene" uid="uid://dpm7ebubyc0vf" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
 [ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="6_xjnsc"]
 [ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="7_1anla"]
@@ -217,6 +218,10 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("5_un27h")]
 
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
+
+[node name="ExplorationHUD" parent="." instance=ExtResource("6_gw26p")]
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NPC" type="Node3D" parent="."]
 transform = Transform3D(0.887815, 0, 0.4602, 0, 1, 0, -0.4602, 0, 0.887815, -3.86354, 0, 0.020031)

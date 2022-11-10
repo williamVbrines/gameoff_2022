@@ -4,22 +4,37 @@ var queue = [0,0,0,0,0,0,0,0,0,0,]
 var player_index = 0;
 var enemy_index = 1;
 
+
 func _ready() -> void:
-	player_index = min(queue.size()-1, player_index);
+	hide();
+	
+	queue = [0,0,0,0,0,0,0,0,0,0,]
+	
+	player_index = 0;
 	queue[player_index] = 1;
 	
-	enemy_index = min(queue.size()-1, enemy_index);
+	enemy_index = 1;
 	queue[enemy_index] = 2;
 	
 	set_text(str(queue).replace("1", "P").replace("2", "N"));
 	
+	_make_connections();
+	
+	
+func _make_connections():
 	EventManager.change_battel_queue.connect(_on_change_queue)
 
-	EventManager.start_combat.connect(_on_start_combat);
+	EventManager.start_combat.connect(_on_combat_started);
 	EventManager.combat_state_changed.connect(_on_combat_state_changed)
+	EventManager.start_exploration.connect(_on_exploration_started);
 	
 	
-func _on_start_combat(_with : String , _cam : Camera3D , ) : pass
+func _on_exploration_started() -> void:
+	hide();
+	
+	
+func _on_combat_started(_with : String , _cam : Camera3D , ) : 
+	show();
 	
 	
 func _on_combat_state_changed(state: String): 
@@ -31,6 +46,8 @@ func _on_combat_state_changed(state: String):
 			_check_queue();
 		"ADJUST_Q":
 			_adjust_queue();
+		"SHUTTING_DOWN_COMBAT":
+			hide();
 	
 	
 func _adjust_queue() -> void:
@@ -52,6 +69,7 @@ func _adjust_queue() -> void:
 
 	EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
+	
 func _check_queue() ->void: 
 	
 	await(get_tree().create_timer(0.5).timeout)#TO:DO Remove later
@@ -60,15 +78,15 @@ func _check_queue() ->void:
 		1: EventManager.call_deferred("emit_signal", "combat_state_changed","PLAYER_TURN");
 		2: EventManager.call_deferred("emit_signal", "combat_state_changed","NPC_TURN");
 		_:EventManager.call_deferred("emit_signal", "combat_state_changed","ERROR");
-		
+	
+	
 func _set_up()->void:
-	queue = [0,0,0,0,0,0,1,0,0,2,]
+	queue = [1,2,0,0,0,0,0,0,0,0,]
 	player_index = 6;
 	enemy_index = 10;
 	set_text(str(queue).replace("1", "P").replace("2", "N"));
 	show();
 	EventManager.battel_queue_changed.emit(queue);
-	
 	
 	
 func _on_change_queue(entity : String, pos_change : int) -> void:
@@ -107,3 +125,5 @@ func _on_change_queue(entity : String, pos_change : int) -> void:
 	set_text(str(queue).replace("1", "P").replace("2", "N"));
 	
 	EventManager.battel_queue_changed.emit(queue);
+	
+	

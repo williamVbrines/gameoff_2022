@@ -1,11 +1,12 @@
 Button
+VBoxContainer
+Panel
 Label
 InteractableArea3D (interactableArea3D.gd)
 Node3D
 Node
 LineEdit
 Control
-VBoxContainer
 ColorRect
 Camera3D
 CollisionShape3D

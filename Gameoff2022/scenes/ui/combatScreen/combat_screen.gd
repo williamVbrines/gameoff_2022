@@ -48,11 +48,7 @@ func _on_attacked(target : String,data : Dictionary, _sender)->void:
 	if target.to_upper() != "PLAYER": return;
 	
 	var damage = data.amt;
-	
-#	if damage_dist.has(data.type):
-#		damage *= damage_dist.get(data.type);
-#		damage += damage_dist.get(data.type + "_f");
-#
+
 	damage = max(0,damage);
 
 	annoyance += damage;
