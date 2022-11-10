@@ -1,18 +1,23 @@
 extends Button
+
 @export var dialog : String = "";
 var opponent : String = "";
 
 func _ready() -> void:
+	set_text("Disengage");
+	_make_connections();
+	
+func _make_connections() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
 	pressed.connect(_on_pressed);
 	
+		
 func _on_start_combat(with : String, _cam : Camera3D) -> void:
 	opponent = with;
-	set_text("Disengage");
 	
 	
 func _on_pressed() -> void:
-	disabled == true;
+	disabled = true;
 	_on_flee();
 	
 	

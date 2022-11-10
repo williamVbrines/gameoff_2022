@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ddyn60ihbkusw"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/items/godteir_test_item_data.gd" id="1_bjo1c"]
+
+[resource]
+script = ExtResource("1_bjo1c")
+discrtiption = "A simpel pebble. You feel it has an epic past."
+cost = 1
+dialog_pool = null

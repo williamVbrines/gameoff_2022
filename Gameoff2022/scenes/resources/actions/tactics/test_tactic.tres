@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_pv1fd")
 stat = 0
-ratting = 1
+ratting = 60
 variance = 0
 discrtiption = "This is a test"
 cost = 1.0

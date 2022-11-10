@@ -1,15 +1,13 @@
 extends PlayerActionData
 class_name ItemData
 
-func activate_effect() -> void:
+func activate_effect(_opponent : String) -> void:
 	pass
 	
 	
 #Override
 func gen_label() -> String:
-	var text : String = "[";
-	
-	text += " ,Cost: " + str(cost) + "] " + discrtiption;
+	var text : String = "[" + "Cost: " + str(cost) + "] " + discrtiption;
 	
 	return text;
 

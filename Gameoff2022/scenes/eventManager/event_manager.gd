@@ -6,6 +6,7 @@ signal start_exploration();
 signal combat_state_changed(state : String);
 
 #Player and NPC action
+#TODO: Determin if sender is nessesary
 signal attack(target : String, data : Dictionary, sender);
 #Player Action
 signal disengage(dialog : String);

@@ -19,7 +19,7 @@ func _ready() -> void:
 	EventManager.combat_state_changed.connect(_on_combat_state_changed)
 	
 	
-func _on_start_combat(with : String , cam : Camera3D , ) : pass
+func _on_start_combat(_with : String , _cam : Camera3D , ) : pass
 	
 	
 func _on_combat_state_changed(state: String): 
@@ -50,21 +50,26 @@ func _adjust_queue() -> void:
 		elif queue[index] == 2:
 			_on_change_queue("NPC", pos);
 
-	EventManager.combat_state_changed.emit("CHECK_Q");
+	EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
 func _check_queue() ->void: 
+	
+	await(get_tree().create_timer(0.5).timeout)#TO:DO Remove later
 	match queue[0]:
-		0: EventManager.combat_state_changed.emit("ADJUST_Q");
-		1: EventManager.combat_state_changed.emit("PLAYER_TURN");
-		2: EventManager.combat_state_changed.emit("NPC_TURN");
-		_:EventManager.combat_state_changed.emit("ERROR");
+		0: EventManager.call_deferred("emit_signal", "combat_state_changed","ADJUST_Q");
+		1: EventManager.call_deferred("emit_signal", "combat_state_changed","PLAYER_TURN");
+		2: EventManager.call_deferred("emit_signal", "combat_state_changed","NPC_TURN");
+		_:EventManager.call_deferred("emit_signal", "combat_state_changed","ERROR");
 		
 func _set_up()->void:
 	queue = [0,0,0,0,0,0,1,0,0,2,]
 	player_index = 6;
 	enemy_index = 10;
 	set_text(str(queue).replace("1", "P").replace("2", "N"));
+	show();
 	EventManager.battel_queue_changed.emit(queue);
+	
+	
 	
 func _on_change_queue(entity : String, pos_change : int) -> void:
 	var place = -1;

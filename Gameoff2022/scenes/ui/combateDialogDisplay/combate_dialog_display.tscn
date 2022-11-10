@@ -13,8 +13,13 @@ script = ExtResource("1_1g1sp")
 
 [node name="Text" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 300.0
+offset_top = 975.0
+offset_right = 1604.0
+offset_bottom = 1020.0
+theme_override_font_sizes/font_size = 30
+text = "NOTHING"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

@@ -74,13 +74,13 @@ func _on_combat_state_changed(state : String) -> void:
 			
 	
 func _check_if_persuaded() -> void:
-	if persuasion == 100:
-		EventManager.combat_state_changed.emit("WIN");
+	if persuasion >= 100:
+		EventManager.call_deferred("emit_signal", "combat_state_changed","WIN");
 	else:
-		EventManager.combat_state_changed.emit("CHECK_Q");
+		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
 	
-func _on_attacked(target : String,data : Dictionary, sender)->void:
+func _on_attacked(target : String,data : Dictionary, _sender)->void:
 	if target == name:
 		var damage = data.amt;
 		
@@ -95,12 +95,9 @@ func _on_attacked(target : String,data : Dictionary, sender)->void:
 			guard_stack -= 1;
 			
 		persuasion += damage;
-		print(persuasion);
 		
 		EventManager.persuasion_changed.emit(persuasion);
-
-#		EventManager.change_battel_queue.emit("PLAYER", data.cost)
-
+		
 		EventManager.display_dialog.emit("PLAYER",data);
 	
 	

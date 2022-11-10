@@ -14,6 +14,16 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scenes/resources/actions/items/clues/clue_data.gd"
 }, {
+"base": "ClueData",
+"class": &"EpicClassClue",
+"language": &"GDScript",
+"path": "res://scenes/resources/actions/items/clues/epicclasss_test_clue.gd"
+}, {
+"base": "ItemData",
+"class": &"GODTeirItem",
+"language": &"GDScript",
+"path": "res://scenes/resources/actions/items/godteir_test_item_data.gd"
+}, {
 "base": "Area3D",
 "class": &"InteractableArea3D",
 "language": &"GDScript",
@@ -51,6 +61,8 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "ClueData": "",
+"EpicClassClue": "",
+"GODTeirItem": "",
 "InteractableArea3D": "",
 "ItemData": "",
 "NPC": "",
@@ -70,6 +82,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventManager="*res://scenes/eventManager/event_manager.gd"
+SystemGlobals="*res://scenes/systemGlobals/system_globals.gd"
 
 [display]
 

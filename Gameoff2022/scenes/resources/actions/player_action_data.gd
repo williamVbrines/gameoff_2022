@@ -16,7 +16,6 @@ const INTIMIDATION = 3;
 func get_amount(stat_val : float = 0.0) -> float: return stat_val;
 	
 	
-	
 func get_dialog() -> String:
 	if dialog_pool.size() == 0: return "";
 	return dialog_pool[randi() % dialog_pool.size()];

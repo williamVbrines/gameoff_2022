@@ -9,6 +9,7 @@ var temp_actor : String = "";
 
 func _ready() -> void:
 	make_connections();
+	hide();
 
 func make_connections()->void:
 	EventManager.disengage.connect(_on_disengage);
@@ -25,10 +26,12 @@ func _on_disengage(dialog : String) -> void:
 func _on_display_dialog(actor : String,  data : Dictionary):
 	show();
 	
-	EventManager.combat_state_changed.emit("IN_DILOG");
+	EventManager.combat_state_changed.emit("IN_DIALOG");
 	in_dialog = true;
 	temp_data = data;
 	temp_actor = actor;
+	
+	text_label.text = temp_data.dialog if temp_data.dialog != "" else "NOTHING";
 	
 func _on_dialog_exit() -> void:
 	hide();
@@ -36,13 +39,14 @@ func _on_dialog_exit() -> void:
 	in_dialog = false;
 	
 	if disengageing:
-		EventManager.combat_state_changed.emit("SHUTTING_DOWN_COMBAT");
+		EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");
+		disengageing = false;
 	else:
 		EventManager.change_battel_queue.emit(temp_actor, temp_data.cost)
 		if temp_actor.to_upper() == "PLAYER":
-			EventManager.combat_state_changed.emit("CHECK_WIN");
+			EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_WIN");
 		else :
-			EventManager.combat_state_changed.emit("CHECK_LOSS");
+			EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_LOSS");
 
 
 func _on_button_pressed() -> void:

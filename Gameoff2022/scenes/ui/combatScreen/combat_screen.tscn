@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpm7ebubyc0vf"]
+[gd_scene load_steps=7 format=3 uid="uid://dpm7ebubyc0vf"]
 
 [ext_resource type="Script" path="res://scenes/ui/combatScreen/combat_screen.gd" id="1_l1agn"]
 [ext_resource type="PackedScene" uid="uid://d21sy6nj67q6l" path="res://scenes/ui/battelQueue/battel_queue.tscn" id="2_chdcx"]
 [ext_resource type="PackedScene" uid="uid://bfdd5v0qqs58a" path="res://scenes/ui/persuasionDisplay/persuasion_display.tscn" id="2_jfxs6"]
 [ext_resource type="PackedScene" uid="uid://71j1khq8u4ub" path="res://scenes/ui/annoyanceDisplay/annoyance_display.tscn" id="2_vherf"]
-[ext_resource type="Script" path="res://scenes/ui/combatScreen/tactic_button.gd" id="5_r3w0m"]
-[ext_resource type="Resource" uid="uid://blnj50581scqy" path="res://scenes/resources/actions/tactics/test_tactic.tres" id="6_h588x"]
-[ext_resource type="Script" path="res://scenes/ui/combatScreen/flee_button.gd" id="7_mddvf"]
+[ext_resource type="PackedScene" uid="uid://2i3wwm5xjrws" path="res://scenes/ui/combatActionSelection/combat_action_selection.tscn" id="6_s7td5"]
 [ext_resource type="PackedScene" uid="uid://doxlpksqfs6jj" path="res://scenes/ui/combateDialogDisplay/combate_dialog_display.tscn" id="8_b2fph"]
 
 [node name="CombatScreen" type="Control"]
@@ -19,7 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_l1agn")
 
 [node name="UI" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,65 +25,32 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CombateDialogDisplay" parent="UI" instance=ExtResource("8_b2fph")]
-layout_mode = 1
 
 [node name="PersuasionDisplay" parent="UI" instance=ExtResource("2_jfxs6")]
-layout_mode = 0
 offset_left = 1490.0
 offset_top = 24.0
 offset_right = 1835.0
 offset_bottom = 92.0
 
 [node name="AnnoyanceDisplay" parent="UI" instance=ExtResource("2_vherf")]
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 345.0
 offset_bottom = 68.0
 
 [node name="BattelQueue" parent="UI" instance=ExtResource("2_chdcx")]
-layout_mode = 0
 offset_left = 810.0
 offset_top = 25.0
 offset_right = 1155.0
 offset_bottom = 82.0
 
-[node name="AttackComand" type="LineEdit" parent="UI"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -61.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 38
-placeholder_text = "Enter attack data"
-
-[node name="TacticButton" type="Button" parent="UI/AttackComand"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -123.0
-offset_right = 152.0
-offset_bottom = -73.0
-theme_override_font_sizes/font_size = 30
-text = "NOTHING"
-script = ExtResource("5_r3w0m")
-tactic = ExtResource("6_h588x")
-
-[node name="DisengageButton" type="Button" parent="UI/AttackComand"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -58.0
-offset_right = 158.0
-offset_bottom = -8.0
-theme_override_font_sizes/font_size = 30
-text = "Disengage"
-script = ExtResource("7_mddvf")
+[node name="CombatActionSelection" parent="UI" instance=ExtResource("6_s7td5")]
+offset_left = 3.0
+offset_top = 771.0
+offset_right = 3.0
+offset_bottom = 771.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

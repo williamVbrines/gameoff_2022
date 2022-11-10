@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://2i3wwm5xjrws"]
+
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/taticAction/tactic_action.gd" id="1_cu8ky"]
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/clueAction/clue_action.gd" id="1_dx3sj"]
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/combat_action_selection.gd" id="1_g6d5b"]
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/itemAction/item_action.gd" id="2_5rtyd"]
+[ext_resource type="Resource" uid="uid://blnj50581scqy" path="res://scenes/resources/actions/tactics/test_tactic.tres" id="2_68j3m"]
+[ext_resource type="Resource" uid="uid://cmiijlqwn1yyk" path="res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres" id="2_rne88"]
+[ext_resource type="Resource" uid="uid://ddyn60ihbkusw" path="res://scenes/resources/actions/items/rock_item.tres" id="3_8yrk3"]
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd" id="3_tad11"]
+
+[node name="CombatActionSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g6d5b")
+
+[node name="ClueButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 30
+text = "NOTHING"
+script = ExtResource("1_dx3sj")
+data = ExtResource("2_rne88")
+
+[node name="ItemButton" type="Button" parent="."]
+offset_top = 60.0
+offset_right = 155.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 30
+text = "NOTHING"
+script = ExtResource("2_5rtyd")
+data = ExtResource("3_8yrk3")
+
+[node name="TacticButton" type="Button" parent="."]
+offset_top = 120.0
+offset_right = 151.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 30
+text = "NOTHING"
+script = ExtResource("1_cu8ky")
+data = ExtResource("2_68j3m")
+
+[node name="DisengageButton" type="Button" parent="."]
+offset_top = 180.0
+offset_right = 157.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 30
+text = "Disengage"
+script = ExtResource("3_tad11")

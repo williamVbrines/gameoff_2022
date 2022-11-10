@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cmiijlqwn1yyk"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/items/clues/epicclasss_test_clue.gd" id="1_hdumc"]
+
+[resource]
+script = ExtResource("1_hdumc")
+discrtiption = "a spy glass. "
+cost = 1
+dialog_pool = ["Hes just an actor"]
