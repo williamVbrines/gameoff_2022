@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://djbmdy8nxh17b"]
+[gd_scene load_steps=29 format=3 uid="uid://u4547vsikfon"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://bnff6pafaf1e6" path="res://modles/woodpost.tscn" id="13_tjw8x"]
 [ext_resource type="PackedScene" uid="uid://bxk526ikuqwq" path="res://modles/pumpkin.tscn" id="14_60j31"]
 [ext_resource type="Shader" uid="uid://dk6q2e0vkitc8" path="res://shaders/water.tres" id="15_fo0cu"]
+[ext_resource type="PackedScene" uid="uid://ddnu2xd4xodou" path="res://modles/boat.tscn" id="17_net1d"]
+[ext_resource type="PackedScene" uid="uid://c7rfbbdj0tkqk" path="res://modles/dock.tscn" id="17_rjdcf"]
+[ext_resource type="PackedScene" uid="uid://pgiirmgenq8c" path="res://modles/stool.tscn" id="18_yee3b"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
 panorama = ExtResource("1_fjwfa")
@@ -83,7 +86,7 @@ shader_parameter/view_bias = null
 shader_parameter/view_multiplier = null
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mfalq"]
-size = Vector2(10, 10)
+size = Vector2(20, 20)
 subdivide_width = 20
 subdivide_depth = 20
 
@@ -98,7 +101,7 @@ shader_parameter/ColorParameter = null
 environment = SubResource("Environment_ujh50")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 31.9638, 38.8136, 20.4819)
+transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 38.8651, 38.8136, 33.5533)
 visible = false
 fov = 36.7416
 
@@ -238,6 +241,30 @@ transform = Transform3D(0.642574, 0, 0.766224, 0, 1, 0, -0.766224, 0, 0.642574, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27642, 0.708117, 1.32503)
 
 [node name="Waterplane" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3686, 0.113008, 10.66)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05199, 0.113008, 26.6068)
 mesh = SubResource("PlaneMesh_mfalq")
 surface_material_override/0 = SubResource("ShaderMaterial_koqwv")
+
+[node name="Dock" parent="." instance=ExtResource("17_rjdcf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.40138, -1.42942, 20.625)
+
+[node name="Dock2" parent="." instance=ExtResource("17_rjdcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4137, -1.42942, 18.4986)
+
+[node name="Boat" parent="." instance=ExtResource("17_net1d")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 8.43759, 0.163748, 23.1684)
+
+[node name="Boat2" parent="." instance=ExtResource("17_net1d")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 11.877, 0.163748, 23.1684)
+
+[node name="Crate" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54455, 1.41099, 24.4516)
+
+[node name="Crate2" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(0.964058, 0, -0.265691, 0, 1, 0, 0.265691, 0, 0.964058, 4.54455, 1.41099, 23.3003)
+
+[node name="Crate3" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(0.883316, 0, 0.468778, 0, 1, 0, -0.468778, 0, 0.883316, 4.54455, 2.39264, 23.8209)
+
+[node name="stool" parent="." instance=ExtResource("18_yee3b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.5734, 1.44819, 18.2838)
