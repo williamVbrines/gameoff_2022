@@ -18,6 +18,11 @@ var disabled = false;
 
 func _ready() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
+	EventManager.start_exploration.connect(_on_start_exploration);
+	
+func _on_start_exploration() -> void:
+	camera.set_current(true);
+	disabled = false;
 	
 func _on_start_combat(with : String, cmaera : Camera3D) -> void:
 	disabled = true;

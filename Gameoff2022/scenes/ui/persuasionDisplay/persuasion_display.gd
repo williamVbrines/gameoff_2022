@@ -3,11 +3,10 @@ extends Label
 var persuasion : float = 0;
 
 func _ready() -> void:
-	EventManager.change_persuasion.connect(_on_change_persuasion);
+	EventManager.persuasion_changed.connect(_on_persuasion_changed);
 	
-func _on_change_persuasion(val : float) -> void:
+func _on_persuasion_changed(val : float) -> void:
 	persuasion = min(100, max(0, val));
 	
-	set_text("Persuasion : " + str(persuasion));
-	
-	EventManager.persuasion_changed.emit(persuasion);
+	set_text("Persuasion : " + str(persuasion) + "%");
+

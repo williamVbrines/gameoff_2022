@@ -51,14 +51,18 @@ func _init() -> void:
 	
 	
 func _make_connections() -> void:
-	EventManager.attack.connect(_on_attack);
+	EventManager.attack.connect(_on_attacked);
 	EventManager.combat_state_changed.connect(_on_combat_state_changed);
 	EventManager.start_combat.connect(_on_start_combat);
+	EventManager.start_exploration.connect(_on_start_exploration);
 	
+func _on_start_exploration() -> void:
+	selected = false;
 	
 func _on_start_combat(with : String , _cam : Camera3D) -> void:
 	selected = with == name;
-	
+	persuasion = 0;
+	EventManager.persuasion_changed.emit(persuasion);
 	
 func _on_combat_state_changed(state : String) -> void:
 	if selected:
@@ -67,7 +71,7 @@ func _on_combat_state_changed(state : String) -> void:
 				_select_action();
 			"CHECK_WIN":
 				_check_if_persuaded();
-	
+			
 	
 func _check_if_persuaded() -> void:
 	if persuasion == 100:
@@ -76,7 +80,7 @@ func _check_if_persuaded() -> void:
 		EventManager.combat_state_changed.emit("CHECK_Q");
 	
 	
-func _on_attack(target : String,data : Dictionary, sender)->void:
+func _on_attacked(target : String,data : Dictionary, sender)->void:
 	if target == name:
 		var damage = data.amt;
 		
@@ -91,24 +95,25 @@ func _on_attack(target : String,data : Dictionary, sender)->void:
 			guard_stack -= 1;
 			
 		persuasion += damage;
+		print(persuasion);
 		
 		EventManager.persuasion_changed.emit(persuasion);
 
-		EventManager.change_battel_queue.emit("PLAYER", data.cost)
-		
-		EventManager.combat_state_changed.emit("CHECK_WIN")
+#		EventManager.change_battel_queue.emit("PLAYER", data.cost)
+
+		EventManager.display_dialog.emit("PLAYER",data);
 	
 	
 func _select_action() -> void:
 	EventManager.combat_state_changed.emit("NPC_ACTION_RESOLVE");
-	var action = tatics.get_action(persuasion,0,0, guard_stack);
+	var action = tatics.get_action(persuasion,0.0, guard_stack);
 	
 	match action:
-		0:
+		NPCTactics.HEAL:
 			heal();
-		1:
+		NPCTactics.GUARD:
 			guard();
-		2:
+		NPCTactics.ATTACK:
 			attack();
 	
 	

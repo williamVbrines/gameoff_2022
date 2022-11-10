@@ -1,12 +1,13 @@
-[gd_scene load_steps=32 format=3 uid="uid://cnvjktnuwa6ni"]
+[gd_scene load_steps=33 format=3 uid="uid://cnvjktnuwa6ni"]
 
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_v6ur4"]
 [ext_resource type="Texture2D" uid="uid://cisgxwxj5w5h4" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_bj56h"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
 [ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="6_cgnqo"]
-[ext_resource type="PackedScene" uid="uid://dkrvdhjdx56xh" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
+[ext_resource type="PackedScene" uid="uid://dpm7ebubyc0vf" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
 [ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="6_xjnsc"]
 [ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="7_1anla"]
+[ext_resource type="Resource" uid="uid://cc8sl1bonoce0" path="res://scenes/resources/npc/test_npc_resource.tres" id="7_m3g4v"]
 [ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="8_ngpto"]
 [ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="9_cdgjy"]
 [ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="10_pcumj"]
@@ -218,7 +219,12 @@ shadow_enabled = true
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
 
 [node name="NPC" type="Node3D" parent="."]
+transform = Transform3D(0.887815, 0, 0.4602, 0, 1, 0, -0.4602, 0, 0.887815, -3.86354, 0, 0.020031)
 script = ExtResource("6_xjnsc")
+npc_res = ExtResource("7_m3g4v")
+npc_mesh = NodePath("NpcMesh")
+interactable_area = NodePath("InteractableArea3D")
+camera = NodePath("Camera")
 
 [node name="InteractableArea3D" type="Area3D" parent="NPC"]
 collision_layer = 4

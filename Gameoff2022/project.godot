@@ -9,10 +9,20 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "ItemData",
+"class": &"ClueData",
+"language": &"GDScript",
+"path": "res://scenes/resources/actions/items/clues/clue_data.gd"
+}, {
 "base": "Area3D",
 "class": &"InteractableArea3D",
 "language": &"GDScript",
 "path": "res://scenes/interactableArea3D/interactableArea3D.gd"
+}, {
+"base": "PlayerActionData",
+"class": &"ItemData",
+"language": &"GDScript",
+"path": "res://scenes/resources/actions/items/item_data.gd"
 }, {
 "base": "Node3D",
 "class": &"NPC",
@@ -30,15 +40,23 @@ _global_script_classes=[{
 "path": "res://scenes/resources/npc/npc_tactics_resource.gd"
 }, {
 "base": "Resource",
+"class": &"PlayerActionData",
+"language": &"GDScript",
+"path": "res://scenes/resources/actions/player_action_data.gd"
+}, {
+"base": "PlayerActionData",
 "class": &"TacticsData",
 "language": &"GDScript",
-"path": "res://scenes/resources/tactics/tactics_data.gd"
+"path": "res://scenes/resources/actions/tactics/tactics_data.gd"
 }]
 _global_script_class_icons={
+"ClueData": "",
 "InteractableArea3D": "",
+"ItemData": "",
 "NPC": "",
 "NPCData": "",
 "NPCTactics": "",
+"PlayerActionData": "",
 "TacticsData": ""
 }
 

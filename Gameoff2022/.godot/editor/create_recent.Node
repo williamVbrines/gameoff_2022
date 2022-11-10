@@ -1,10 +1,10 @@
+Label
+Button
 InteractableArea3D (interactableArea3D.gd)
 Node3D
 Node
-Label
 LineEdit
 Control
-Button
 VBoxContainer
 ColorRect
 Camera3D

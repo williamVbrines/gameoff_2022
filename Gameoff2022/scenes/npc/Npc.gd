@@ -25,6 +25,10 @@ func _make_connections() -> void:
 	interactable_area.area_hovered.connect(_hovered);
 	interactable_area.area_pressed.connect(_on_pressed);
 	
+	EventManager.start_exploration.connect(_on_start_exploration);
+	
+func _on_start_exploration() -> void:
+	selected = false;
 	
 func _hovered()->void:
 	npc_mesh.get_active_material(0).get("next_pass").set("shader_parameter/str",0.3);
