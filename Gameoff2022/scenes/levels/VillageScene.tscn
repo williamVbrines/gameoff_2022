@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://u4547vsikfon"]
+[gd_scene load_steps=32 format=3 uid="uid://u4547vsikfon"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://c7rfbbdj0tkqk" path="res://modles/dock.tscn" id="17_rjdcf"]
 [ext_resource type="PackedScene" uid="uid://pgiirmgenq8c" path="res://modles/stool.tscn" id="18_yee3b"]
 [ext_resource type="PackedScene" uid="uid://d1cxdlb2ns13m" path="res://modles/sandbump.tscn" id="19_mjmfe"]
+[ext_resource type="PackedScene" uid="uid://bifwck4si2ayq" path="res://modles/grasstexture1.tscn" id="20_m5hce"]
+[ext_resource type="PackedScene" uid="uid://b707k3rkcx0dq" path="res://modles/grasstexture2.tscn" id="21_reib2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
 panorama = ExtResource("1_fjwfa")
@@ -293,3 +295,9 @@ transform = Transform3D(-1.31134e-07, 0, -2.99998, 0, 4, 0, 2.99998, 0, -1.31134
 
 [node name="landbump2" parent="." instance=ExtResource("19_mjmfe")]
 transform = Transform3D(6.53499, 0, 0, 0, 1.18834, 0, 0, 0, 5, 30.0351, -0.387468, 34.6637)
+
+[node name="grasstexture1" parent="." instance=ExtResource("20_m5hce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5076, 0.349082, 5.32376)
+
+[node name="grasstexture2" parent="." instance=ExtResource("21_reib2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.67006, 0.376477, 9.02948)

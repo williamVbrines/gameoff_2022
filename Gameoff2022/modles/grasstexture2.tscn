@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b707k3rkcx0dq"]
+
+[ext_resource type="Texture2D" uid="uid://dkp14l008a8m8" path="res://textures/Grass2Texture.png" id="1_icvp8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bsjg1"]
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al2i5"]
+transparency = 1
+albedo_texture = ExtResource("1_icvp8")
+
+[node name="grasstexture1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 1.05, 0.606218, 0, 0.7, -1.21244, -1.21244, 0.606218, 0.35, 0, 0, 0)
+mesh = SubResource("PlaneMesh_bsjg1")
+surface_material_override/0 = SubResource("StandardMaterial3D_al2i5")
