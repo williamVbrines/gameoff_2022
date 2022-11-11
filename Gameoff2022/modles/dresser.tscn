@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cfcuprff715cc" path="res://meshes/DresserMesh.obj" id="1_log1m"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_jfbmd"]
-[ext_resource type="Texture2D" uid="uid://bs7n32125yvb" path="res://Textures/DresserTexture.png" id="3_cs4tw"]
+[ext_resource type="Texture2D" uid="uid://bs7n32125yvb" path="res://textures/DresserTexture.png" id="3_cs4tw"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_6o5qb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fn7w2"]
@@ -18,7 +18,7 @@ shader_parameter/normal_map = ExtResource("4_6o5qb")
 shader_parameter/rimlight_blend = 0.01
 shader_parameter/rimlight_color = Color(1, 1, 1, 1)
 shader_parameter/rimlight_size = 0.921
-shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_blend = 2.0
 shader_parameter/shadow_color = null
 shader_parameter/shadow_extra_intensity = 0.0
 shader_parameter/shadow_size = 0.045

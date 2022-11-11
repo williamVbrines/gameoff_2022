@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqexrarr4tuve"
+path="res://.godot/imported/DockMesh.obj-76c30479fa3f61adc091680638a94438.mesh"
+
+[deps]
+
+files=["res://.godot/imported/DockMesh.obj-76c30479fa3f61adc091680638a94438.mesh"]
+
+source_file="res://meshes/DockMesh.obj"
+dest_files=["res://.godot/imported/DockMesh.obj-76c30479fa3f61adc091680638a94438.mesh", "res://.godot/imported/DockMesh.obj-76c30479fa3f61adc091680638a94438.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

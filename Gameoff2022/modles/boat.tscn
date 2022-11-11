@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddnu2xd4xodou"]
+
+[ext_resource type="ArrayMesh" uid="uid://fa2lpeatwkk3" path="res://meshes/BoatMesh.obj" id="1_dejbi"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_fh63o"]
+[ext_resource type="Texture2D" uid="uid://ced8xnn2i1l3b" path="res://textures/BoatTexture.png" id="3_pe5ag"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_gtrw2"]
+[ext_resource type="Script" path="res://scripts/BoatSway.gd" id="5_l307p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k666a"]
+render_priority = 0
+shader = ExtResource("2_fh63o")
+shader_parameter/albedo_texture = ExtResource("3_pe5ag")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_gtrw2")
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = null
+
+[node name="Boat" type="Node3D"]
+
+[node name="BoatMesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_dejbi")
+surface_material_override/0 = SubResource("ShaderMaterial_k666a")
+
+[node name="BoatMesh2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_dejbi")
+surface_material_override/0 = SubResource("ShaderMaterial_k666a")
+script = ExtResource("5_l307p")

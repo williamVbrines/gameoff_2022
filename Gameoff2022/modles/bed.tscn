@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cae2fadpgr86o" path="res://meshes/BedMesh.obj" id="1_2matk"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_8cjfo"]
-[ext_resource type="Texture2D" uid="uid://b71al1010uojp" path="res://Textures/BedTexture.png" id="3_3628x"]
+[ext_resource type="Texture2D" uid="uid://b71al1010uojp" path="res://textures/BedTexture.png" id="3_3628x"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_olesc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0t1sk"]
@@ -17,8 +17,8 @@ shader_parameter/normal_bias = null
 shader_parameter/normal_map = ExtResource("4_olesc")
 shader_parameter/rimlight_blend = 0.01
 shader_parameter/rimlight_color = Color(1, 1, 1, 1)
-shader_parameter/rimlight_size = 0.921
-shader_parameter/shadow_blend = 0.001
+shader_parameter/rimlight_size = 1.0
+shader_parameter/shadow_blend = 2.0
 shader_parameter/shadow_color = null
 shader_parameter/shadow_extra_intensity = 0.0
 shader_parameter/shadow_size = 0.045
