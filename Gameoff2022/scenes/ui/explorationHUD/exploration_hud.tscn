@@ -13,5 +13,3 @@ grow_vertical = 2
 script = ExtResource("1_200lq")
 
 [node name="LoadoutMenu" parent="." instance=ExtResource("2_stjcu")]
-grow_horizontal = 2
-grow_vertical = 2

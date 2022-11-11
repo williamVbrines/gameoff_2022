@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2nmm1a8ww6c5"]
+
+[ext_resource type="Script" path="res://scenes/ui/loadoutMenu/slot_selection.gd" id="1_7rqoe"]
+
+[node name="SlotSelector" type="Button"]
+offset_left = 299.0
+offset_top = 133.0
+offset_right = 405.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "EMPTY"
+script = ExtResource("1_7rqoe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -84.0
+offset_top = 3.0
+offset_right = 6.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 30
+text = "SLOT: "

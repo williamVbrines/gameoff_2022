@@ -3,7 +3,7 @@ extends Control
 @onready var close_button: Button = $PoupPanel/CloseButton
 @onready var slots_container: VBoxContainer = $PoupPanel/SlotsContainer
 @onready var loadout_button: Button = $ChangeLoadoutButton
-@onready var poup_panel: Panel = $PoupPanel
+@onready var poup_panel: ColorRect = $PoupPanel
 @onready var save_button: Button = $PoupPanel/SaveButton
 
 
@@ -27,4 +27,5 @@ func _on_close_loadout() -> void:
 	
 	
 func _on_save_loadout() -> void:
-	pass
+	for slot in slots_container.get_children():
+		slot.store_data();

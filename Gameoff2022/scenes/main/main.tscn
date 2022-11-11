@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnvjktnuwa6ni"]
+[gd_scene load_steps=5 format=3 uid="uid://cnvjktnuwa6ni"]
 
-[ext_resource type="PackedScene" uid="uid://u4547vsikfon" path="res://scenes/levels/VillageScene.tscn" id="3_mpvhg"]
+[ext_resource type="PackedScene" uid="uid://bhcfyawh66n7t" path="res://scenes/ui/explorationHUD/exploration_hud.tscn" id="1_m1a3i"]
+[ext_resource type="PackedScene" uid="uid://c25dap1wya5s2" path="res://scenes/levels/test_area.tscn" id="3_aogdo"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
 [ext_resource type="PackedScene" uid="uid://dpm7ebubyc0vf" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
 
 [node name="Main" type="Node3D"]
 
-[node name="Village" parent="." instance=ExtResource("3_mpvhg")]
+[node name="ExplorationHUD" parent="." instance=ExtResource("1_m1a3i")]
 
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
 
 [node name="Player" parent="." instance=ExtResource("5_un27h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2537, 1.65703, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58545, 1.65703, 0)
+
+[node name="TestArea" parent="." instance=ExtResource("3_aogdo")]

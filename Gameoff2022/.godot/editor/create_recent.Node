@@ -1,15 +1,17 @@
+Button
+Panel
+PopupMenu
+ColorRect
+Label
+MenuButton
 Node3D
 StaticBody3D
 CollisionShape3D
-Button
 VBoxContainer
-Panel
-Label
 InteractableArea3D (interactableArea3D.gd)
 Node
 LineEdit
 Control
-ColorRect
 Camera3D
 InteractableArea3D (InteractableArea3D.gd)
 MeshInstance3D

@@ -14,43 +14,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_l1agn")
 
 [node name="UI" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="CombateDialogDisplay" parent="UI" instance=ExtResource("8_b2fph")]
+layout_mode = 1
 
 [node name="PersuasionDisplay" parent="UI" instance=ExtResource("2_jfxs6")]
+layout_mode = 0
 offset_left = 1490.0
 offset_top = 24.0
 offset_right = 1835.0
 offset_bottom = 92.0
 
 [node name="AnnoyanceDisplay" parent="UI" instance=ExtResource("2_vherf")]
+layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 345.0
 offset_bottom = 68.0
 
 [node name="BattelQueue" parent="UI" instance=ExtResource("2_chdcx")]
+layout_mode = 0
 offset_left = 810.0
 offset_top = 25.0
 offset_right = 1155.0
 offset_bottom = 82.0
 
 [node name="CombatActionSelection" parent="UI" instance=ExtResource("6_s7td5")]
+layout_mode = 1
 offset_left = 3.0
 offset_top = 771.0
 offset_right = 3.0
 offset_bottom = 771.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

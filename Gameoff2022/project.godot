@@ -83,6 +83,7 @@ config/icon="res://icon.svg"
 
 EventManager="*res://scenes/eventManager/event_manager.gd"
 SystemGlobals="*res://scenes/systemGlobals/system_globals.gd"
+ResourcManager="*res://scenes/resourceManager/resourc_manager.gd"
 
 [display]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu6c17iwu5lee"]
+[gd_scene load_steps=3 format=3 uid="uid://cu6c17iwu5lee"]
 
 [ext_resource type="Script" path="res://scenes/ui/loadoutMenu/loadout_menu.gd" id="1_17bqn"]
+[ext_resource type="PackedScene" uid="uid://b2nmm1a8ww6c5" path="res://scenes/ui/loadoutMenu/slot_selector.tscn" id="2_ism0e"]
 
 [node name="LoadoutMenu" type="Control"]
 layout_mode = 3
@@ -19,28 +20,30 @@ offset_bottom = 50.0
 theme_override_font_sizes/font_size = 30
 text = "Change Loadout"
 
-[node name="PoupPanel" type="Panel" parent="."]
+[node name="PoupPanel" type="ColorRect" parent="."]
 clip_contents = true
 custom_minimum_size = Vector2i(600, 400)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -200.0
-offset_right = 300.0
-offset_bottom = 200.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 623.0
+offset_top = 301.0
+offset_right = 1223.0
+offset_bottom = 701.0
+mouse_filter = 2
+color = Color(0.168627, 0.180392, 0.203922, 1)
 
 [node name="SlotsContainer" type="VBoxContainer" parent="PoupPanel"]
 layout_mode = 0
-offset_left = -660.0
-offset_top = -340.0
-offset_right = -620.0
-offset_bottom = -300.0
+offset_left = 268.0
+offset_top = 57.0
+offset_right = 374.0
+offset_bottom = 107.0
+
+[node name="SlotSelector" parent="PoupPanel/SlotsContainer" instance=ExtResource("2_ism0e")]
+layout_mode = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 106.0
+offset_bottom = 50.0
 
 [node name="CloseButton" type="Button" parent="PoupPanel"]
 layout_mode = 0
