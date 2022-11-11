@@ -1,13 +1,7 @@
-res://scenes/main.tscn
+res://scenes/levels/VillageScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/levels/VillageScene.tscn
-res://scripts/BoatSway.gd
-res://scripts/Canvase3D.gd
-res://scripts/InteractablesTest.gd
-res://scenes/main_menu.gd
-res://scripts/player.gd
-res://modles/boat.tscn
-res://modles/grasstexture1.tscn
-res://modles/grasstexture2.tscn
+res://scenes/main.tscn
+res://modles/trailstraight.tscn
+res://modles/trailsplit.tscn
