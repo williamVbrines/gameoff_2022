@@ -1,14 +1,15 @@
+Node3D
+StaticBody3D
+CollisionShape3D
 Button
 Label
 InteractableArea3D (interactableArea3D.gd)
-Node3D
 Node
 LineEdit
 Control
 VBoxContainer
 ColorRect
 Camera3D
-CollisionShape3D
 InteractableArea3D (InteractableArea3D.gd)
 MeshInstance3D
 SubViewport
@@ -17,7 +18,6 @@ Area3D
 InteractableArea3D (InteractablesTest.gd)
 RayCast3D
 SpringArm3D
-StaticBody3D
 RigidBody3D
 DirectionalLight3D
 CharacterBody3D
