@@ -1,0 +1,282 @@
+[gd_scene load_steps=30 format=3 uid="uid://u4547vsikfon"]
+
+[ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
+[ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_2m2qn"]
+[ext_resource type="Shader" uid="uid://d6t6aevet6j4" path="res://shaders/Pixelation.tres" id="2_g32fl"]
+[ext_resource type="Texture2D" uid="uid://bye3sl2u4rd7k" path="res://icon.svg" id="3_ia1mj"]
+[ext_resource type="PackedScene" uid="uid://cvkbkuv2ch0jk" path="res://modles/crate.tscn" id="6_r3p86"]
+[ext_resource type="PackedScene" uid="uid://b83liv0gvm2hb" path="res://modles/villageporch.tscn" id="7_mrn34"]
+[ext_resource type="PackedScene" uid="uid://d2088j2i35ij3" path="res://modles/smalltree.tscn" id="8_w4f88"]
+[ext_resource type="PackedScene" uid="uid://dx40fhvq7xq4m" path="res://modles/smallrock.tscn" id="9_q35t0"]
+[ext_resource type="PackedScene" uid="uid://8f54kt0m0nku" path="res://modles/smalltreedarkercolor.tscn" id="10_lj1id"]
+[ext_resource type="PackedScene" uid="uid://bq8jiliucs2l6" path="res://modles/woodplank.tscn" id="11_23cxe"]
+[ext_resource type="PackedScene" uid="uid://cfmnbk2r5ajeh" path="res://modles/landbump.tscn" id="12_e1n4y"]
+[ext_resource type="PackedScene" uid="uid://bnff6pafaf1e6" path="res://modles/woodpost.tscn" id="13_tjw8x"]
+[ext_resource type="PackedScene" uid="uid://bxk526ikuqwq" path="res://modles/pumpkin.tscn" id="14_60j31"]
+[ext_resource type="Shader" uid="uid://dk6q2e0vkitc8" path="res://shaders/water.tres" id="15_fo0cu"]
+[ext_resource type="PackedScene" uid="uid://ddnu2xd4xodou" path="res://modles/boat.tscn" id="17_net1d"]
+[ext_resource type="PackedScene" uid="uid://c7rfbbdj0tkqk" path="res://modles/dock.tscn" id="17_rjdcf"]
+[ext_resource type="PackedScene" uid="uid://pgiirmgenq8c" path="res://modles/stool.tscn" id="18_yee3b"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
+panorama = ExtResource("1_fjwfa")
+
+[sub_resource type="Sky" id="Sky_163l6"]
+sky_material = SubResource("PanoramaSkyMaterial_f8xgp")
+
+[sub_resource type="Environment" id="Environment_ujh50"]
+background_mode = 2
+background_color = Color(0, 1, 0.803922, 1)
+sky = SubResource("Sky_163l6")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 1.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tyom5"]
+shader = ExtResource("2_g32fl")
+shader_parameter/Pixelation_Amount = 350.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eqk65"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpm7w"]
+render_priority = 0
+shader = ExtResource("2_2m2qn")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.741176, 0.14902, 0, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujybd"]
+size = Vector2(200, 200)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mocg1"]
+render_priority = 0
+shader = ExtResource("2_2m2qn")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(0.262745, 0.262745, 0.262745, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.67451, 1, 0.611765, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl8fa"]
+size = Vector3(200, 2, 200)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mfalq"]
+size = Vector2(20, 20)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_koqwv"]
+render_priority = 0
+shader = ExtResource("15_fo0cu")
+shader_parameter/ColorParameter = null
+
+[node name="Village" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ujh50")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.980532, 0.160901, 0.112553, 0.195965, 0.765514, 0.612851, 0.0124477, 0.622976, -0.782142, 13.1257, 11.4182, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 38.8651, 38.8136, 33.5533)
+visible = false
+fov = 36.7416
+
+[node name="Pixelation" type="Sprite2D" parent="Camera3D"]
+material = SubResource("ShaderMaterial_tyom5")
+position = Vector2(960.5, 542)
+scale = Vector2(15.0078, 8.40625)
+texture = ExtResource("3_ia1mj")
+
+[node name="Camera3D Dialogue Example" type="Camera3D" parent="."]
+transform = Transform3D(0.570532, -0.49426, 0.655896, 0.0428637, 0.815463, 0.577219, -0.820156, -0.301208, 0.486434, 32.7558, 15.9238, 14.6983)
+fov = 35.0649
+
+[node name="Pixelation" type="Sprite2D" parent="Camera3D Dialogue Example"]
+material = SubResource("ShaderMaterial_tyom5")
+position = Vector2(960.5, 542)
+scale = Vector2(15.0078, 8.40625)
+texture = ExtResource("3_ia1mj")
+
+[node name="PlayerEx" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.5798, 1.54381, 5.06765)
+mesh = SubResource("CapsuleMesh_eqk65")
+
+[node name="NPCEx" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 15.5798, 1.54381, -1.9335)
+mesh = SubResource("CapsuleMesh_eqk65")
+surface_material_override/0 = SubResource("ShaderMaterial_kpm7w")
+
+[node name="villageporch" parent="." instance=ExtResource("7_mrn34")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -0.0388789, 1)
+
+[node name="VillageHouseGreen" parent="villageporch" instance=ExtResource("1_eln33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13644, 2.46336, -0.200328)
+
+[node name="Crate" parent="villageporch/VillageHouseGreen" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.70866, -0.0767541, -1.31783)
+
+[node name="Crate4" parent="villageporch/VillageHouseGreen/Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.390471, 1.00136, -0.515475)
+
+[node name="Crate3" parent="villageporch/VillageHouseGreen/Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0882, 0, -0.723562)
+
+[node name="Crate2" parent="villageporch/VillageHouseGreen/Crate" instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00185752, 0, -1.12904)
+
+[node name="VillageHouseGreen" parent="." instance=ExtResource("1_eln33")]
+transform = Transform3D(0.175349, 0, 0.984506, 0, 1, 0, -0.984506, 0, 0.175349, 0.805154, 11.6521, -37.1704)
+
+[node name="GroundPlane" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ujybd")
+surface_material_override/0 = SubResource("ShaderMaterial_mocg1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GroundPlane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundPlane/StaticBody3D"]
+shape = SubResource("BoxShape3D_kl8fa")
+
+[node name="SmallTrees" type="Node3D" parent="."]
+
+[node name="smalltree7" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(3.00001, 0, -1.3411e-06, 0, 3, 0, 1.3411e-06, 0, 3.00001, 1.64031, 0.152951, 11.4219)
+
+[node name="smalltree6" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(-0.256189, 0, 4.99345, 0, 5, 0, -4.99345, 0, -0.256189, -23.3523, -0.34173, 18.8443)
+
+[node name="smalltree5" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(3.52185, 0, 1.89647, 0, 4, 0, -1.89647, 0, 3.52185, -17.214, 0.19247, -27.9742)
+
+[node name="smalltree4" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(-0.256178, 0, 4.99343, 0, 5, 0, -4.99343, 0, -0.256178, -29.2347, -0.34173, -6.3558)
+
+[node name="smalltree3" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(2.64139, 0, 1.42236, 0, 2.99999, 0, -1.42236, 0, 2.64139, -8.35892, -0.34173, -12.8972)
+
+[node name="smalltree2" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(3.52185, 0, 1.89648, 0, 3.99999, 0, -1.89648, 0, 3.52185, -17.214, 0.192469, -10.4272)
+
+[node name="smalltree" parent="SmallTrees" instance=ExtResource("8_w4f88")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.9527, 0.192469, 5.3253)
+
+[node name="smallrock" parent="." instance=ExtResource("9_q35t0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -12.8127, 0, 2.29597)
+
+[node name="smallrock2" parent="smallrock" instance=ExtResource("9_q35t0")]
+transform = Transform3D(0.793635, 0, -1.27285, 0, 2.5, 0, 1.27285, 0, 0.793635, 1.24315, 0, -1.0817)
+
+[node name="smallrock3" parent="smallrock/smallrock2" instance=ExtResource("9_q35t0")]
+transform = Transform3D(-0.500635, 0, -0.865659, 0, 1, 0, 0.865659, 0, -0.500635, -0.608141, 0, -4.29532)
+
+[node name="smallrock4" parent="smallrock/smallrock2/smallrock3" instance=ExtResource("9_q35t0")]
+transform = Transform3D(0.0739986, 0, -0.66274, 0, 0.677388, 0, 0.66274, 0, 0.0739986, -1.45506, -0.0663763, -0.235922)
+
+[node name="smallrock5" parent="smallrock/smallrock2/smallrock3/smallrock4" instance=ExtResource("9_q35t0")]
+transform = Transform3D(-0.147921, 0, -1.49225, 0, 1.47626, 0, 1.49225, 0, -0.147921, 0.117869, 0.0979886, -13.1055)
+
+[node name="smalltreedarkercolor" parent="." instance=ExtResource("10_lj1id")]
+transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 3, -21.079, -9.53674e-07, 0.0464401)
+
+[node name="smalltreedarkercolor2" parent="smalltreedarkercolor" instance=ExtResource("10_lj1id")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.766, 0, -5.70521)
+
+[node name="smalltreedarkercolor3" parent="smalltreedarkercolor/smalltreedarkercolor2" instance=ExtResource("10_lj1id")]
+transform = Transform3D(1.33333, 0, 0, 0, 1.33325, 0, 0, 0, 1.33333, -4.01447, 0, 0.598933)
+
+[node name="smalltreedarkercolor4" parent="smalltreedarkercolor/smalltreedarkercolor2/smalltreedarkercolor3" instance=ExtResource("10_lj1id")]
+transform = Transform3D(0.75, 0, 0, 0, 0.750047, 0, 0, 0, 0.75, 5.8681, 1.72015, -3.9648)
+
+[node name="smalltreedarkercolor5" parent="smalltreedarkercolor/smalltreedarkercolor2/smalltreedarkercolor3/smalltreedarkercolor4" instance=ExtResource("10_lj1id")]
+transform = Transform3D(1.33333, 0, 0, 0, 1.33325, 0, 0, 0, 1.33333, -4.9884, -2.29339, -1.66867)
+
+[node name="smalltreedarkercolor6" parent="smalltreedarkercolor/smalltreedarkercolor2/smalltreedarkercolor3/smalltreedarkercolor4/smalltreedarkercolor5" instance=ExtResource("10_lj1id")]
+transform = Transform3D(0.75, 0, 0, 0, 0.750047, 0, 0, 0, 0.75, 3.57887, 0, 12.0997)
+
+[node name="woodplank" parent="." instance=ExtResource("11_23cxe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.89, 0, -2.88501)
+
+[node name="woodplank2" parent="woodplank" instance=ExtResource("11_23cxe")]
+transform = Transform3D(0.981922, 0, 0.189284, 0, 1, 0, -0.189284, 0, 0.981922, 0.095531, 0, 2.16286)
+
+[node name="woodplank3" parent="woodplank/woodplank2" instance=ExtResource("11_23cxe")]
+transform = Transform3D(0.980574, 0, 0.196151, 0, 1, 0, -0.196151, 0, 0.980574, 0.126535, 0, 2.10717)
+
+[node name="woodplank2" parent="." instance=ExtResource("11_23cxe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.42532, 10.9723, -36.4227)
+
+[node name="woodplank3" parent="woodplank2" instance=ExtResource("11_23cxe")]
+transform = Transform3D(1, -3.15797e-09, 1.1423e-10, 3.15797e-09, 0.997387, -0.072246, 1.14223e-10, 0.072246, 0.997387, 0, -0.771005, 2.15223)
+
+[node name="woodplank4" parent="woodplank2/woodplank3" instance=ExtResource("11_23cxe")]
+transform = Transform3D(1, 3.69265e-09, 1.56252e-10, -3.69264e-09, 0.996426, 0.0844778, 1.56245e-10, -0.0844778, 0.996426, 0, -0.988385, 2.2844)
+
+[node name="landbump" parent="." instance=ExtResource("12_e1n4y")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.622048, 0, -37.0061)
+
+[node name="woodpost" parent="." instance=ExtResource("13_tjw8x")]
+transform = Transform3D(0.642574, 0, 0.766224, 0, 1, 0, -0.766224, 0, 0.642574, 6.59786, 0, -10.4257)
+
+[node name="pumpkin" parent="." instance=ExtResource("14_60j31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27642, 0.708117, 1.32503)
+
+[node name="Waterplane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05199, 0.113008, 26.6068)
+mesh = SubResource("PlaneMesh_mfalq")
+surface_material_override/0 = SubResource("ShaderMaterial_koqwv")
+
+[node name="Dock" parent="." instance=ExtResource("17_rjdcf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.40138, -1.42942, 20.625)
+
+[node name="Dock2" parent="." instance=ExtResource("17_rjdcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4137, -1.42942, 18.4986)
+
+[node name="Boat" parent="." instance=ExtResource("17_net1d")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 8.43759, 0.163748, 23.1684)
+
+[node name="Boat2" parent="." instance=ExtResource("17_net1d")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 11.877, 0.163748, 23.1684)
+
+[node name="Crate" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54455, 1.41099, 24.4516)
+
+[node name="Crate2" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(0.964058, 0, -0.265691, 0, 1, 0, 0.265691, 0, 0.964058, 4.54455, 1.41099, 23.3003)
+
+[node name="Crate3" parent="." instance=ExtResource("6_r3p86")]
+transform = Transform3D(0.883316, 0, 0.468778, 0, 1, 0, -0.468778, 0, 0.883316, 4.54455, 2.39264, 23.8209)
+
+[node name="stool" parent="." instance=ExtResource("18_yee3b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.5734, 1.44819, 18.2838)

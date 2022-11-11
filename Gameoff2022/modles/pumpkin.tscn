@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxk526ikuqwq"]
+
+[ext_resource type="ArrayMesh" uid="uid://dpqwm1rhejixj" path="res://meshes/Pumpkin.obj" id="1_nrcfp"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_lvpgx"]
+[ext_resource type="Texture2D" uid="uid://bqua2tk7gcx86" path="res://textures/PumpkinTexture.png" id="3_ireqh"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_sqd4a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qs6qh"]
+render_priority = 0
+shader = ExtResource("2_lvpgx")
+shader_parameter/albedo_texture = ExtResource("3_ireqh")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_sqd4a")
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(0.705882, 0.933333, 0.784314, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = null
+shader_parameter/view_multiplier = null
+
+[node name="pumpkin" type="Node3D"]
+
+[node name="Pumpkin" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("1_nrcfp")
+surface_material_override/0 = SubResource("ShaderMaterial_qs6qh")

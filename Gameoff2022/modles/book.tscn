@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dkvkqb1cs4y1i" path="res://meshes/BookMesh.obj" id="1_caxsk"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_tu0ql"]
-[ext_resource type="Texture2D" uid="uid://c1v7iwfs1ybyg" path="res://Textures/BookTexture.png" id="3_eoc0g"]
+[ext_resource type="Texture2D" uid="uid://c1v7iwfs1ybyg" path="res://textures/BookTexture.png" id="3_eoc0g"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_svkc6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v064s"]

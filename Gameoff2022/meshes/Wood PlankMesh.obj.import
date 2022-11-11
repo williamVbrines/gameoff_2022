@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxeq7itoslvtd"
+path="res://.godot/imported/Wood PlankMesh.obj-4e48d4a8d869cb2d0cba0f030c406a47.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood PlankMesh.obj-4e48d4a8d869cb2d0cba0f030c406a47.mesh"]
+
+source_file="res://meshes/Wood PlankMesh.obj"
+dest_files=["res://.godot/imported/Wood PlankMesh.obj-4e48d4a8d869cb2d0cba0f030c406a47.mesh", "res://.godot/imported/Wood PlankMesh.obj-4e48d4a8d869cb2d0cba0f030c406a47.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
