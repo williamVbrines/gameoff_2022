@@ -2,4 +2,6 @@ res://scenes/levels/VillageScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/main.tscn
+res://modles/sandbump.tscn
+res://modles/smalltree.tscn
+res://modles/smalltreedarkercolor.tscn
