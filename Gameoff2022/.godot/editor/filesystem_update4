@@ -2,11 +2,4 @@ res://scenes/levels/VillageScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://modles/Boat.tscn
-res://modles/Dock.tscn
 res://scenes/main.tscn
-res://scenes/levels/RoomScene.tscn
-res://modles/dock.tscn
-res://modles/stool.tscn
-res://modles/boat.tscn
-res://scripts/BoatSway.gd
