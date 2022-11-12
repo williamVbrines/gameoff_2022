@@ -1,0 +1,69 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://dialog_data.gd" id="1_gkug8"]
+
+[resource]
+script = ExtResource("1_gkug8")
+data = {
+"0": {
+"acc": "player",
+"act": ["Opt[No I have not, Stop]", " next"],
+"con": "true",
+"def": ["next"]
+},
+"1": {
+"acc": "player",
+"act": ["Opt[Yes I do here it is, FakeRing]", " next"],
+"con": "has_fake_ring",
+"def": ["next"]
+},
+"2": {
+"acc": "system",
+"act": ["Set[Wait, Ture]"],
+"con": "true",
+"def": ["next"]
+},
+"3": {
+"acc": "npc_2",
+"act": ["That ring I NEEED my ring", " Line[Stop]"],
+"con": "true",
+"def": ["next"]
+},
+"4": {
+"acc": "npc_2",
+"act": ["NO THATS NOT MY RING. GET OUT", " Line[Stop]"],
+"con": "true",
+"def": ["next"]
+},
+"Default Dialog": {
+"acc": "npc_2",
+"act": ["Hello there, have you seen my ring", " next"],
+"con": "true",
+"def": ["next"]
+},
+"FakeRing": {
+"acc": "npc_2",
+"act": ["Emot[Angery]", " Add[anger, 1]", " next"],
+"con": "true",
+"def": ["next"]
+},
+"NeedRing": {
+"acc": "npc_2",
+"act": ["Emot[Envy]", " next"],
+"con": "true",
+"def": ["next"]
+},
+"Start": {
+"acc": "player",
+"act": ["Line[NeedRing]"],
+"con": "has_ring",
+"def": ["Line[Default Dialog]"]
+},
+"Stop": {
+"acc": "system",
+"act": ["Set[Exit, Ture]"],
+"con": "true",
+"def": []
+},
+"order": ["Start", "Default Dialog", "0", "1", "2", "NeedRing", "3", "FakeRing", "4", "Stop"]
+}
