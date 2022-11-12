@@ -1,7 +1,5 @@
-res://scenes/levels/VillageScene.tscn
+res://modles/landbump.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/main.tscn
-res://modles/trailstraight.tscn
-res://modles/trailsplit.tscn
+res://scenes/levels/VillageScene.tscn
