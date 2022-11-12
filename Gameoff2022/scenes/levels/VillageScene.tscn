@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://u4547vsikfon"]
+[gd_scene load_steps=34 format=3 uid="uid://u4547vsikfon"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d1cxdlb2ns13m" path="res://modles/sandbump.tscn" id="19_mjmfe"]
 [ext_resource type="PackedScene" uid="uid://bifwck4si2ayq" path="res://modles/grasstexture1.tscn" id="20_m5hce"]
 [ext_resource type="PackedScene" uid="uid://b707k3rkcx0dq" path="res://modles/grasstexture2.tscn" id="21_reib2"]
+[ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="23_phwvr"]
 [ext_resource type="PackedScene" uid="uid://b8h4cvh3bfyxe" path="res://modles/trailsplit.tscn" id="23_x6lf4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
@@ -486,3 +487,6 @@ transform = Transform3D(0.991711, 0, 0.0495871, 0, 1, 0, -0.0389991, 0, 1.26095,
 
 [node name="trailstraight5" parent="." instance=ExtResource("23_x6lf4")]
 transform = Transform3D(0.991711, 0, 0.0495871, 0, 1, 0, -0.0389991, 0, 1.26095, 21.3167, 0.015, 9.77106)
+
+[node name="Player" parent="." instance=ExtResource("23_phwvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7794, 1.71172, 0)

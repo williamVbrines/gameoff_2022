@@ -1,4 +1,6 @@
-res://modles/landbump.tscn
+res://scenes/levels/VillageScene.tscn
+res://scenes/resources/npc/test_npc_resource.tres
+res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
