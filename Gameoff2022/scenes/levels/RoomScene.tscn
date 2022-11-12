@@ -34,10 +34,10 @@ radiance_size = 2
 background_mode = 2
 background_energy_multiplier = 0.0
 sky = SubResource("33")
-ambient_light_source = 2
+ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.2
-ambient_light_energy = 0.15
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.45
 glow_strength = 1.79
 glow_bloom = 0.44
 
@@ -237,6 +237,27 @@ light_specular = 16.0
 spot_range = 18.2852
 spot_angle = 47.5255
 
+[node name="WindowLight" type="SpotLight3D" parent="Room"]
+transform = Transform3D(0.683196, -0.0457116, -0.728803, 0.729566, -6.74117e-08, 0.683911, -0.0312627, -0.998955, 0.0333496, -14.887, 5.87959, 4.38846)
+visible = false
+light_color = Color(0, 0.466667, 0.533333, 1)
+light_energy = 10.455
+light_indirect_energy = 8.0
+light_specular = 16.0
+shadow_enabled = true
+spot_range = 18.2852
+spot_angle = 23.0883
+
+[node name="StackedBook2" parent="Room/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
+transparency = 1.0
+skeleton = NodePath("../..")
+
+[node name="StackedBook3" parent="Room/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684843, 0.268805, 0.18185, 1.95719, -2.15528)
+transparency = 1.0
+skeleton = NodePath("../..")
+
 [node name="Bed" parent="Room" instance=ExtResource("4_grb64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
 skeleton = NodePath("../..")
@@ -321,6 +342,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10671, 0, 1.00407)
 [node name="LampLight" type="SpotLight3D" parent="Room/Lamp"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0671444, 3.83939, 0.0847137)
 light_color = Color(1, 0.984314, 0.811765, 1)
+light_energy = 2.22
+shadow_enabled = true
+distance_fade_begin = 2.0
 spot_range = 5.86071
 spot_angle = 46.4063
 

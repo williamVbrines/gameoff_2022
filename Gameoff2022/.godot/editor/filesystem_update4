@@ -1,4 +1,7 @@
-res://modles/landbump.tscn
+res://scenes/main.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
+res://scenes/levels/VillageScene.tscn
+res://modles/landbump.tscn
+res://scenes/levels/RoomScene.tscn
