@@ -1,8 +1,7 @@
-res://scenes/levels/RoomScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/main.tscn
+res://modles/campfire.tscn
 res://scenes/levels/VillageScene.tscn
-res://modles/stickynote.tscn
-res://modles/stickynoteblue.tscn
+res://scenes/main.tscn
+res://scenes/levels/RoomScene.tscn
