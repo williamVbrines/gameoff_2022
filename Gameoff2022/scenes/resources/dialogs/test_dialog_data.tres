@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dt7lnf3o1refa"]
+
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_e3brs"]
+
+[resource]
+script = ExtResource("1_e3brs")
+data = {}

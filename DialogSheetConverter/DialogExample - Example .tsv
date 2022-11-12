@@ -1,0 +1,10 @@
+Start	player	has_ring	Line[NeedRing];	Line[Default Dialog];
+Default Dialog	npc_2	T	"Hello there, have you seen my ring"; Line[next];	Line[next];
+	player	T	Opt["No I have not", Stop]; Line[next];	Line[next];
+	player	has_fake_ring	Opt["Yes I do here it is", FakeRing]; Line[next];	Line[next];
+	system	T	Set[Wait, Ture];	Line[next];
+NeedRing	npc_2	T	Emot[Envy]; Line[next];	Line[next];
+	npc_2	T	"That ring I NEEED my ring"; Line[Stop];	Line[next];
+FakeRing	npc_2	T	Emot[Angery]; Add[anger, 1]; Line[next];	Line[next];
+	npc_2	T	"NO THATS NOT MY RING. GET OUT"; Line[Stop];	Line[next];
+Stop	system	T	Set[Exit, Ture];	Line[next];

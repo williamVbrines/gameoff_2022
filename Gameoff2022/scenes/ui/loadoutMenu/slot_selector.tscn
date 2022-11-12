@@ -12,6 +12,7 @@ text = "EMPTY"
 script = ExtResource("1_7rqoe")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = -84.0
 offset_top = 3.0
 offset_right = 6.0

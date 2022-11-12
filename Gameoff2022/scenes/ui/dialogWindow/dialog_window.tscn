@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhp7jkmj1ckja"]
+
+[ext_resource type="Script" path="res://scenes/ui/dialogWindow/dialog_window.gd" id="1_khgcm"]
+[ext_resource type="Resource" uid="uid://chtfpc5ea0qy4" path="res://scenes/resources/dialogs/out.tres" id="2_2gnrs"]
+
+[node name="DialogWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_khgcm")
+dialog_data = ExtResource("2_2gnrs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 755.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "THERE IS SOME TEXT HERE"
