@@ -1,16 +1,4 @@
-res://scenes/main/main.tscn
+res://modles/landbump.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/resources/actions/tactics/test_tactic.tres
-res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres
-res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/ui/combatScreen/combat_screen.tscn
-res://scenes/ui/explorationHUD/exploration_hud.tscn
-res://scenes/resourceManager/resourc_manager.gd
-res://scenes/systemGlobals/system_globals.gd
-res://scenes/ui/explorationHUD/slot_selection.gd
-res://scenes/ui/loadoutMenu/loadout_menu.tscn
-res://scenes/ui/loadoutMenu/loadout_menu.gd
-res://scenes/ui/loadoutMenu/slot_selector.tscn
-res://scenes/ui/loadoutMenu/slot_selection.gd

@@ -34,7 +34,3 @@ shader_parameter/view_multiplier = null
 [node name="BoatMesh" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_dejbi")
 surface_material_override/0 = SubResource("ShaderMaterial_k666a")
-
-[node name="BoatMesh2" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_dejbi")
-surface_material_override/0 = SubResource("ShaderMaterial_k666a")
