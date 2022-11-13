@@ -49,15 +49,26 @@ var opps : Dictionary = {
 	
 	
 var actions : Dictionary = {
-	"Line" : _line_action,
-	"Set" : _set_action,
-	"Say" : _say_action,
-	"Show" : _show_action,
-	"Wait" : _wait_action,
-	"Wait[]" : _wait_action,
-	"Opt" : _opt_action,
-	"Close" : _close_action,
-	"Close[]" : _close_action
+	"SET" : _set_action,
+	"ADD" : _add_action,
+	"SUB" : _sub_action,
+	
+	
+	"SAY" : _say_action,
+	
+	"OPEN" : _open_action, 
+	
+	"LINE" : _line_action,
+	
+	"SHOW" : _show_action,
+	"HIDE[]" : _hide_action,
+	
+	"WAIT" : _wait_action,
+	"WAIT[]" : _wait_action,
+	"OPT" : _opt_action,
+	
+	"EMIT" : _emit_action
+	
 }
 	
 	
@@ -95,6 +106,16 @@ func _on_opt_3_pressed() -> void:
 	_clear_opts();
 	
 	
+func _on_contine_button_pressed() -> void:
+	if !waiting_for_input || wait_tag == "null": return;
+	
+	call_deferred("run_dialog" , dialog_data, wait_tag);
+	_label.hide();
+	waiting_for_input = false;
+	wait_tag = "null";
+	text = "";
+	
+	
 func _clear_opts() -> void:
 	waiting_for_input = false;
 	
@@ -111,15 +132,6 @@ func _clear_opts() -> void:
 	opt_action_3 = "null";
 	
 	
-func _on_contine_button_pressed() -> void:
-	if !waiting_for_input || wait_tag == "null": return;
-	
-	call_deferred("run_dialog" , dialog_data, wait_tag);
-	_label.hide();
-	waiting_for_input = false;
-	wait_tag = "null";
-	
-	
 func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
 	var data = dialog_data.data.duplicate(true);
 	print(tag);
@@ -127,12 +139,12 @@ func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
 	
 	
 func parce_line(line : Dictionary, tag : String) -> void:
-	print(line);
+	print(line);#TODO: Remove
 	if parce_condition(line.con):
-		print("TRUE");
+		print("ParceResult: TRUE ###################################")
 		parce_action(line.act, tag);
 	else:
-		print("FALSE");
+		print("ParceResult: FALSE ###################################")
 		parce_action(line.def, tag);
 	
 	
@@ -151,53 +163,31 @@ func parce_action(act : Array, tag : String) -> void:
 		prints(">>>>Action :", action.replace(" ", ""))
 		prints(">>>>Params :", params)
 		
-		if action.replace(" ", "") in actions.keys():
-			if actions.get(action.replace(" ", "")).call(params, tag) == -1:
+		action = action.replace(" ", "").to_upper();
+		
+		if action in actions.keys():
+			if actions.get(action).call(params, tag) == -1:
 				break;
 	
 	
-func parce_condition(con : String) -> bool:
-	var profile = null;# SystemGlobals.dialog_profiles.get(acc);
-	var val = null;
-	var opp = null;
+func parce_condition(con : String):
 	var left = null;
+	var opp = null;
 	var right = null;
 	
 	for key in opps.keys():
 		if con.find(key) != -1:
 			opp = key;
 			break;
-			
 	
 	
 	left = con.substr(0, con.find(opp) if opp != null else con.length());
-	right = con.substr(con.find(opp), -1) if opp != null else null;
+	right = clip_str_to(con,opp) if opp != null else null;
 	
+	prints(left,opp,right,"###########################");
 
 	if left != null && opp == null && right == null:
-		#Get Profile;
-		profile = null;
-		profile = SystemGlobals.dialog_profiles.get(get_con_profile(left));
-		
-			
-		
-		if profile != null:
-			var p1 = left.find("[") + 1;
-			var p2 = left.rfind("]");
-			left = left.substr(p1 ,p2-p1);
-			
-			#Check Profile for match
-			val = profile.get(left);
-		
-			return val;
-		
-		if left.to_upper() in ["TRUE", "T", "1"]: return true;
-		if left.to_upper() in ["FALSE", "F", "0"]: return true;
-		
-		if left.is_valid_float() : return left.to_float();
-		
-		return val if val != null else false;
-	
+		return str_to_val(left);
 	
 	if left != null && opp != null && right != null:
 		return opps.get(opp).call(parce_condition(left), parce_condition(right));
@@ -206,21 +196,59 @@ func parce_condition(con : String) -> bool:
 	return false;
 	
 	
-func get_con_profile(val : String) -> String:
-	var profile = val.substr(0,val.find("[")).replace(" ", "");
-	return profile;
+#Actions############################################################################################
+func _set_action(params : String, tag : String) -> int:
+	var profile = null;
+	var key = null;
+	var val = null;
+	
+	profile = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	key = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	val = str_to_val(params);
+	
+	_set_profile_val(profile,key,val);
+	
+	return 0;
 	
 	
-func _line_action(params : String, tag : String) -> int:
-	if params.to_upper() == "NEXT":
-		var order = dialog_data.data.order as Array;
-		var index = order.find(tag);
-		if index != -1 && index + 1 < order.size():
-			call_deferred("run_dialog", dialog_data, order[index + 1]);
-	elif dialog_data.data.has(params):
-			call_deferred("run_dialog", dialog_data, params);
-			
-	return -1;
+func _add_action(params : String, tag : String) -> int:
+	var profile = null;
+	var key = null;
+	var val = null;
+	
+	profile = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	key = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	val = str_to_val(params);
+	
+	_set_profile_val(profile,key,val + _get_profile_val(profile,key));
+	
+	return 0;
+	
+	
+func _sub_action(params : String, tag : String) -> int:
+	var profile = null;
+	var key = null;
+	var val = null;
+	
+	profile = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	key = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
+	
+	val = str_to_val(params);
+	
+	_set_profile_val(profile,key,_get_profile_val(profile,key) - val);
+	
+	return 0;
 	
 	
 func _say_action(params : String, tag : String) -> int:
@@ -234,6 +262,22 @@ func _say_action(params : String, tag : String) -> int:
 	speaker = profile;
 	
 	return 0;
+	
+	
+func _open_action(params : String, tag : String) -> int:
+	return 0;
+	
+	
+func _line_action(params : String, tag : String) -> int:
+	if params.to_upper() == "NEXT":
+		var order = dialog_data.data.order as Array;
+		var index = order.find(tag);
+		if index != -1 && index + 1 < order.size():
+			call_deferred("run_dialog", dialog_data, order[index + 1]);
+	elif dialog_data.data.has(params):
+			call_deferred("run_dialog", dialog_data, params);
+			
+	return -1;
 	
 	
 func _show_action(params : String, tag : String) -> int:
@@ -260,6 +304,11 @@ func _show_action(params : String, tag : String) -> int:
 			
 			
 	return 0;
+	
+	
+func _hide_action(params : String, tag : String) -> int:
+	hide();
+	return -1;
 	
 	
 func _wait_action(params : String, tag : String) -> int:
@@ -301,60 +350,86 @@ func _opt_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _close_action(params : String, tag : String) -> int:
-	hide();
-	return -1;
+func _emit_action(params : String, tag : String) -> int:
+	return 0;
 	
 	
-func _set_action(params : String, tag : String) -> int:
-	var profile = null;
-	var key = null;
-	var val = null;
+#utils##############################################################################################
+func get_next_str_clean(val : String, del : String) -> String:
+	return val.substr(0,val.find(del)).replace(" ", "");
 	
-	profile = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - profile.length());
-	profile = profile.replace(" ", "");
 	
-	key = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - key.length());
+func clip_str_to(val : String, del : String) -> String:
+	var p = val.find(del) + del.length();
+	return val.substr(p , val.length() - p);
+	
+	
+func str_to_val(val : String):
+	var old_val = val;
+	var new_val = null;
+	
+	val = val.replace(" ", "");#Clean
+	
+	#Check type
+	if val in ["False", "F", "FALSE", "false", "null", "NULL", "Null"]:
+		return  false;
+	elif val in ["True", "T", "TRUE", "true"] :
+		return true;
+	elif val.is_valid_float():
+		return val.to_float();
+	
+	if val.find("[") != -1 && val.rfind("]") != -1:
+		var p = get_next_str_clean(val, "[");
+		var k = get_next_str_clean(clip_str_to(val, "["), "]");
+		
+		new_val = _get_profile_val(p,k); 
+		
+	if new_val == null: return old_val;
+	
+	return new_val;
+	
+	
+func _get_profile_val(profile : String, key : String):
+	var p = null;#P is a dictionary
+	
+	#Clean data
+	profile = profile.replace(" ", ""); 
 	key = key.replace(" ", "");
 	
-	val = params.substr(0, params.find(",")).replace(" ", "");
-	
-	if val in ["False", "F", "FALSE", "false", "null", "NULL", "Null"]:
-		val = false;
-	elif val in ["True", "T", "TRUE", "true"] :
-		val = true;
-	elif val.is_valid_float():
-		val = val.to_float();
+	if profile.to_upper() == "STATS":
+		key = key.to_upper()
+		p = SystemGlobals.player_stats;
 	else:
-		val = params;
+		p = SystemGlobals.dialog_profiles.get(profile);
 	
-	if !SystemGlobals.dialog_profiles.has(profile):
+	
+	if p == null : return null; #Guard
+	
+	#Return data or null
+	return p.get(key, null);
+	
+	
+func _set_profile_val(profile : String, key : String, val) -> void:
+	var p = null;#P is a dictionary
+	
+	#Clean data
+	profile = profile.replace(" ", ""); 
+	key = key.replace(" ", "");
+	
+	if profile.to_upper() == "STATS":
+		key = key.to_upper()
+		p = SystemGlobals.player_stats;
+	else:
+		p = SystemGlobals.dialog_profiles.get(profile);
+	
+	if p == null :
 		SystemGlobals.dialog_profiles[profile] = {};
+		p = SystemGlobals.dialog_profiles.get(profile);
+	
+	if !p.has(key):
+		p[key] = null;
 		
-	if !SystemGlobals.dialog_profiles[profile].has(key):
-		SystemGlobals.dialog_profiles[profile][key] = null;
-		
-	SystemGlobals.dialog_profiles[profile][key] = val;
+	p[key] = val;
 	
-	
-	return 0;
-	
-	
-func _add_action(params : String, tag : String) -> int:
-	return 0;
-	
-	
-func _sub_action(params : String, tag : String) -> int:
-	return 0;
-	
-	
-func _playsoud_action(params : String, tag : String) -> int:
-	return 0;
-	
-	
-func _open_action(params : String, tag : String) -> int:
-	return 0;
 	
 	

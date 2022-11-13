@@ -1,0 +1,10 @@
+Start	T	Set[player, has_ring, false]; Line[next];	Line[next];
+	player[has_ring]==False	Say[player,GOOD]; Line[next];	Say[player,BAD]; Line[Stop];
+	T	Show[text]; Wait[next];	Line[next];
+	T	Set[player, num, 0]; Add[player, num, 10] Line[next];	Line[next];
+	player[num]<=10	Say[player,GOOD]; Line[next];	Say[player,BAD]; Line[Stop];
+	T	Show[text]; Wait[next];	Line[next];
+	T	Set[player, num2, 20]; Sub[player, num, player[num2]]; Line[next];	Line[next];
+	player[num]>=-10	Say[player,GOOD]; Line[next];	Say[player,BAD]; Line[Stop];
+	T	Show[text]; Wait[next];	Line[next];
+Stop	T	Hide[]	Hide[]
