@@ -46,12 +46,12 @@ data = {
 "def": ["Line[next]"]
 },
 "Start": {
-"act": ["Set[player, has_ring, false]", " Line[next]"],
+"act": ["Set[player, has_ring, true]", " Line[next]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "Stop": {
-"act": ["Cose[]"],
+"act": ["Close[]"],
 "con": "true",
 "def": []
 },

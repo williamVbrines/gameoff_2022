@@ -3,10 +3,15 @@ extends Control
 @export var dialog_data : Resource;
 @onready var _label: RichTextLabel = $Panel/RichTextLabel
 @onready var contine_button: Button = $Panel/ContineButton
-@onready var opt_button_1: Button = $Panel/OptButton1
-@onready var opt_button_2: Button = $Panel/OptButton2
-@onready var opt_button_3: Button = $Panel/OptButton3
 
+@onready var opt_button_1: Button = $Panel/OptButton1
+@onready var opt_label_1: RichTextLabel = $Panel/OptButton1/OptLabel1
+
+@onready var opt_button_2: Button = $Panel/OptButton2
+@onready var opt_label_2: RichTextLabel = $Panel/OptButton2/OptLabel2
+
+@onready var opt_button_3: Button = $Panel/OptButton3
+@onready var opt_label_3: RichTextLabel = $Panel/OptButton3/OptLabel3
 
 var speaker : String = "";
 var text : String = "";
@@ -41,17 +46,21 @@ var opps : Dictionary = {
 	"||" : _or,
 	"&&" : _and
 }
-
+	
+	
 var actions : Dictionary = {
 	"Line" : _line_action,
 	"Set" : _set_action,
 	"Say" : _say_action,
 	"Show" : _show_action,
 	"Wait" : _wait_action,
-	"Opt" : _opt_action
+	"Wait[]" : _wait_action,
+	"Opt" : _opt_action,
+	"Close" : _close_action,
+	"Close[]" : _close_action
 }
-
-
+	
+	
 func _ready() -> void:
 	dialog_data = dialog_data as DialogData;
 	if dialog_data == null: breakpoint;
@@ -63,13 +72,52 @@ func _ready() -> void:
 	
 func _make_connections() -> void:
 	contine_button.pressed.connect(_on_contine_button_pressed);
-	pass
+	opt_button_1.pressed.connect(_on_opt_1_pressed);
+	opt_button_2.pressed.connect(_on_opt_2_pressed);
+	opt_button_3.pressed.connect(_on_opt_3_pressed);
+	
+	
+func _on_opt_1_pressed() -> void:
+	if !waiting_for_input || wait_tag != "null": return;
+	call_deferred("run_dialog" , dialog_data, opt_action_1);
+	_clear_opts();
+	
+	
+func _on_opt_2_pressed() -> void:
+	if !waiting_for_input || wait_tag != "null": return;
+	call_deferred("run_dialog" , dialog_data, opt_action_2);
+	_clear_opts();
+	
+	
+func _on_opt_3_pressed() -> void:
+	if !waiting_for_input || wait_tag != "null": return;
+	call_deferred("run_dialog" , dialog_data, opt_action_3);
+	_clear_opts();
+	
+	
+func _clear_opts() -> void:
+	waiting_for_input = false;
+	
+	opt_button_1.hide();
+	opt_text_1 = "null";
+	opt_action_1 = "null";
+
+	opt_button_2.hide();
+	opt_text_2 = "null";
+	opt_action_2 = "null";
+	
+	opt_button_3.hide();
+	opt_text_3 = "null";
+	opt_action_3 = "null";
 	
 	
 func _on_contine_button_pressed() -> void:
 	if !waiting_for_input || wait_tag == "null": return;
 	
-	run_dialog(dialog_data, wait_tag);
+	call_deferred("run_dialog" , dialog_data, wait_tag);
+	_label.hide();
+	waiting_for_input = false;
+	wait_tag = "null";
 	
 	
 func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
@@ -109,7 +157,6 @@ func parce_action(act : Array, tag : String) -> void:
 	
 	
 func parce_condition(con : String) -> bool:
-	
 	var profile = null;# SystemGlobals.dialog_profiles.get(acc);
 	var val = null;
 	var opp = null;
@@ -121,22 +168,23 @@ func parce_condition(con : String) -> bool:
 			opp = key;
 			break;
 			
+	
+	
 	left = con.substr(0, con.find(opp) if opp != null else con.length());
 	right = con.substr(con.find(opp), -1) if opp != null else null;
 	
-	print(left);
-	print(opp);
-	print(right);
 
 	if left != null && opp == null && right == null:
 		#Get Profile;
 		profile = null;
-		SystemGlobals.dialog_profiles.get(get_con_profile(left));
+		profile = SystemGlobals.dialog_profiles.get(get_con_profile(left));
 		
-		if val != null:
-			var p1 = left.find("[");
+			
+		
+		if profile != null:
+			var p1 = left.find("[") + 1;
 			var p2 = left.rfind("]");
-			left = left.substr(p1,p2-p1);
+			left = left.substr(p1 ,p2-p1);
 			
 			#Check Profile for match
 			val = profile.get(left);
@@ -172,6 +220,89 @@ func _line_action(params : String, tag : String) -> int:
 	elif dialog_data.data.has(params):
 			call_deferred("run_dialog", dialog_data, params);
 			
+	return -1;
+	
+	
+func _say_action(params : String, tag : String) -> int:
+	var profile = null;
+	
+	profile = params.substr(0, params.find(","));
+	params = params.substr(params.find(",") + 1, params.length() - profile.length());
+	profile = profile.replace(" ", "");
+	
+	text += params;
+	speaker = profile;
+	
+	return 0;
+	
+	
+func _show_action(params : String, tag : String) -> int:
+	params = params.replace(" ", "").to_upper();
+	
+	if params == "TEXT":
+		_label.set_text(text);
+		_label.show();
+	elif params == "OPT":
+		if opt_text_1 != "null":
+			opt_button_1.show()
+			opt_button_1.set_disabled(opt_action_1 == "null")
+			opt_label_1.set_text(opt_text_1);
+			
+		if opt_text_2 != "null":
+			opt_button_2.show()
+			opt_button_2.set_disabled(opt_action_2 == "null")
+			opt_label_2.set_text(opt_text_2);
+			
+		if opt_text_3 != "null":
+			opt_button_3.show()
+			opt_button_3.set_disabled(opt_action_3 == "null")
+			opt_label_3.set_text(opt_text_3);
+			
+			
+	return 0;
+	
+	
+func _wait_action(params : String, tag : String) -> int:
+	params = params.replace(" ", "");
+	wait_tag = params if params != "" else "null";
+	
+	if wait_tag.to_upper() == "NEXT":
+		var order : Array = dialog_data.data.order;
+		wait_tag = order[(order.find(tag) + 1) if order.find(tag) + 1 < order.size() else order.size()];
+		
+	waiting_for_input = true;
+	return -1;
+	
+	
+func _opt_action(params : String, tag : String) -> int:
+	var line = "null";
+	
+	line = params.substr(0, params.find(","));
+	params = params.substr(params.find(",") + 1, params.length() - line.length());
+	line = line.replace(" ", "");
+	
+	
+	if line.to_upper() == "NEXT":
+		var order : Array = dialog_data.data.order;
+		line = order[(order.find(tag) + 1) if order.find(tag) + 1 < order.size() else order.size()];
+		
+		
+		
+	if opt_text_1 == "null":
+		opt_text_1 = params;
+		opt_action_1 = line;
+	elif opt_text_2 == "null":
+		opt_text_2 = params;
+		opt_action_2 = line;
+	elif opt_text_3 == "null":
+		opt_text_3 = params;
+		opt_action_3 = line;
+	
+	return 0;
+	
+	
+func _close_action(params : String, tag : String) -> int:
+	hide();
 	return -1;
 	
 	
@@ -211,65 +342,19 @@ func _set_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _say_action(params : String, tag : String) -> int:
-	var profile = null;
-	
-	profile = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - profile.length());
-	profile = profile.replace(" ", "");
-	
-	text += params;
-	speaker = profile;
-	
+func _add_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _show_action(params : String, tag : String) -> int:
-	params = params.replace(" ", "").to_upper();
-	
-	if params == "TEXT":
-		_label.set_text(text);
-		_label.show();
-	elif params == "OPT":
-		if opt_text_1 == "null":
-			opt_button_1.show()
-		
-		if opt_text_2 == "null":
-			opt_button_2.show()
-			
-		if opt_text_3 == "null":
-			opt_button_2.show()
-		
+func _sub_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _wait_action(params : String, tag : String) -> int:
-	params = params.replace(" ", "");
-	wait_tag = params if params != "" else "null";
-	
-	if wait_tag.to_upper() == "NEXT":
-		var order : Array = dialog_data.data.order;
-		wait_tag = order[(order.find(tag) + 1) if order.find(tag) + 1 < order.size() else order.size()];
-		
-	waiting_for_input = true;
-	return -1;
-	
-	
-func _opt_action(params : String, tag : String) -> int:
-	var line = "null";
-	
-	line = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - line.length());
-	line = line.replace(" ", "");
-	
-	if opt_text_1 == "null":
-		opt_text_1 = params;
-		opt_action_1 = line;
-	elif opt_text_2 == "null":
-		opt_text_2 = params;
-		opt_action_2 = line;
-	elif opt_text_3 == "null":
-		opt_text_3 = params;
-		opt_action_3 = line;
-	
+func _playsoud_action(params : String, tag : String) -> int:
 	return 0;
+	
+	
+func _open_action(params : String, tag : String) -> int:
+	return 0;
+	
+	

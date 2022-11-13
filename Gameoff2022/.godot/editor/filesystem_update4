@@ -1,7 +1,6 @@
-res://scenes/main/main.tscn
+res://scenes/ui/dialogWindow/dialog_window.tscn
 res://scenes/resources/npc/test_npc_resource.tres
 res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/dialogs/out.tres
-res://scenes/ui/dialogWindow/dialog_window.tscn
-res://scenes/systemGlobals/system_globals.gd
+res://scenes/main/main.tscn
