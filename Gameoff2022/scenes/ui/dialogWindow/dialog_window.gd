@@ -27,6 +27,8 @@ var opt_action_2 : String = "null";
 var opt_text_3 : String = "null";
 var opt_action_3 : String = "null";
 
+signal dialog_emit(val : String);
+
 func _equal_to(a,b) -> bool: return a == b;
 func _not_equal_to(a,b) -> bool: return a != b;
 func _greater_than(a,b) -> bool: return a > b;
@@ -53,7 +55,6 @@ var actions : Dictionary = {
 	"ADD" : _add_action,
 	"SUB" : _sub_action,
 	
-	
 	"SAY" : _say_action,
 	
 	"OPEN" : _open_action, 
@@ -65,10 +66,10 @@ var actions : Dictionary = {
 	
 	"WAIT" : _wait_action,
 	"WAIT[]" : _wait_action,
+	
 	"OPT" : _opt_action,
 	
 	"EMIT" : _emit_action
-	
 }
 	
 	
@@ -133,14 +134,20 @@ func _clear_opts() -> void:
 	
 	
 func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
+	if dialog_data == null: return;
+	
 	var data = dialog_data.data.duplicate(true);
-	print(tag);
+	
+	if data == null : return;
+	if data.has(tag) == false : return;
+	
 	parce_line(data.get(tag), tag);
 	
 	
 func parce_line(line : Dictionary, tag : String) -> void:
 	print(line);#TODO: Remove
-	if parce_condition(line.con):
+	var result = parce_condition(line.con);
+	if result && typeof(result) == 1:
 		print("ParceResult: TRUE ###################################")
 		parce_action(line.act, tag);
 	else:
@@ -219,6 +226,8 @@ func _add_action(params : String, tag : String) -> int:
 	var profile = null;
 	var key = null;
 	var val = null;
+	var val2 = null;
+	
 	
 	profile = get_next_str_clean(params, ",");
 	params = clip_str_to(params , ",");
@@ -228,7 +237,12 @@ func _add_action(params : String, tag : String) -> int:
 	
 	val = str_to_val(params);
 	
-	_set_profile_val(profile,key,val + _get_profile_val(profile,key));
+	val2 = _get_profile_val(profile,key);
+	
+	if typeof(val) == typeof(val2):
+		val += val2;
+		
+	_set_profile_val(profile,key,val);
 	
 	return 0;
 	
@@ -237,6 +251,7 @@ func _sub_action(params : String, tag : String) -> int:
 	var profile = null;
 	var key = null;
 	var val = null;
+	var val2 = null;
 	
 	profile = get_next_str_clean(params, ",");
 	params = clip_str_to(params , ",");
@@ -246,25 +261,35 @@ func _sub_action(params : String, tag : String) -> int:
 	
 	val = str_to_val(params);
 	
-	_set_profile_val(profile,key,_get_profile_val(profile,key) - val);
+	val2 = _get_profile_val(profile,key);
+	
+	if typeof(val) == typeof(val2):
+		val -= val2;
+		
+	_set_profile_val(profile,key, val);
 	
 	return 0;
 	
 	
 func _say_action(params : String, tag : String) -> int:
-	var profile = null;
+	speaker = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
 	
-	profile = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - profile.length());
-	profile = profile.replace(" ", "");
+	if params.find("[") != -1 && params.find("]") != -1 :
+		params = str(str_to_val(params));
 	
 	text += params;
-	speaker = profile;
 	
 	return 0;
 	
 	
 func _open_action(params : String, tag : String) -> int:
+	var new_tag = get_next_str_clean(params,",");
+	var new_dialog = ResourcManager.get_dialog_data(clip_str_to(params, ","));
+	if new_dialog != null:
+		dialog_data = new_dialog;
+		call_deferred("run_dialog" , dialog_data , new_tag);
+		return -1;
 	return 0;
 	
 	
@@ -272,8 +297,10 @@ func _line_action(params : String, tag : String) -> int:
 	if params.to_upper() == "NEXT":
 		var order = dialog_data.data.order as Array;
 		var index = order.find(tag);
+		
 		if index != -1 && index + 1 < order.size():
 			call_deferred("run_dialog", dialog_data, order[index + 1]);
+			
 	elif dialog_data.data.has(params):
 			call_deferred("run_dialog", dialog_data, params);
 			
@@ -326,16 +353,18 @@ func _wait_action(params : String, tag : String) -> int:
 func _opt_action(params : String, tag : String) -> int:
 	var line = "null";
 	
-	line = params.substr(0, params.find(","));
-	params = params.substr(params.find(",") + 1, params.length() - line.length());
-	line = line.replace(" ", "");
-	
+	line = get_next_str_clean(params, ",");
+	params = clip_str_to(params , ",");
 	
 	if line.to_upper() == "NEXT":
-		var order : Array = dialog_data.data.order;
-		line = order[(order.find(tag) + 1) if order.find(tag) + 1 < order.size() else order.size()];
+		var order = dialog_data.data.order as Array;
+		var index = order.find(tag);
 		
-		
+		if index != -1 && index + 1 < order.size():
+			line = order[index + 1];
+			
+	if params.find("[") != -1 && params.find("]") != -1 :
+		params = str(str_to_val(params));
 		
 	if opt_text_1 == "null":
 		opt_text_1 = params;
@@ -351,6 +380,8 @@ func _opt_action(params : String, tag : String) -> int:
 	
 	
 func _emit_action(params : String, tag : String) -> int:
+	dialog_emit.emit(params);
+	EventManager.dialog_emit.emit(params);
 	return 0;
 	
 	
@@ -430,6 +461,5 @@ func _set_profile_val(profile : String, key : String, val) -> void:
 		p[key] = null;
 		
 	p[key] = val;
-	
 	
 	

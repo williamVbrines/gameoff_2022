@@ -6,7 +6,7 @@
 script = ExtResource("1_64jik")
 data = {
 "0": {
-"act": ["Say[player,GOOD]", " Line[next]"],
+"act": ["Say[player,GOOD1]", " Line[next]"],
 "con": "player[has_ring]==False",
 "def": ["Say[player,BAD]", " Line[Stop]"]
 },
@@ -21,7 +21,7 @@ data = {
 "def": ["Line[next]"]
 },
 "3": {
-"act": ["Say[player,GOOD]", " Line[next]"],
+"act": ["Say[player,GOOD2]", " Line[next]"],
 "con": "player[num]<=10",
 "def": ["Say[player,BAD]", " Line[Stop]"]
 },
@@ -36,12 +36,17 @@ data = {
 "def": ["Line[next]"]
 },
 "6": {
-"act": ["Say[player,GOOD]", " Line[next]"],
+"act": ["Say[player,GOOD3]", " Line[next]"],
 "con": "player[num]>=-10",
 "def": ["Say[player,BAD]", " Line[Stop]"]
 },
 "7": {
 "act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"8": {
+"act": ["Open[Start,test_dialog2]"],
 "con": "true",
 "def": ["Line[next]"]
 },
@@ -53,7 +58,7 @@ data = {
 "Stop": {
 "act": ["Hide[]"],
 "con": "true",
-"def": ["Hide[]"]
+"def": []
 },
-"order": ["Start", "0", "1", "2", "3", "4", "5", "6", "7", "Stop"]
+"order": ["Start", "0", "1", "2", "3", "4", "5", "6", "7", "8", "Stop"]
 }

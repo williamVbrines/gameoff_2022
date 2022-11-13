@@ -1,10 +1,11 @@
-Start	T	Set[player, has_ring, false]; Line[next];	Line[next];
+Start	T	Say[player,Good4]; Set[player, has_ring, false]; Line[next];	Line[next];
+	T	Show[text]; Wait[next];	Line[next];
 	player[has_ring]	Line[NeedRing];	Line[Default Dialog];
 Default Dialog	T	Say[npc_2, Hello there, have you seen my ring]; Show[text]; Wait[next];	Line[next];
 	T	Opt[Stop, No I have not];  Line[next];	Line[next];
 	player[has_fake_ring]	Opt[FakeRing, Yes I do here it is]; Line[next];	Line[next];
-	T	Show[opt]; Wait[]; 	Line[next];
+	T	Show[opt]; Wait[];	Line[next];
 NeedRing	T	Say[npc_2, That ring I NEEED my ring]; Show[text]; Wait[Stop];	Line[next];
 FakeRing	T	Add[npc_2, anger, 1]; Line[next];	Line[next];
 	T	Say[npc_2,  NO THATS NOT MY RING. GET OUT]; Show[text]; Wait[Stop];	Line[next];
-Stop	T	Cose[];	Line[next];
+Stop	T	Hide[];	Line[next];

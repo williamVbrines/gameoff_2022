@@ -23,3 +23,4 @@ signal changed_annoyance(val : float);
 signal battel_queue_changed(new_q : Array);
 signal change_battel_queue(entity : String,  pos_change : int);
 
+signal dialog_emit(val : String);
