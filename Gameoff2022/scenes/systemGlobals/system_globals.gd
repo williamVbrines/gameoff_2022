@@ -21,12 +21,6 @@ var player_clues : Array[String] = [] #List of refids to all clues the player ha
 
 
 var dialog_profiles : Dictionary = {
-	"player" : {
-		"has_ring" : false
-	},
-	"npc_2" : {
-		
-	}
 }
 
 

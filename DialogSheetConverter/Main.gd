@@ -6,7 +6,8 @@ var _raw_file_content : String = "null";
 
 func _ready() -> void:
 	var res = load("res://out.tres") as DialogData;
-	print(res.data);
+	if res != null:
+		print(res.data)
 	
 ################################################################################
 #This function when called saves a dictionary to a file.
@@ -62,7 +63,6 @@ func _convert_to_json(data : String) -> String:
 	
 	var lineNum = 0;
 	var tag;
-	var acc;
 	var con;
 	var act;
 	var def;
@@ -87,18 +87,8 @@ func _convert_to_json(data : String) -> String:
 			
 		elif data[index] == '\t': #IF tab
 			match tabNum:
-				1:#Acc
+				1:#Con
 					tabNum = 2;
-					acc = "";
-					index += 1;
-					
-					acc = data.substr(index , data.find("\t", index) - index);
-					index = data.find("\t",index);
-					
-					out += "\t\t\"acc\": \"" + acc + "\",\n";
-					
-				2:#Con
-					tabNum = 3;
 					con = "";
 					index += 1;
 					
@@ -111,14 +101,15 @@ func _convert_to_json(data : String) -> String:
 						
 					out += "\t\t\"con\": \"" + con + "\",\n";
 					
-				3:#Act
-					tabNum = 4;
+				2:#Act
+					tabNum = 3;
 					
 					index += 1;
 					act = "";
 					act += data.substr(index , data.find("\t", index) - index);
 					index = data.find("\t",index);
 					
+					act = act.substr(0, act.rfind(";") + 1);
 					act = act.replace("\"", "");
 					
 					var entry = "";
@@ -151,12 +142,14 @@ func _convert_to_json(data : String) -> String:
 
 					out += "\t\t\"act\": [" + act + "],\n";
 					
-				4:#Def
-					tabNum = 4;
+				3:#Def
+					tabNum = 3;
 					
 					index += 1;
 					def = "";
 					def += data.substr(index , data.find("\n", index) - index -1);
+					
+					def = def.substr(0, def.rfind(";") + 1);
 					
 					def = def.replace("\"", "");
 					

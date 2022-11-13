@@ -1,69 +1,59 @@
 [gd_resource type="Resource" load_steps=2 format=3 uid="uid://chtfpc5ea0qy4"]
 
-[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_gkug8"]
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_64jik"]
 
 [resource]
-script = ExtResource("1_gkug8")
+script = ExtResource("1_64jik")
 data = {
 "0": {
-"acc": "player",
-"act": ["Opt[No I have not, Stop]", " Line[next]"],
-"con": "true",
-"def": ["Line[next]"]
+"act": ["Line[NeedRing]"],
+"con": "player[has_ring]",
+"def": ["Line[Default Dialog]"]
 },
 "1": {
-"acc": "player",
-"act": ["Opt[Yes I do here it is, FakeRing]", " Line[next]"],
-"con": "has_fake_ring",
+"act": ["Opt[Stop, No I have not]", "  Line[next]"],
+"con": "true",
 "def": ["Line[next]"]
 },
 "2": {
-"acc": "system",
-"act": ["Set[Wait, Ture]"],
-"con": "true",
+"act": ["Opt[FakeRing, Yes I do here it is]", " Line[next]"],
+"con": "player[has_fake_ring]",
 "def": ["Line[next]"]
 },
 "3": {
-"acc": "npc_2",
-"act": ["That ring I NEEED my ring", " Line[Stop]"],
+"act": ["Show[opt]", " Wait[]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "4": {
-"acc": "npc_2",
-"act": ["NO THATS NOT MY RING. GET OUT", " Line[Stop]"],
+"act": ["Say[npc_2,  NO THATS NOT MY RING. GET OUT]", " Show[text]", " Wait[Stop]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "Default Dialog": {
-"acc": "npc_2",
-"act": ["Hello there, have you seen my ring", " Line[next]"],
+"act": ["Say[npc_2, Hello there, have you seen my ring]", " Show[text]", " Wait[next]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "FakeRing": {
-"acc": "npc_2",
-"act": ["Emot[Angery]", " Add[anger, 1]", " Line[next]"],
+"act": ["Add[npc_2, anger, 1]", " Line[next]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "NeedRing": {
-"acc": "npc_2",
-"act": ["Emot[Envy]", " Line[next]"],
+"act": ["Say[npc_2, That ring I NEEED my ring]", " Show[text]", " Wait[Stop]"],
 "con": "true",
 "def": ["Line[next]"]
 },
 "Start": {
-"acc": "player",
-"act": ["Line[NeedRing]"],
-"con": "has_ring",
-"def": ["Line[Default Dialog]"]
+"act": ["Set[player, has_ring, false]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
 },
 "Stop": {
-"acc": "system",
-"act": ["Set[Exit, Ture]"],
+"act": ["Cose[]"],
 "con": "true",
 "def": []
 },
-"order": ["Start", "Default Dialog", "0", "1", "2", "NeedRing", "3", "FakeRing", "4", "Stop"]
+"order": ["Start", "0", "Default Dialog", "1", "2", "3", "NeedRing", "FakeRing", "4", "Stop"]
 }

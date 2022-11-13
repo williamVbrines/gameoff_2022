@@ -1,11 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1668245243
+::res://::1668300759
 default_env.tres::Environment::-1::1668226267::0::1::::<><>::
 icon.png::CompressedTexture2D::1164233361986046522::1668226242::1668226287::1::::<><>::
-Main.gd::GDScript::-1::1668231579::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::167113153398474484::1668244831::0::1::::<><>::res://Main.gd
-out.tres::Resource::-1::1668245243::0::1::::<><>::res://scenes/resources/dialog_data.gd
+Main.gd::GDScript::-1::1668295471::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::167113153398474484::1668295471::0::1::::<><>::res://Main.gd
 ::res://scenes/::1668245207
-::res://scenes/resources/::1668245243
+::res://scenes/resources/::1668245247
+::res://scenes/resources/dialogs/::1668245247
 dialog_data.gd::GDScript::-1::1668231597::0::1::::DialogData<>Resource<>::
-::res://scenes/resources/dialogs/::1668245232
