@@ -1,1 +1,5 @@
-res://Main.tscn
+res://scenes/main/main.tscn
+res://scenes/ui/dialogWindow/dialog_window.tscn
+res://scenes/ui/dialogLoader/dialog_loader.tscn
+res://scenes/ui/dialogLoader/dialog_loader.gd
+res://scenes/ui/dialogWindow/dialog_window.gd

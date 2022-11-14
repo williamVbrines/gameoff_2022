@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgajfar1vys5c"]
+
+[ext_resource type="PackedScene" uid="uid://3xd4kkglwogk" path="res://scenes/ui/dialogLoader/dialog_loader.tscn" id="1_eipit"]
+[ext_resource type="PackedScene" uid="uid://ga2iolih30e1" path="res://scenes/ui/dialogWindow/dialog_window.tscn" id="2_rnbuc"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogLoader" parent="." instance=ExtResource("1_eipit")]
+layout_mode = 1
+
+[node name="DialogWindow" parent="." instance=ExtResource("2_rnbuc")]
+visible = false
+layout_mode = 1
