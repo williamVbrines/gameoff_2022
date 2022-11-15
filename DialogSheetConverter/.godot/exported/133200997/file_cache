@@ -1,0 +1,9 @@
+res://old/Main.tscn::872f57250ba3ee7176221e08f0b26b1b::1668403404::res://.godot/exported/133200997/export-7cc07234eb07b66e39e7099be779126b-Main.scn
+res://scenes/main/main.tscn::ab301fba16a684a6cd290cfe5b8daad6::1668493757::res://.godot/exported/133200997/export-f39996a6d27a38698d16421ab974097b-main.scn
+res://scenes/resources/dialogs/out.tres::c6c4d5c07bdc7568d2278edcf5aacb20::1668330998::res://.godot/exported/133200997/export-5dce32ec8dd3afd34336984538084e43-out.res
+res://scenes/resources/dialogs/test_dialog_data.tres::41d3fc24a9dccc7cce23e1511efb4a0f::1668332088::res://.godot/exported/133200997/export-203d8961e4f5349dd3ada280a8ae945e-test_dialog_data.res
+res://scenes/ui/dialogLoader/dialog_loader.tscn::6191579a432d1a0b68e7b39e15d5f88c::1668493757::res://.godot/exported/133200997/export-50830916dbb24e8ff373996f3ae6068c-dialog_loader.scn
+res://scenes/ui/dialogWindow/dialog_window.tscn::9fd38d8bd13b947d718c6ac9bfd20da0::1668493757::res://.godot/exported/133200997/export-c1fe5ed626c8497d753f0af5272c069e-dialog_window.scn
+res://default_env.tres::a52129f071fffbd20a6013a6c0edec1e::1668226267::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://dialog_examples/test_dialog_1.tres::45c01c5e591057828ba4ae7302d75b6b::1668493203::res://.godot/exported/133200997/export-d68549d4a76ee6d6ff41e4951836a13e-test_dialog_1.res
+res://dialog_examples/test_dialog_2.tres::04aee721b1012f05a03d5153f76e7959::1668493198::res://.godot/exported/133200997/export-8e26ebfbfa6f79222bcb509188e44dbd-test_dialog_2.res

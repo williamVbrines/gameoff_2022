@@ -23,3 +23,8 @@ signal changed_annoyance(val : float);
 signal battel_queue_changed(new_q : Array);
 signal change_battel_queue(entity : String,  pos_change : int);
 
+#Dialog signals#################################################################
+signal start_dialog(id : String);
+signal dialog_ended();
+signal dialog_emit(val : String);
+

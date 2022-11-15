@@ -17,8 +17,15 @@ var drag_orgin =  Vector2.ZERO;
 var disabled = false;
 
 func _ready() -> void:
+	_make_connections();
+	
+	
+func _make_connections() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
 	EventManager.start_exploration.connect(_on_start_exploration);
+	EventManager.start_dialog.connect(_on_start_dialog)
+	EventManager.dialog_ended.connect(_on_dialog_eneded)
+	
 	
 func _on_start_exploration() -> void:
 	camera.set_current(true);
@@ -26,7 +33,16 @@ func _on_start_exploration() -> void:
 	
 func _on_start_combat(_with : String, _cmaera : Camera3D) -> void:
 	disabled = true;
-
+	
+	
+func _on_start_dialog(_str : String) -> void:
+	disabled = true;
+	
+	
+func _on_dialog_eneded() -> void:
+	disabled = false;
+	
+	
 func _input(event: InputEvent) -> void:
 	if !disabled:
 		camera_event(event);

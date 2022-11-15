@@ -1,0 +1,64 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0wtqjkjka54p"]
+
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_a7h1f"]
+
+[resource]
+script = ExtResource("1_a7h1f")
+data = {
+"0": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"1": {
+"act": ["Line[NeedRing]"],
+"con": "player[has_ring]",
+"def": ["Line[Default Dialog]"]
+},
+"2": {
+"act": ["Opt[Stop, No I have not]", "  Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"3": {
+"act": ["Opt[FakeRing, Yes I do here it is]", " Line[next]"],
+"con": "player[has_fake_ring]",
+"def": ["Line[next]"]
+},
+"4": {
+"act": ["Show[opt]", " Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"5": {
+"act": ["Say[npc_2,  NO THATS NOT MY RING. GET OUT]", " Show[text]", " Wait[Stop]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Default Dialog": {
+"act": ["Say[npc_2, Hello there, have you seen my ring]", " Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"FakeRing": {
+"act": ["Add[npc_2, anger, 1]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"NeedRing": {
+"act": ["Say[npc_2, That ring I NEEED my ring]", " Show[text]", " Wait[Stop]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Start": {
+"act": ["Say[player,Good4]", " Set[player, has_ring, false]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Stop": {
+"act": ["Hide[]"],
+"con": "true",
+"def": []
+},
+"order": ["Start", "0", "1", "Default Dialog", "2", "3", "4", "NeedRing", "FakeRing", "5", "Stop"]
+}

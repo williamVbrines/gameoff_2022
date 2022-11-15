@@ -18,3 +18,10 @@ var player_tactics : Dictionary = {
 	
 var player_items : Array[String] = [] #List of refids to all items the player has
 var player_clues : Array[String] = [] #List of refids to all clues the player has
+
+
+var dialog_profiles : Dictionary = {
+}
+
+
+

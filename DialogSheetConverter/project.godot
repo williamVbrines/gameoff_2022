@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Resource",
+"class": &"DialogData",
+"language": &"GDScript",
+"path": "res://scenes/resources/dialogs/dialog_data.gd"
+}]
+_global_script_class_icons={
+"DialogData": ""
+}
+
+[application]
+
+config/name="DialogSheetConverter"
+run/main_scene="res://scenes/main/main.tscn"
+config/features=PackedStringArray("4.0")
+config/icon="res://icon.png"
+
+[autoload]
+
+SystemGlobals="*res://scenes/systemGlobals/system_globals.gd"
+EventManager="*res://scenes/eventManager/event_manager.gd"
+ResourceManager="*res://scenes/resourceManager/resource_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="viewport"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

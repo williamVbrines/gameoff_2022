@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgajfar1vys5c"]
+
+[ext_resource type="PackedScene" uid="uid://3xd4kkglwogk" path="res://scenes/ui/dialogLoader/dialog_loader.tscn" id="1_eipit"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_to46a"]
+[ext_resource type="PackedScene" uid="uid://ga2iolih30e1" path="res://scenes/ui/dialogWindow/dialog_window.tscn" id="2_rnbuc"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_to46a")
+
+[node name="DialogLoader" parent="." instance=ExtResource("1_eipit")]
+
+[node name="DialogWindow" parent="." instance=ExtResource("2_rnbuc")]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 1487.0
+offset_top = 53.0
+offset_right = 1916.0
+offset_bottom = 777.0
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "{}"
+
+[node name="Label" type="Label" parent="RichTextLabel"]
+offset_left = -20.0
+offset_top = -42.0
+offset_right = 157.0
+offset_bottom = 3.0
+theme_override_font_sizes/font_size = 30
+text = "Profile Data:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1341.0
+offset_top = 8.0
+offset_right = 1461.0
+offset_bottom = 220.0
+
+[node name="Charm" type="LineEdit" parent="VBoxContainer"]
+offset_right = 120.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 30
+max_length = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Charm"]
+offset_left = -70.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "CHA:"
+
+[node name="Logic" type="LineEdit" parent="VBoxContainer"]
+offset_top = 54.0
+offset_right = 120.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 30
+max_length = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Logic"]
+offset_left = -70.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "LOG:"
+
+[node name="DECEPTION" type="LineEdit" parent="VBoxContainer"]
+offset_top = 108.0
+offset_right = 120.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 30
+max_length = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/DECEPTION"]
+offset_left = -70.0
+offset_right = -4.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "DEC:"
+
+[node name="INTIMIDATION" type="LineEdit" parent="VBoxContainer"]
+offset_top = 162.0
+offset_right = 120.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 30
+max_length = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/INTIMIDATION"]
+offset_left = -70.0
+offset_right = -12.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "INT:"
+
+[connection signal="text_changed" from="VBoxContainer/Charm" to="." method="_on_charm_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Logic" to="." method="_on_logic_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/DECEPTION" to="." method="_on_deception_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/INTIMIDATION" to="." method="_on_intimidation_text_changed"]

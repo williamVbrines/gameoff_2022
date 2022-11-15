@@ -1,0 +1,6 @@
+res://scenes/ui/dialogWindow/dialog_window.tscn
+res://scenes/ui/dialogWindow/dialog_window.gd
+res://scenes/main/main.tscn
+res://scenes/main/main.gd
+res://scenes/ui/dialogLoader/dialog_loader.tscn
+res://scenes/ui/dialogLoader/dialog_loader.gd

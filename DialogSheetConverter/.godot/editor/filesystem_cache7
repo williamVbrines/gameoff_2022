@@ -1,0 +1,32 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1668492637
+default_env.tres::Environment::-1::1668226267::0::1::::<><>::
+DialogExample - Example.tres::Resource::-1::1668475220::0::1::::<><>::res://scenes/resources/dialogs/dialog_data.gd
+DialogExample - ExampleALL.tres::Resource::-1::1668477761::0::1::::<><>::res://scenes/resources/dialogs/dialog_data.gd
+export_presets.cfg::TextFile::-1::1668484029::0::1::::<><>::
+icon.png::CompressedTexture2D::1164233361986046522::1668226242::1668226287::1::::<><>::
+::res://old/::1668403404
+Main.gd::GDScript::-1::1668301315::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::167113153398474484::1668403404::0::1::::<><>::res://Main.gd
+::res://scenes/::1668403386
+::res://scenes/eventManager/::1668474662
+event_manager.gd::GDScript::-1::1668474662::0::1::::<>Node<>::
+::res://scenes/main/::1668483065
+main.gd::GDScript::-1::1668470921::0::1::::<>Control<>::
+main.tscn::PackedScene::5194529838590843350::1668483065::0::1::::<><>::uid://3xd4kkglwogk<>res://scenes/main/main.gd<>uid://ga2iolih30e1
+::res://scenes/resourceManager/::1668483027
+resource_manager.gd::GDScript::-1::1668483027::0::1::::<>Node<>::
+::res://scenes/resources/::1668245247
+::res://scenes/resources/dialogs/::1668403737
+dialog_data.gd::GDScript::-1::1668231597::0::1::::DialogData<>Resource<>::
+out.tres::Resource::5303716973625546709::1668330998::0::1::::<><>::res://scenes/resources/dialogs/dialog_data.gd
+test_dialog_data.tres::Resource::8559601577115814050::1668332088::0::1::::<><>::res://scenes/resources/dialogs/dialog_data.gd
+::res://scenes/systemGlobals/::1668468364
+system_globals.gd::GDScript::-1::1668468364::0::1::::<>Node<>::
+::res://scenes/ui/::1668402084
+::res://scenes/ui/dialogLoader/::1668483065
+dialog_loader.gd::GDScript::-1::1668483065::0::1::::<>Control<>::
+dialog_loader.tscn::PackedScene::2013002790179561902::1668483065::0::1::::<><>::res://scenes/ui/dialogLoader/dialog_loader.gd
+::res://scenes/ui/dialogWindow/::1668483065
+dialog_window.gd::GDScript::-1::1668475935::0::1::::<>Control<>::
+dialog_window.tscn::PackedScene::422787459677845910::1668483065::0::1::::<><>::res://scenes/ui/dialogWindow/dialog_window.gd<>uid://chtfpc5ea0qy4
