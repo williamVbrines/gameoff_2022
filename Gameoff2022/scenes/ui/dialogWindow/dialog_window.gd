@@ -1,6 +1,4 @@
 extends Control
-
-@export var dialog_data : Resource;
 @onready var _label: RichTextLabel = $Panel/RichTextLabel
 @onready var contine_button: Button = $Panel/ContineButton
 
@@ -13,6 +11,9 @@ extends Control
 @onready var opt_button_3: Button = $Panel/OptButton3
 @onready var opt_label_3: RichTextLabel = $Panel/OptButton3/OptLabel3
 
+@onready var line_label: Label = $LineLabel
+
+var dialog_data : DialogData;
 var speaker : String = "";
 var text : String = "";
 var wait_tag : String = "null";
@@ -74,12 +75,8 @@ var actions : Dictionary = {
 	
 	
 func _ready() -> void:
-	dialog_data = dialog_data as DialogData;
-	if dialog_data == null: breakpoint;
-
+	hide();
 	_make_connections();
-
-	run_dialog(dialog_data);
 	
 	
 func _make_connections() -> void:
@@ -87,6 +84,21 @@ func _make_connections() -> void:
 	opt_button_1.pressed.connect(_on_opt_1_pressed);
 	opt_button_2.pressed.connect(_on_opt_2_pressed);
 	opt_button_3.pressed.connect(_on_opt_3_pressed);
+	EventManager.start_dialog.connect(_on_strat_dialog);
+	
+	
+func _on_strat_dialog(id : String) -> void:
+	var data = ResourceManager.get_dialog_data(id) as DialogData;
+	
+	if data == null:
+		exit_dialog();
+		return;
+	if data.data == { }:
+		exit_dialog();
+		return;
+		
+	
+	call_deferred("run_dialog" , data);
 	
 	
 func _on_opt_1_pressed() -> void:
@@ -133,25 +145,31 @@ func _clear_opts() -> void:
 	opt_action_3 = "null";
 	
 	
-func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
-	if dialog_data == null: return;
+func run_dialog(new_dialog_data : DialogData, tag : String = "Start") -> void:
+	if new_dialog_data == null: return;
 	
-	var data = dialog_data.data.duplicate(true);
+	var data = new_dialog_data.data.duplicate(true);
 	
-	if data == null : return;
-	if data.has(tag) == false : return;
+	if data == null : 
+		exit_dialog();
+		return;
 	
+	if data.has(tag) == false || data == { }: 
+		exit_dialog();
+		return;
+	
+	show();
+	
+	self.dialog_data = new_dialog_data;
 	parce_line(data.get(tag), tag);
 	
 	
 func parce_line(line : Dictionary, tag : String) -> void:
-	print(line);#TODO: Remove
+	line_label.text = "CurrentLine : " + tag
 	var result = parce_condition(line.con);
 	if result && typeof(result) == 1:
-		print("ParceResult: TRUE ###################################")
 		parce_action(line.act, tag);
 	else:
-		print("ParceResult: FALSE ###################################")
 		parce_action(line.def, tag);
 	
 	
@@ -164,11 +182,6 @@ func parce_action(act : Array, tag : String) -> void:
 		var p2 = action.rfind("]") ;
 		var params = action.substr(p1,p2-p1);
 		if params: action = action.substr(0,p1-1);
-		
-		
-		prints(">>>>CurrentTAG : ", tag)
-		prints(">>>>Action :", action.replace(" ", ""))
-		prints(">>>>Params :", params)
 		
 		action = action.replace(" ", "").to_upper();
 		
@@ -191,8 +204,6 @@ func parce_condition(con : String):
 	left = con.substr(0, con.find(opp) if opp != null else con.length());
 	right = clip_str_to(con,opp) if opp != null else null;
 	
-	prints(left,opp,right,"###########################");
-
 	if left != null && opp == null && right == null:
 		return str_to_val(left);
 	
@@ -201,6 +212,10 @@ func parce_condition(con : String):
 		
 		
 	return false;
+	
+func exit_dialog()->void:
+	EventManager.dialog_ended.emit();
+	hide();
 	
 	
 #Actions############################################################################################
@@ -285,7 +300,7 @@ func _say_action(params : String, tag : String) -> int:
 	
 func _open_action(params : String, tag : String) -> int:
 	var new_tag = get_next_str_clean(params,",");
-	var new_dialog = ResourcManager.get_dialog_data(clip_str_to(params, ","));
+	var new_dialog = ResourceManager.get_dialog_data(clip_str_to(params, ","));
 	if new_dialog != null:
 		dialog_data = new_dialog;
 		call_deferred("run_dialog" , dialog_data , new_tag);
@@ -335,6 +350,7 @@ func _show_action(params : String, tag : String) -> int:
 	
 func _hide_action(params : String, tag : String) -> int:
 	hide();
+	EventManager.dialog_ended.emit();
 	return -1;
 	
 	

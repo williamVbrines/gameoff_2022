@@ -21,7 +21,7 @@ func _on_visibilty_changed() -> void:
 	
 	
 func _update_label()->void:
-	var data : TacticsData = ResourcManager.get_tactic(tactic_id);
+	var data : TacticsData = ResourceManager.get_tactic(tactic_id);
 	
 	text = "EMPTY";
 	
@@ -38,7 +38,7 @@ func _on_pressed() -> void:
 	
 	if available.size() > 0:
 		id = available[0];
-		data = ResourcManager.get_tactic(id);
+		data = ResourceManager.get_tactic(id);
 		
 	if data != null:
 		tactic_id = id;

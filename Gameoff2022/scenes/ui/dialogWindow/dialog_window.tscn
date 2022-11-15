@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhp7jkmj1ckja"]
+[gd_scene load_steps=2 format=3 uid="uid://ga2iolih30e1"]
 
 [ext_resource type="Script" path="res://scenes/ui/dialogWindow/dialog_window.gd" id="1_khgcm"]
-[ext_resource type="Resource" uid="uid://chtfpc5ea0qy4" path="res://scenes/resources/dialogs/out.tres" id="2_2gnrs"]
 
 [node name="DialogWindow" type="Control"]
 layout_mode = 3
@@ -11,16 +10,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_khgcm")
-dialog_data = ExtResource("2_2gnrs")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
 offset_top = 755.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,7 +30,6 @@ theme_override_font_sizes/mono_font_size = 30
 text = "THERE IS SOME TEXT HERE"
 
 [node name="ContineButton" type="Button" parent="Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -46,14 +41,12 @@ flat = true
 
 [node name="OptButton1" type="Button" parent="Panel"]
 visible = false
-layout_mode = 0
 offset_right = 1915.0
 offset_bottom = 105.0
 mouse_default_cursor_shape = 2
 flat = true
 
 [node name="OptLabel1" type="RichTextLabel" parent="Panel/OptButton1"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -69,7 +62,6 @@ theme_override_font_sizes/mono_font_size = 30
 
 [node name="OptButton2" type="Button" parent="Panel"]
 visible = false
-layout_mode = 1
 offset_left = 3.0
 offset_top = 111.0
 offset_right = 1918.0
@@ -78,7 +70,6 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="OptLabel2" type="RichTextLabel" parent="Panel/OptButton2"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -94,7 +85,6 @@ theme_override_font_sizes/mono_font_size = 30
 
 [node name="OptButton3" type="Button" parent="Panel"]
 visible = false
-layout_mode = 1
 offset_left = 3.0
 offset_top = 219.0
 offset_right = 1918.0
@@ -103,7 +93,6 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="OptLabel3" type="RichTextLabel" parent="Panel/OptButton3"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -116,3 +105,11 @@ theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
+
+[node name="LineLabel" type="Label" parent="."]
+offset_left = 1391.0
+offset_top = 702.0
+offset_right = 1919.0
+offset_bottom = 747.0
+theme_override_font_sizes/font_size = 30
+text = "CurrentLine :"

@@ -13,3 +13,4 @@ grow_vertical = 2
 script = ExtResource("1_200lq")
 
 [node name="LoadoutMenu" parent="." instance=ExtResource("2_stjcu")]
+layout_mode = 1

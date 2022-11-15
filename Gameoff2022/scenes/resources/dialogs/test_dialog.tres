@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dt7lnf3o1refa"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d0wtqjkjka54p"]
 
-[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_64jik"]
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_a7h1f"]
 
 [resource]
-script = ExtResource("1_64jik")
+script = ExtResource("1_a7h1f")
 data = {
 "0": {
 "act": ["Show[text]", " Wait[next]"],
