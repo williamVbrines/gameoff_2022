@@ -78,8 +78,6 @@ func _ready() -> void:
 	if dialog_data == null: breakpoint;
 
 	_make_connections();
-
-	run_dialog(dialog_data);
 	
 	
 func _make_connections() -> void:
@@ -87,6 +85,23 @@ func _make_connections() -> void:
 	opt_button_1.pressed.connect(_on_opt_1_pressed);
 	opt_button_2.pressed.connect(_on_opt_2_pressed);
 	opt_button_3.pressed.connect(_on_opt_3_pressed);
+	EventManager.start_dialog.connect(_on_strat_dialog);
+	
+	
+func _on_strat_dialog(id : String) -> void:
+	print(id)
+	var data = ResourceManager.get_dialog_data(id) as DialogData;
+	
+	print(data.data)
+	
+	if data == null:
+		exit_dialog();
+		return;
+	if data.data == { }:
+		exit_dialog();
+		return;
+		
+	call_deferred("run_dialog" , data);
 	
 	
 func _on_opt_1_pressed() -> void:
@@ -138,8 +153,15 @@ func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
 	
 	var data = dialog_data.data.duplicate(true);
 	
-	if data == null : return;
-	if data.has(tag) == false : return;
+	if data == null : 
+		exit_dialog();
+		return;
+	
+	if data.has(tag) == false || data == { }: 
+		exit_dialog();
+		return;
+	
+	show();
 	
 	parce_line(data.get(tag), tag);
 	
@@ -201,6 +223,11 @@ func parce_condition(con : String):
 		
 		
 	return false;
+	
+func exit_dialog()->void:
+	EventManager.dialog_ended.emit();
+	hide();
+	print("dialog exited" )
 	
 	
 #Actions############################################################################################
@@ -335,6 +362,7 @@ func _show_action(params : String, tag : String) -> int:
 	
 func _hide_action(params : String, tag : String) -> int:
 	hide();
+	EventManager.dialog_ended.emit();
 	return -1;
 	
 	
