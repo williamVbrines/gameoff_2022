@@ -1,21 +1,19 @@
 extends Node
 
+#Tactics Data###################################################################
 var tactics_data = {
 	#"RefID" : preload(res:path),
 	"test" : preload("res://scenes/resources/actions/tactics/test_tactic.tres")
 }
-	
-
-
-
 func get_tactic(id : String) -> TacticsData:
 	return tactics_data.get(id,null);
 	
 	
+	
+#Dialog Data####################################################################
 var dialog_data = {
 	"test_dialog" = preload("res://scenes/resources/dialogs/test_dialog.tres")
 }
-
 func get_dialog_data(id : String) -> DialogData:
 	
 	if FileAccess.file_exists(id):
@@ -26,6 +24,7 @@ func get_dialog_data(id : String) -> DialogData:
 		return data;
 		
 	return dialog_data.get(id, null);
+	
 	
 func add_resource( type : String , path : String , key : String = "null") -> void:
 	var data = null;
@@ -40,4 +39,5 @@ func add_resource( type : String , path : String , key : String = "null") -> voi
 	match type:
 		"dialog_data":
 			dialog_data[key] = data;
-
+	
+	

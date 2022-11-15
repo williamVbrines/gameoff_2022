@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://depvgkijahyt5"]
+
+[ext_resource type="Script" path="res://scenes/test/save_test.gd" id="1_7vimq"]
+
+[node name="SaveTest" type="Node"]
+script = ExtResource("1_7vimq")
