@@ -1,7 +1,9 @@
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://modles/campfire.tscn
+res://modles/wizardtower.tscn
 res://scenes/levels/VillageScene.tscn
 res://scenes/main.tscn
 res://scenes/levels/RoomScene.tscn
+res://modles/campfire.tscn
+res://modles/villagehousegreen.tscn

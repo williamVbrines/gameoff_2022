@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://u4547vsikfon"]
+[gd_scene load_steps=35 format=3 uid="uid://u4547vsikfon"]
 
 [ext_resource type="PackedScene" uid="uid://do66mehml4abx" path="res://modles/villagehousegreen.tscn" id="1_eln33"]
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_fjwfa"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://b707k3rkcx0dq" path="res://modles/grasstexture2.tscn" id="21_reib2"]
 [ext_resource type="PackedScene" uid="uid://cbpms42oraq6n" path="res://modles/campfire.tscn" id="23_une0c"]
 [ext_resource type="PackedScene" uid="uid://b8h4cvh3bfyxe" path="res://modles/trailsplit.tscn" id="23_x6lf4"]
+[ext_resource type="PackedScene" uid="uid://cbnhppl67epy0" path="res://modles/wizardtower.tscn" id="24_lryoy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f8xgp"]
 panorama = ExtResource("1_fjwfa")
@@ -103,7 +104,7 @@ shader_parameter/ColorParameter = null
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.725602, 0.629743, 0.277353, 0.0489503, -0.354803, 0.933659, 0.686371, 0.691041, 0.22662, 13.1257, 24.6035, 2.50101)
+transform = Transform3D(-0.725602, 0.629743, 0.277353, -0.224831, -0.59791, 0.769386, 0.650348, 0.495911, 0.57543, 13.1257, 24.6035, 2.50101)
 light_energy = 3.0
 shadow_enabled = true
 
@@ -111,7 +112,7 @@ shadow_enabled = true
 environment = SubResource("Environment_ujh50")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 38.8651, 38.8136, 33.5533)
+transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 31.9266, 38.8136, 11.5509)
 visible = false
 fov = 36.7416
 
@@ -492,3 +493,6 @@ transform = Transform3D(0.991711, 0, 0.0495871, 0, 1, 0, -0.0389991, 0, 1.26095,
 
 [node name="campfire" parent="." instance=ExtResource("23_une0c")]
 transform = Transform3D(-0.393428, 0, 0.919355, 0, 1, 0, -0.919355, 0, -0.393428, 2.50019, -0.219822, 14.5581)
+
+[node name="wizardtower" parent="." instance=ExtResource("24_lryoy")]
+transform = Transform3D(0.85512, 0, 0.51843, 0, 1, 0, -0.51843, 0, 0.85512, 11.6269, 0, -11.3316)
