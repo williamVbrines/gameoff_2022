@@ -1,7 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=3]
-
-[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_aw8ax"]
-
-[resource]
-script = ExtResource("1_aw8ax")
-data = {}

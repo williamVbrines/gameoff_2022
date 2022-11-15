@@ -12,7 +12,6 @@ grow_vertical = 2
 script = ExtResource("1_bxgyd")
 
 [node name="LineEdit" type="LineEdit" parent="."]
-layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -23,7 +22,6 @@ theme_override_font_sizes/font_size = 30
 placeholder_text = "Path to tsv or tres file"
 
 [node name="FileLookupButton" type="Button" parent="LineEdit"]
-layout_mode = 1
 offset_left = 1215.0
 offset_top = 2.0
 offset_right = 1271.0
@@ -32,7 +30,6 @@ theme_override_font_sizes/font_size = 30
 text = "***"
 
 [node name="ConvertButton" type="Button" parent="."]
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -46,7 +43,6 @@ theme_override_font_sizes/font_size = 30
 text = "Convert"
 
 [node name="Label" type="RichTextLabel" parent="."]
-layout_mode = 1
 offset_right = 1152.0
 offset_bottom = 1020.0
 theme_override_font_sizes/normal_font_size = 30
@@ -70,7 +66,6 @@ access = 2
 filters = PackedStringArray("*.tsv", "*.tres")
 
 [node name="TestButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1632.0
 offset_top = 1028.0
 offset_right = 1791.0
@@ -79,7 +74,6 @@ theme_override_font_sizes/font_size = 30
 text = "TestDialog"
 
 [node name="LoadButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1499.0
 offset_top = 1028.0
 offset_right = 1625.0

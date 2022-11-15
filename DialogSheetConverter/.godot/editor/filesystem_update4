@@ -1,9 +1,6 @@
+res://scenes/ui/dialogWindow/dialog_window.tscn
+res://scenes/ui/dialogWindow/dialog_window.gd
+res://scenes/main/main.tscn
+res://scenes/main/main.gd
 res://scenes/ui/dialogLoader/dialog_loader.tscn
 res://scenes/ui/dialogLoader/dialog_loader.gd
-res://scenes/main/main.tscn
-res://scenes/ui/dialogWindow/dialog_window.tscn
-res://scenes/eventManager/event_manager.gd
-res://scenes/main/main.gd
-res://scenes/systemGlobals/system_globals.gd
-res://scenes/ui/dialogWindow/dialog_window.gd
-res://scenes/resourceManager/resource_manager.gd

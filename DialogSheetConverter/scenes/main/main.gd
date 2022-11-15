@@ -46,4 +46,6 @@ func _on_intimidation_text_changed(new_text: String) -> void:
 	
 func _on_time_out() -> void:
 	rich_text_label.text = JSON.stringify(SystemGlobals.dialog_profiles,"\t");
+	rich_text_label.text += "\nPreloaded:\n"
+	rich_text_label.text += str(ResourceManager.dialog_data.keys());
 	timer.start(update_time);

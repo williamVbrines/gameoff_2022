@@ -1,9 +1,9 @@
 [gd_resource type="Resource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_asrpy"]
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1_rldn2"]
 
 [resource]
-script = ExtResource("1_asrpy")
+script = ExtResource("1_rldn2")
 data = {
 "0": {
 "act": ["Say[player,GOOD1]", " Line[next]"],
@@ -46,7 +46,7 @@ data = {
 "def": ["Line[next]"]
 },
 "8": {
-"act": ["Open[Start,test_dialog2]"],
+"act": ["Open[Start,test_dialog_1]"],
 "con": "true",
 "def": ["Line[next]"]
 },

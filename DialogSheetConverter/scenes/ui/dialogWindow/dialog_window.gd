@@ -1,6 +1,4 @@
 extends Control
-
-@export var dialog_data : Resource;
 @onready var _label: RichTextLabel = $Panel/RichTextLabel
 @onready var contine_button: Button = $Panel/ContineButton
 
@@ -13,6 +11,9 @@ extends Control
 @onready var opt_button_3: Button = $Panel/OptButton3
 @onready var opt_label_3: RichTextLabel = $Panel/OptButton3/OptLabel3
 
+@onready var line_label: Label = $LineLabel
+
+var dialog_data : DialogData;
 var speaker : String = "";
 var text : String = "";
 var wait_tag : String = "null";
@@ -74,9 +75,6 @@ var actions : Dictionary = {
 	
 	
 func _ready() -> void:
-	dialog_data = dialog_data as DialogData;
-	if dialog_data == null: breakpoint;
-
 	_make_connections();
 	
 	
@@ -89,10 +87,7 @@ func _make_connections() -> void:
 	
 	
 func _on_strat_dialog(id : String) -> void:
-	print(id)
 	var data = ResourceManager.get_dialog_data(id) as DialogData;
-	
-	print(data.data)
 	
 	if data == null:
 		exit_dialog();
@@ -101,6 +96,7 @@ func _on_strat_dialog(id : String) -> void:
 		exit_dialog();
 		return;
 		
+	
 	call_deferred("run_dialog" , data);
 	
 	
@@ -148,10 +144,10 @@ func _clear_opts() -> void:
 	opt_action_3 = "null";
 	
 	
-func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
-	if dialog_data == null: return;
+func run_dialog(new_dialog_data : DialogData, tag : String = "Start") -> void:
+	if new_dialog_data == null: return;
 	
-	var data = dialog_data.data.duplicate(true);
+	var data = new_dialog_data.data.duplicate(true);
 	
 	if data == null : 
 		exit_dialog();
@@ -163,17 +159,16 @@ func run_dialog(dialog_data : DialogData, tag : String = "Start") -> void:
 	
 	show();
 	
+	self.dialog_data = new_dialog_data;
 	parce_line(data.get(tag), tag);
 	
 	
 func parce_line(line : Dictionary, tag : String) -> void:
-	print(line);#TODO: Remove
+	line_label.text = "CurrentLien : " + tag
 	var result = parce_condition(line.con);
 	if result && typeof(result) == 1:
-		print("ParceResult: TRUE ###################################")
 		parce_action(line.act, tag);
 	else:
-		print("ParceResult: FALSE ###################################")
 		parce_action(line.def, tag);
 	
 	
@@ -186,11 +181,6 @@ func parce_action(act : Array, tag : String) -> void:
 		var p2 = action.rfind("]") ;
 		var params = action.substr(p1,p2-p1);
 		if params: action = action.substr(0,p1-1);
-		
-		
-		prints(">>>>CurrentTAG : ", tag)
-		prints(">>>>Action :", action.replace(" ", ""))
-		prints(">>>>Params :", params)
 		
 		action = action.replace(" ", "").to_upper();
 		
@@ -213,8 +203,6 @@ func parce_condition(con : String):
 	left = con.substr(0, con.find(opp) if opp != null else con.length());
 	right = clip_str_to(con,opp) if opp != null else null;
 	
-	prints(left,opp,right,"###########################");
-
 	if left != null && opp == null && right == null:
 		return str_to_val(left);
 	
@@ -227,7 +215,6 @@ func parce_condition(con : String):
 func exit_dialog()->void:
 	EventManager.dialog_ended.emit();
 	hide();
-	print("dialog exited" )
 	
 	
 #Actions############################################################################################

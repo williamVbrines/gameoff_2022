@@ -159,9 +159,11 @@ func _convert_to_json(data : String) -> String:
 	var def;
 	var order = [];
 	var time = Time.get_ticks_msec();
-	var time_cap = 10;
+	var time_cap = 60;
+	
 	while index < data.length():
 		if Time.get_ticks_msec() - time >= time_cap:
+			print(Time.get_ticks_msec() - time);
 			err = 4;
 			label.text += "\n[color=red]Formating error see INF time:" +str(tag)+ "[/color]";
 			return "";
