@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://b7gkdxy2wwn7a" path="res://meshes/WizardTower.obj" id="1_jckjf"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_605td"]
-[ext_resource type="Texture2D" uid="uid://27a0fkayoiew" path="res://textures/WizardTowerTempTexture.png" id="3_crgso"]
+[ext_resource type="Texture2D" uid="uid://37x4382oo80g" path="res://textures/WizardTowerTempTexture.png" id="3_crgso"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_vyegu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ewosu"]
