@@ -41,10 +41,10 @@ offset_right = 345.0
 offset_bottom = 68.0
 
 [node name="BattelQueue" parent="UI" instance=ExtResource("2_chdcx")]
-offset_left = 810.0
-offset_top = 25.0
-offset_right = 1155.0
-offset_bottom = 82.0
+offset_left = 461.0
+offset_top = 125.0
+offset_right = 806.0
+offset_bottom = 182.0
 
 [node name="CombatActionSelection" parent="UI" instance=ExtResource("6_s7td5")]
 offset_left = 3.0

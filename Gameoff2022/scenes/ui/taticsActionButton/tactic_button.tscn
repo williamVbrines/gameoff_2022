@@ -1,17 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://gloe6kqplns2"]
+[gd_scene load_steps=8 format=3 uid="uid://gloe6kqplns2"]
 
 [ext_resource type="Script" path="res://scenes/ui/combatActionSelection/taticAction/tactic_action.gd" id="1_mvboj"]
-[ext_resource type="Resource" uid="uid://blnj50581scqy" path="res://scenes/resources/actions/tactics/test_tactic.tres" id="2_wsbcu"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="3_37cxj"]
+[ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="3_sfqkw"]
+[ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="4_tnn87"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="5_d21fy"]
+[ext_resource type="Texture2D" uid="uid://cbi7t5s6k8iie" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv3.png" id="8_c6452"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uhiuv"]
+resource_local_to_scene = true
+shader = ExtResource("3_sfqkw")
+shader_parameter/from_1 = Color(1, 1, 1, 1)
+shader_parameter/from_2 = Color(0, 0, 0, 1)
+shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
 
 [node name="TacticButton" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 151.0
+offset_right = 276.0
 offset_bottom = 50.0
 script = ExtResource("1_mvboj")
-data = ExtResource("2_wsbcu")
 
-[node name="TagButton2" parent="." instance=ExtResource("3_37cxj")]
-clip_contents = false
-layout_mode = 1
+[node name="TagButton" parent="." instance=ExtResource("3_37cxj")]
+material = SubResource("ShaderMaterial_uhiuv")
+offset_right = 296.0
+normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+hovered_color_1 = Color(0.117647, 0.109804, 0.211765, 0.972549)
+pressed_color_1 = Color(0.0901961, 0.0823529, 0.168627, 0.972549)
+
+[node name="CostCounterTag" parent="TagButton" instance=ExtResource("4_tnn87")]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="TaticDiscriptionLabel" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 5.0
+offset_right = 271.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("5_d21fy")
+theme_override_font_sizes/font_size = 42
+text = "12345678901234"
+visible_characters = 14
+
+[node name="Frame" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -37.0
+offset_top = -12.0
+offset_right = 37.0
+offset_bottom = 62.0
+texture = ExtResource("8_c6452")

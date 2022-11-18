@@ -1,7 +1,10 @@
-Control
 Label
-TextureRect
+Control
+HSeparator
+VSplitContainer
+VBoxContainer
 Button
+TextureRect
 AnimationPlayer
 WorldEnvironment
 OmniLight3D
@@ -18,7 +21,6 @@ Panel
 PopupMenu
 MenuButton
 StaticBody3D
-VBoxContainer
 InteractableArea3D (interactableArea3D.gd)
 LineEdit
 InteractableArea3D (InteractableArea3D.gd)
@@ -28,4 +30,3 @@ RayCast3D
 SpringArm3D
 RigidBody3D
 DirectionalLight3D
-CharacterBody3D

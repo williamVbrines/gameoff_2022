@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmqxxsevkfr7h" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_Edge.png" id="4_786im"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2agw2"]
+resource_local_to_scene = true
 shader = ExtResource("1_dndjf")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
 shader_parameter/from_2 = Color(0, 0, 0, 1)
@@ -15,7 +16,6 @@ shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
 [node name="TagButton" type="Button"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_2agw2")
-clip_contents = true
 custom_minimum_size = Vector2i(2, 50)
 layout_direction = 1
 anchors_preset = -1

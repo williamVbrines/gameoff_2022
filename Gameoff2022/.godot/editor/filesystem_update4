@@ -11,3 +11,9 @@ res://scenes/interactableArea3D/interactablesTest.tscn
 res://scenes/ui/taticsActionButton/tactic_button.tscn
 res://scenes/ui/costCounterTag/cost_counter_tag.tscn
 res://scenes/ui/costCounterTag/cost_counter_tag.gd
+res://scenes/ui/combatActionSelection/taticAction/tactic_action.gd
+res://scenes/ui/combatActionSelection/combat_action_selection.tscn
+res://scenes/ui/combatActionSelection/combat_action_selection.gd
+res://scenes/systemGlobals/system_globals.gd
+res://scenes/ui/clueActionMenu/clue_menu.tscn
+res://scenes/ui/combatActionSelection/clueAction/clue_action.gd
