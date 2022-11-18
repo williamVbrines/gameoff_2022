@@ -36,8 +36,8 @@ background_energy_multiplier = 0.0
 sky = SubResource("33")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.2
-ambient_light_energy = 0.15
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
 glow_strength = 1.79
 glow_bloom = 0.44
 
@@ -265,6 +265,7 @@ skeleton = NodePath("../..")
 
 [node name="Monitor" parent="Room/Desk" instance=ExtResource("16_xh2ma")]
 transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.423819)
+visible = false
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_f1jah")
 
@@ -352,3 +353,7 @@ transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.
 mesh = SubResource("17")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("18")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(0.905717, 1.05439e-10, 0.423884, -0.00123549, 0.999996, 0.00263989, -0.423882, -0.0029147, 0.905713, -5.15277, 2.39097, 2.19387)
+current = true

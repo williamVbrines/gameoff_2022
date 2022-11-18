@@ -6,7 +6,7 @@ var mesh_size = null;
 @onready var viewport: SubViewport = $SubViewport
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 
-var display_y_scale := 0.5;
+var display_y_scale := 1;
 
 var is_mouse_held := false;
 var is_mouse_inside := false : set = set_is_mouse_inside;
@@ -73,8 +73,8 @@ func handel_mouse_event(event) -> void:
 	mouse_pos2D.x = mouse_pos2D.x / mesh_size.x;
 	mouse_pos2D.y = mouse_pos2D.y / mesh_size.y;
 
-	mouse_pos2D.x = mouse_pos2D.x * 1920#viewport.size.x;
-	mouse_pos2D.y = mouse_pos2D.y * 1080#viewport.size.y;
+	mouse_pos2D.x = mouse_pos2D.x * 500; #1920#viewport.size.x;
+	mouse_pos2D.y = mouse_pos2D.y * 500; #1080#viewport.size.y;
 	
 	new_event.position = mouse_pos2D;
 	new_event.global_position = mouse_pos2D;
@@ -113,8 +113,8 @@ func find_mouse(pos : Vector2):
 func set_panel_size(y_scale):
 	var area_shape = $MeshInstance3D/Area3D/CollisionShape3D;
 
-	var view_h : float = 1080 #viewport.size.y;
-	var view_w : float = 1920 #viewport.size.x;
+	var view_h : float = 500; #1080 #viewport.size.y;
+	var view_w : float = 500; #1920 #viewport.size.x;
 	var x_scale = 0.0;
 	var ratio = view_w / view_h;
 

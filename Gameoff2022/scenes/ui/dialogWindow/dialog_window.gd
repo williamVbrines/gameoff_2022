@@ -202,6 +202,7 @@ func parce_condition(con : String):
 	
 	
 	left = con.substr(0, con.find(opp) if opp != null else con.length());
+	@warning_ignore(incompatible_ternary)
 	right = clip_str_to(con,opp) if opp != null else null;
 	
 	if left != null && opp == null && right == null:
@@ -219,7 +220,7 @@ func exit_dialog()->void:
 	
 	
 #Actions############################################################################################
-func _set_action(params : String, tag : String) -> int:
+func _set_action(params : String, _tag : String) -> int:
 	var profile = null;
 	var key = null;
 	var val = null;
@@ -237,7 +238,7 @@ func _set_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _add_action(params : String, tag : String) -> int:
+func _add_action(params : String, _tag : String) -> int:
 	var profile = null;
 	var key = null;
 	var val = null;
@@ -262,7 +263,7 @@ func _add_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _sub_action(params : String, tag : String) -> int:
+func _sub_action(params : String, _tag : String) -> int:
 	var profile = null;
 	var key = null;
 	var val = null;
@@ -286,7 +287,7 @@ func _sub_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _say_action(params : String, tag : String) -> int:
+func _say_action(params : String, _tag : String) -> int:
 	speaker = get_next_str_clean(params, ",");
 	params = clip_str_to(params , ",");
 	
@@ -298,7 +299,7 @@ func _say_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _open_action(params : String, tag : String) -> int:
+func _open_action(params : String, _tag : String) -> int:
 	var new_tag = get_next_str_clean(params,",");
 	var new_dialog = ResourceManager.get_dialog_data(clip_str_to(params, ","));
 	if new_dialog != null:
@@ -322,7 +323,7 @@ func _line_action(params : String, tag : String) -> int:
 	return -1;
 	
 	
-func _show_action(params : String, tag : String) -> int:
+func _show_action(params : String, _tag : String) -> int:
 	params = params.replace(" ", "").to_upper();
 	
 	if params == "TEXT":
@@ -348,7 +349,7 @@ func _show_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _hide_action(params : String, tag : String) -> int:
+func _hide_action(_params : String, _tag : String) -> int:
 	hide();
 	EventManager.dialog_ended.emit();
 	return -1;
@@ -395,7 +396,7 @@ func _opt_action(params : String, tag : String) -> int:
 	return 0;
 	
 	
-func _emit_action(params : String, tag : String) -> int:
+func _emit_action(params : String, _tag : String) -> int:
 	dialog_emit.emit(params);
 	EventManager.dialog_emit.emit(params);
 	return 0;
