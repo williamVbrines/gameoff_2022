@@ -1,11 +1,13 @@
-extends Label
-@export var block_separation : float = 3;
-@export var fade_time : float = 0.2;
-@export var shift_time : float = 0.2;
+extends Control
+
 
 @onready var slots: Control = $Slots
 @onready var npc_block: TextureRect = $Slots/TurnBlockNpc
 @onready var player_block: TextureRect = $Slots/TurnBlockPlayer
+
+const BLOCK_SEPARATION : float = 8;
+const FADE_TIME : float = 0.2;
+const SHIFT_TIME : float = 0.2;
 
 var queue = [0,0,0,0,0,0,0,0,0,0,]
 var player_index = 0;
@@ -13,7 +15,7 @@ var enemy_index = 1;
 
 
 func _ready() -> void:
-#	hide();
+	hide();
 	
 	queue = [0,0,0,0,0,0,0,0,0,0]
 	
@@ -23,26 +25,24 @@ func _ready() -> void:
 	enemy_index = 1;
 	queue[enemy_index] = 2;
 	
-	set_text(str(queue).replace("1", "P").replace("2", "N"));
-	
 	slots.move_child(npc_block, enemy_index);
 	slots.move_child(player_block, player_index);
 	
 	for index in slots.get_child_count():
 		var block = slots.get_child(index) as TextureRect;
-		block.position.x = (block.size.x + block_separation) * index;
+		block.position.x = (block.size.x + BLOCK_SEPARATION) * index;
 		
 	
 	_make_connections();
 	
 	
-
 func _notifiy_queue_changed():
 	if slots.get_child(0) in [player_block, npc_block]:
 		EventManager.battel_queue_changed.emit(queue);
 		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_WIN_OR_LOSS");
 	else:
 		_move_front_to(slots.get_child_count()-1);
+	
 	
 func _make_connections():
 	EventManager.change_battel_queue.connect(_on_change_queue)
@@ -67,38 +67,18 @@ func _on_combat_state_changed(state: String):
 			_set_up();
 		"CHECK_Q":
 			_check_queue();
-		"ADJUST_Q":
-			_adjust_queue();
 		"SHUTTING_DOWN_COMBAT":
 			hide();
 	
 	
-func _adjust_queue() -> void:
-	#Waiting on adjusment
-	pass
-#	var pos = -1;
-#
-#	#Find Next Turn
-#	for index in queue.size():
-#		if queue[index] != 0:
-#			pos = -index;
-#			break;
-#
-#	#Error Check
-#	if pos == -1: printerr("NOTHING IN Q");
-#
-#	_on_change_queue("PLAYER" if pos == player_index else "NPC", pos);
-	
-	
 func _check_queue() ->void: 
 	
-	await(get_tree().create_timer(0.5).timeout)#TO:DO Remove later
-		
+	
 	match queue[0]:
 		0: EventManager.call_deferred("emit_signal", "combat_state_changed","ADJUST_Q");
 		1: EventManager.call_deferred("emit_signal", "combat_state_changed","PLAYER_TURN");
 		2: EventManager.call_deferred("emit_signal", "combat_state_changed","NPC_TURN");
-#		_:EventManager.call_deferred("emit_signal", "combat_state_changed","ERROR");
+		_:EventManager.call_deferred("emit_signal", "combat_state_changed","ERROR");
 	
 	
 func _set_up()->void:
@@ -111,16 +91,14 @@ func _set_up()->void:
 	
 	for index in slots.get_child_count():
 		var block = slots.get_child(index) as TextureRect;
-		block.position.x = (block.size.x + block_separation) * index;
+		block.position.x = (block.size.x + BLOCK_SEPARATION) * index;
 		
-	set_text(str(queue).replace("1", "P").replace("2", "N"));
 	show();
 	
 	EventManager.battel_queue_changed.emit(queue);
 	
 	
 func _on_change_queue(_entity : String, pos_change : int) -> void:
-	
 	
 	pos_change = clampi(pos_change,0, queue.size()-1);
 	
@@ -147,37 +125,36 @@ func _on_change_queue(_entity : String, pos_change : int) -> void:
 	
 	enemy_index = enemy_index - next;
 	player_index = player_index - next;
-	
-	set_text(str(queue).replace("1", "P").replace("2", "N"));
-	print(pos_change);
+
 	_move_front_to(pos_change);
-	
 	
 	
 func _move_front_to(index : int):
 	var tween = create_tween();
 	var block = slots.get_child(0) as TextureRect;
+	tween.set_ease(Tween.EASE_IN_OUT);
+	tween.set_trans(Tween.TRANS_CUBIC);
 	
 	tween.stop();
 	#Fade out
-	tween.tween_property(block,"self_modulate",Color(Color.WHITE,0.0),fade_time)
+	tween.tween_property(block,"self_modulate",Color(Color.WHITE,0.0),FADE_TIME)
 	
 	#Swap block
 	slots.move_child(block,index);
-	tween.tween_callback(block.set_position.bind(Vector2((block.size.x + block_separation) * (index),0)));
+	tween.tween_callback(block.set_position.bind(Vector2((block.size.x + BLOCK_SEPARATION) * (index),0)));
 	
 	#Rearange blocks
 	for i in index:
 		block = slots.get_child(i) as TextureRect;
-		var next_pos = (block.size.x + block_separation) * (i);
-		tween.tween_property(block,"position",Vector2(next_pos, 0),shift_time);
+		var next_pos = (block.size.x + BLOCK_SEPARATION) * (i);
+		tween.tween_property(block,"position",Vector2(next_pos, 0),SHIFT_TIME);
 		
 	block = slots.get_child(index) as TextureRect;
-	tween.tween_property(block,"self_modulate",Color(Color.WHITE,1.0),fade_time);
+	tween.tween_property(block,"self_modulate",Color(Color.WHITE,1.0),FADE_TIME);
 	
 	tween.tween_callback(_notifiy_queue_changed);
 	
 	tween.play();
 	
-#
+	
 
