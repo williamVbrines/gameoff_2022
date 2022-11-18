@@ -1,6 +1,8 @@
 Control
-AnimationPlayer
+Label
 TextureRect
+Button
+AnimationPlayer
 WorldEnvironment
 OmniLight3D
 ColorRect
@@ -12,10 +14,8 @@ SubViewport
 MeshInstance3D
 Node
 RichTextLabel
-Button
 Panel
 PopupMenu
-Label
 MenuButton
 StaticBody3D
 VBoxContainer

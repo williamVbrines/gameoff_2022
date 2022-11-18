@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4gx2xbbpqju8"]
+
+[ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="1_sexgw"]
+[ext_resource type="Texture2D" uid="uid://dmqxxsevkfr7h" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_Edge.png" id="2_fxyhm"]
+[ext_resource type="Script" path="res://scenes/ui/costCounterTag/cost_counter_tag.gd" id="2_ir3nl"]
+[ext_resource type="Texture2D" uid="uid://df3826xj6slyh" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_EdgeMatch.png" id="3_osjgs"]
+[ext_resource type="Texture2D" uid="uid://opsohciiyx02" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_Back.png" id="4_fxqkd"]
+[ext_resource type="Texture2D" uid="uid://cgv2x5el18n4j" path="res://textures/ui/Battle/Menu/Time Cost/BattleMenu_Icon_TimeCost.png" id="5_mjhcd"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="7_3eec0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_472wb"]
+shader = ExtResource("1_sexgw")
+shader_parameter/from_1 = Color(0, 0, 0, 1)
+shader_parameter/from_2 = Color(1, 1, 1, 1)
+shader_parameter/to_1 = Color(0.0901961, 0.0823529, 0.168627, 0.698039)
+shader_parameter/to_2 = Color(0.0901961, 0.0823529, 0.168627, 0.972549)
+
+[node name="CostCounterTag" type="Control"]
+material = SubResource("ShaderMaterial_472wb")
+custom_minimum_size = Vector2i(2, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 49.0
+offset_bottom = 50.0
+script = ExtResource("2_ir3nl")
+
+[node name="BwEdge" type="TextureRect" parent="."]
+texture_filter = 1
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 26.0
+offset_bottom = 50.0
+grow_horizontal = 0
+texture = ExtResource("2_fxyhm")
+
+[node name="BwEdgeMatch" type="TextureRect" parent="."]
+texture_filter = 1
+use_parent_material = true
+layout_mode = 1
+offset_left = -26.0
+offset_bottom = 50.0
+texture = ExtResource("3_osjgs")
+
+[node name="BwMid" type="TextureRect" parent="."]
+texture_filter = 1
+use_parent_material = true
+custom_minimum_size = Vector2i(2, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_fxqkd")
+
+[node name="BattleMenuIconTimeCost" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 28.0
+offset_bottom = 36.0
+texture = ExtResource("5_mjhcd")
+
+[node name="Label" type="Label" parent="BattleMenuIconTimeCost"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("7_3eec0")
+theme_override_font_sizes/font_size = 42
+text = "0"
+clip_text = true
+visible_characters = 1

@@ -1,7 +1,13 @@
-res://scenes/main/main.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
 res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres
-res://scenes/ui/battelQueue/battel_queue.gd
+res://scenes/ui/tagButton/tag_button.tscn
+res://scenes/ui/tagButton/tag_button.gd
+res://scenes/ui/tagButton/color_swap.gdshader
+res://scenes/main/main.tscn
 res://scenes/ui/combatScreen/combat_screen.tscn
 res://scenes/ui/battelQueue/battel_queue.tscn
+res://scenes/interactableArea3D/interactablesTest.tscn
+res://scenes/ui/taticsActionButton/tactic_button.tscn
+res://scenes/ui/costCounterTag/cost_counter_tag.tscn
+res://scenes/ui/costCounterTag/cost_counter_tag.gd

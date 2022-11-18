@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://gloe6kqplns2"]
+
+[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/taticAction/tactic_action.gd" id="1_mvboj"]
+[ext_resource type="Resource" uid="uid://blnj50581scqy" path="res://scenes/resources/actions/tactics/test_tactic.tres" id="2_wsbcu"]
+[ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="3_37cxj"]
+
+[node name="TacticButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 151.0
+offset_bottom = 50.0
+script = ExtResource("1_mvboj")
+data = ExtResource("2_wsbcu")
+
+[node name="TagButton2" parent="." instance=ExtResource("3_37cxj")]
+clip_contents = false
+layout_mode = 1

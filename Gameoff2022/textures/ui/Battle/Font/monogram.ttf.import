@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/monogram.ttf-6afe8bdeacf51e2dd5d4370e4eeeb429
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=0
 generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
