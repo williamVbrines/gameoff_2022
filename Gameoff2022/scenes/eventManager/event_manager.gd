@@ -21,8 +21,8 @@ signal change_battel_queue(entity : String,  pos_change : int);
 signal persuasion_changed(val : float);
 signal change_persuasion(val : float);
 
-signal annoyance_changed(val : float);
-signal changed_annoyance(val : float);
+signal stress_changed(val : float);
+signal changed_stress(val : float);
 
 
 #Saveing signals################################################################

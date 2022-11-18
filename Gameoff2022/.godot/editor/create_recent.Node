@@ -1,3 +1,6 @@
+AnimationPlayer
+Control
+TextureRect
 WorldEnvironment
 OmniLight3D
 ColorRect
@@ -18,7 +21,6 @@ StaticBody3D
 VBoxContainer
 InteractableArea3D (interactableArea3D.gd)
 LineEdit
-Control
 InteractableArea3D (InteractableArea3D.gd)
 Sprite3D
 InteractableArea3D (InteractablesTest.gd)

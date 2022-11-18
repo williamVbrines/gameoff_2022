@@ -121,14 +121,14 @@ func heal():
 	EventManager.persuasion_changed.emit(persuasion);
 	
 	EventManager.battel_queue_changed.emit("NPC" , heal_cost);
-	EventManager.combat_state_changed.emit("CHECK_LOSS");
+	EventManager.combat_state_changed.emit("ADJUST_Q");
 	
 	
 func guard():
 	guard_stack += guard_amount;
 	
 	EventManager.battel_queue_changed.emit("NPC" , guard_cost);
-	EventManager.combat_state_changed.emit("CHECK_LOSS");
+	EventManager.combat_state_changed.emit("ADJUST_Q");
 	
 	
 func attack():

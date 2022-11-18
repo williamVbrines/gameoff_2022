@@ -11,3 +11,4 @@ func activate_effect(opponent : String) -> void:
 	EventManager.attack.emit(opponent, attack_info, self);
 	
 	
+	

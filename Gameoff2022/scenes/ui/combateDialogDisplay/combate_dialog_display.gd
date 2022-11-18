@@ -42,13 +42,10 @@ func _on_dialog_exit() -> void:
 		EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");
 		disengageing = false;
 	else:
-		EventManager.change_battel_queue.emit(temp_actor, temp_data.cost)
-		if temp_actor.to_upper() == "PLAYER":
-			EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_WIN");
-		else :
-			EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_LOSS");
-
-
+		EventManager.change_battel_queue.emit(temp_actor, temp_data.cost);
+		EventManager.call_deferred("emit_signal", "combat_state_changed","ADJUST_Q");
+	
+	
 func _on_button_pressed() -> void:
 	if in_dialog:
 		_on_dialog_exit();

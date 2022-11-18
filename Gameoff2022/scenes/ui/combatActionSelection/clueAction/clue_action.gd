@@ -35,5 +35,5 @@ func _on_pressed() -> void:
 
 func _use_action() -> void:
 	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-
+	data.activate_effect(opponent);
 

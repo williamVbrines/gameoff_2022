@@ -1,6 +1,7 @@
 extends Node
 
 var current_save_file : String = "null";
+var stress = 0;
 
 var player_stats : Dictionary = {
 	"CHARM" : 50,
