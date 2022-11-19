@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://0w7ambp03kof"]
+[gd_scene load_steps=10 format=3 uid="uid://0w7ambp03kof"]
 
+[ext_resource type="Script" path="res://scenes/ui/cluesActionButton/clue_action_button.gd" id="1_cuete"]
 [ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="1_yj5m1"]
+[ext_resource type="Resource" uid="uid://cmiijlqwn1yyk" path="res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres" id="2_1ea1r"]
 [ext_resource type="Texture2D" uid="uid://d72wcglmseqx" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Clues_Icon_TimeCost.png" id="2_y0wmj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7mw2"]
@@ -22,6 +24,7 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf4d3"]
 border_width_left = 1
+border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.153117, 0.144981, 0.263135, 1)
@@ -32,6 +35,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 314.0
 offset_bottom = 36.0
+script = ExtResource("1_cuete")
+data = ExtResource("2_1ea1r")
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
@@ -40,6 +45,7 @@ offset_top = 1.0
 offset_right = 305.0
 offset_bottom = 27.0
 focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0.647059, 0.164706, 0.164706, 1)
 theme_override_fonts/font = ExtResource("1_yj5m1")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7mw2")

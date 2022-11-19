@@ -1,5 +1,20 @@
 extends Node
-
+#Item Data######################################################################
+var item_data = {
+	"rock" : preload("res://scenes/resources/actions/items/rock_item.tres")
+}
+func get_item_data(id : String) -> ItemData:
+	return item_data.get(id,null);
+	
+	
+#Clue Data######################################################################
+var clues_data = {
+	"test_spy_glass" = preload("res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres")
+}
+func get_clue_data(id : String) -> ClueData:
+	return clues_data.get(id,null);
+	
+	
 #Tactics Data###################################################################
 var tactics_data = {
 	#"RefID" : preload(res:path),

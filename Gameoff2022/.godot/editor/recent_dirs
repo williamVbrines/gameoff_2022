@@ -1,3 +1,5 @@
+res://scenes/ui/itemActionButton
+res://scenes/ui/itemActionMenu
 res://scenes/ui/cluesActionButton
 res://scenes/ui/clueActionMenu
 res://scenes/ui/costCounterTag
@@ -18,5 +20,3 @@ res://scenes/resources
 res://scenes/ui/persuasionDisplay
 res://scenes/ui/annoyanceDisplay
 res://scenes/ui/battelQueue
-res://scenes/ui/combatScreen
-res://scenes/eventManager

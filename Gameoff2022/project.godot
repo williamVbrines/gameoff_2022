@@ -68,6 +68,11 @@ _global_script_classes=[{
 "class": &"TacticsData",
 "language": &"GDScript",
 "path": "res://scenes/resources/actions/tactics/tactics_data.gd"
+}, {
+"base": "Button",
+"class": &"UITagButton",
+"language": &"GDScript",
+"path": "res://scenes/ui/tagButton/tag_button.gd"
 }]
 _global_script_class_icons={
 "ClueData": "",
@@ -81,7 +86,8 @@ _global_script_class_icons={
 "NPCTactics": "",
 "PlayerActionData": "",
 "SaveData": "",
-"TacticsData": ""
+"TacticsData": "",
+"UITagButton": ""
 }
 
 [application]
@@ -113,6 +119,10 @@ import/use_multiple_threads=false
 
 import/blender/enabled=false
 import/fbx/enabled=false
+
+[gui]
+
+theme/default_font_subpixel_positioning=0
 
 [input]
 

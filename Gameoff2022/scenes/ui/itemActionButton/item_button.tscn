@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccag0ul8csdht"]
+
+[ext_resource type="Script" path="res://scenes/ui/itemActionButton/item_button.gd" id="1_a4n43"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="1_aahlo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu2rc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol5vt"]
+bg_color = Color(0.117647, 0.109804, 0.211765, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjdbv"]
+bg_color = Color(0.0901961, 0.0823529, 0.168627, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr7kn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egohk"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.153117, 0.144981, 0.263135, 1)
+
+[node name="ItemButton" type="Control"]
+custom_minimum_size = Vector2i(314, 36)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4n43")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 305.0
+offset_bottom = 27.0
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0.647059, 0.164706, 0.164706, 1)
+theme_override_fonts/font = ExtResource("1_aahlo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_lu2rc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ol5vt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjdbv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wr7kn")
+text = "Items Lorem Ipsum"
+alignment = 0
+icon_alignment = 2
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+custom_minimum_size = Vector2i(314, 0)
+offset_left = -1.0
+offset_top = 34.0
+offset_right = 313.0
+offset_bottom = 38.0
+theme_override_styles/separator = SubResource("StyleBoxFlat_egohk")

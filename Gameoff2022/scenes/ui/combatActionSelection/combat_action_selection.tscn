@@ -1,10 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://2i3wwm5xjrws"]
+[gd_scene load_steps=13 format=3 uid="uid://bp3lqnbnywpvo"]
 
 [ext_resource type="Script" path="res://scenes/ui/combatActionSelection/combat_action_selection.gd" id="1_g6d5b"]
-[ext_resource type="Script" path="res://scenes/ui/combatActionSelection/itemAction/item_action.gd" id="2_5rtyd"]
-[ext_resource type="PackedScene" uid="uid://c1adsn3ijmafi" path="res://scenes/ui/clueActionMenu/clue_menu.tscn" id="2_rrsva"]
-[ext_resource type="Resource" uid="uid://ddyn60ihbkusw" path="res://scenes/resources/actions/items/rock_item.tres" id="3_8yrk3"]
+[ext_resource type="PackedScene" uid="uid://dxumryqsk6v7n" path="res://scenes/ui/clueActionMenu/clue_action_menu.tscn" id="2_cs3b3"]
+[ext_resource type="PackedScene" uid="uid://dmr5tljni8kwq" path="res://scenes/ui/itemActionMenu/item_action_menu.tscn" id="2_ha51d"]
 [ext_resource type="Script" path="res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd" id="3_tad11"]
+[ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_fuwor"]
+[ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_ubwu6"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_l5w1h"]
+[ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="6_ptig4"]
+[ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_igjm8"]
+[ext_resource type="Texture2D" uid="uid://b7y3tgwgcl563" path="res://textures/ui/Battle/Menu/Battle Menu Spacing Guide.png" id="7_t4qvl"]
+[ext_resource type="Texture2D" uid="uid://bipovdp7owcop" path="res://textures/ui/Battle/Menu/Secondary Button Spacing Guide.png" id="11_buc3t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yk8r0"]
+resource_local_to_scene = true
+shader = ExtResource("5_ubwu6")
+shader_parameter/from_1 = Color(1, 1, 1, 1)
+shader_parameter/from_2 = Color(0, 0, 0, 1)
+shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
 
 [node name="CombatActionSelection" type="Control"]
 layout_mode = 3
@@ -15,32 +29,76 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g6d5b")
 
-[node name="ClueActionMenu" parent="." instance=ExtResource("2_rrsva")]
+[node name="Tatics" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 98.0
+offset_top = 695.0
+offset_right = 98.0
+offset_bottom = 851.0
+grow_vertical = 0
+theme_override_constants/separation = 106
+alignment = 2
 
-[node name="ItemButton" type="Button" parent="."]
-offset_top = 60.0
-offset_right = 155.0
-offset_bottom = 110.0
-theme_override_font_sizes/font_size = 30
-text = "NOTHING"
-script = ExtResource("2_5rtyd")
-data = ExtResource("3_8yrk3")
+[node name="ItemActionMenu" parent="." instance=ExtResource("2_ha51d")]
+layout_mode = 1
+offset_left = 101.0
+offset_top = 956.0
+offset_right = -1637.0
+offset_bottom = -59.0
 
-[node name="DisengageButton" type="Button" parent="."]
-offset_left = 347.0
-offset_top = 199.0
-offset_right = 504.0
-offset_bottom = 249.0
-theme_override_font_sizes/font_size = 30
-text = "Disengage"
+[node name="ClueActionMenu" parent="." instance=ExtResource("2_cs3b3")]
+layout_mode = 1
+offset_left = 101.0
+offset_top = 956.0
+offset_right = 251.0
+offset_bottom = 1006.0
+
+[node name="DisengageButton" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 577.0
+offset_top = 956.0
+offset_right = 734.0
+offset_bottom = 1006.0
 script = ExtResource("3_tad11")
 
-[node name="Tatics" type="VBoxContainer" parent="."]
-anchors_preset = -1
-offset_left = 1.0
-offset_top = -214.0
-offset_right = 1.0
-offset_bottom = -58.0
-grow_vertical = 0
-theme_override_constants/separation = 78
-alignment = 2
+[node name="TagButton" parent="DisengageButton" instance=ExtResource("4_fuwor")]
+material = SubResource("ShaderMaterial_yk8r0")
+custom_minimum_size = Vector2i(173, 50)
+layout_mode = 1
+offset_right = 167.0
+
+[node name="Label" type="Label" parent="DisengageButton/TagButton"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 3.0
+offset_right = 129.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("6_l5w1h")
+theme_override_font_sizes/font_size = 42
+text = "Flee
+"
+
+[node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="DisengageButton/TagButton"]
+layout_mode = 0
+offset_left = -37.0
+offset_top = -14.0
+offset_right = 37.0
+offset_bottom = 60.0
+texture = ExtResource("7_igjm8")
+
+[node name="ItemSubmenuSpacingGuide" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1278, 1333)
+texture = ExtResource("6_ptig4")
+
+[node name="BattleMenuSpacingGuide" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(704, 349)
+texture = ExtResource("7_t4qvl")
+
+[node name="SecondaryButtonSpacingGuide" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(425, 1225)
+texture = ExtResource("11_buc3t")

@@ -1,7 +1,7 @@
-@tool
+
 extends Control
 
-@export_range(0,9,1) var cost = 0 : set = set_cost;
+var cost = 1 : set = set_cost;
 @onready var label: Label = $BattleMenuIconTimeCost/Label
 
 func set_cost(val : int) -> void:

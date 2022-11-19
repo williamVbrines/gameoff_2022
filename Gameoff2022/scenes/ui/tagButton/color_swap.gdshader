@@ -7,10 +7,10 @@ uniform vec4 to_2 : source_color = vec4(0.0);
 
 void fragment() {
 	vec4 color = COLOR;
+
+	if (color.rgb == from_1.rgb) color = to_1;
+	else if (color.rgb == from_2.rgb) color = to_2;
 	
-	if (color == from_1) color = to_1;
-	else if (color == from_2) color = to_2;
-	
-	COLOR = color;
+	COLOR = vec4(color.rgb , COLOR.a * color.a);
 	
 }

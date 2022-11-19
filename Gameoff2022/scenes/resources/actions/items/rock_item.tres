@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_bjo1c")
-discrtiption = "A simpel pebble. You feel it has an epic past."
+discrtiption = "A simpel pebble. Of power?"
 cost = 1
 dialog_pool = null

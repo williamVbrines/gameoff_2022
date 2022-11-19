@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxumryqsk6v7n"]
+
+[ext_resource type="Script" path="res://scenes/ui/clueActionMenu/clue_action_menu.gd" id="1_7anxj"]
+[ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="2_ul808"]
+[ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="3_clk6p"]
+[ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_4cptf"]
+[ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_fwbst"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_rmyx5"]
+[ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_hj721"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ma1vc"]
+resource_local_to_scene = true
+shader = ExtResource("5_fwbst")
+shader_parameter/from_1 = Color(1, 1, 1, 1)
+shader_parameter/from_2 = Color(0, 0, 0, 1)
+shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
+
+[node name="ClueActionMenu" type="Control"]
+custom_minimum_size = Vector2i(150, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 92.0
+offset_top = 966.0
+offset_right = 242.0
+offset_bottom = 1016.0
+mouse_filter = 2
+script = ExtResource("1_7anxj")
+
+[node name="ItemSubmenuSpacingGuide" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.494118)
+offset_left = -100.0
+offset_top = -12.0
+offset_right = 445.0
+offset_bottom = 251.0
+texture = ExtResource("2_ul808")
+
+[node name="MenuBackground" type="NinePatchRect" parent="."]
+visible = false
+texture_filter = 1
+clip_contents = true
+offset_left = -1.0
+offset_top = 48.0
+offset_right = 349.0
+offset_bottom = 104.0
+texture = ExtResource("3_clk6p")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Clues" type="VBoxContainer" parent="MenuBackground"]
+custom_minimum_size = Vector2i(314, 0)
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 43.0
+theme_override_constants/separation = 3
+
+[node name="TagButton" parent="." instance=ExtResource("4_4cptf")]
+material = SubResource("ShaderMaterial_ma1vc")
+offset_left = 238.0
+offset_right = 411.0
+
+[node name="Label" type="Label" parent="TagButton"]
+offset_left = 49.0
+offset_top = 3.0
+offset_right = 129.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("6_rmyx5")
+theme_override_font_sizes/font_size = 42
+text = "Clues"
+
+[node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="TagButton"]
+offset_left = -37.0
+offset_top = -14.0
+offset_right = 37.0
+offset_bottom = 60.0
+texture = ExtResource("7_hj721")

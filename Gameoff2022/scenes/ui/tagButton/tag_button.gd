@@ -1,4 +1,5 @@
 extends Button
+class_name UITagButton
 
 @export var hot_key : int = 0;
 @export var normal_color_1 : Color;
