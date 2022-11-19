@@ -16,6 +16,8 @@ func _make_connetions() -> void:
 func _on_combat_state_changed(state : String) ->void:
 	print(state); #TODO:Remove
 	match state.to_upper():
+		"SET_UP":
+			EventManager.call_deferred("emit_signal", "combat_state_changed", "CHECK_Q")
 		"CHECK_WIN_OR_LOSS":
 			_check_win_or_loss();
 		"WIN":
@@ -41,7 +43,7 @@ func _check_win_or_loss():
 		EventManager.combat_state_changed.emit("CHECK_WIN");
 	
 	
-func _on_attacked(target : String,data : Dictionary, _sender)->void:
+func _on_attacked(target : String,data : Dictionary)->void:
 	if target.to_upper() != "PLAYER": return;
 	
 	var damage = data.amt;
@@ -68,7 +70,7 @@ func _on_start_combat(camera : Camera3D) -> void:
 	
 	tween.tween_property(color_rect,"color",Color(0, 0, 0, 0),fade_time);
 	
-	tween.tween_callback(_change_state.bind("CHECK_Q"));
+	tween.tween_callback(_change_state.bind("SET_UP"));
 	
 	tween.play();
 	
@@ -87,6 +89,6 @@ func _shut_down_combat() -> void:
 	tween.play();
 	
 	
-func _change_state(state : String): EventManager.combat_state_changed.emit(state);
+func _change_state(state : String): EventManager.call_deferred("emit_signal", "combat_state_changed", state);
 	
 	

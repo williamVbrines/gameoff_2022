@@ -2,7 +2,7 @@ extends Control
 
 const OPEN_SPEED : float = 0.1;
 
-@onready var clues: VBoxContainer = $MenuBackground/Itmes
+@onready var items : VBoxContainer = $MenuBackground/Itmes
 @onready var menu_background: NinePatchRect = $MenuBackground
 @onready var tag_button: Button = $TagButton
 @onready var cost_tag: Control = $TagButton/CostCounterTag
@@ -105,8 +105,9 @@ func _open_p2() -> void:
 	
 func _on_start_combat(_camera) -> void: 
 	var height = 26;
-	for child in clues.get_children():
-		child.queue_free();
+	for item in items.get_children():
+		items.remove_child(item);
+		item.queue_free();
 	
 	for id in SystemGlobals.player_items:
 		
@@ -114,9 +115,9 @@ func _on_start_combat(_camera) -> void:
 			var new_item = item_button_scene.instantiate();
 			new_item.set_data(ResourceManager.get_item_data(id));
 			height = new_item.size.y;
-			clues.add_child(new_item);
+			items.add_child(new_item);
 		
 	
-	box_size.y = clues.get_child_count() * (height + clues.get("theme_override_constants/separation")) +32;
+	box_size.y = items.get_child_count() * (height + items.get("theme_override_constants/separation")) +32;
 	menu_background.hide();
 	

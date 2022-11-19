@@ -13,8 +13,7 @@ func _make_connections() -> void:
 	
 		
 func _on_start_combat(_cam : Camera3D) -> void:
-	pass
-	
+	tag_button.set_disabled(false);
 	
 	
 func _on_pressed() -> void:
@@ -23,6 +22,8 @@ func _on_pressed() -> void:
 	
 	
 func _on_flee() -> void:
-	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-	EventManager.disengage.emit(dialog);
+#	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
+#	EventManager.disengage.emit(dialog);
+	EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");
+
 	

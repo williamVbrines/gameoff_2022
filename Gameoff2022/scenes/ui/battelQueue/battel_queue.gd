@@ -15,7 +15,7 @@ var enemy_index = 1;
 
 
 func _ready() -> void:
-	hide();
+	_on_hide();
 	
 	queue = [0,0,0,0,0,0,0,0,0,0]
 	
@@ -46,27 +46,24 @@ func _notifiy_queue_changed():
 	
 func _make_connections():
 	EventManager.change_battel_queue.connect(_on_change_queue)
-
-	EventManager.start_combat.connect(_on_combat_started);
 	EventManager.combat_state_changed.connect(_on_combat_state_changed)
 	EventManager.start_exploration.connect(_on_exploration_started);
 	
 	
 func _on_exploration_started() -> void:
-	hide();
+	_on_hide();
 	
-	
-func _on_combat_started(_cam : Camera3D , ) : 
-	_set_up();
 	
 	
 func _on_combat_state_changed(state: String): 
 	
 	match state.to_upper():
+		"SET_UP":
+			_set_up();
 		"CHECK_Q":
 			_check_queue();
 		"SHUTTING_DOWN_COMBAT":
-			hide();
+			_on_hide();
 	
 	
 func _check_queue() ->void: 
@@ -89,7 +86,7 @@ func _set_up()->void:
 		var block = slots.get_child(index) as TextureRect;
 		block.position.x = (block.size.x + BLOCK_SEPARATION) * index;
 		
-	show();
+	_on_show();
 	
 	EventManager.battel_queue_changed.emit(queue);
 	
@@ -154,4 +151,16 @@ func _move_front_to(index : int):
 	tween.play();
 	
 	
-
+func _on_hide() -> void:
+	var tween = create_tween();
+	tween.tween_property(self,"modulate", Color(Color.WHITE, 0.0),0.2);
+	tween.tween_callback(hide);
+	tween.play();
+	
+	
+func _on_show() -> void:
+	var tween = create_tween();
+	show();
+	tween.tween_property(self,"modulate", Color(Color.WHITE, 1.0),0.2);
+	tween.play();
+	

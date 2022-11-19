@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_bjo1c")
-discrtiption = "A simpel pebble. Of power?"
+discrtiption = "A rock. Of power?"
 cost = 1
-dialog_pool = null
+dialog_pool = ["You feel an emance poower when you throw this rock"]
+name = "rock"

@@ -80,7 +80,7 @@ func _check_if_persuaded() -> void:
 		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
 	
-func _on_attacked(target : String,data : Dictionary, _sender)->void:
+func _on_attacked(target : String,data : Dictionary)->void:
 	if target == name:
 		var damage = data.amt;
 		
@@ -138,6 +138,6 @@ func attack():
 		"cost" : attack_cost
 	}
 	
-	EventManager.attack.emit("PLAYER",data, self);
+	EventManager.attack.emit("PLAYER",data);
 	
 	

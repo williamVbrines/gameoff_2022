@@ -70,7 +70,6 @@ func gen_label() -> String:
 		HIGH:
 			text += "HIGH";
 		_: 
-			printerr(ratting)
 			text += "ERR";
 			
 	text += " ,Cost: " + str(cost) + "] " + discrtiption;

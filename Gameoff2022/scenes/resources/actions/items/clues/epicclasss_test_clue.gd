@@ -9,4 +9,4 @@ func activate_effect(opponent : String) -> void:
 		"dialog" : "You found their weakpoint"
 	};
 	
-	EventManager.attack.emit(opponent, attack_info, self);
+	EventManager.attack.emit(opponent, attack_info);

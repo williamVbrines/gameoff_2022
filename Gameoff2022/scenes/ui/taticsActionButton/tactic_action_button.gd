@@ -63,7 +63,6 @@ func _on_pressed() -> void:
 	
 func _on_attack() -> void:
 	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-	prints(SystemGlobals.opponent,data.gen_attack_info())
-	EventManager.attack.emit(SystemGlobals.opponent, data.gen_attack_info(), self);	
+	EventManager.attack.emit(SystemGlobals.opponent, data.gen_attack_info());	
 	
 	

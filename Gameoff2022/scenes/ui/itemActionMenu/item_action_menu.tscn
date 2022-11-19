@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_8shqt"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="8_u8fht"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a6ixx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60xx1"]
 resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -64,7 +64,7 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_kqxxk")]
-material = SubResource("ShaderMaterial_a6ixx")
+material = SubResource("ShaderMaterial_60xx1")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)

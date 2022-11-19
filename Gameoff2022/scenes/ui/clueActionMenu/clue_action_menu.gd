@@ -102,6 +102,7 @@ func _open_p2() -> void:
 func _on_start_combat(_camera) -> void: 
 	var height = 26;
 	for child in clues.get_children():
+		clues.remove_child(child);
 		child.queue_free();
 	
 	for id in SystemGlobals.player_clues:

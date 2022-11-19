@@ -34,7 +34,6 @@ func get_dialog_data(id : String) -> DialogData:
 	if FileAccess.file_exists(id):
 		var data = ResourceLoader.load(id);
 		var key = id.substr(id.rfind("\\")).substr(0,id.find("."));
-		print(key);
 		dialog_data[key] = data;
 		return data;
 		

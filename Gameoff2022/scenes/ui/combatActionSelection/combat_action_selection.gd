@@ -8,7 +8,7 @@ var tattics_scene : PackedScene = preload("res://scenes/ui/taticsActionButton/ta
 
 func _ready() -> void:
 	_make_connections();
-	hide();
+	_on_hide();
 	
 	
 func _make_connections() -> void:
@@ -20,18 +20,10 @@ func _make_connections() -> void:
 	
 func _on_combat_state_changed(state : String) ->void:
 	match state.to_upper():
-		"WIN":
-			hide();
-		"LOSS":
-			hide();
-		"NPC_TURN":
-			hide();
 		"PLAYER_TURN":
-			show();
-		"IN_DIALOG":
-			hide();
-		"SHUTTING_DOWN_COMBAT":
-			hide();
+			_on_show();
+		"NPC_TURN", "IN_DIALOG", "SHUTTING_DOWN_COMBAT":
+			_on_hide();
 	
 	
 func _on_start_combat(_camera : Camera3D) -> void:
@@ -51,12 +43,12 @@ func _on_start_combat(_camera : Camera3D) -> void:
 		
 	
 func _on_item_pressed() -> void:
-	print("BEEP")
 	if !item_action_menu.is_open:
 		_hide_all_but(item_action_menu,item_action_menu.set_is_open.bind(true))
 	else:
 		_show_all();
 		item_action_menu.set_is_open(false);
+		
 		
 func _on_clue_pressed() -> void:
 	if !clue_action_menu.is_open:
@@ -64,6 +56,31 @@ func _on_clue_pressed() -> void:
 	else:
 		_show_all();
 		clue_action_menu.set_is_open(false);
+	
+func _on_hide() -> void:
+	if visible:
+		item_action_menu.set_is_open(false);
+		clue_action_menu.set_is_open(false);
+		
+		var tween = create_tween();
+		tween.stop();
+		for index in get_child_count():
+			var child = get_child(get_child_count()-1 - index);
+			tween.tween_property(child,"modulate",Color(Color.WHITE,0.0), 0.02);
+		tween.tween_callback(hide);
+		tween.play();
+	
+func _on_show() -> void:
+	if !visible:
+		var tween = create_tween();
+		tween.stop();
+		tween.tween_callback(show);
+		for index in get_child_count():
+			var child = get_child(index);
+			tween.tween_property(child,"modulate",Color(Color.WHITE,1.0), 0.04);
+		
+		tween.play();
+	
 	
 func _hide_all_but(exclude : Control, callable : Callable ,fade_speed : float = 0.02)->void:
 	var tween = create_tween();

@@ -8,8 +8,7 @@ signal start_combat(camera : Camera3D);
 signal combat_state_changed(state : String);
 
 #Player and NPC action
-#TODO: Determin if sender is nessesary
-signal attack(target : String, data : Dictionary, sender);
+signal attack(target : String, data : Dictionary);
 #Player Action
 signal disengage(dialog : String);
 

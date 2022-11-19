@@ -47,6 +47,15 @@ func _on_attack() -> void:
 	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
 	data.activate_effect(SystemGlobals.opponent);
 	is_used = true;
+	
+	var index = SystemGlobals.player_items.find(data.name)
+
+	if index != -1:
+		SystemGlobals.player_items[index] = SystemGlobals.player_items[SystemGlobals.player_items.size()-1];
+		SystemGlobals.player_items.pop_back();
+		
+		
+	queue_free();
 	button.set_disabled(true);
 	
 	

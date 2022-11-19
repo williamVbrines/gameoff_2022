@@ -11,7 +11,7 @@ const INTIMIDATION = 3;
 @export var discrtiption : String = "This is a test"
 @export_range(1,9,1) var cost : int = 1;
 @export var dialog_pool : Array[String] = [];
-
+@export var name : String = "name";
 
 func get_amount(stat_val : float = 0.0) -> float: return stat_val;
 	
