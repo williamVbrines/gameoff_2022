@@ -18,7 +18,7 @@ func _on_dialog_eneded() -> void:
 	show();
 	
 	
-func _on_combat_started(_wiht : String , _cam : Camera3D) -> void:
+func _on_combat_started(_cam : Camera3D) -> void:
 	hide();
 	
 	

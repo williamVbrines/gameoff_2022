@@ -8,8 +8,7 @@ var tattics_scene : PackedScene = preload("res://scenes/ui/taticsActionButton/ta
 
 func _ready() -> void:
 	_make_connections();
-	_on_start_combat("name",null)
-#	hide();
+	hide();
 	
 	
 func _make_connections() -> void:
@@ -35,7 +34,7 @@ func _on_combat_state_changed(state : String) ->void:
 			hide();
 	
 	
-func _on_start_combat(_name : String, _camera : Camera3D) -> void:
+func _on_start_combat(_camera : Camera3D) -> void:
 	for child in tatics.get_children():
 		child.queue_free();
 	

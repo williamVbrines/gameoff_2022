@@ -13,7 +13,7 @@ func _make_connections() -> void:
 	EventManager.start_exploration.connect(_on_exploration_started);
 	
 	
-func _on_combat_started(_with : String, _cam : Camera3D) -> void:
+func _on_combat_started(_cam : Camera3D) -> void:
 	show();
 	
 	

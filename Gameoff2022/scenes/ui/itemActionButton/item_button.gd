@@ -2,8 +2,6 @@ extends Control
 @export var disabled_color : Color = Color.BROWN
 @export var data : Resource : set = set_data;
 @onready var button: Button = $Button
-
-var opponent : String = "";
 var is_used : bool = false;
 
 func _init(new_data : ItemData = null) -> void:
@@ -27,12 +25,11 @@ func _set_up() -> void:
 	if data is ItemData:
 		button.set_text(data.discrtiption);
 	
-func _on_start_combat(with : String, _cam : Camera3D) -> void:
+func _on_start_combat(_cam : Camera3D) -> void:
 	if !data: 
 		queue_free();
 		return;
 		
-	opponent = with;
 	set_data(data);
 	
 	
@@ -48,7 +45,7 @@ func _on_pressed() -> void:
 	
 func _on_attack() -> void:
 	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-	data.activate_effect(opponent);
+	data.activate_effect(SystemGlobals.opponent);
 	is_used = true;
 	button.set_disabled(true);
 	

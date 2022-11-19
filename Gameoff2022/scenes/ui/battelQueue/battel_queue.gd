@@ -56,15 +56,13 @@ func _on_exploration_started() -> void:
 	hide();
 	
 	
-func _on_combat_started(_with : String , _cam : Camera3D , ) : 
-	show();
+func _on_combat_started(_cam : Camera3D , ) : 
+	_set_up();
 	
 	
 func _on_combat_state_changed(state: String): 
 	
 	match state.to_upper():
-		"SET_UP":
-			_set_up();
 		"CHECK_Q":
 			_check_queue();
 		"SHUTTING_DOWN_COMBAT":
@@ -72,8 +70,6 @@ func _on_combat_state_changed(state: String):
 	
 	
 func _check_queue() ->void: 
-	
-	
 	match queue[0]:
 		0: EventManager.call_deferred("emit_signal", "combat_state_changed","ADJUST_Q");
 		1: EventManager.call_deferred("emit_signal", "combat_state_changed","PLAYER_TURN");
@@ -125,11 +121,12 @@ func _on_change_queue(_entity : String, pos_change : int) -> void:
 	
 	enemy_index = enemy_index - next;
 	player_index = player_index - next;
-
+	
 	_move_front_to(pos_change);
 	
 	
 func _move_front_to(index : int):
+	index -= 1 if index > 1 else 0;
 	var tween = create_tween();
 	var block = slots.get_child(0) as TextureRect;
 	tween.set_ease(Tween.EASE_IN_OUT);

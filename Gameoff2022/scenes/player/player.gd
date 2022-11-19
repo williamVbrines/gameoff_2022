@@ -31,7 +31,7 @@ func _on_start_exploration() -> void:
 	camera.set_current(true);
 	disabled = false;
 	
-func _on_start_combat(_with : String, _cmaera : Camera3D) -> void:
+func _on_start_combat(_cmaera : Camera3D) -> void:
 	disabled = true;
 	
 	

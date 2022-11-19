@@ -4,7 +4,7 @@ signal start_exploration();
 
 
 #Dialog Combat signals##########################################################
-signal start_combat(with : String, camera : Camera3D);
+signal start_combat(camera : Camera3D);
 signal combat_state_changed(state : String);
 
 #Player and NPC action

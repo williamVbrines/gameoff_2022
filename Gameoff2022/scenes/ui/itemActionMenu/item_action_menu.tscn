@@ -14,7 +14,7 @@ resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
 shader_parameter/from_2 = Color(0, 0, 0, 1)
-shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
 
 [node name="ItemActionMenu" type="Control"]
@@ -67,6 +67,7 @@ theme_override_constants/separation = 3
 material = SubResource("ShaderMaterial_a6ixx")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
+normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Label" type="Label" parent="TagButton"]
 offset_left = 49.0

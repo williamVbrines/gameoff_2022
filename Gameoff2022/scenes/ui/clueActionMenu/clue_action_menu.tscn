@@ -13,7 +13,7 @@ resource_local_to_scene = true
 shader = ExtResource("5_fwbst")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
 shader_parameter/from_2 = Color(0, 0, 0, 1)
-shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.972549)
+shader_parameter/to_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 shader_parameter/to_2 = Color(0.145098, 0.137255, 0.25098, 0.701961)
 
 [node name="ClueActionMenu" type="Control"]
@@ -30,6 +30,7 @@ script = ExtResource("1_7anxj")
 [node name="ItemSubmenuSpacingGuide" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.494118)
+layout_mode = 0
 offset_left = -100.0
 offset_top = -12.0
 offset_right = 445.0
@@ -40,6 +41,7 @@ texture = ExtResource("2_ul808")
 visible = false
 texture_filter = 1
 clip_contents = true
+layout_mode = 0
 offset_left = -1.0
 offset_top = 48.0
 offset_right = 349.0
@@ -52,6 +54,7 @@ patch_margin_bottom = 2
 
 [node name="Clues" type="VBoxContainer" parent="MenuBackground"]
 custom_minimum_size = Vector2i(314, 0)
+layout_mode = 0
 offset_left = 19.0
 offset_top = 16.0
 offset_right = 333.0
@@ -60,10 +63,13 @@ theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_4cptf")]
 material = SubResource("ShaderMaterial_ma1vc")
+layout_mode = 1
 offset_left = 238.0
 offset_right = 411.0
+normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Label" type="Label" parent="TagButton"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 3.0
 offset_right = 129.0
@@ -73,6 +79,7 @@ theme_override_font_sizes/font_size = 42
 text = "Clues"
 
 [node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="TagButton"]
+layout_mode = 0
 offset_left = -37.0
 offset_top = -14.0
 offset_right = 37.0

@@ -16,25 +16,28 @@ offset_bottom = 57.0
 script = ExtResource("1_7gq41")
 
 [node name="Static" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TurnIndicator" type="TextureRect" parent="Static"]
 texture_filter = 1
+layout_mode = 0
 offset_right = 110.0
 offset_bottom = 72.0
 texture = ExtResource("3_rxyix")
 
 [node name="Endcap_L" type="TextureRect" parent="Static/TurnIndicator"]
 texture_filter = 1
+layout_mode = 0
 offset_left = -36.0
 offset_bottom = 72.0
 texture = ExtResource("4_e1gre")
 
 [node name="ActionQueueBack" type="TextureRect" parent="Static"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 110.0
 offset_right = 887.0
 offset_bottom = 72.0
@@ -42,6 +45,7 @@ texture = ExtResource("5_i6i0m")
 
 [node name="Endcap_R" type="TextureRect" parent="Static/ActionQueueBack"]
 texture_filter = 1
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -52,7 +56,7 @@ texture = ExtResource("4_e1gre")
 flip_h = true
 
 [node name="Slots" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_left = 14.0
 offset_top = 18.0
@@ -60,46 +64,55 @@ offset_right = 14.0
 offset_bottom = 18.0
 
 [node name="TurnBlockNpc" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_kupr6")
 
 [node name="TurnBlockPlayer" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("7_kmd7c")
 
 [node name="TurnBlock" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock2" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock3" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock4" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock5" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock6" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
 
 [node name="TurnBlock7" type="TextureRect" parent="Slots"]
+layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")

@@ -3,8 +3,6 @@ extends Control
 @export var fade_time : float = 1.0;
 @onready var color_rect: ColorRect = $ColorRect
 
-var opponent : String = "";
-
 func _ready() -> void:
 	_make_connetions();
 	
@@ -59,10 +57,8 @@ func _on_attacked(target : String,data : Dictionary, _sender)->void:
 	EventManager.combat_state_changed.emit("ADJUST_Q")
 	
 	
-func _on_start_combat(with : String, camera : Camera3D) -> void:
+func _on_start_combat(camera : Camera3D) -> void:
 	var tween = create_tween();
-	
-	opponent = with;
 	
 	tween.pause();
 	tween.tween_property(color_rect,"color",Color(0, 0, 0, 1),fade_time);

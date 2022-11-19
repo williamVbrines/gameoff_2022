@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="5_d21fy"]
 [ext_resource type="Texture2D" uid="uid://cbi7t5s6k8iie" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv3.png" id="8_c6452"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jreaj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_asd5r"]
 resource_local_to_scene = true
 shader = ExtResource("3_sfqkw")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -23,7 +23,7 @@ offset_bottom = 50.0
 script = ExtResource("1_t2f7p")
 
 [node name="TagButton" parent="." instance=ExtResource("3_37cxj")]
-material = SubResource("ShaderMaterial_jreaj")
+material = SubResource("ShaderMaterial_asd5r")
 offset_right = 296.0
 
 [node name="CostCounterTag" parent="TagButton" instance=ExtResource("4_tnn87")]

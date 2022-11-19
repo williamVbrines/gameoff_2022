@@ -59,8 +59,8 @@ func _make_connections() -> void:
 func _on_start_exploration() -> void:
 	selected = false;
 	
-func _on_start_combat(with : String , _cam : Camera3D) -> void:
-	selected = with == name;
+func _on_start_combat(_cam : Camera3D) -> void:
+	selected = SystemGlobals.opponent == name;
 	persuasion = 0;
 	EventManager.persuasion_changed.emit(persuasion);
 	

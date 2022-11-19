@@ -29,7 +29,6 @@ func set_is_open(val) -> void:
 func _ready() -> void:
 	cost_tag.set_cost(3);
 	_make_connections();
-	_on_start_combat("PLAYER", null);
 	box_pos = tag_button.position;
 	
 	
@@ -104,7 +103,7 @@ func _open_p2() -> void:
 	tween_p.play();
 	
 	
-func _on_start_combat(_name : String, _camera) -> void: 
+func _on_start_combat(_camera) -> void: 
 	var height = 26;
 	for child in clues.get_children():
 		child.queue_free();

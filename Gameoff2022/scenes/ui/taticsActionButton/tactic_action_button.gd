@@ -11,7 +11,6 @@ var frames : Array = [
 	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv2.png"),
 	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv3.png")
 ]
-var opponent : String = "";
 
 func _init(new_data : TacticsData = null) -> void:
 	set_data(new_data if new_data else data);
@@ -44,12 +43,11 @@ func _set_up() -> void:
 	
 		cost_counter_tag.set_cost(data.cost);
 	
-func _on_start_combat(with : String, _cam : Camera3D) -> void:
+func _on_start_combat(_cam : Camera3D) -> void:
 	if !data: 
 		queue_free();
 		return;
 		
-	opponent = with;
 	set_data(data);
 	
 	
@@ -65,6 +63,7 @@ func _on_pressed() -> void:
 	
 func _on_attack() -> void:
 	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
-	EventManager.attack.emit(opponent, data.gen_attack_info(), self);	
+	prints(SystemGlobals.opponent,data.gen_attack_info())
+	EventManager.attack.emit(SystemGlobals.opponent, data.gen_attack_info(), self);	
 	
 	
