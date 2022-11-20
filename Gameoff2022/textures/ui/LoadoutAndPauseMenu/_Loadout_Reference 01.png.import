@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs8sh712eovub"
-path="res://.godot/imported/Loadout_TacticList_Diamond_Lv3.png-f11993383712bca24c32272a361b82f3.ctex"
+uid="uid://c3jxr37cmlr7t"
+path="res://.godot/imported/_Loadout_Reference 01.png-bd7677c412a151606ec4eaa6c2768dbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/LoadoutAndPause menu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv3.png"
-dest_files=["res://.godot/imported/Loadout_TacticList_Diamond_Lv3.png-f11993383712bca24c32272a361b82f3.ctex"]
+source_file="res://textures/ui/LoadoutAndPauseMenu/_Loadout_Reference 01.png"
+dest_files=["res://.godot/imported/_Loadout_Reference 01.png-bd7677c412a151606ec4eaa6c2768dbe.ctex"]
 
 [params]
 

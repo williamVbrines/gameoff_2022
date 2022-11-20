@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8vh72q6mr7jt"
-path="res://.godot/imported/Loadout_Equipped_Diamond_Lv1.png-3734a650667ae02221041e8cae91a523.ctex"
+uid="uid://dy06wibd73sxu"
+path="res://.godot/imported/Loadout Screen Measurement Guide 2.png-f570d5c61f83ba3b7fe2897932056b17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/LoadoutAndPause menu/Diamond/Equipped Diamond (Bigger)/Loadout_Equipped_Diamond_Lv1.png"
-dest_files=["res://.godot/imported/Loadout_Equipped_Diamond_Lv1.png-3734a650667ae02221041e8cae91a523.ctex"]
+source_file="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 2.png"
+dest_files=["res://.godot/imported/Loadout Screen Measurement Guide 2.png-f570d5c61f83ba3b7fe2897932056b17.ctex"]
 
 [params]
 

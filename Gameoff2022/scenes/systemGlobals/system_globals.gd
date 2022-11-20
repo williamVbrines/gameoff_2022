@@ -13,9 +13,9 @@ var player_stats : Dictionary = {
 	
 	
 var player_tactics : Dictionary = {
-	"SLOT:1" : "test",
-	"SLOT:2" : "test",
-	"SLOT:3" : "test",
+	"SLOT:1" : "",
+	"SLOT:2" : "",
+	"SLOT:3" : "",
 	"AVAILABLE" : ["test"] #List of all available tatictics to the player.
 }
 	

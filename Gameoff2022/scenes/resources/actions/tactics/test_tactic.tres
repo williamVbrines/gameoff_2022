@@ -10,3 +10,4 @@ variance = 0
 discrtiption = "This is a test"
 cost = 1.0
 dialog_pool = ["Hello this is a tatics dialog"]
+name = "test"

@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddyu66i72fx6o"]
+
+[ext_resource type="Script" path="res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd" id="1_jilq1"]
+[ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_1wvcl"]
+[ext_resource type="Texture2D" uid="uid://d4053sr81jx7" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png" id="2_vmhr8"]
+[ext_resource type="Texture2D" uid="uid://deaarakxmj1d7" path="res://textures/ui/LoadoutAndPauseMenu/tooltip9patch.png" id="2_wokme"]
+
+[sub_resource type="SystemFont" id="SystemFont_dav45"]
+
+[node name="TacticDragAble" type="Button"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2i(110, 110)
+offset_left = 1.0
+offset_right = 111.0
+offset_bottom = 110.0
+focus_mode = 0
+shortcut_in_tooltip = false
+flat = true
+script = ExtResource("1_jilq1")
+
+[node name="LoadoutScreenMeasurementGuide1" type="TextureRect" parent="."]
+visible = false
+offset_left = -375.0
+offset_top = -237.0
+offset_right = 1545.0
+offset_bottom = 843.0
+texture = ExtResource("2_1wvcl")
+
+[node name="ToolTip" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.0
+offset_top = 114.0
+offset_right = 244.0
+offset_bottom = 220.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Label" type="Label" parent="ToolTip"]
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 89.0
+theme_override_fonts/font = SubResource("SystemFont_dav45")
+theme_override_font_sizes/font_size = 22
+text = "Tooltip with tactic name lv 2
+just two lines"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Packground" type="NinePatchRect" parent="ToolTip/Label"]
+show_behind_parent = true
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 28.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wokme")
+region_rect = Rect2(0, 0, 34, 34)
+patch_margin_left = 13
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 13
+
+[node name="Texture" type="TextureRect" parent="."]
+offset_right = 110.0
+offset_bottom = 110.0
+mouse_filter = 2
+texture = ExtResource("2_vmhr8")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy06wibd73sxu"
-path="res://.godot/imported/Loadout Screen Measurement Guide 2.png-85e727bcd59c91e34467f6738651a7a1.ctex"
+uid="uid://b48udv1xv7gcd"
+path="res://.godot/imported/_Loadout_Reference 02.png-19841825533bc9a2945537fd327d8ddc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/ui/LoadoutAndPause menu/Loadout Screen Measurement Guide 2.png"
-dest_files=["res://.godot/imported/Loadout Screen Measurement Guide 2.png-85e727bcd59c91e34467f6738651a7a1.ctex"]
+source_file="res://textures/ui/LoadoutAndPauseMenu/_Loadout_Reference 02.png"
+dest_files=["res://.godot/imported/_Loadout_Reference 02.png-19841825533bc9a2945537fd327d8ddc.ctex"]
 
 [params]
 
