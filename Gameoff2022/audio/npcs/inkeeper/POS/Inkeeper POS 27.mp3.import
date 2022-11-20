@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Inkeeper POS 27.mp3-310acc6ca136232350e2890e6
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0
