@@ -20,8 +20,11 @@ signal change_battel_queue(entity : String,  pos_change : int);
 signal persuasion_changed(val : float);
 signal change_persuasion(val : float);
 
+#Status bar ####################################################################
 signal stress_changed(val : float);
 signal changed_stress(val : float);
+
+signal enemy_portrait_changed(tex : Texture);
 
 
 #Saveing signals################################################################

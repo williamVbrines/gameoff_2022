@@ -24,7 +24,6 @@ func get_tactic(id : String) -> TacticsData:
 	return tactics_data.get(id,null);
 	
 	
-	
 #Dialog Data####################################################################
 var dialog_data = {
 	"test_dialog" = preload("res://scenes/resources/dialogs/test_dialog.tres")

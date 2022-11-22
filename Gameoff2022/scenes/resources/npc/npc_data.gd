@@ -36,8 +36,6 @@ const base_dist = {
 
 var guard_stack : int = 0;
 
-var persuasion : float = 0;
-
 var selected : bool = false;
 
 func _init() -> void:
@@ -61,8 +59,8 @@ func _on_start_exploration() -> void:
 	
 func _on_start_combat(_cam : Camera3D) -> void:
 	selected = SystemGlobals.opponent == name;
-	persuasion = 0;
-	EventManager.persuasion_changed.emit(persuasion);
+	SystemGlobals.persuasion = 0;
+	EventManager.persuasion_changed.emit(SystemGlobals.persuasion );
 	
 func _on_combat_state_changed(state : String) -> void:
 	if selected:
@@ -74,8 +72,10 @@ func _on_combat_state_changed(state : String) -> void:
 			
 	
 func _check_if_persuaded() -> void:
-	if persuasion >= 100:
+	if SystemGlobals.persuasion  >= 100:
 		EventManager.call_deferred("emit_signal", "combat_state_changed","WIN");
+	elif SystemGlobals.stress  >= 100:
+		EventManager.call_deferred("emit_signal", "combat_state_changed","LOSS");
 	else:
 		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
@@ -94,16 +94,16 @@ func _on_attacked(target : String,data : Dictionary)->void:
 			damage = max( 0 , damage * (1.0 - guard_percent) - guard_flat);
 			guard_stack -= 1;
 			
-		persuasion += damage;
+		SystemGlobals.persuasion += damage;
 		
-		EventManager.persuasion_changed.emit(persuasion);
+		EventManager.persuasion_changed.emit(SystemGlobals.persuasion );
 		
 		EventManager.display_dialog.emit("PLAYER",data);
 	
 	
 func _select_action() -> void:
 	EventManager.combat_state_changed.emit("NPC_ACTION_RESOLVE");
-	var action = tatics.get_action(persuasion,0.0, guard_stack);
+	var action = tatics.get_action(SystemGlobals.persuasion ,0.0, guard_stack);
 	
 	match action:
 		NPCTactics.HEAL:
@@ -116,9 +116,9 @@ func _select_action() -> void:
 	
 func heal():
 	
-	persuasion = min(0, persuasion * (1.0 - heal_percent) - heal_flat);
+	SystemGlobals.persuasion = min(0, SystemGlobals.persuasion  * (1.0 - heal_percent) - heal_flat);
 	
-	EventManager.persuasion_changed.emit(persuasion);
+	EventManager.persuasion_changed.emit(SystemGlobals.persuasion);
 	
 	EventManager.battel_queue_changed.emit("NPC" , heal_cost);
 	EventManager.combat_state_changed.emit("ADJUST_Q");

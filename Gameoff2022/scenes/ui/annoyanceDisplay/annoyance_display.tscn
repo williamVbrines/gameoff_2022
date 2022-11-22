@@ -1,12 +1,94 @@
-[gd_scene load_steps=2 format=3 uid="uid://71j1khq8u4ub"]
+[gd_scene load_steps=6 format=3 uid="uid://71j1khq8u4ub"]
 
 [ext_resource type="Script" path="res://scenes/ui/annoyanceDisplay/annoyance_display.gd" id="1_f1ely"]
+[ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_1f5cm"]
+[ext_resource type="Texture2D" uid="uid://b2bpl446qd25d" path="res://textures/ui/Battle/Health Bar/HealthBar_HealthBarHalf.png" id="3_8fsqb"]
+[ext_resource type="Texture2D" uid="uid://c77wjev2mu1ap" path="res://textures/ui/Battle/Health Bar/HealthBar_CenterSkull.png" id="4_oilt8"]
+[ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="5_qr6xq"]
 
-[node name="AnnoyanceDisplay" type="Label"]
-offset_left = 21.0
-offset_top = 13.0
-offset_right = 366.0
-offset_bottom = 81.0
-theme_override_font_sizes/font_size = 47
-text = "Annoyance: 0%"
+[node name="StreesAndPersuaionBattelDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_f1ely")
+
+[node name="HealthBarSpacingGuide" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.298039)
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_1f5cm")
+
+[node name="HealthBar_R" type="TextureRect" parent="."]
+texture_filter = 1
+clip_contents = true
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1522.0
+offset_bottom = 204.0
+texture = ExtResource("3_8fsqb")
+ignore_texture_size = true
+stretch_mode = 2
+flip_h = true
+
+[node name="Fill_R" type="ColorRect" parent="HealthBar_R"]
+show_behind_parent = true
+offset_left = 558.0
+offset_top = 80.0
+offset_right = 1095.0
+offset_bottom = 100.0
+rotation = 3.14159
+color = Color(1, 0, 0, 1)
+
+[node name="HealthBar_L" type="TextureRect" parent="."]
+texture_filter = 1
+clip_contents = true
+offset_left = 960.0
+offset_top = 204.0
+offset_right = 1522.0
+offset_bottom = 344.0
+rotation = 3.14159
+texture = ExtResource("3_8fsqb")
+ignore_texture_size = true
+stretch_mode = 2
+flip_h = true
+flip_v = true
+
+[node name="Fill_L" type="ColorRect" parent="HealthBar_L"]
+show_behind_parent = true
+offset_left = 558.0
+offset_top = 82.0
+offset_right = 1095.0
+offset_bottom = 106.0
+rotation = 3.14159
+color = Color(1, 0, 0, 1)
+
+[node name="CenterSkull" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 929.0
+offset_top = 103.0
+offset_right = 991.0
+offset_bottom = 165.0
+texture = ExtResource("4_oilt8")
+
+[node name="PlayerPortrait" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 270.0
+offset_top = 64.0
+offset_right = 410.0
+offset_bottom = 204.0
+texture = ExtResource("5_qr6xq")
+
+[node name="EnemyPortrait" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 1510.0
+offset_top = 64.0
+offset_right = 1650.0
+offset_bottom = 204.0
+texture = ExtResource("5_qr6xq")
+flip_h = true

@@ -37,10 +37,12 @@ func _strat_exploration():
 	
 	
 func _check_win_or_loss():
-	if SystemGlobals.stress == 100:
-		EventManager.combat_state_changed.emit("LOSS");
+	if SystemGlobals.persuasion  >= 100:
+		EventManager.call_deferred("emit_signal", "combat_state_changed","WIN");
+	elif SystemGlobals.stress  >= 100:
+		EventManager.call_deferred("emit_signal", "combat_state_changed","LOSS");
 	else:
-		EventManager.combat_state_changed.emit("CHECK_WIN");
+		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");
 	
 	
 func _on_attacked(target : String,data : Dictionary)->void:

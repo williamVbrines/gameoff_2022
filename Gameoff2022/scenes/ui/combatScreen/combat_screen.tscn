@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/ui/combatScreen/combat_screen.gd" id="1_l1agn"]
 [ext_resource type="PackedScene" uid="uid://d21sy6nj67q6l" path="res://scenes/ui/battelQueue/battel_queue.tscn" id="2_chdcx"]
-[ext_resource type="PackedScene" uid="uid://bfdd5v0qqs58a" path="res://scenes/ui/persuasionDisplay/persuasion_display.tscn" id="2_jfxs6"]
+[ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_tq4xa"]
 [ext_resource type="PackedScene" uid="uid://71j1khq8u4ub" path="res://scenes/ui/annoyanceDisplay/annoyance_display.tscn" id="2_vherf"]
 [ext_resource type="PackedScene" uid="uid://bp3lqnbnywpvo" path="res://scenes/ui/combatActionSelection/combat_action_selection.tscn" id="6_s7td5"]
 [ext_resource type="PackedScene" uid="uid://doxlpksqfs6jj" path="res://scenes/ui/combateDialogDisplay/combate_dialog_display.tscn" id="8_b2fph"]
@@ -17,6 +17,12 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_l1agn")
 
+[node name="HealthBarSpacingGuide" type="TextureRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_tq4xa")
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -28,23 +34,15 @@ mouse_filter = 2
 
 [node name="CombateDialogDisplay" parent="UI" instance=ExtResource("8_b2fph")]
 
-[node name="PersuasionDisplay" parent="UI" instance=ExtResource("2_jfxs6")]
-offset_left = 1490.0
-offset_top = 24.0
-offset_right = 1835.0
-offset_bottom = 92.0
-
 [node name="AnnoyanceDisplay" parent="UI" instance=ExtResource("2_vherf")]
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 345.0
 offset_bottom = 68.0
 
 [node name="BattelQueue" parent="UI" instance=ExtResource("2_chdcx")]
-offset_left = 461.0
-offset_top = 125.0
-offset_right = 806.0
-offset_bottom = 182.0
+offset_left = 517.0
+offset_top = 185.0
+offset_right = 862.0
+offset_bottom = 242.0
 
 [node name="CombatActionSelection" parent="UI" instance=ExtResource("6_s7td5")]
 

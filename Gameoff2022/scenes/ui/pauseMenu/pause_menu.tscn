@@ -39,7 +39,6 @@ mouse_filter = 2
 script = ExtResource("1_po6cs")
 
 [node name="PauseButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 91.0
 offset_top = 57.0
 offset_right = 199.0
@@ -50,7 +49,6 @@ flat = true
 
 [node name="Diamond" type="TextureRect" parent="PauseButton"]
 custom_minimum_size = Vector2i(110, 110)
-layout_mode = 0
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("2_s0xdg")
@@ -58,7 +56,7 @@ texture = ExtResource("2_s0xdg")
 [node name="SideBar" type="Control" parent="."]
 clip_contents = true
 custom_minimum_size = Vector2i(288, 0)
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -67,7 +65,7 @@ mouse_filter = 2
 [node name="BackGround" type="Control" parent="SideBar"]
 visible = false
 clip_contents = true
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -75,7 +73,6 @@ mouse_filter = 2
 
 [node name="mid" type="ColorRect" parent="SideBar/BackGround"]
 custom_minimum_size = Vector2i(248, 0)
-layout_mode = 0
 offset_left = 20.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -84,14 +81,12 @@ color = Color(0.145098, 0.137255, 0.25098, 0.741176)
 
 [node name="Side" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
-layout_mode = 0
 offset_left = -20.0
 offset_bottom = 1080.0
 color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Side2" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
-layout_mode = 0
 offset_left = 248.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -99,7 +94,6 @@ color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Selection" type="VBoxContainer" parent="SideBar"]
 visible = false
-layout_mode = 0
 offset_left = 44.0
 offset_top = 381.0
 offset_right = 248.0
@@ -108,7 +102,6 @@ mouse_filter = 2
 theme_override_constants/separation = 31
 
 [node name="ResumeButton" type="Button" parent="SideBar/Selection"]
-layout_mode = 2
 offset_right = 204.0
 offset_bottom = 39.0
 theme_override_fonts/font = SubResource("SystemFont_yyaxe")
@@ -120,7 +113,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_oucv7")
 text = "Resume"
 
 [node name="LoadOutButton" type="Button" parent="SideBar/Selection"]
-layout_mode = 2
 offset_top = 70.0
 offset_right = 204.0
 offset_bottom = 109.0
@@ -134,7 +126,6 @@ toggle_mode = true
 text = "Loadout"
 
 [node name="ItmesButton" type="Button" parent="SideBar/Selection"]
-layout_mode = 2
 offset_top = 140.0
 offset_right = 204.0
 offset_bottom = 179.0
@@ -148,7 +139,6 @@ toggle_mode = true
 text = "Items"
 
 [node name="CluesButton" type="Button" parent="SideBar/Selection"]
-layout_mode = 2
 offset_top = 210.0
 offset_right = 204.0
 offset_bottom = 249.0
@@ -162,7 +152,6 @@ toggle_mode = true
 text = "Clues"
 
 [node name="Exit Kingdom Of Frogs" type="Button" parent="SideBar/Selection"]
-layout_mode = 2
 offset_top = 280.0
 offset_right = 204.0
 offset_bottom = 358.0
@@ -177,7 +166,6 @@ text = "Exit Kindom of
 Frogs"
 
 [node name="LoadoutMenu" parent="." instance=ExtResource("3_yi8yh")]
-layout_mode = 1
 
 [node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]
 visible = false
