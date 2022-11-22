@@ -1,22 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbg8tve5ijtec"]
+[gd_scene load_steps=3 format=3 uid="uid://23xjwrwnc3tt"]
 
 [ext_resource type="Script" path="res://scenes/voiceBox/voice_box.gd" id="1_1g42e"]
-[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="1_6k4hn"]
-[ext_resource type="AudioStream" uid="uid://c7v2gxtau55si" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 1.mp3" id="12_7erb0"]
-[ext_resource type="AudioStream" uid="uid://dgqwsumnoq4fh" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 2.mp3" id="13_u26wl"]
-[ext_resource type="AudioStream" uid="uid://2qq4vo14d32m" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 3.mp3" id="14_llw7m"]
-[ext_resource type="AudioStream" uid="uid://crpkwqvvk2e8v" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 4.mp3" id="15_yabq2"]
-[ext_resource type="AudioStream" uid="uid://l1u0jjkuk7vv" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 5.mp3" id="16_vcwro"]
-[ext_resource type="AudioStream" uid="uid://7hop3d7405ws" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 6.mp3" id="17_hvjiw"]
-[ext_resource type="AudioStream" uid="uid://v71x8755oq63" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 7.mp3" id="18_j6lxm"]
-[ext_resource type="AudioStream" uid="uid://3cmpgkpgrw7c" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3" id="19_euxh2"]
-[ext_resource type="AudioStream" uid="uid://cfvxdwl6wxuks" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 9.mp3" id="20_wpgf1"]
-[ext_resource type="AudioStream" uid="uid://b2m7mp4combxw" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 10.mp3" id="21_q4tcf"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="12_6md0e"]
 
-[node name="VoiceBox" type="AudioStreamPlayer"]
+[node name="VoiceBox" type="AudioStreamPlayer" node_paths=PackedStringArray("label")]
 pitch_scale = 1.22
 script = ExtResource("1_1g42e")
-samples = [ExtResource("12_7erb0"), ExtResource("13_u26wl"), ExtResource("14_llw7m"), ExtResource("15_yabq2"), ExtResource("16_vcwro"), ExtResource("17_hvjiw"), ExtResource("18_j6lxm"), ExtResource("19_euxh2"), ExtResource("20_wpgf1"), ExtResource("21_q4tcf")]
+label = NodePath("Label")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 texture_filter = 1
@@ -24,7 +14,7 @@ offset_left = 543.0
 offset_top = 803.0
 offset_right = 1259.0
 offset_bottom = 834.0
-theme_override_fonts/font = ExtResource("1_6k4hn")
+theme_override_fonts/font = ExtResource("12_6md0e")
 theme_override_font_sizes/font_size = 40
 
 [node name="Label" type="RichTextLabel" parent="."]
@@ -33,7 +23,7 @@ offset_left = 550.0
 offset_top = 599.0
 offset_right = 1266.0
 offset_bottom = 706.0
-theme_override_fonts/normal_font = ExtResource("1_6k4hn")
+theme_override_fonts/normal_font = ExtResource("12_6md0e")
 theme_override_font_sizes/normal_font_size = 42
 text = "TestTestTEstste"
 

@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_l5w1h"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_igjm8"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qvttp"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lso6g"]
 resource_local_to_scene = true
 shader = ExtResource("5_ubwu6")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -59,7 +59,7 @@ offset_bottom = 1006.0
 script = ExtResource("3_tad11")
 
 [node name="TagButton" parent="FleeButton" instance=ExtResource("4_fuwor")]
-material = SubResource("ShaderMaterial_qvttp")
+material = SubResource("ShaderMaterial_lso6g")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 167.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 1)

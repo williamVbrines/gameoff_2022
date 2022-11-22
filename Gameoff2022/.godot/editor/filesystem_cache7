@@ -1,10 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1669116526
+::res://::1669121287
 export_presets.cfg::TextFile::-1::1668936590::0::1::::<><>::
 icon.svg::CompressedTexture2D::4080943282524572270::1668221551::1668221551::1::::<><>::
 ::res://audio/::1669116446
 ::res://audio/npcs/::1669116446
-::res://audio/npcs/inkeeper/::1669116446
+::res://audio/npcs/inkeeper/::1669116583
 ::res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/::1669116446
 Inkeeper NEU 1.mp3::AudioStreamMP3::7063887607622895956::1669116446::1669116446::1::::<><>::
 Inkeeper NEU 2.mp3::AudioStreamMP3::7614794144718291877::1669116446::1669116446::1::::<><>::
@@ -16,34 +16,6 @@ Inkeeper NEU 7.mp3::AudioStreamMP3::1541647303708352266::1669116446::1669116446:
 Inkeeper NEU 8.mp3::AudioStreamMP3::1970172099473186402::1669116446::1669116446::1::::<><>::
 Inkeeper NEU 9.mp3::AudioStreamMP3::5168540540572339438::1669116446::1669116446::1::::<><>::
 Inkeeper NEU 10.mp3::AudioStreamMP3::4308257201023711720::1669116446::1669116446::1::::<><>::
-::res://audio/npcs/inkeeper/POS/::1669116446
-Inkeeper POS 1.mp3::AudioStreamMP3::1647164356901545403::1669116446::1669116446::1::::<><>::
-Inkeeper POS 2.mp3::AudioStreamMP3::5322723835372071274::1669116446::1669116446::1::::<><>::
-Inkeeper POS 3.mp3::AudioStreamMP3::5690682968918794382::1669116446::1669116446::1::::<><>::
-Inkeeper POS 4.mp3::AudioStreamMP3::1213571818225028651::1669116446::1669116446::1::::<><>::
-Inkeeper POS 5.mp3::AudioStreamMP3::5061509572966633573::1669116446::1669116446::1::::<><>::
-Inkeeper POS 6.mp3::AudioStreamMP3::6892865897010392062::1669116446::1669116446::1::::<><>::
-Inkeeper POS 7.mp3::AudioStreamMP3::6270706532289714438::1669116446::1669116446::1::::<><>::
-Inkeeper POS 8.mp3::AudioStreamMP3::4076192769980138376::1669116446::1669116446::1::::<><>::
-Inkeeper POS 9.mp3::AudioStreamMP3::8182860667932413162::1669116446::1669116446::1::::<><>::
-Inkeeper POS 10.mp3::AudioStreamMP3::8177791109586889866::1669116446::1669116446::1::::<><>::
-Inkeeper POS 11.mp3::AudioStreamMP3::4147472892242745459::1669116446::1669116446::1::::<><>::
-Inkeeper POS 12.mp3::AudioStreamMP3::7390043636119734010::1669116446::1669116446::1::::<><>::
-Inkeeper POS 13.mp3::AudioStreamMP3::3506747273849053156::1669116446::1669116446::1::::<><>::
-Inkeeper POS 14.mp3::AudioStreamMP3::4358526254326383385::1669116446::1669116446::1::::<><>::
-Inkeeper POS 15.mp3::AudioStreamMP3::2367123608559894827::1669116446::1669116446::1::::<><>::
-Inkeeper POS 16.mp3::AudioStreamMP3::5366612685496955909::1669116446::1669116446::1::::<><>::
-Inkeeper POS 17.mp3::AudioStreamMP3::7939014977847610898::1669116446::1669116446::1::::<><>::
-Inkeeper POS 18.mp3::AudioStreamMP3::3279363240406307003::1669116446::1669116446::1::::<><>::
-Inkeeper POS 19.mp3::AudioStreamMP3::1191806866780113741::1669116446::1669116446::1::::<><>::
-Inkeeper POS 20.mp3::AudioStreamMP3::315996464461939467::1669116446::1669116446::1::::<><>::
-Inkeeper POS 21.mp3::AudioStreamMP3::1010196107465386470::1669116446::1669116446::1::::<><>::
-Inkeeper POS 22.mp3::AudioStreamMP3::192922241149250928::1669116446::1669116446::1::::<><>::
-Inkeeper POS 23.mp3::AudioStreamMP3::813488326478161321::1669116446::1669116446::1::::<><>::
-Inkeeper POS 24.mp3::AudioStreamMP3::4845791641837641893::1669116446::1669116446::1::::<><>::
-Inkeeper POS 25.mp3::AudioStreamMP3::2836732543881256732::1669116446::1669116446::1::::<><>::
-Inkeeper POS 26.mp3::AudioStreamMP3::8237527376682175418::1669116446::1669116446::1::::<><>::
-Inkeeper POS 27.mp3::AudioStreamMP3::206678993312773781::1669116446::1669116446::1::::<><>::
 ::res://meshes/::1668221551
 AlarmClockMesh.obj::Mesh::666901171431798425::1668221551::1668221551::1::::<><>::
 BedMesh.obj::Mesh::4782747171501330232::1668221551::1668221551::1::::<><>::
@@ -116,12 +88,12 @@ villagehousegreen.tscn::PackedScene::8207805450158324881::1668221552::0::1::::<>
 villageporch.tscn::PackedScene::4761138416045155851::1668221552::0::1::::<><>::uid://bknogsetv18b0<>res://shaders/ArtShader.gdshader<>uid://knewbs1jo6yu<>uid://b3hpjriuttwf5
 woodplank.tscn::PackedScene::3578127978099136305::1668221552::0::1::::<><>::uid://bxeq7itoslvtd<>res://shaders/ArtShader.gdshader<>uid://c820l6wognwb2<>uid://b3hpjriuttwf5
 woodpost.tscn::PackedScene::3309557272410361047::1668221552::0::1::::<><>::uid://bw6j8vcm8jmbi<>res://shaders/ArtShader.gdshader<>uid://xrttkbndxkto<>uid://b3hpjriuttwf5
-::res://scenes/::1669116446
+::res://scenes/::1669119085
 ::res://scenes/canvas3D/::1668850758
 canvas3D.gd::GDScript::-1::1668850758::0::1::::<>Node3D<>::
 canvas3D.tscn::PackedScene::4844765004618244457::1668651167::0::1::::<><>::res://scenes/canvas3D/canvas3D.gd
-::res://scenes/eventManager/::1669116363
-event_manager.gd::GDScript::-1::1669116363::0::1::::<>Node<>::
+::res://scenes/eventManager/::1669121037
+event_manager.gd::GDScript::-1::1669121037::0::1::::<>Node<>::
 event_manager.tscn::PackedScene::983989294905901704::1668496844::0::1::::<><>::res://scenes/eventManager/event_manager.gd
 ::res://scenes/interactableArea3D/::1669116363
 interactableArea3D.gd::GDScript::-1::1669116363::0::1::::InteractableArea3D<>Area3D<>::
@@ -132,8 +104,8 @@ DungeonScene.tscn::PackedScene::5011740928977661278::1668221552::0::1::::<><>::
 RoomScene.tscn::PackedScene::1895943206892800854::1668850758::0::1::::<><>::uid://t7veo7ara27a<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://bu2yj26dvmjoo<>uid://dohk55w2v4jar<>uid://cnntxn1gqo2l5<>uid://di2yossccrpdk<>uid://f3olkhor585g<>res://shaders/ArtShader.gdshader<>uid://bs7n32125yvb<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://yllcxgk88mvt<>uid://blfbj6w4wfnt7<>uid://biqnqga1dlvta<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu
 test_area.tscn::PackedScene::6730054458260022839::1669116363::0::1::::<><>::uid://c6gpe0v66rslx<>uid://cisgxwxj5w5h4<>res://scenes/ui/mainMenu/main_menu.tscn<>res://scenes/npc/Npc.gd<>uid://cc8sl1bonoce0<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap
 VillageScene.tscn::PackedScene::1465518839451642061::1669116446::0::1::::<><>::uid://do66mehml4abx<>uid://d000toy1c1400<>res://shaders/ArtShader.gdshader<>uid://d6t6aevet6j4<>uid://bye3sl2u4rd7k<>uid://cvkbkuv2ch0jk<>uid://b83liv0gvm2hb<>uid://d2088j2i35ij3<>uid://dx40fhvq7xq4m<>uid://8f54kt0m0nku<>uid://bq8jiliucs2l6<>uid://cfmnbk2r5ajeh<>uid://bnff6pafaf1e6<>uid://bxk526ikuqwq<>uid://dk6q2e0vkitc8<>uid://ddnu2xd4xodou<>uid://c7rfbbdj0tkqk<>uid://pgiirmgenq8c<>uid://d1cxdlb2ns13m<>uid://bifwck4si2ayq<>uid://b707k3rkcx0dq<>uid://b8h4cvh3bfyxe
-::res://scenes/main/::1669116363
-main.tscn::PackedScene::5729213597354079838::1669116363::0::1::::<><>::uid://bhcfyawh66n7t<>uid://ga2iolih30e1<>uid://c25dap1wya5s2<>uid://w8grd7k40rhy<>uid://c1ynlnisg2qox<>uid://dpm7ebubyc0vf
+::res://scenes/main/::1669121109
+main.tscn::PackedScene::5729213597354079838::1669121109::0::1::::<><>::uid://bhcfyawh66n7t<>uid://ga2iolih30e1<>uid://c25dap1wya5s2<>uid://w8grd7k40rhy<>uid://c1ynlnisg2qox<>uid://dpm7ebubyc0vf
 test_remove_me.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
 ::res://scenes/npc/::1669116363
 Npc.gd::GDScript::-1::1669116363::0::1::::NPC<>Node3D<>::
@@ -163,10 +135,10 @@ test_tactic.tres::Resource::3185936262228989584::1669116363::0::1::::<><>::res:/
 ::res://scenes/resources/dialogs/::1668497437
 dialog_data.gd::GDScript::-1::1668497437::0::1::::DialogData<>Resource<>::
 test_dialog.tres::Resource::8960582136764982305::1668497437::0::1::::<><>::res://scenes/resources/dialogs/dialog_data.gd
-::res://scenes/resources/npc/::1669116363
+::res://scenes/resources/npc/::1669117219
 npc_data.gd::GDScript::-1::1669116363::0::1::::NPCData<>Resource<>::
 npc_tactics_resource.gd::GDScript::-1::1668222214::0::1::::NPCTactics<>Resource<>::
-test_npc_resource.tres::Resource::4982457437954918889::1669115591::0::1::::<><>::res://scenes/resources/npc/npc_data.gd<>res://scenes/resources/npc/npc_tactics_resource.gd
+test_npc_resource.tres::Resource::4982457437954918889::1669117219::0::1::::<><>::res://scenes/resources/npc/npc_data.gd<>res://scenes/resources/npc/npc_tactics_resource.gd
 ::res://scenes/resources/saves/::1668850758
 save_data.gd::GDScript::-1::1668850758::0::1::::SaveData<>Resource<>::
 ::res://scenes/systemGlobals/::1669116363
@@ -178,36 +150,36 @@ mointor_menu_test.tscn::PackedScene::5523162261892515969::1668850758::0::1::::<>
 save_test.gd::GDScript::-1::1668741804::0::1::::<>Node<>::
 save_test.tscn::PackedScene::7472269401555013596::1668570740::0::1::::<><>::res://scenes/test/save_test.gd
 ::res://scenes/ui/::1669116363
-::res://scenes/ui/annoyanceDisplay/::1669116363
-annoyance_display.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
+::res://scenes/ui/annoyanceDisplay/::1669121023
+annoyance_display.gd::GDScript::-1::1669121023::0::1::::<>Control<>::
 annoyance_display.tscn::PackedScene::2300310238418034445::1669116363::0::1::::<><>::res://scenes/ui/annoyanceDisplay/annoyance_display.gd<>uid://5aktl5smo5ms<>uid://b2bpl446qd25d<>uid://c77wjev2mu1ap<>uid://by2cr8bcufbqn
-::res://scenes/ui/battelQueue/::1669116363
+::res://scenes/ui/battelQueue/::1669121109
 battel_queue.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
-battel_queue.tscn::PackedScene::9109172064593179961::1669100879::0::1::::<><>::res://scenes/ui/battelQueue/battel_queue.gd<>uid://dr3l8if5am1l0<>uid://d4jw1nsuebve1<>uid://7rjavflk8rb6<>uid://vkpr8280nvpl<>uid://bkovlc322tq4t<>uid://c51bmsdvxema8
-::res://scenes/ui/clueActionMenu/::1668850758
+battel_queue.tscn::PackedScene::9109172064593179961::1669121109::0::1::::<><>::res://scenes/ui/battelQueue/battel_queue.gd<>uid://dr3l8if5am1l0<>uid://d4jw1nsuebve1<>uid://7rjavflk8rb6<>uid://vkpr8280nvpl<>uid://bkovlc322tq4t<>uid://c51bmsdvxema8
+::res://scenes/ui/clueActionMenu/::1669121109
 clue_action_menu.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
-clue_action_menu.tscn::PackedScene::8815653258354543225::1668850758::0::1::::<><>::res://scenes/ui/clueActionMenu/clue_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://02irn3hmx2wt<>uid://csa4vgi6yin3c
+clue_action_menu.tscn::PackedScene::8815653258354543225::1669121109::0::1::::<><>::res://scenes/ui/clueActionMenu/clue_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://02irn3hmx2wt<>uid://csa4vgi6yin3c
 ::res://scenes/ui/cluesActionButton/::1668850758
 clue_action_button.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
 clue_action_button.tscn::PackedScene::1802080977849709977::1668850758::0::1::::<><>::res://scenes/ui/cluesActionButton/clue_action_button.gd<>uid://02irn3hmx2wt<>uid://cmiijlqwn1yyk<>uid://d72wcglmseqx
-::res://scenes/ui/combatActionSelection/::1668850758
+::res://scenes/ui/combatActionSelection/::1669121109
 combat_action_selection.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
-combat_action_selection.tscn::PackedScene::3497753059972141604::1668850758::0::1::::<><>::res://scenes/ui/combatActionSelection/combat_action_selection.gd<>uid://dxumryqsk6v7n<>uid://dmr5tljni8kwq<>res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://02irn3hmx2wt<>uid://csa4vgi6yin3c
+combat_action_selection.tscn::PackedScene::3497753059972141604::1669121109::0::1::::<><>::res://scenes/ui/combatActionSelection/combat_action_selection.gd<>uid://dxumryqsk6v7n<>uid://dmr5tljni8kwq<>res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://02irn3hmx2wt<>uid://csa4vgi6yin3c
 ::res://scenes/ui/combatActionSelection/disengageAction/::1668850758
 disengage_action.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
 ::res://scenes/ui/combatActionSelection/itemAction/::1668850758
 item_action.gd::GDScript::-1::1668850758::0::1::::<>Button<>::
-::res://scenes/ui/combateDialogDisplay/::1668850758
-combate_dialog_display.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
-combate_dialog_display.tscn::PackedScene::8190081777958508951::1668850758::0::1::::<><>::res://scenes/ui/combateDialogDisplay/combate_dialog_display.gd
-::res://scenes/ui/combatScreen/::1669116363
-combat_screen.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
-combat_screen.tscn::PackedScene::8238817409139706851::1669116363::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://5aktl5smo5ms<>uid://71j1khq8u4ub<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
+::res://scenes/ui/combateDialogDisplay/::1669121109
+combate_dialog_display.gd::GDScript::-1::1669120526::0::1::::<>Control<>::
+combate_dialog_display.tscn::PackedScene::8190081777958508951::1669121109::0::1::::<><>::res://scenes/ui/combateDialogDisplay/combate_dialog_display.gd<>uid://cbybq6p6775cn<>uid://rfj18ib1q8ca<>res://scenes/voiceBox/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw
+::res://scenes/ui/combatScreen/::1669121109
+combat_screen.gd::GDScript::-1::1669121046::0::1::::<>Control<>::
+combat_screen.tscn::PackedScene::8238817409139706851::1669121109::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://5aktl5smo5ms<>uid://71j1khq8u4ub<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
 ::res://scenes/ui/costCounterTag/::1668850758
 cost_counter_tag.gd::GDScript::-1::1668850758::0::1::::<>Control<>::
 cost_counter_tag.tscn::PackedScene::9208570700023639997::1668850758::0::1::::<><>::res://scenes/ui/tagButton/color_swap.gdshader<>uid://dmqxxsevkfr7h<>res://scenes/ui/costCounterTag/cost_counter_tag.gd<>uid://df3826xj6slyh<>uid://opsohciiyx02<>uid://cgv2x5el18n4j<>uid://02irn3hmx2wt
-::res://scenes/ui/dialogWindow/::1669115591
-dialog_window.gd::GDScript::-1::1669115591::0::1::::<>Control<>::
+::res://scenes/ui/dialogWindow/::1669117219
+dialog_window.gd::GDScript::-1::1669117219::0::1::::<>Control<>::
 dialog_window.tscn::PackedScene::422787459677845910::1668820341::0::1::::<><>::res://scenes/ui/dialogWindow/dialog_window.gd
 ::res://scenes/ui/explorationHUD/::1669116363
 exploration_hud.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
@@ -233,9 +205,9 @@ tatic_drag_able.tscn::PackedScene::7420644989629744608::1669116363::0::1::::<><>
 ::res://scenes/ui/persuasionDisplay/::1668850758
 persuasion_display.gd::GDScript::-1::1668850758::0::1::::<>Label<>::
 persuasion_display.tscn::PackedScene::2743794902300443434::1668222214::0::1::::<><>::res://scenes/ui/persuasionDisplay/persuasion_display.gd
-::res://scenes/ui/stressIndicator/::1669116363
+::res://scenes/ui/stressIndicator/::1669121100
 stress_bar.gdshader::Shader::-1::1669116363::0::1::::<><>::
-stress_indicator.gd::GDScript::-1::1669116363::0::1::::<>Control<>::
+stress_indicator.gd::GDScript::-1::1669121100::0::1::::<>Control<>::
 stress_indicator.tscn::PackedScene::454179955194688047::1669116363::0::1::::<><>::res://scenes/ui/stressIndicator/stress_indicator.gd<>uid://h22do6ryyggw<>res://scenes/ui/stressIndicator/stress_bar.gdshader<>uid://xas0cbolee0s<>uid://cdw3ejwh4fi0q<>uid://by2cr8bcufbqn
 ::res://scenes/ui/tagButton/::1668850759
 color_swap.gdshader::Shader::-1::1668850758::0::1::::<><>::
@@ -244,9 +216,12 @@ tag_button.tscn::PackedScene::7717035720317848978::1668850759::0::1::::<><>::res
 ::res://scenes/ui/taticsActionButton/::1669116363
 tactic_action_button.gd::GDScript::-1::1668850759::0::1::::<>Control<>::
 tactic_button.tscn::PackedScene::1814347533631113188::1669116363::0::1::::<><>::res://scenes/ui/taticsActionButton/tactic_action_button.gd<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://d4gx2xbbpqju8<>uid://02irn3hmx2wt<>uid://cbi7t5s6k8iie
-::res://scenes/voiceBox/::1669116446
-voice_box.gd::GDScript::-1::1669116446::0::1::::<>AudioStreamPlayer<>::
-voice_box.tscn::PackedScene::2471034495244678366::1669116446::0::1::::<><>::res://scenes/voiceBox/voice_box.gd<>uid://02irn3hmx2wt<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw
+::res://scenes/voiceBox/::1669121109
+voice_box.gd::GDScript::-1::1669120000::0::1::::VoiceBoxPlayer<>AudioStreamPlayer<>::
+voice_box.tscn::PackedScene::1954315101111762409::1669121109::0::1::::<><>::res://scenes/voiceBox/voice_box.gd<>uid://02irn3hmx2wt
+::res://scenes/voiceBoxTesting/::1669121109
+voice_box.gd::GDScript::-1::1669119228::0::1::::<>AudioStreamPlayer<>::
+voice_box.tscn::PackedScene::1954315101111762409::1669121109::0::1::::<><>::res://scenes/voiceBoxTesting/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw<>uid://02irn3hmx2wt
 ::res://shaders/::1668975582
 ArtShader.gdshader::Shader::-1::1668221553::0::1::::<><>::
 artshader_noisetexture.tres::NoiseTexture2D::4367086683063326312::1668975582::0::1::::<><>::
@@ -388,9 +363,9 @@ texture_10.png::CompressedTexture2D::6937716011360806923::1668221556::1668221556
 texture_11.png::CompressedTexture2D::18358689775941004::1668221556::1668221556::1::::<><>::
 texture_12.png::CompressedTexture2D::7743837705027315441::1668221556::1668221556::1::::<><>::
 texture_13.png::CompressedTexture2D::2221482679565715300::1668221556::1668221556::1::::<><>::
-::res://textures/ui/::1669116363
-::res://textures/ui/Battle/::1669116363
-Dialogue Window Spacing.png::CompressedTexture2D::4892666219665388009::1668850759::1668850759::1::::<><>::
+::res://textures/ui/::1669121450
+::res://textures/ui/Battle/::1669121289
+Dialogue Window Spacing.png::CompressedTexture2D::435611567078988684::1669121284::1669121289::1::::<><>::
 ::res://textures/ui/Battle/Action Queue/::1668850759
 ActionQueue_Back.png::CompressedTexture2D::2281684982399795533::1668850759::1668850759::1::::<><>::
 ActionQueue_Back_TurnIndicator.png::CompressedTexture2D::8411002217433208151::1668850759::1668850759::1::::<><>::
@@ -430,6 +405,21 @@ BattleMenu_ListItem_Diamond_Lv2.png::CompressedTexture2D::2504029180656968315::1
 BattleMenu_ListItem_Diamond_Lv3.png::CompressedTexture2D::4861523711839584444::1668850759::1668850759::1::::<><>::
 ::res://textures/ui/Battle/Menu/Time Cost/::1668850759
 BattleMenu_Icon_TimeCost.png::CompressedTexture2D::5239008376529728287::1668850759::1668850759::1::::<><>::
+::res://textures/ui/Font/::1669121434
+OpenSans-BoldItalic.ttf::FontFile::2844384982860911055::1669121434::1669121455::1::::<><>::
+OpenSans-CondBold.ttf::FontFile::5098789144333562083::1669121434::1669121455::1::::<><>::
+OpenSans-CondLight.ttf::FontFile::6120007844844898709::1669121434::1669121455::1::::<><>::
+OpenSans-CondLightItalic.ttf::FontFile::4120436266918331304::1669121434::1669121455::1::::<><>::
+OpenSans-ExtraBold.ttf::FontFile::5538733093491792660::1669121434::1669121455::1::::<><>::
+OpenSans-ExtraBoldItalic.ttf::FontFile::8817624687280168995::1669121434::1669121455::1::::<><>::
+OpenSans-Italic.ttf::FontFile::2322820989392789374::1669121434::1669121455::1::::<><>::
+OpenSans-Light.ttf::FontFile::9175037327783747840::1669121434::1669121455::1::::<><>::
+OpenSans-LightItalic.ttf::FontFile::3170506631955964290::1669121434::1669121455::1::::<><>::
+OpenSans-Regular.ttf::FontFile::6193318815380818109::1669121434::1669121456::1::::<><>::
+OpenSans-Semibold.ttf::FontFile::7889601056194392317::1669121434::1669121456::1::::<><>::
+OpenSans-SemiboldItalic.ttf::FontFile::7387914325861980169::1669121434::1669121456::1::::<><>::
+::res://textures/ui/Font/z_Old Fonts/::1669121434
+monogram.ttf::FontFile::8152660721519154919::1669121434::1669121455::1::::<><>::
 ::res://textures/ui/LoadoutAndPauseMenu/::1669116363
 Loadout Screen Measurement Guide 1.png::CompressedTexture2D::3586600999047273449::1669116363::1669116363::1::::<><>::
 Loadout Screen Measurement Guide 2.png::CompressedTexture2D::8897325678397039594::1669116363::1669116363::1::::<><>::

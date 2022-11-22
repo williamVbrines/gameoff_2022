@@ -8,7 +8,7 @@ const FILL_SPEED : float = 0.5;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_make_connections();
-	_on_stress_changed();
+	_on_stress_changed(0);
 	
 func _make_connections() -> void:
 	EventManager.stress_changed.connect(_on_stress_changed)
@@ -26,7 +26,7 @@ func _on_start_dialog(_id : String) -> void:
 	_hide_anim();
 	
 	
-func _on_stress_changed():
+func _on_stress_changed(_val):
 	var tween = create_tween();
 	tween.set_trans(Tween.TRANS_CUBIC)
 	var p = (SystemGlobals.stress / 100.0 )- 0.001;

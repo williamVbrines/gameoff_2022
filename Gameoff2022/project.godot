@@ -73,6 +73,11 @@ _global_script_classes=[{
 "class": &"UITagButton",
 "language": &"GDScript",
 "path": "res://scenes/ui/tagButton/tag_button.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": &"VoiceBoxPlayer",
+"language": &"GDScript",
+"path": "res://scenes/voiceBox/voice_box.gd"
 }]
 _global_script_class_icons={
 "ClueData": "",
@@ -87,7 +92,8 @@ _global_script_class_icons={
 "PlayerActionData": "",
 "SaveData": "",
 "TacticsData": "",
-"UITagButton": ""
+"UITagButton": "",
+"VoiceBoxPlayer": ""
 }
 
 [application]

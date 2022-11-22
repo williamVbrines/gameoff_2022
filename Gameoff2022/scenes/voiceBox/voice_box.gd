@@ -1,12 +1,15 @@
 extends AudioStreamPlayer
+class_name VoiceBoxPlayer
 
 @export var samples : Array[AudioStream]
-@onready var label: RichTextLabel = $Label
-@onready var line_edit: LineEdit = $LineEdit
-var space_pause : float = 0.00;
-var coma_pause : float = .000;
+@export var label: RichTextLabel;
+
+@export var short_pause : float = 0.00;
+@export var long_pause : float = 0.000;
 
 var queue : Array[int] = [];
+
+signal complete();
 
 func _ready() -> void:
 	_make_connections();
@@ -20,17 +23,16 @@ func _on_finnish():
 	play_next();
 	
 	
-func _on_text_submitted(new_text: String) -> void:
+func play_text() -> void:
 	label.visible_characters = 0;
-	label.set_text(new_text);
-	_gen_sample_q(new_text);
+	_gen_sample_q(label.text);
 	play_next();
 	
 	
-func _gen_sample_q(text: String)->void:
+func _gen_sample_q(new_text: String)->void:
 	queue = [];
 	
-	text = text.to_upper();
+	new_text = new_text.to_upper();
 	
 	if playing:
 		stop();
@@ -39,26 +41,29 @@ func _gen_sample_q(text: String)->void:
 	var end_of_word = false;
 	var index = 0;
 
-	while index < text.length():
-		if text[index] in [" ",'\n','\t',",",";","."]:
+	while index < new_text.length():
+		if new_text[index] in [" ",'\n','\t',",",";","."]:
 			if !end_of_word:
 				queue.append(randi() % samples.size());
 				word = "";
-			queue.append((- [" ",",",";","."].find(text[index])) - 1);
+			queue.append((- [" ",",",";","."].find(new_text[index])) - 1);
 			end_of_word = true
 		else:
 			end_of_word = false;
 			
-			word += text[index];
+			word += new_text[index];
 		index += 1;
 	
 	if word != "":
 		queue.append(hash(word)  % samples.size());
 	
-	print(queue)
 	
 func play_next()->void:
-	if queue.size() <= 0: return;
+	if queue.size() <= 0: 
+		complete.emit(); 
+		return;
+		
+		
 	var index = queue.pop_front();
 #	
 
@@ -92,18 +97,16 @@ func play_next()->void:
 		
 		match index:
 			-1:
-				time = space_pause;
+				time = short_pause;
 			-2,-3,-4,-5:
-				time = coma_pause;
+				time = long_pause;
 				
 		
 		var tween = create_tween()
 		tween.tween_interval(time);
 		tween.tween_callback(_on_finnish);
 		tween.play();
-	
-	
-		
+
 	
 	
 

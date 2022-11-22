@@ -1,0 +1,40 @@
+[gd_scene load_steps=13 format=3 uid="uid://23xjwrwnc3tt"]
+
+[ext_resource type="Script" path="res://scenes/voiceBoxTesting/voice_box.gd" id="1_4vxyp"]
+[ext_resource type="AudioStream" uid="uid://c7v2gxtau55si" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 1.mp3" id="2_o4anf"]
+[ext_resource type="AudioStream" uid="uid://dgqwsumnoq4fh" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 2.mp3" id="3_4fjin"]
+[ext_resource type="AudioStream" uid="uid://2qq4vo14d32m" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 3.mp3" id="4_idnjp"]
+[ext_resource type="AudioStream" uid="uid://crpkwqvvk2e8v" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 4.mp3" id="5_ajhbs"]
+[ext_resource type="AudioStream" uid="uid://l1u0jjkuk7vv" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 5.mp3" id="6_hl63s"]
+[ext_resource type="AudioStream" uid="uid://7hop3d7405ws" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 6.mp3" id="7_judjh"]
+[ext_resource type="AudioStream" uid="uid://v71x8755oq63" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 7.mp3" id="8_pqbto"]
+[ext_resource type="AudioStream" uid="uid://3cmpgkpgrw7c" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3" id="9_lj714"]
+[ext_resource type="AudioStream" uid="uid://cfvxdwl6wxuks" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 9.mp3" id="10_dfrku"]
+[ext_resource type="AudioStream" uid="uid://b2m7mp4combxw" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 10.mp3" id="11_p1v0a"]
+[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="12_6md0e"]
+
+[node name="VoiceBox" type="AudioStreamPlayer"]
+pitch_scale = 1.22
+script = ExtResource("1_4vxyp")
+samples = [ExtResource("2_o4anf"), ExtResource("3_4fjin"), ExtResource("4_idnjp"), ExtResource("5_ajhbs"), ExtResource("6_hl63s"), ExtResource("7_judjh"), ExtResource("8_pqbto"), ExtResource("9_lj714"), ExtResource("10_dfrku"), ExtResource("11_p1v0a")]
+
+[node name="LineEdit" type="LineEdit" parent="."]
+texture_filter = 1
+offset_left = 543.0
+offset_top = 803.0
+offset_right = 1259.0
+offset_bottom = 834.0
+theme_override_fonts/font = ExtResource("12_6md0e")
+theme_override_font_sizes/font_size = 40
+
+[node name="Label" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 550.0
+offset_top = 599.0
+offset_right = 1266.0
+offset_bottom = 706.0
+theme_override_fonts/normal_font = ExtResource("12_6md0e")
+theme_override_font_sizes/normal_font_size = 42
+text = "TestTestTEstste"
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_text_submitted"]
