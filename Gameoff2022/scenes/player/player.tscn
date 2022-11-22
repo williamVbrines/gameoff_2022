@@ -68,7 +68,6 @@ collide_with_areas = true
 
 [node name="LookBall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.65153, 4.13409)
-visible = false
 mesh = SubResource("SphereMesh_j73yf")
 surface_material_override/0 = SubResource("StandardMaterial3D_1xja0")
 

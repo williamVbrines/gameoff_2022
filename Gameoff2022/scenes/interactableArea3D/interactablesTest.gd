@@ -1,7 +1,9 @@
 extends InteractableArea3D
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
-
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE;
+	
 func _on_area_hovered() -> void:
 	mesh.get_active_material(0).set("albedo_color", Color.GREEN);
 

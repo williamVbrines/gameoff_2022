@@ -1,6 +1,7 @@
-TextureRect
-ColorRect
 Control
+ColorRect
+TextureButton
+TextureRect
 Label
 HBoxContainer
 Button
@@ -29,4 +30,3 @@ Sprite3D
 InteractableArea3D (InteractablesTest.gd)
 RayCast3D
 SpringArm3D
-RigidBody3D

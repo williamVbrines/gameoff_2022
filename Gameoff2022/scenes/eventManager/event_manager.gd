@@ -37,3 +37,6 @@ signal start_dialog(id : String);
 signal dialog_ended();
 signal dialog_emit(val : String);
 
+#Pause Menu####################################################################
+signal pause_menu_opened();
+signal pause_menu_closed();

@@ -16,6 +16,10 @@ var acceleration: Vector3 = Vector3.ZERO;
 var drag_orgin =  Vector2.ZERO;
 var disabled = false;
 
+func set_disabled(val : bool) -> void:
+	disabled = val;
+	
+	
 func _ready() -> void:
 	_make_connections();
 	
@@ -25,6 +29,17 @@ func _make_connections() -> void:
 	EventManager.start_exploration.connect(_on_start_exploration);
 	EventManager.start_dialog.connect(_on_start_dialog)
 	EventManager.dialog_ended.connect(_on_dialog_eneded)
+	
+	EventManager.pause_menu_closed.connect(_on_pause_menu_closed);
+	EventManager.pause_menu_opened.connect(_pause_menu_opened);
+	
+	
+func _on_pause_menu_closed() -> void:
+	disabled = false;
+	
+	
+func _pause_menu_opened() -> void:
+	disabled = true;
 	
 	
 func _on_start_exploration() -> void:
@@ -111,7 +126,7 @@ func look_event(event : InputEvent) -> void:
 		var pos = event.position;
 		
 		look_cast.global_rotation = Vector3.ZERO;
-		look_cast.target_position = camera.project_ray_normal(pos) * 2000;
+		look_cast.target_position = camera.project_ray_normal(pos) * 200;
 		
 
 

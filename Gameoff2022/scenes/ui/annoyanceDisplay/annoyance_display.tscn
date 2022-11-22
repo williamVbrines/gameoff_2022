@@ -20,6 +20,7 @@ script = ExtResource("1_f1ely")
 visible = false
 self_modulate = Color(1, 1, 1, 0.298039)
 texture_filter = 1
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_1f5cm")
@@ -27,6 +28,7 @@ texture = ExtResource("2_1f5cm")
 [node name="HealthBar_R" type="TextureRect" parent="."]
 texture_filter = 1
 clip_contents = true
+layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1522.0
@@ -38,16 +40,18 @@ flip_h = true
 
 [node name="Fill_R" type="ColorRect" parent="HealthBar_R"]
 show_behind_parent = true
+layout_mode = 0
 offset_left = 558.0
 offset_top = 80.0
 offset_right = 1095.0
 offset_bottom = 100.0
 rotation = 3.14159
-color = Color(1, 0, 0, 1)
+color = Color(0.996078, 0.0392157, 0.32549, 1)
 
 [node name="HealthBar_L" type="TextureRect" parent="."]
 texture_filter = 1
 clip_contents = true
+layout_mode = 0
 offset_left = 960.0
 offset_top = 204.0
 offset_right = 1522.0
@@ -61,15 +65,17 @@ flip_v = true
 
 [node name="Fill_L" type="ColorRect" parent="HealthBar_L"]
 show_behind_parent = true
+layout_mode = 0
 offset_left = 558.0
 offset_top = 82.0
 offset_right = 1095.0
 offset_bottom = 106.0
 rotation = 3.14159
-color = Color(1, 0, 0, 1)
+color = Color(0.996078, 0.0392157, 0.32549, 1)
 
 [node name="CenterSkull" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 929.0
 offset_top = 103.0
 offset_right = 991.0
@@ -78,6 +84,7 @@ texture = ExtResource("4_oilt8")
 
 [node name="PlayerPortrait" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 270.0
 offset_top = 64.0
 offset_right = 410.0
@@ -86,6 +93,7 @@ texture = ExtResource("5_qr6xq")
 
 [node name="EnemyPortrait" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 1510.0
 offset_top = 64.0
 offset_right = 1650.0

@@ -1,3 +1,4 @@
+res://scenes/ui/stressIndicator
 res://scenes/ui/pauseMenu/tatic_darg_able
 res://scenes/ui/pauseMenu
 res://scenes/ui/itemActionButton
@@ -19,4 +20,3 @@ res://scenes/ui/combatActionSelection
 res://scenes/ui/combateDialogDisplay
 res://scenes/resources/npc
 res://scenes/resources
-res://scenes/ui/persuasionDisplay

@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://dm2llsrqhkg3t"]
+[gd_scene load_steps=15 format=3 uid="uid://dm2llsrqhkg3t"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/pause_menu.gd" id="1_po6cs"]
-[ext_resource type="Texture2D" uid="uid://d4053sr81jx7" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png" id="2_s0xdg"]
 [ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_ufott"]
 [ext_resource type="Texture2D" uid="uid://dy06wibd73sxu" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 2.png" id="3_87cyt"]
+[ext_resource type="Texture2D" uid="uid://b5i3e346b6pvg" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond.png" id="3_m84tq"]
 [ext_resource type="PackedScene" uid="uid://cu6c17iwu5lee" path="res://scenes/ui/loadoutMenu/loadout_menu.tscn" id="3_yi8yh"]
+[ext_resource type="Texture2D" uid="uid://c8euvbkk0y356" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_pressed.png" id="4_7v36u"]
+[ext_resource type="Texture2D" uid="uid://wcwbjjjr6avd" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_hover.png" id="5_ldqd7"]
 
 [sub_resource type="SystemFont" id="SystemFont_yyaxe"]
 
@@ -29,6 +31,8 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 [sub_resource type="SystemFont" id="SystemFont_wp4lv"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
+process_priority = -1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,25 +42,21 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_po6cs")
 
-[node name="PauseButton" type="Button" parent="."]
-offset_left = 91.0
-offset_top = 57.0
-offset_right = 199.0
-offset_bottom = 162.0
-toggle_mode = true
-text = "||"
-flat = true
-
-[node name="Diamond" type="TextureRect" parent="PauseButton"]
-custom_minimum_size = Vector2i(110, 110)
-offset_right = 110.0
-offset_bottom = 110.0
-texture = ExtResource("2_s0xdg")
+[node name="PauseButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 97.0
+offset_top = 228.0
+offset_right = 171.0
+offset_bottom = 302.0
+texture_normal = ExtResource("3_m84tq")
+texture_pressed = ExtResource("4_7v36u")
+texture_hover = ExtResource("5_ldqd7")
 
 [node name="SideBar" type="Control" parent="."]
 clip_contents = true
 custom_minimum_size = Vector2i(288, 0)
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -65,7 +65,7 @@ mouse_filter = 2
 [node name="BackGround" type="Control" parent="SideBar"]
 visible = false
 clip_contents = true
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -73,6 +73,7 @@ mouse_filter = 2
 
 [node name="mid" type="ColorRect" parent="SideBar/BackGround"]
 custom_minimum_size = Vector2i(248, 0)
+layout_mode = 0
 offset_left = 20.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -81,12 +82,14 @@ color = Color(0.145098, 0.137255, 0.25098, 0.741176)
 
 [node name="Side" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
+layout_mode = 0
 offset_left = -20.0
 offset_bottom = 1080.0
 color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Side2" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
+layout_mode = 0
 offset_left = 248.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -94,6 +97,7 @@ color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Selection" type="VBoxContainer" parent="SideBar"]
 visible = false
+layout_mode = 0
 offset_left = 44.0
 offset_top = 381.0
 offset_right = 248.0
@@ -102,6 +106,7 @@ mouse_filter = 2
 theme_override_constants/separation = 31
 
 [node name="ResumeButton" type="Button" parent="SideBar/Selection"]
+layout_mode = 2
 offset_right = 204.0
 offset_bottom = 39.0
 theme_override_fonts/font = SubResource("SystemFont_yyaxe")
@@ -113,6 +118,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_oucv7")
 text = "Resume"
 
 [node name="LoadOutButton" type="Button" parent="SideBar/Selection"]
+layout_mode = 2
 offset_top = 70.0
 offset_right = 204.0
 offset_bottom = 109.0
@@ -126,6 +132,7 @@ toggle_mode = true
 text = "Loadout"
 
 [node name="ItmesButton" type="Button" parent="SideBar/Selection"]
+layout_mode = 2
 offset_top = 140.0
 offset_right = 204.0
 offset_bottom = 179.0
@@ -139,6 +146,7 @@ toggle_mode = true
 text = "Items"
 
 [node name="CluesButton" type="Button" parent="SideBar/Selection"]
+layout_mode = 2
 offset_top = 210.0
 offset_right = 204.0
 offset_bottom = 249.0
@@ -152,6 +160,7 @@ toggle_mode = true
 text = "Clues"
 
 [node name="Exit Kingdom Of Frogs" type="Button" parent="SideBar/Selection"]
+layout_mode = 2
 offset_top = 280.0
 offset_right = 204.0
 offset_bottom = 358.0
@@ -166,6 +175,7 @@ text = "Exit Kindom of
 Frogs"
 
 [node name="LoadoutMenu" parent="." instance=ExtResource("3_yi8yh")]
+layout_mode = 1
 
 [node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]
 visible = false

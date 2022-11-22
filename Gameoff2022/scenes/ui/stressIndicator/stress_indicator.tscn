@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://gqajo2cvvlal"]
+
+[ext_resource type="Script" path="res://scenes/ui/stressIndicator/stress_indicator.gd" id="1_2pod7"]
+[ext_resource type="Texture2D" uid="uid://h22do6ryyggw" path="res://textures/ui/Out of Battle/Out Of Battle UI Spacing Guide.png" id="2_m2sx3"]
+[ext_resource type="Shader" path="res://scenes/ui/stressIndicator/stress_bar.gdshader" id="3_nw5j8"]
+[ext_resource type="Texture2D" uid="uid://xas0cbolee0s" path="res://textures/ui/Out of Battle/HealthBarHalf_MASK_OutOfBattle.png" id="4_ivarl"]
+[ext_resource type="Texture2D" uid="uid://cdw3ejwh4fi0q" path="res://textures/ui/Out of Battle/HealthBar_HealthBarHalf_OutOfBattle.png" id="5_68njq"]
+[ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="6_65ir8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7pny"]
+shader = ExtResource("3_nw5j8")
+shader_parameter/bar_color = Color(0.996078, 0.0392157, 0.32549, 1)
+shader_parameter/x_cutoff = 0.999
+
+[node name="StressIndicator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2pod7")
+
+[node name="OutOfBattleUiSpacingGuide" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.513726)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("2_m2sx3")
+
+[node name="Fill" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_k7pny")
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 722.0
+offset_bottom = 204.0
+mouse_filter = 2
+texture = ExtResource("4_ivarl")
+
+[node name="HealthBar" type="TextureRect" parent="."]
+texture_filter = 1
+clip_contents = true
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 722.0
+offset_bottom = 204.0
+mouse_filter = 2
+texture = ExtResource("5_68njq")
+ignore_texture_size = true
+
+[node name="Portrait" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 204.0
+offset_bottom = 204.0
+mouse_filter = 2
+texture = ExtResource("6_65ir8")

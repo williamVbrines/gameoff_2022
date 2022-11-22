@@ -39,7 +39,7 @@ func _unhovered()->void:
 	
 	
 func _on_pressed() -> void:
-	if !selected:
+	if !selected && get_tree().paused == false:
 #		EventManager.combat_state_changed.emit("SET_UP");
 		SystemGlobals.opponent = name;
 		EventManager.start_combat.emit(camera);

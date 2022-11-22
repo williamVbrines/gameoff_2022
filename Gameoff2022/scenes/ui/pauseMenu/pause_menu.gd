@@ -1,6 +1,6 @@
 extends Control
 
-@onready var pause_button: Button = $PauseButton
+@onready var pause_button: TextureButton = $PauseButton
 @onready var resume_button: Button = $SideBar/Selection/ResumeButton
 @onready var side_bar: Control = $SideBar
 @onready var selection: VBoxContainer = $SideBar/Selection
@@ -11,14 +11,57 @@ extends Control
 
 func _ready() -> void:
 	_make_connections();
+	process_mode = Node.PROCESS_MODE_ALWAYS;
 	
 func _make_connections() -> void:
 	pause_button.pressed.connect(_on_pause_pressed);
 	resume_button.pressed.connect(_on_resume_pressed);
 	load_out_button.toggled.connect(_on_loadout_toggled);
 	
+	EventManager.start_combat.connect(_on_start_combat);
+	EventManager.start_exploration.connect(_show_anim);
+	
+	EventManager.start_dialog.connect(_on_start_dialog);
+	EventManager.dialog_ended.connect(_show_anim);
+	
+	
+func _on_start_combat(_cam : Camera3D) -> void:
+	if get_tree().paused == false:
+		_hide_anim();
+	
+	
+func _on_start_dialog(_id : String) -> void:
+	if get_tree().paused == false:
+		_hide_anim();
+	
+	
+func _hide_anim() -> void:
+	var tween = create_tween()
+	tween.stop();
+	
+	tween.tween_property(self,"modulate", Color(Color.WHITE, 0.0), 0.5);
+	
+	tween.play();
+	
+	
+func _show_anim() -> void:
+	var tween = create_tween()
+	tween.stop();
+	
+	tween.tween_property(self,"modulate", Color(Color.WHITE, 1.0), 0.5);
+	
+	tween.play();
+	
+	
 func _on_pause_pressed() -> void:
+	get_tree().paused = true;
+	
 	pause_button.set_disabled(true);
+	
+	EventManager.pause_menu_opened.emit();
+	
+#	Engine.time_scale = 0;
+	
 	
 	var tween = create_tween();
 	
@@ -41,6 +84,7 @@ func _on_pause_pressed() -> void:
 	
 func _on_resume_pressed() ->void:
 	resume_button.set_disabled(true);
+	
 	
 	if loadout_menu.is_open():
 		loadout_menu.close_loadout();
@@ -71,6 +115,10 @@ func _on_resume_pressed() ->void:
 	
 	tween.tween_callback(pause_button.set_disabled.bind(false));
 	tween.tween_callback(pause_button.show);
+	tween.tween_callback(EventManager.call.bind("emit_signal","pause_menu_closed"));
+
+#	Engine.time_scale = 1;
+	get_tree().paused = false;
 	
 	tween.play()
 	

@@ -207,6 +207,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
 visible = false
 
 [node name="NPC" type="Node3D" parent="."]
+process_mode = 1
 transform = Transform3D(0.887815, 0, 0.4602, 0, 1, 0, -0.4602, 0, 0.887815, -3.86354, 0, 0.020031)
 script = ExtResource("4_s40om")
 npc_res = ExtResource("5_om3ok")
@@ -215,6 +216,8 @@ interactable_area = NodePath("InteractableArea3D")
 camera = NodePath("Camera")
 
 [node name="InteractableArea3D" type="Area3D" parent="NPC"]
+process_mode = 1
+process_priority = 1
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("6_q4npx")

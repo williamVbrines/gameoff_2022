@@ -9,13 +9,12 @@
 
 [node name="Main" type="Node3D"]
 
-[node name="ExplorationHUD" parent="." instance=ExtResource("1_m1a3i")]
-mouse_filter = 2
-
 [node name="CombatScreen" parent="." instance=ExtResource("6_vy1uh")]
 
+[node name="ExplorationHUD" parent="." instance=ExtResource("1_m1a3i")]
+
 [node name="DialogWindow" parent="." instance=ExtResource("3_7yhg4")]
-mouse_filter = 2
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("5_un27h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97967, 0.0439042, 5.28352)
