@@ -1,13 +1,14 @@
+ColorRect
+VBoxContainer
+Node
 VoiceBoxPlayer (voice_box.gd)
 RichTextLabel
 Control
-ColorRect
 TextureButton
 TextureRect
 Label
 HBoxContainer
 Button
-VBoxContainer
 HSeparator
 VSplitContainer
 AnimationPlayer
@@ -19,7 +20,6 @@ CollisionShape3D
 Area3D
 SubViewport
 MeshInstance3D
-Node
 Panel
 PopupMenu
 MenuButton
@@ -30,4 +30,3 @@ InteractableArea3D (InteractableArea3D.gd)
 Sprite3D
 InteractableArea3D (InteractablesTest.gd)
 RayCast3D
-SpringArm3D

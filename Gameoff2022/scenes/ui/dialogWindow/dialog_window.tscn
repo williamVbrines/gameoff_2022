@@ -1,8 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://ga2iolih30e1"]
+[gd_scene load_steps=20 format=3 uid="uid://ga2iolih30e1"]
 
 [ext_resource type="Script" path="res://scenes/ui/dialogWindow/dialog_window.gd" id="1_khgcm"]
+[ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="2_whjhp"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="3_w5nww"]
+[ext_resource type="Script" path="res://scenes/voiceBox/voice_box.gd" id="4_sfrfl"]
+[ext_resource type="AudioStream" uid="uid://c7v2gxtau55si" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 1.mp3" id="5_vodvt"]
+[ext_resource type="AudioStream" uid="uid://dgqwsumnoq4fh" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 2.mp3" id="6_f25mv"]
+[ext_resource type="AudioStream" uid="uid://2qq4vo14d32m" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 3.mp3" id="7_tfa6v"]
+[ext_resource type="AudioStream" uid="uid://crpkwqvvk2e8v" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 4.mp3" id="8_evao4"]
+[ext_resource type="AudioStream" uid="uid://l1u0jjkuk7vv" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 5.mp3" id="9_6si24"]
+[ext_resource type="AudioStream" uid="uid://7hop3d7405ws" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 6.mp3" id="10_jx3g3"]
+[ext_resource type="AudioStream" uid="uid://v71x8755oq63" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 7.mp3" id="11_2pjkf"]
+[ext_resource type="AudioStream" uid="uid://3cmpgkpgrw7c" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3" id="12_x7fyt"]
+[ext_resource type="AudioStream" uid="uid://cfvxdwl6wxuks" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 9.mp3" id="13_2mgfh"]
+[ext_resource type="AudioStream" uid="uid://b2m7mp4combxw" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 10.mp3" id="14_0uw03"]
 
-[node name="DialogWindow" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu2rc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol5vt"]
+bg_color = Color(0.117647, 0.109804, 0.211765, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjdbv"]
+bg_color = Color(0.0901961, 0.0823529, 0.168627, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr7kn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_ahg4g"]
+
+[node name="DialogWindow" type="Control" node_paths=PackedStringArray("text_label", "name_label", "opt_button_1", "opt_label_1", "opt_button_2", "opt_label_2", "opt_button_3", "opt_label_3", "voices")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,43 +42,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_khgcm")
+text_label = NodePath("Background/Text")
+name_label = NodePath("Background/Name")
+opt_button_1 = NodePath("Background/VBoxContainer/OptButton1")
+opt_label_1 = NodePath("Background/VBoxContainer/OptButton1/OptLabel1")
+opt_button_2 = NodePath("Background/VBoxContainer/OptButton2")
+opt_label_2 = NodePath("Background/VBoxContainer/OptButton2/OptLabel2")
+opt_button_3 = NodePath("Background/VBoxContainer/OptButton3")
+opt_label_3 = NodePath("Background/VBoxContainer/OptButton3/OptLabel3")
+voices = NodePath("Voices")
 
-[node name="Panel" type="Panel" parent="."]
-offset_top = 755.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+[node name="ContineButton" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
-text = "THERE IS SOME TEXT HERE"
-
-[node name="ContineButton" type="Button" parent="Panel"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 flat = true
 
-[node name="OptButton1" type="Button" parent="Panel"]
-visible = false
-offset_right = 1915.0
-offset_bottom = 105.0
-mouse_default_cursor_shape = 2
-flat = true
+[node name="Background" type="NinePatchRect" parent="."]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+offset_top = 1080.0
+offset_right = 1920.0
+offset_bottom = 1350.0
+texture = ExtResource("2_whjhp")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 
-[node name="OptLabel1" type="RichTextLabel" parent="Panel/OptButton1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 47.0
+offset_right = 1859.0
+offset_bottom = 223.0
+mouse_filter = 2
+theme_override_constants/separation = 25
+
+[node name="OptButton1" type="Button" parent="Background/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2i(1780, 42)
+layout_mode = 2
+offset_right = 1780.0
+offset_bottom = 42.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_lu2rc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ol5vt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjdbv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wr7kn")
+
+[node name="OptLabel1" type="RichTextLabel" parent="Background/VBoxContainer/OptButton1"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -54,22 +108,40 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("3_w5nww")
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
+text = "Option 1: "
 
-[node name="OptButton2" type="Button" parent="Panel"]
+[node name="ColorRect" type="ColorRect" parent="Background/VBoxContainer/OptButton1"]
+custom_minimum_size = Vector2i(0, 4)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="OptButton2" type="Button" parent="Background/VBoxContainer"]
 visible = false
-offset_left = 3.0
-offset_top = 111.0
-offset_right = 1918.0
-offset_bottom = 216.0
+custom_minimum_size = Vector2i(1780, 42)
+layout_mode = 2
+offset_top = 67.0
+offset_right = 1780.0
+offset_bottom = 109.0
 mouse_default_cursor_shape = 2
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_lu2rc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ol5vt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjdbv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wr7kn")
 
-[node name="OptLabel2" type="RichTextLabel" parent="Panel/OptButton2"]
+[node name="OptLabel2" type="RichTextLabel" parent="Background/VBoxContainer/OptButton2"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -77,22 +149,40 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("3_w5nww")
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
+text = "Option 2: "
 
-[node name="OptButton3" type="Button" parent="Panel"]
+[node name="ColorRect" type="ColorRect" parent="Background/VBoxContainer/OptButton2"]
+custom_minimum_size = Vector2i(0, 4)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="OptButton3" type="Button" parent="Background/VBoxContainer"]
 visible = false
-offset_left = 3.0
-offset_top = 219.0
-offset_right = 1918.0
-offset_bottom = 324.0
+custom_minimum_size = Vector2i(1780, 42)
+layout_mode = 2
+offset_top = 134.0
+offset_right = 1780.0
+offset_bottom = 176.0
 mouse_default_cursor_shape = 2
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_lu2rc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ol5vt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bjdbv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wr7kn")
 
-[node name="OptLabel3" type="RichTextLabel" parent="Panel/OptButton3"]
+[node name="OptLabel3" type="RichTextLabel" parent="Background/VBoxContainer/OptButton3"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -100,16 +190,80 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("3_w5nww")
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/bold_italics_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
+text = "Option 3: "
+
+[node name="ColorRect" type="ColorRect" parent="Background/VBoxContainer/OptButton3"]
+custom_minimum_size = Vector2i(0, 4)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Name" type="RichTextLabel" parent="Background"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 23.0
+offset_right = -64.0
+offset_bottom = -183.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_ahg4g")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="Background"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = -66.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_w5nww")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "Hello how are you are you feeling well. I sure hope so the potluck is the day affter today."
 
 [node name="LineLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
 offset_left = 1391.0
-offset_top = 702.0
+offset_top = 687.0
 offset_right = 1919.0
-offset_bottom = 747.0
+offset_bottom = 732.0
 theme_override_font_sizes/font_size = 30
 text = "CurrentLine :"
+
+[node name="Voices" type="Node" parent="."]
+
+[node name="DefaultVoice" type="AudioStreamPlayer" parent="Voices" node_paths=PackedStringArray("label")]
+script = ExtResource("4_sfrfl")
+samples = [ExtResource("5_vodvt"), ExtResource("6_f25mv"), ExtResource("7_tfa6v"), ExtResource("8_evao4"), ExtResource("9_6si24"), ExtResource("10_jx3g3"), ExtResource("11_2pjkf"), ExtResource("12_x7fyt"), ExtResource("13_2mgfh"), ExtResource("14_0uw03")]
+label = NodePath("../../Background/Text")

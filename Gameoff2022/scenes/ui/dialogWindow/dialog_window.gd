@@ -1,17 +1,23 @@
 extends Control
-@onready var _label: RichTextLabel = $Panel/RichTextLabel
-@onready var contine_button: Button = $Panel/ContineButton
+@export var text_label: RichTextLabel;
+@export var name_label: RichTextLabel;
 
-@onready var opt_button_1: Button = $Panel/OptButton1
-@onready var opt_label_1: RichTextLabel = $Panel/OptButton1/OptLabel1
+@onready var contine_button: Button = $ContineButton
 
-@onready var opt_button_2: Button = $Panel/OptButton2
-@onready var opt_label_2: RichTextLabel = $Panel/OptButton2/OptLabel2
+@export var opt_button_1: Button;
+@export var opt_label_1: RichTextLabel;
 
-@onready var opt_button_3: Button = $Panel/OptButton3
-@onready var opt_label_3: RichTextLabel = $Panel/OptButton3/OptLabel3
+@export var opt_button_2: Button;
+@export var opt_label_2: RichTextLabel;
+
+@export var opt_button_3: Button;
+@export var opt_label_3: RichTextLabel;
+
+@export var voices : Node;
 
 @onready var line_label: Label = $LineLabel
+@onready var background: NinePatchRect = $Background
+@onready var default_voice: AudioStreamPlayer = $Voices/DefaultVoice
 
 var dialog_data : DialogData;
 var speaker : String = "";
@@ -27,6 +33,8 @@ var opt_action_2 : String = "null";
 
 var opt_text_3 : String = "null";
 var opt_action_3 : String = "null";
+
+const box_size : Vector2 = Vector2(1920,270);
 
 signal dialog_emit(val : String);
 
@@ -76,6 +84,8 @@ var actions : Dictionary = {
 	
 func _ready() -> void:
 	hide();
+	_hide_dialog_box_anim();
+	
 	_make_connections();
 	
 	
@@ -123,7 +133,7 @@ func _on_contine_button_pressed() -> void:
 	if !waiting_for_input || wait_tag == "null": return;
 	
 	call_deferred("run_dialog" , dialog_data, wait_tag);
-	_label.hide();
+	text_label.hide();
 	waiting_for_input = false;
 	wait_tag = "null";
 	text = "";
@@ -158,7 +168,7 @@ func run_dialog(new_dialog_data : DialogData, tag : String = "Start") -> void:
 		exit_dialog();
 		return;
 	
-	show();
+	_show_dialog_box_anim();
 	
 	self.dialog_data = new_dialog_data;
 	parce_line(data.get(tag), tag);
@@ -216,7 +226,7 @@ func parce_condition(con : String):
 	
 func exit_dialog()->void:
 	EventManager.dialog_ended.emit();
-	hide();
+	_hide_dialog_box_anim();
 	
 	
 #Actions############################################################################################
@@ -327,9 +337,25 @@ func _show_action(params : String, _tag : String) -> int:
 	params = params.replace(" ", "").to_upper();
 	
 	if params == "TEXT":
-		_label.set_text(text);
-		_label.show();
+		text_label.set_text(text);
+		text_label.visible_characters = 0;
+		text_label.show();
+		name_label.set_text(speaker);
+		name_label.show();
+		
+		var voice : VoiceBoxPlayer = default_voice;
+		
+		for child in voices.get_children():
+			if child is VoiceBoxPlayer:
+				voice = child;
+				break;
+		
+		
+		voice.play_text();
+		
+		
 	elif params == "OPT":
+		name_label.hide();
 		if opt_text_1 != "null":
 			opt_button_1.show()
 			opt_button_1.set_disabled(opt_action_1 == "null")
@@ -350,7 +376,7 @@ func _show_action(params : String, _tag : String) -> int:
 	
 	
 func _hide_action(_params : String, _tag : String) -> int:
-	hide();
+	_hide_dialog_box_anim();
 	EventManager.dialog_ended.emit();
 	return -1;
 	
@@ -480,3 +506,20 @@ func _set_profile_val(profile : String, key : String, val) -> void:
 	p[key] = val;
 	
 	
+func _show_dialog_box_anim() -> void:
+	var tween = create_tween();
+#	text_label.visible_characters = 0;
+	
+	show();
+	tween.stop();
+	tween.tween_property(background,"position",Vector2(0, 1080 - box_size.y), 0.5)
+#	tween.tween_callback(player.play_text)
+	tween.play();
+	
+	
+func _hide_dialog_box_anim() -> void:
+	var tween = create_tween();
+	tween.stop();
+	tween.tween_property(background,"position",Vector2(0, 1080 + box_size.y), 0.5)
+	tween.tween_callback(hide);
+	tween.play();

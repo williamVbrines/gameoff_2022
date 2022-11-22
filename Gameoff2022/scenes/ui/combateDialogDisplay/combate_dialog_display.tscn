@@ -30,7 +30,6 @@ script = ExtResource("1_1g1sp")
 [node name="Background" type="NinePatchRect" parent="."]
 texture_filter = 1
 clip_contents = true
-layout_mode = 1
 offset_top = 1080.0
 offset_right = 1920.0
 offset_bottom = 1350.0
@@ -41,7 +40,6 @@ patch_margin_right = 2
 patch_margin_bottom = 2
 
 [node name="Name" type="RichTextLabel" parent="Background"]
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,7 +58,6 @@ theme_override_font_sizes/mono_font_size = 36
 scroll_active = false
 
 [node name="Text" type="RichTextLabel" parent="Background"]
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -79,7 +76,6 @@ theme_override_font_sizes/mono_font_size = 30
 text = "Hello how are you are you feeling well. I sure hope so the potluck is the day affter today."
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
