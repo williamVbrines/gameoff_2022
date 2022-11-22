@@ -2,21 +2,21 @@
 
 [ext_resource type="Script" path="res://scenes/voiceBox/voice_box.gd" id="1_1g42e"]
 [ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="1_6k4hn"]
-[ext_resource type="AudioStream" uid="uid://baqpgjj4mrifo" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 1.mp3" id="2_nunk4"]
-[ext_resource type="AudioStream" uid="uid://i4m2rc35nc1u" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 2.mp3" id="3_o4xfc"]
-[ext_resource type="AudioStream" uid="uid://m2hvqm0up1kc" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 3.mp3" id="4_sdc4d"]
-[ext_resource type="AudioStream" uid="uid://bm4xnas7ee7kn" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 4.mp3" id="5_3pb3u"]
-[ext_resource type="AudioStream" uid="uid://dtujmacwja24c" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 5.mp3" id="6_17atm"]
-[ext_resource type="AudioStream" uid="uid://c2ojiycmg0mlr" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 6.mp3" id="7_ey1g0"]
-[ext_resource type="AudioStream" uid="uid://c4inl47rw2rql" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 7.mp3" id="8_hnb1c"]
-[ext_resource type="AudioStream" uid="uid://b4y1wefr2sjf2" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 8.mp3" id="9_j21cx"]
-[ext_resource type="AudioStream" uid="uid://ldrhw0rhm8vv" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 9.mp3" id="10_13hfn"]
-[ext_resource type="AudioStream" uid="uid://bcpiy8cy7qsgp" path="res://audio/npcs/inkeeper/Inkeeper NEU (short normal)/Inkeeper NEU s.n. 10.mp3" id="11_ul668"]
+[ext_resource type="AudioStream" uid="uid://c7v2gxtau55si" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 1.mp3" id="12_7erb0"]
+[ext_resource type="AudioStream" uid="uid://dgqwsumnoq4fh" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 2.mp3" id="13_u26wl"]
+[ext_resource type="AudioStream" uid="uid://2qq4vo14d32m" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 3.mp3" id="14_llw7m"]
+[ext_resource type="AudioStream" uid="uid://crpkwqvvk2e8v" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 4.mp3" id="15_yabq2"]
+[ext_resource type="AudioStream" uid="uid://l1u0jjkuk7vv" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 5.mp3" id="16_vcwro"]
+[ext_resource type="AudioStream" uid="uid://7hop3d7405ws" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 6.mp3" id="17_hvjiw"]
+[ext_resource type="AudioStream" uid="uid://v71x8755oq63" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 7.mp3" id="18_j6lxm"]
+[ext_resource type="AudioStream" uid="uid://3cmpgkpgrw7c" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3" id="19_euxh2"]
+[ext_resource type="AudioStream" uid="uid://cfvxdwl6wxuks" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 9.mp3" id="20_wpgf1"]
+[ext_resource type="AudioStream" uid="uid://b2m7mp4combxw" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 10.mp3" id="21_q4tcf"]
 
 [node name="VoiceBox" type="AudioStreamPlayer"]
 pitch_scale = 1.22
 script = ExtResource("1_1g42e")
-samples = [ExtResource("2_nunk4"), ExtResource("3_o4xfc"), ExtResource("4_sdc4d"), ExtResource("5_3pb3u"), ExtResource("6_17atm"), ExtResource("7_ey1g0"), ExtResource("8_hnb1c"), ExtResource("9_j21cx"), ExtResource("10_13hfn"), ExtResource("11_ul668")]
+samples = [ExtResource("12_7erb0"), ExtResource("13_u26wl"), ExtResource("14_llw7m"), ExtResource("15_yabq2"), ExtResource("16_vcwro"), ExtResource("17_hvjiw"), ExtResource("18_j6lxm"), ExtResource("19_euxh2"), ExtResource("20_wpgf1"), ExtResource("21_q4tcf")]
 
 [node name="LineEdit" type="LineEdit" parent="."]
 texture_filter = 1
@@ -36,19 +36,5 @@ offset_bottom = 706.0
 theme_override_fonts/normal_font = ExtResource("1_6k4hn")
 theme_override_font_sizes/normal_font_size = 42
 text = "TestTestTEstste"
-
-[node name="Label2" type="Label" parent="."]
-anchors_preset = -1
-anchor_right = 0.138
-anchor_bottom = 0.152
-offset_left = 521.0
-offset_top = 298.0
-offset_right = 742.04
-offset_bottom = 307.84
-theme_override_font_sizes/font_size = 40
-text = "[6]
-- 2 Samples 
-- normal octive.
-- Rand"
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_text_submitted"]

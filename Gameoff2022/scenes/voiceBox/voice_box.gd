@@ -42,8 +42,7 @@ func _gen_sample_q(text: String)->void:
 	while index < text.length():
 		if text[index] in [" ",'\n','\t',",",";","."]:
 			if !end_of_word:
-				queue.append(hash(word)  % samples.size());
-				print(word);
+				queue.append(randi() % samples.size());
 				word = "";
 			queue.append((- [" ",",",";","."].find(text[index])) - 1);
 			end_of_word = true
@@ -81,10 +80,7 @@ func play_next()->void:
 		#Hello how are you are you dooing well or are you good.
 #		
 		pitch_scale = 1 + sin(Time.get_ticks_usec()* 0.01) * 0.1
-		#Hello how are you. I hope you are feeling well. You are doing a great job keep up the good work.
 		
-		print(pitch_scale);
-		index = randi() % 2#(samples.size()-1);
 		stream = samples[index];
 		call_deferred("play");
 	#Show Spaceing 
