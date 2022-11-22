@@ -3,8 +3,8 @@ extends AudioStreamPlayer
 @export var samples : Array[AudioStream]
 @onready var label: RichTextLabel = $Label
 @onready var line_edit: LineEdit = $LineEdit
-var space_pause : float = 1.0;
-var coma_pause : float = 2.0;
+var space_pause : float = 0.00;
+var coma_pause : float = .000;
 
 var queue : Array[int] = [];
 
@@ -60,20 +60,39 @@ func _gen_sample_q(text: String)->void:
 	
 func play_next()->void:
 	if queue.size() <= 0: return;
-	stop();
-	
+	var index = queue.pop_front();
+#	
+
 	#Show next word
-	if queue[0] != 0:
+	if index >= 0:
+		var new_vis = label.visible_characters;
+		
 		for i in range(label.visible_characters,label.text.length()):
-			print(label.text[i])
-			label.visible_characters += 1;
-			if label.text[i] in [" ",'\n','\t',",",";","."] || i == label.text.length() :
+			
+			if label.text[i] in [" ",'\n','\t',",",";","."] \
+			|| i == label.text.length():
+				
 				break;
 				
-	var index = queue.pop_front();
-	
-	if index <= 0:
-		var time = 0.1;
+			
+			new_vis += 1;
+		
+		label.visible_characters = new_vis; 
+		#Hello how are you are you dooing well or are you good.
+#		
+		pitch_scale = 1 + sin(Time.get_ticks_usec()* 0.01) * 0.1
+		#Hello how are you. I hope you are feeling well. You are doing a great job keep up the good work.
+		
+		print(pitch_scale);
+		index = randi() % 2#(samples.size()-1);
+		stream = samples[index];
+		call_deferred("play");
+	#Show Spaceing 
+	else:
+		
+		label.visible_characters += 1;
+		
+		var time = 0.0;
 		
 		match index:
 			-1:
@@ -81,15 +100,14 @@ func play_next()->void:
 			-2,-3,-4,-5:
 				time = coma_pause;
 				
-				
+		
 		var tween = create_tween()
 		tween.tween_interval(time);
 		tween.tween_callback(_on_finnish);
 		tween.play();
+	
+	
 		
-	else:
-		stream = samples[index];
-		play();
 	
 	
 
