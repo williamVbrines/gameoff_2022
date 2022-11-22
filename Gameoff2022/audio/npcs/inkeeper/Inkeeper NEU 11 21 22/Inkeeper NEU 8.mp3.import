@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3cmpgkpgrw7c"
+path="res://.godot/imported/Inkeeper NEU 8.mp3-438c01619c82ed34473ccb66770881d7.mp3str"
+
+[deps]
+
+source_file="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3"
+dest_files=["res://.godot/imported/Inkeeper NEU 8.mp3-438c01619c82ed34473ccb66770881d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

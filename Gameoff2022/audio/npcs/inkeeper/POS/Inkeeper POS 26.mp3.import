@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpmk4wp4v8e8q"
+path="res://.godot/imported/Inkeeper POS 26.mp3-cad16c003e6a5d68f60be2760713a96d.mp3str"
+
+[deps]
+
+source_file="res://audio/npcs/inkeeper/POS/Inkeeper POS 26.mp3"
+dest_files=["res://.godot/imported/Inkeeper POS 26.mp3-cad16c003e6a5d68f60be2760713a96d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
