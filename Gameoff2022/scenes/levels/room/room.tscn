@@ -277,7 +277,6 @@ offset_bottom = 1082.0
 texture = ExtResource("1_ps7ld")
 
 [node name="ConfirmBox" type="Control" parent="GUI"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -290,12 +289,11 @@ normal_color = Color(1, 1, 1, 0.968627)
 pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
 
 [node name="Label" type="Label" parent="GUI/ConfirmBox"]
-layout_mode = 1
+layout_mode = 0
 offset_left = 850.0
 offset_top = 505.0
 offset_right = 1062.0
 offset_bottom = 533.0
-text = "Sleep for the rest of the day"
 horizontal_alignment = 1
 
 [node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Label"]
@@ -319,6 +317,7 @@ patch_margin_right = 17
 patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Label/Background"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -329,7 +328,7 @@ focus_mode = 0
 flat = true
 
 [node name="CancelTexy" type="Label" parent="GUI/ConfirmBox"]
-layout_mode = 1
+layout_mode = 0
 offset_left = 918.0
 offset_top = 590.0
 offset_right = 1002.0
@@ -456,6 +455,9 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
 script = ExtResource("3_pssuc")
 mesh = NodePath("BedMesh")
+message = null
+tooltip = null
+action = null
 
 [node name="BedMesh" parent="Room3D/Room/Bed" instance=ExtResource("4_grb64")]
 skeleton = NodePath("../../..")

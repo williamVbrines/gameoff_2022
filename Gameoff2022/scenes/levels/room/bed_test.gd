@@ -1,17 +1,22 @@
 extends Node3D
+class_name RoomInteractable3D
 
 @export var mesh : MeshInstance3D;
 
+@export var message : String = "Keep Calm this is just a test"
+@export var tooltip : String = "test of tool tip"
+@export var action : String = "Test";
 
 var mouse_in_area : bool = false;
+
 func _unhandled_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("mouse_left") && mouse_in_area:
-		EventManager.room_show_confirm.emit("This is a tool tip");
+		EventManager.room_show_confirm.emit(message,action);
 		EventManager.room_hide_tooltip.emit();
 
 func _on_area_3d_mouse_entered() -> void:
-	EventManager.room_show_tooltip.emit("This is a tool tip");
+	EventManager.room_show_tooltip.emit(tooltip);
 	_hovered();
 
 

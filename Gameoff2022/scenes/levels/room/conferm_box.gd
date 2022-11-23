@@ -76,7 +76,7 @@ func _show_anim() -> void:
 	tween.tween_callback(show);
 	
 	tween.stop();
-	
+	tween.tween_callback(on_label_resized);
 	tween.tween_property(self, "modulate",Color(Color.WHITE, 1.0), FADE_TIME);
 	
 	tween.play();
@@ -100,6 +100,12 @@ func _parce_action():
 	action = "";
 	_hide_anim()
 	
-func _on_show_confirm(text : String) -> void:
+func _on_show_confirm(text : String, new_action : String) -> void:
+	action = new_action;
+	label.set_text("");
+	label.size.x = 1;
+	label.set_text(text);
 	_show_anim();
 
+func on_label_resized() -> void:
+	label.position.x = (1920/2) - (label.size.x / 2);

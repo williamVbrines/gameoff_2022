@@ -46,6 +46,6 @@ signal pause_menu_closed();
 signal room_show_tooltip(text : String);
 signal room_hide_tooltip();
 
-signal room_show_confirm(text : String);
+signal room_show_confirm(text : String, action : String);
 signal room_hide_confirm();
 
