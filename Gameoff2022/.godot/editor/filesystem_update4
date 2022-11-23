@@ -1,7 +1,4 @@
-res://scenes/main.tscn
+res://scenes/levels/VillageScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
-res://scenes/levels/RoomScene.tscn
-res://modles/campfire.tscn
-res://scenes/levels/VillageScene.tscn
