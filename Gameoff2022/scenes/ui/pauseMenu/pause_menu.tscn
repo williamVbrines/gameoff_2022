@@ -103,12 +103,13 @@ offset_top = 381.0
 offset_right = 248.0
 offset_bottom = 728.0
 mouse_filter = 2
-theme_override_constants/separation = 31
+theme_override_constants/separation = 26
 
 [node name="ResumeButton" type="Button" parent="SideBar/Selection"]
+custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
 offset_right = 204.0
-offset_bottom = 39.0
+offset_bottom = 45.0
 theme_override_fonts/font = SubResource("SystemFont_yyaxe")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_aq6uf")
@@ -118,10 +119,11 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_oucv7")
 text = "Resume"
 
 [node name="LoadOutButton" type="Button" parent="SideBar/Selection"]
+custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
-offset_top = 70.0
+offset_top = 71.0
 offset_right = 204.0
-offset_bottom = 109.0
+offset_bottom = 116.0
 theme_override_fonts/font = SubResource("SystemFont_g4ae0")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_aq6uf")
@@ -132,10 +134,11 @@ toggle_mode = true
 text = "Loadout"
 
 [node name="ItmesButton" type="Button" parent="SideBar/Selection"]
+custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
-offset_top = 140.0
+offset_top = 142.0
 offset_right = 204.0
-offset_bottom = 179.0
+offset_bottom = 187.0
 theme_override_fonts/font = SubResource("SystemFont_wp4lv")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_aq6uf")
@@ -146,10 +149,11 @@ toggle_mode = true
 text = "Items"
 
 [node name="CluesButton" type="Button" parent="SideBar/Selection"]
+custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
-offset_top = 210.0
+offset_top = 213.0
 offset_right = 204.0
-offset_bottom = 249.0
+offset_bottom = 258.0
 theme_override_fonts/font = SubResource("SystemFont_wp4lv")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_aq6uf")
@@ -160,10 +164,11 @@ toggle_mode = true
 text = "Clues"
 
 [node name="Exit Kingdom Of Frogs" type="Button" parent="SideBar/Selection"]
+custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
-offset_top = 280.0
+offset_top = 284.0
 offset_right = 204.0
-offset_bottom = 358.0
+offset_bottom = 362.0
 theme_override_fonts/font = SubResource("SystemFont_wp4lv")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_aq6uf")

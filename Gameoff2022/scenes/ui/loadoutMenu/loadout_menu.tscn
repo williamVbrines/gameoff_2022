@@ -33,7 +33,7 @@ centered = false
 
 [node name="BackGround" type="Control" parent="."]
 clip_contents = true
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = 288.0
 offset_right = 1920.0
@@ -42,7 +42,6 @@ scale = Vector2(1e-05, 1)
 mouse_filter = 2
 
 [node name="Back" type="ColorRect" parent="BackGround"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -52,14 +51,13 @@ mouse_filter = 2
 color = Color(0.145098, 0.137255, 0.25098, 0.74902)
 
 [node name="Labels" type="Control" parent="BackGround"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Title" type="Label" parent="BackGround/Labels"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
 offset_left = 83.0
 offset_top = 84.0
 offset_right = 242.0
@@ -69,7 +67,6 @@ theme_override_font_sizes/font_size = 40
 text = "Loadout"
 
 [node name="ColorRect" type="ColorRect" parent="BackGround/Labels/Title"]
-layout_mode = 0
 offset_left = 1.0
 offset_top = 62.0
 offset_right = 1465.0
@@ -77,7 +74,6 @@ offset_bottom = 66.0
 
 [node name="ChamLabel" type="Label" parent="BackGround/Labels"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
 offset_left = 438.0
 offset_top = 322.0
 offset_right = 529.0
@@ -88,7 +84,6 @@ text = "Charm"
 
 [node name="IntimidationLabel" type="Label" parent="BackGround/Labels"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
 offset_left = 438.0
 offset_top = 476.0
 offset_right = 606.0
@@ -99,7 +94,6 @@ text = "Intimidation"
 
 [node name="LogicLabel" type="Label" parent="BackGround/Labels"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
 offset_left = 438.0
 offset_top = 629.0
 offset_right = 529.0
@@ -110,7 +104,6 @@ text = "Logic"
 
 [node name="DeceptionLabel" type="Label" parent="BackGround/Labels"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
 offset_left = 438.0
 offset_top = 785.0
 offset_right = 593.0
@@ -121,12 +114,11 @@ text = "Deception"
 
 [node name="pointTextuers" type="Control" parent="."]
 clip_contents = true
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 mouse_filter = 2
 
 [node name="Slots" type="VBoxContainer" parent="pointTextuers"]
-layout_mode = 0
 offset_left = 371.0
 offset_top = 232.0
 offset_right = 553.0
@@ -135,14 +127,12 @@ theme_override_constants/separation = 64
 
 [node name="Slot" type="TextureRect" parent="pointTextuers/Slots"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_right = 182.0
 offset_bottom = 182.0
 texture = ExtResource("4_xupd6")
 
 [node name="Slot2" type="TextureRect" parent="pointTextuers/Slots"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_top = 246.0
 offset_right = 182.0
 offset_bottom = 428.0
@@ -150,21 +140,19 @@ texture = ExtResource("4_xupd6")
 
 [node name="Slot3" type="TextureRect" parent="pointTextuers/Slots"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_top = 492.0
 offset_right = 182.0
 offset_bottom = 674.0
 texture = ExtResource("4_xupd6")
 
 [node name="Selection" type="Control" parent="pointTextuers"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = -8.0
 offset_right = 32.0
 offset_bottom = 40.0
 
 [node name="Charm" type="HBoxContainer" parent="pointTextuers/Selection"]
-layout_mode = 0
 offset_left = 868.0
 offset_top = 283.0
 offset_right = 1594.0
@@ -173,14 +161,12 @@ theme_override_constants/separation = 44
 
 [node name="Spot" type="TextureRect" parent="pointTextuers/Selection/Charm"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Spot2" type="TextureRect" parent="pointTextuers/Selection/Charm"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 154.0
 offset_right = 264.0
 offset_bottom = 110.0
@@ -188,7 +174,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot3" type="TextureRect" parent="pointTextuers/Selection/Charm"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 308.0
 offset_right = 418.0
 offset_bottom = 110.0
@@ -196,7 +181,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot4" type="TextureRect" parent="pointTextuers/Selection/Charm"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 462.0
 offset_right = 572.0
 offset_bottom = 110.0
@@ -204,14 +188,12 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot5" type="TextureRect" parent="pointTextuers/Selection/Charm"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 616.0
 offset_right = 726.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Intimidation" type="HBoxContainer" parent="pointTextuers/Selection"]
-layout_mode = 0
 offset_left = 948.0
 offset_top = 440.0
 offset_right = 1674.0
@@ -220,14 +202,12 @@ theme_override_constants/separation = 44
 
 [node name="Spot" type="TextureRect" parent="pointTextuers/Selection/Intimidation"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Spot2" type="TextureRect" parent="pointTextuers/Selection/Intimidation"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 154.0
 offset_right = 264.0
 offset_bottom = 110.0
@@ -235,7 +215,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot3" type="TextureRect" parent="pointTextuers/Selection/Intimidation"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 308.0
 offset_right = 418.0
 offset_bottom = 110.0
@@ -243,7 +222,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot4" type="TextureRect" parent="pointTextuers/Selection/Intimidation"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 462.0
 offset_right = 572.0
 offset_bottom = 110.0
@@ -251,14 +229,12 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot5" type="TextureRect" parent="pointTextuers/Selection/Intimidation"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 616.0
 offset_right = 726.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Logic" type="HBoxContainer" parent="pointTextuers/Selection"]
-layout_mode = 0
 offset_left = 851.0
 offset_top = 593.0
 offset_right = 1577.0
@@ -267,14 +243,12 @@ theme_override_constants/separation = 44
 
 [node name="Spot" type="TextureRect" parent="pointTextuers/Selection/Logic"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Spot2" type="TextureRect" parent="pointTextuers/Selection/Logic"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 154.0
 offset_right = 264.0
 offset_bottom = 110.0
@@ -282,7 +256,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot3" type="TextureRect" parent="pointTextuers/Selection/Logic"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 308.0
 offset_right = 418.0
 offset_bottom = 110.0
@@ -290,7 +263,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot4" type="TextureRect" parent="pointTextuers/Selection/Logic"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 462.0
 offset_right = 572.0
 offset_bottom = 110.0
@@ -298,14 +270,12 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot5" type="TextureRect" parent="pointTextuers/Selection/Logic"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 616.0
 offset_right = 726.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Deception" type="HBoxContainer" parent="pointTextuers/Selection"]
-layout_mode = 0
 offset_left = 919.0
 offset_top = 746.0
 offset_right = 1645.0
@@ -314,14 +284,12 @@ theme_override_constants/separation = 44
 
 [node name="Spot" type="TextureRect" parent="pointTextuers/Selection/Deception"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Spot2" type="TextureRect" parent="pointTextuers/Selection/Deception"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 154.0
 offset_right = 264.0
 offset_bottom = 110.0
@@ -329,7 +297,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot3" type="TextureRect" parent="pointTextuers/Selection/Deception"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 308.0
 offset_right = 418.0
 offset_bottom = 110.0
@@ -337,7 +304,6 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot4" type="TextureRect" parent="pointTextuers/Selection/Deception"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 462.0
 offset_right = 572.0
 offset_bottom = 110.0
@@ -345,44 +311,43 @@ texture = ExtResource("4_v3es0")
 
 [node name="Spot5" type="TextureRect" parent="pointTextuers/Selection/Deception"]
 modulate = Color(0.709804, 0.709804, 0.709804, 0)
-layout_mode = 2
 offset_left = 616.0
 offset_right = 726.0
 offset_bottom = 110.0
 texture = ExtResource("4_v3es0")
 
 [node name="Dragables" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Sloted" type="Control" parent="Dragables"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Charm" type="Control" parent="Dragables"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Intimidation" type="Control" parent="Dragables"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Logic" type="Control" parent="Dragables"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Deception" type="Control" parent="Dragables"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

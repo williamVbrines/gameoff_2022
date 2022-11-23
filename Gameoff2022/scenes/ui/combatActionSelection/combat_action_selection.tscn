@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd" id="3_tad11"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_fuwor"]
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_ubwu6"]
-[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_l5w1h"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_igjm8"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="7_yn6aa"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lso6g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ki47l"]
 resource_local_to_scene = true
 shader = ExtResource("5_ubwu6")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -28,6 +28,7 @@ mouse_filter = 2
 script = ExtResource("1_g6d5b")
 
 [node name="Tatics" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = -1
 offset_left = 98.0
 offset_top = 695.0
@@ -38,19 +39,21 @@ theme_override_constants/separation = 106
 alignment = 2
 
 [node name="ItemActionMenu" parent="." instance=ExtResource("2_ha51d")]
+layout_mode = 1
 offset_left = 101.0
 offset_top = 956.0
 offset_right = -1637.0
 offset_bottom = -59.0
 
 [node name="ClueActionMenu" parent="." instance=ExtResource("2_cs3b3")]
+layout_mode = 1
 offset_left = 101.0
 offset_top = 956.0
 offset_right = 251.0
 offset_bottom = 1006.0
 
 [node name="FleeButton" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_left = 577.0
 offset_top = 956.0
@@ -59,22 +62,25 @@ offset_bottom = 1006.0
 script = ExtResource("3_tad11")
 
 [node name="TagButton" parent="FleeButton" instance=ExtResource("4_fuwor")]
-material = SubResource("ShaderMaterial_lso6g")
+material = SubResource("ShaderMaterial_ki47l")
 custom_minimum_size = Vector2i(173, 50)
+layout_mode = 1
 offset_right = 167.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 1)
 
 [node name="Label" type="Label" parent="FleeButton/TagButton"]
+layout_mode = 0
 offset_left = 49.0
-offset_top = 3.0
+offset_top = 5.0
 offset_right = 129.0
-offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("6_l5w1h")
-theme_override_font_sizes/font_size = 42
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("7_yn6aa")
+theme_override_font_sizes/font_size = 26
 text = "Flee
 "
 
 [node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="FleeButton/TagButton"]
+layout_mode = 0
 offset_left = -37.0
 offset_top = -14.0
 offset_right = 37.0

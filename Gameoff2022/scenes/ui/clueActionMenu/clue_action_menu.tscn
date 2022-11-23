@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="3_clk6p"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_4cptf"]
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_fwbst"]
-[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_rmyx5"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_808q1"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_hj721"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_61jws"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f411w"]
 resource_local_to_scene = true
 shader = ExtResource("5_fwbst")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -30,6 +30,7 @@ script = ExtResource("1_7anxj")
 [node name="ItemSubmenuSpacingGuide" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.494118)
+layout_mode = 0
 offset_left = -100.0
 offset_top = -12.0
 offset_right = 445.0
@@ -40,10 +41,11 @@ texture = ExtResource("2_ul808")
 visible = false
 texture_filter = 1
 clip_contents = true
+layout_mode = 0
 offset_left = -1.0
 offset_top = 48.0
 offset_right = 349.0
-offset_bottom = 104.0
+offset_bottom = 94.0
 texture = ExtResource("3_clk6p")
 patch_margin_left = 2
 patch_margin_top = 2
@@ -52,6 +54,7 @@ patch_margin_bottom = 2
 
 [node name="Clues" type="VBoxContainer" parent="MenuBackground"]
 custom_minimum_size = Vector2i(314, 0)
+layout_mode = 0
 offset_left = 19.0
 offset_top = 16.0
 offset_right = 333.0
@@ -59,21 +62,25 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_4cptf")]
-material = SubResource("ShaderMaterial_61jws")
+material = SubResource("ShaderMaterial_f411w")
+layout_mode = 1
 offset_left = 238.0
 offset_right = 411.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Label" type="Label" parent="TagButton"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 49.0
-offset_top = 3.0
-offset_right = 129.0
-offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("6_rmyx5")
-theme_override_font_sizes/font_size = 42
+offset_top = 5.0
+offset_right = 140.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("6_808q1")
+theme_override_font_sizes/font_size = 26
 text = "Clues"
 
 [node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="TagButton"]
+layout_mode = 0
 offset_left = -37.0
 offset_top = -14.0
 offset_right = 37.0

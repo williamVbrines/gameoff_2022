@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="3_a4p4y"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_kqxxk"]
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_gck8f"]
-[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="6_pivce"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_7row5"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_8shqt"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="8_u8fht"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_60xx1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wp70"]
 resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -64,18 +64,18 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_kqxxk")]
-material = SubResource("ShaderMaterial_60xx1")
+material = SubResource("ShaderMaterial_3wp70")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Label" type="Label" parent="TagButton"]
-offset_left = 49.0
-offset_top = 3.0
-offset_right = 129.0
-offset_bottom = 40.0
-theme_override_fonts/font = ExtResource("6_pivce")
-theme_override_font_sizes/font_size = 42
+offset_left = 46.5
+offset_top = 5.0
+offset_right = 126.5
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("6_7row5")
+theme_override_font_sizes/font_size = 26
 text = "Items"
 
 [node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="TagButton"]

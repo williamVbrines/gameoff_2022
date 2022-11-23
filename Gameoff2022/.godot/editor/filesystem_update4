@@ -1,6 +1,6 @@
-res://scenes/ui/dialogWindow/dialog_window.tscn
+res://scenes/main/main.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/main/main.tscn
-res://scenes/ui/combateDialogDisplay/combate_dialog_display.tscn
-res://scenes/ui/itemActionButton/item_button.tscn
+res://scenes/ui/pauseMenu/pause_menu.tscn
+res://scenes/ui/explorationHUD/exploration_hud.tscn
+res://scenes/ui/dialogWindow/dialog_window.tscn

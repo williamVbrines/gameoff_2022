@@ -1,12 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://71j1khq8u4ub"]
+[gd_scene load_steps=6 format=3 uid="uid://ua5g0lc8aoie"]
 
-[ext_resource type="Script" path="res://scenes/ui/annoyanceDisplay/annoyance_display.gd" id="1_f1ely"]
-[ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_1f5cm"]
-[ext_resource type="Texture2D" uid="uid://b2bpl446qd25d" path="res://textures/ui/Battle/Health Bar/HealthBar_HealthBarHalf.png" id="3_8fsqb"]
-[ext_resource type="Texture2D" uid="uid://c77wjev2mu1ap" path="res://textures/ui/Battle/Health Bar/HealthBar_CenterSkull.png" id="4_oilt8"]
-[ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="5_qr6xq"]
+[ext_resource type="Script" path="res://scenes/ui/streesAndPersuaionBattelIndicater/strees_and_persuaion_battel_indicater.gd" id="1_pqiru"]
+[ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_cfnu7"]
+[ext_resource type="Texture2D" uid="uid://b2bpl446qd25d" path="res://textures/ui/Battle/Health Bar/HealthBar_HealthBarHalf.png" id="3_vnsyj"]
+[ext_resource type="Texture2D" uid="uid://c77wjev2mu1ap" path="res://textures/ui/Battle/Health Bar/HealthBar_CenterSkull.png" id="4_donwf"]
+[ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="5_8jj4f"]
 
-[node name="StreesAndPersuaionBattelDisplay" type="Control"]
+[node name="streesAndBersuaionBattelIndicater" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_f1ely")
+script = ExtResource("1_pqiru")
 
 [node name="HealthBarSpacingGuide" type="TextureRect" parent="."]
 visible = false
@@ -23,7 +23,7 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_1f5cm")
+texture = ExtResource("2_cfnu7")
 
 [node name="HealthBar_R" type="TextureRect" parent="."]
 texture_filter = 1
@@ -33,7 +33,7 @@ offset_left = 960.0
 offset_top = 64.0
 offset_right = 1522.0
 offset_bottom = 204.0
-texture = ExtResource("3_8fsqb")
+texture = ExtResource("3_vnsyj")
 ignore_texture_size = true
 stretch_mode = 2
 flip_h = true
@@ -57,7 +57,7 @@ offset_top = 204.0
 offset_right = 1522.0
 offset_bottom = 344.0
 rotation = 3.14159
-texture = ExtResource("3_8fsqb")
+texture = ExtResource("3_vnsyj")
 ignore_texture_size = true
 stretch_mode = 2
 flip_h = true
@@ -80,7 +80,7 @@ offset_left = 929.0
 offset_top = 103.0
 offset_right = 991.0
 offset_bottom = 165.0
-texture = ExtResource("4_oilt8")
+texture = ExtResource("4_donwf")
 
 [node name="PlayerPortrait" type="TextureRect" parent="."]
 texture_filter = 1
@@ -89,7 +89,7 @@ offset_left = 270.0
 offset_top = 64.0
 offset_right = 410.0
 offset_bottom = 204.0
-texture = ExtResource("5_qr6xq")
+texture = ExtResource("5_8jj4f")
 
 [node name="EnemyPortrait" type="TextureRect" parent="."]
 texture_filter = 1
@@ -98,5 +98,5 @@ offset_left = 1510.0
 offset_top = 64.0
 offset_right = 1650.0
 offset_bottom = 204.0
-texture = ExtResource("5_qr6xq")
+texture = ExtResource("5_8jj4f")
 flip_h = true

@@ -124,7 +124,6 @@ func gen_dragables()->void:
 			set_up_nonsloted(ResourceManager.get_tactic(id));
 
 func set_up_nonsloted(data):
-	var p = Vector2.ZERO;
 	var new_dargable = dragable_scene.instantiate();
 	new_dargable.slot_points = slot_points;
 	

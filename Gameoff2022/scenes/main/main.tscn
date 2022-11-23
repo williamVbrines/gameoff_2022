@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c25dap1wya5s2" path="res://scenes/levels/test_area.tscn" id="3_aogdo"]
 [ext_resource type="PackedScene" uid="uid://w8grd7k40rhy" path="res://scenes/npc/npcDialogTest/dialog_test_npc.tscn" id="5_c6ys6"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="5_un27h"]
-[ext_resource type="PackedScene" uid="uid://dpm7ebubyc0vf" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
+[ext_resource type="PackedScene" uid="uid://iy86trujqevt" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="6_vy1uh"]
 
 [node name="Main" type="Node3D"]
 

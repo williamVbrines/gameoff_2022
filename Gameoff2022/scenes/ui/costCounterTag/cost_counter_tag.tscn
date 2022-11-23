@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://df3826xj6slyh" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_EdgeMatch.png" id="3_osjgs"]
 [ext_resource type="Texture2D" uid="uid://opsohciiyx02" path="res://textures/ui/Battle/Menu/Menu Buttons/BattleMenuItem_BW_Back.png" id="4_fxqkd"]
 [ext_resource type="Texture2D" uid="uid://cgv2x5el18n4j" path="res://textures/ui/Battle/Menu/Time Cost/BattleMenu_Icon_TimeCost.png" id="5_mjhcd"]
-[ext_resource type="FontFile" uid="uid://02irn3hmx2wt" path="res://textures/ui/Battle/Font/monogram.ttf" id="7_3eec0"]
+[ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="7_4vwtj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_472wb"]
 shader = ExtResource("1_sexgw")
@@ -72,8 +72,8 @@ offset_left = 24.0
 offset_top = -8.0
 offset_right = 40.0
 offset_bottom = 29.0
-theme_override_fonts/font = ExtResource("7_3eec0")
-theme_override_font_sizes/font_size = 42
+theme_override_fonts/font = ExtResource("7_4vwtj")
+theme_override_font_sizes/font_size = 26
 text = "0"
 clip_text = true
 visible_characters = 1
