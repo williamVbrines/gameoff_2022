@@ -1,6 +1,4 @@
-res://scenes/ui/pauseMenu/pause_menu.tscn
+res://scenes/main/main.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/ui/pauseMenu/pause_menu.gd
-res://scenes/main/main.tscn
-res://scenes/ui/itemsMenu/items_menu.gd
+res://scenes/ui/pauseMenu/pause_menu.tscn
