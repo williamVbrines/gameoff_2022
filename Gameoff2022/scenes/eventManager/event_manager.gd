@@ -40,3 +40,12 @@ signal dialog_emit(val : String);
 #Pause Menu####################################################################
 signal pause_menu_opened();
 signal pause_menu_closed();
+
+
+#Room ##########################################################################
+signal room_show_tooltip(text : String);
+signal room_hide_tooltip();
+
+signal room_show_confirm(text : String);
+signal room_hide_confirm();
+

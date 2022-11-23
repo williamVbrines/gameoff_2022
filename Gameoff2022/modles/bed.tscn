@@ -1,12 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu2yj26dvmjoo"]
+[gd_scene load_steps=8 format=3 uid="uid://bu2yj26dvmjoo"]
 
 [ext_resource type="ArrayMesh" uid="uid://cae2fadpgr86o" path="res://meshes/BedMesh.obj" id="1_2matk"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_8cjfo"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="2_m1o3y"]
 [ext_resource type="Texture2D" uid="uid://b71al1010uojp" path="res://textures/BedTexture.png" id="3_3628x"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_olesc"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lim1e"]
+render_priority = 0
+shader = ExtResource("2_m1o3y")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 1.8
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0t1sk"]
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_lim1e")
 shader = ExtResource("2_8cjfo")
 shader_parameter/albedo_texture = ExtResource("3_3628x")
 shader_parameter/animated = true

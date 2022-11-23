@@ -1,30 +1,30 @@
-Control
-ColorRect
+Button
 Label
-VBoxContainer
-Node
-VoiceBoxPlayer (voice_box.gd)
 RichTextLabel
+Control
+Node
+Area3D
+CollisionShape3D
+InteractableArea3D (interactableArea3D.gd)
+Node3D
+Camera3D
+ColorRect
+VBoxContainer
+VoiceBoxPlayer (voice_box.gd)
 TextureButton
 TextureRect
 HBoxContainer
-Button
 HSeparator
 VSplitContainer
 AnimationPlayer
 WorldEnvironment
 OmniLight3D
-Camera3D
-Node3D
-CollisionShape3D
-Area3D
 SubViewport
 MeshInstance3D
 Panel
 PopupMenu
 MenuButton
 StaticBody3D
-InteractableArea3D (interactableArea3D.gd)
 LineEdit
 InteractableArea3D (InteractableArea3D.gd)
 Sprite3D
