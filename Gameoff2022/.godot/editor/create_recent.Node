@@ -1,3 +1,4 @@
+Node3D
 Button
 Label
 RichTextLabel
@@ -6,7 +7,6 @@ Node
 Area3D
 CollisionShape3D
 InteractableArea3D (interactableArea3D.gd)
-Node3D
 Camera3D
 ColorRect
 VBoxContainer

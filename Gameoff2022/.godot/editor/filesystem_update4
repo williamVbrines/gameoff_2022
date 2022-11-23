@@ -1,14 +1,6 @@
-res://scenes/main/main.tscn
+res://scenes/levels/room/room.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
 res://shaders/artshader_noisetexture.tres
-res://scenes/levels/room/room.tscn
-res://modles/bed.tscn
 res://scenes/levels/room/bed_test.gd
-res://scenes/npc/npcDialogTest/dialog_test_npc.tscn
-res://scenes/eventManager/event_manager.gd
-res://scenes/levels/room/tooltip.gd
-res://shaders/Pixelation.tres
-res://shaders/water.tres
-res://scenes/levels/VillageScene.tscn
-res://scenes/levels/room/conferm_box.gd
+res://scenes/main/main.tscn

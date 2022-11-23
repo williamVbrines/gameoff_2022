@@ -451,13 +451,11 @@ transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.
 transparency = 1.0
 skeleton = NodePath("../..")
 
-[node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh")]
+[node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
 script = ExtResource("3_pssuc")
 mesh = NodePath("BedMesh")
-message = null
-tooltip = null
-action = null
+area = NodePath("Area3D")
 
 [node name="BedMesh" parent="Room3D/Room/Bed" instance=ExtResource("4_grb64")]
 skeleton = NodePath("../../..")
@@ -585,9 +583,11 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, -0.0635431, 5.01533)
 surface_material_override/0 = SubResource("StandardMaterial3D_sl82f")
 
-[node name="Door" parent="Room3D/Room" instance=ExtResource("18_xi7mj")]
+[node name="Door" type="Node3D" parent="Room3D/Room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983248, 0, 2.07006)
-skeleton = NodePath("../..")
+
+[node name="DoorMesh" parent="Room3D/Room/Door" instance=ExtResource("18_xi7mj")]
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("ShaderMaterial_igroj")
 
 [node name="Walls" type="Node3D" parent="Room3D/Room"]
@@ -623,6 +623,3 @@ randomness = 1.0
 visibility_aabb = AABB(-4, -2.58548, -5.18234, 8, 5.17096, 10.3647)
 process_material = SubResource("ParticleProcessMaterial_n61j3")
 draw_pass_1 = SubResource("QuadMesh_4a8s2")
-
-[connection signal="mouse_entered" from="Room3D/Room/Bed/Area3D" to="Room3D/Room/Bed" method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Room3D/Room/Bed/Area3D" to="Room3D/Room/Bed" method="_on_area_3d_mouse_exited"]
