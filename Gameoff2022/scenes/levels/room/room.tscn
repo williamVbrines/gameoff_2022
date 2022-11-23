@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://mftqjfa6h1jw"]
+[gd_scene load_steps=49 format=3 uid="uid://mftqjfa6h1jw"]
 
 [ext_resource type="Texture2D" uid="uid://dvva2m855qikg" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom Tooltip Spacing Guide.png" id="1_ps7ld"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://cmxkhatsbfdnl" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom Tooltip Behavior.png" id="2_uonhq"]
 [ext_resource type="PackedScene" uid="uid://csl5u8uumwyx2" path="res://modles/book.tscn" id="3_7uc24"]
 [ext_resource type="Script" path="res://scenes/levels/room/tooltip.gd" id="3_gugj3"]
-[ext_resource type="Script" path="res://scenes/levels/room/bed_test.gd" id="3_pssuc"]
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
 [ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
 [ext_resource type="PackedScene" uid="uid://dohk55w2v4jar" path="res://modles/desk.tscn" id="5_8jjll"]
 [ext_resource type="PackedScene" uid="uid://cnntxn1gqo2l5" path="res://modles/desk_chair.tscn" id="6_1pfs0"]
 [ext_resource type="PackedScene" uid="uid://di2yossccrpdk" path="res://modles/desk_paper.tscn" id="7_iycir"]
 [ext_resource type="PackedScene" uid="uid://f3olkhor585g" path="res://modles/dresser.tscn" id="8_fj1gn"]
+[ext_resource type="Script" path="res://scenes/levels/room/room_interactable_3D.gd" id="8_xg4cl"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="9_l43cy"]
 [ext_resource type="Texture2D" uid="uid://bs7n32125yvb" path="res://textures/DresserTexture.png" id="10_flbw3"]
 [ext_resource type="PackedScene" uid="uid://bgtu76l55emde" path="res://modles/key_board.tscn" id="11_y8fwa"]
@@ -22,9 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="14_6xceb"]
 [ext_resource type="Texture2D" uid="uid://csughb021ergy" path="res://textures/RugforRoomTexture.png" id="15_gm4mk"]
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="16_xh2ma"]
-[ext_resource type="Texture2D" uid="uid://yllcxgk88mvt" path="res://textures/MonitorTexture.png" id="17_ytfcg"]
 [ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_xi7mj"]
-[ext_resource type="Texture2D" uid="uid://biqnqga1dlvta" path="res://textures/DoorTexture.png" id="19_4781p"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="20_hik4s"]
 [ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="21_kfrrn"]
 [ext_resource type="PackedScene" uid="uid://cpc7t82lkl8xu" path="res://modles/pizza.tscn" id="22_garrg"]
@@ -53,39 +51,9 @@ glow_bloom = 0.44
 [sub_resource type="BoxShape3D" id="BoxShape3D_duerd"]
 size = Vector3(5.00362, 1.40432, 2.90848)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nw41d"]
+
 [sub_resource type="FastNoiseLite" id="1"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q1hcp"]
-width = 40
-height = 40
-seamless = true
-as_normal_map = true
-bump_strength = 0.2
-noise = SubResource("1")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f1jah"]
-render_priority = 0
-shader = ExtResource("9_l43cy")
-shader_parameter/albedo_texture = ExtResource("17_ytfcg")
-shader_parameter/animated = true
-shader_parameter/light_bias = null
-shader_parameter/light_tint = Color(1, 1, 1, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/normal_bias = null
-shader_parameter/normal_map = SubResource("NoiseTexture2D_q1hcp")
-shader_parameter/rimlight_blend = 0.01
-shader_parameter/rimlight_color = Color(1, 1, 1, 1)
-shader_parameter/rimlight_size = 1.0
-shader_parameter/shadow_blend = 0.001
-shader_parameter/shadow_color = null
-shader_parameter/shadow_extra_intensity = 0.0
-shader_parameter/shadow_size = 0.045
-shader_parameter/time_scale = 0.02
-shader_parameter/tint = Color(1, 1, 1, 0.94902)
-shader_parameter/use_normalmap = true
-shader_parameter/use_view = true
-shader_parameter/view_bias = Color(1, 0, 1, 1)
-shader_parameter/view_multiplier = -1.0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ayyvb"]
 width = 80
@@ -124,37 +92,8 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("15_gm4mk")
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_83pps"]
-width = 40
-height = 40
-seamless = true
-as_normal_map = true
-bump_strength = 0.2
-noise = SubResource("1")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_igroj"]
-render_priority = 0
-shader = ExtResource("9_l43cy")
-shader_parameter/albedo_texture = ExtResource("19_4781p")
-shader_parameter/animated = true
-shader_parameter/light_bias = null
-shader_parameter/light_tint = Color(1, 1, 1, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/normal_bias = null
-shader_parameter/normal_map = SubResource("NoiseTexture2D_83pps")
-shader_parameter/rimlight_blend = 0.01
-shader_parameter/rimlight_color = Color(1, 1, 1, 1)
-shader_parameter/rimlight_size = 1.0
-shader_parameter/shadow_blend = 0.001
-shader_parameter/shadow_color = null
-shader_parameter/shadow_extra_intensity = 0.0
-shader_parameter/shadow_size = 0.045
-shader_parameter/time_scale = 0.02
-shader_parameter/tint = Color(1, 1, 1, 0.94902)
-shader_parameter/use_normalmap = true
-shader_parameter/use_view = true
-shader_parameter/view_bias = Color(1, 0, 1, 1)
-shader_parameter/view_multiplier = -1.0
+[sub_resource type="BoxShape3D" id="BoxShape3D_c43p4"]
+size = Vector3(1, 4.22983, 2.32997)
 
 [sub_resource type="QuadMesh" id="QuadMesh_c1e8n"]
 size = Vector2(10, 11)
@@ -295,6 +234,7 @@ offset_top = 505.0
 offset_right = 1062.0
 offset_bottom = 533.0
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Label"]
 modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
@@ -335,6 +275,7 @@ offset_right = 1002.0
 offset_bottom = 619.0
 text = "Cancel"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/CancelTexy"]
 modulate = Color(1, 1, 1, 0.968627)
@@ -389,6 +330,7 @@ offset_right = 340.0
 offset_bottom = 94.0
 text = "Sleep for the rest of the day"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BedroomTooltipBackground" type="NinePatchRect" parent="GUI/Tooltip/RichTextLabel"]
 modulate = Color(1, 1, 1, 0.968627)
@@ -453,9 +395,12 @@ skeleton = NodePath("../..")
 
 [node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
-script = ExtResource("3_pssuc")
+script = ExtResource("8_xg4cl")
 mesh = NodePath("BedMesh")
 area = NodePath("Area3D")
+message = "Sleep for the rest of the day"
+tooltip = "Go to bed"
+action = "Sleep_Day"
 
 [node name="BedMesh" parent="Room3D/Room/Bed" instance=ExtResource("4_grb64")]
 skeleton = NodePath("../../..")
@@ -494,7 +439,13 @@ skeleton = NodePath("../..")
 [node name="stickynote3" parent="Room3D/Room/DeskGroup" instance=ExtResource("24_j2n3a")]
 transform = Transform3D(0.0787039, -0.232011, 0.969524, -0.974939, 0.185087, 0.123436, -0.208085, -0.954942, -0.21163, 0.77364, 1.91343, -0.122927)
 
-[node name="Monitor" type="Node3D" parent="Room3D/Room/DeskGroup"]
+[node name="Monitor" type="Node3D" parent="Room3D/Room/DeskGroup" node_paths=PackedStringArray("mesh", "area")]
+script = ExtResource("8_xg4cl")
+mesh = NodePath("MonitorMesh")
+area = NodePath("Area3D")
+message = "Get back to work"
+tooltip = "Sit at your computer"
+action = "Monitor"
 
 [node name="ComputerLight" type="OmniLight3D" parent="Room3D/Room/DeskGroup/Monitor"]
 transform = Transform3D(0.939824, 0, 0.341659, 0, 1, 0, -0.341659, 0, 0.939824, -0.142045, 2.55748, 0.168262)
@@ -505,13 +456,18 @@ omni_range = 1.25447
 [node name="MonitorMesh" parent="Room3D/Room/DeskGroup/Monitor" instance=ExtResource("16_xh2ma")]
 transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.423819)
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_f1jah")
 
 [node name="stickynote" parent="Room3D/Room/DeskGroup/Monitor" instance=ExtResource("24_j2n3a")]
 transform = Transform3D(-0.449809, -0.0797052, 0.889561, -0.18058, 0.983555, -0.00318352, -0.874679, -0.162069, -0.456805, -0.24116, 2.73596, -0.122927)
 
 [node name="stickynote2" parent="Room3D/Room/DeskGroup/Monitor" instance=ExtResource("25_q7wdj")]
 transform = Transform3D(-0.30922, 0.0519462, 0.949571, -0.269939, 0.952642, -0.140018, -0.911875, -0.299623, -0.280554, -0.17947, 2.46457, -0.133586)
+
+[node name="Area3D" type="Area3D" parent="Room3D/Room/DeskGroup/Monitor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room3D/Room/DeskGroup/Monitor/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.809862, 2.64217, 0)
+shape = SubResource("BoxShape3D_nw41d")
 
 [node name="DresserGroup" type="Node3D" parent="Room3D/Room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.593158, 0, 6.09851)
@@ -583,12 +539,24 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, -0.0635431, 5.01533)
 surface_material_override/0 = SubResource("StandardMaterial3D_sl82f")
 
-[node name="Door" type="Node3D" parent="Room3D/Room"]
+[node name="Door" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0983248, 0, 2.07006)
+script = ExtResource("8_xg4cl")
+mesh = NodePath("DoorMesh")
+area = NodePath("Area3D")
+message = "Have a calming walk for a while"
+tooltip = "Open door"
+action = "Walk"
 
 [node name="DoorMesh" parent="Room3D/Room/Door" instance=ExtResource("18_xi7mj")]
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_igroj")
+
+[node name="Area3D" type="Area3D" parent="Room3D/Room/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47966, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room3D/Room/Door/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.235181, 0)
+shape = SubResource("BoxShape3D_c43p4")
 
 [node name="Walls" type="Node3D" parent="Room3D/Room"]
 

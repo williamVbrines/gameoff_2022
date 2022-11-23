@@ -1,11 +1,12 @@
+CollisionShape3D
+Area3D
+RoomInteractable3D (room_interactable_3D.gd)
 Node3D
 Button
 Label
 RichTextLabel
 Control
 Node
-Area3D
-CollisionShape3D
 InteractableArea3D (interactableArea3D.gd)
 Camera3D
 ColorRect
@@ -29,4 +30,3 @@ LineEdit
 InteractableArea3D (InteractableArea3D.gd)
 Sprite3D
 InteractableArea3D (InteractablesTest.gd)
-RayCast3D

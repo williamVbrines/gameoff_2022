@@ -1,12 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhvgh7gmhxyci"]
+[gd_scene load_steps=8 format=3 uid="uid://dhvgh7gmhxyci"]
 
 [ext_resource type="ArrayMesh" uid="uid://geyfdqkjo24o" path="res://meshes/MonitorMesh.obj" id="1_1fpbk"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_4nh07"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="2_tlnha"]
 [ext_resource type="Texture2D" uid="uid://yllcxgk88mvt" path="res://textures/MonitorTexture.png" id="3_kkodr"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_07wdl"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wkwop"]
+render_priority = 0
+shader = ExtResource("2_tlnha")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 1.8
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m1kbq"]
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_wkwop")
 shader = ExtResource("2_4nh07")
 shader_parameter/albedo_texture = ExtResource("3_kkodr")
 shader_parameter/animated = true

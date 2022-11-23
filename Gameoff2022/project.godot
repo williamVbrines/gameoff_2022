@@ -62,7 +62,7 @@ _global_script_classes=[{
 "base": "Node3D",
 "class": &"RoomInteractable3D",
 "language": &"GDScript",
-"path": "res://scenes/levels/room/bed_test.gd"
+"path": "res://scenes/levels/room/room_interactable_3D.gd"
 }, {
 "base": "Resource",
 "class": &"SaveData",

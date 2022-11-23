@@ -12,6 +12,7 @@ var mouse_in_area : bool = false;
 
 func _ready() -> void:
 	_make_connections();
+	mesh.get_active_material(0).get("next_pass").set("shader_parameter/str",300.0);
 	
 func _make_connections()->void:
 	area.mouse_entered.connect(_on_mouse_entered);

@@ -56,7 +56,7 @@ func _hide_anim() -> void:
 	tween.stop();
 	
 	tween.tween_property(self, "modulate",Color(Color.WHITE, 0.0), FADE_TIME)
-	tween.tween_callback(hide);
+
 	tween.play();
 	
 	
