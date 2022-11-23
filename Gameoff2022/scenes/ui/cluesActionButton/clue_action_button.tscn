@@ -42,7 +42,6 @@ data = ExtResource("2_1ea1r")
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 custom_minimum_size = Vector2i(0, 36)
-layout_mode = 0
 offset_left = 7.0
 offset_top = 1.0
 offset_right = 305.0
@@ -60,7 +59,6 @@ alignment = 0
 icon_alignment = 2
 
 [node name="BattleMenuSubmenuCluesIconTimeCost" type="TextureRect" parent="Button"]
-layout_mode = 0
 offset_left = 264.0
 offset_top = 8.0
 offset_right = 280.0
@@ -69,7 +67,6 @@ texture = ExtResource("2_y0wmj")
 
 [node name="CostLabel" type="Label" parent="Button/BattleMenuSubmenuCluesIconTimeCost"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 24.0
 offset_top = -6.0
 offset_right = 36.0
@@ -81,7 +78,6 @@ visible_characters = 1
 
 [node name="HSeparator2" type="HSeparator" parent="."]
 custom_minimum_size = Vector2i(314, 0)
-layout_mode = 0
 offset_left = -1.0
 offset_top = 34.0
 offset_right = 313.0

@@ -1,12 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://dm2llsrqhkg3t"]
+[gd_scene load_steps=16 format=3 uid="uid://dm2llsrqhkg3t"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/pause_menu.gd" id="1_po6cs"]
 [ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_ufott"]
 [ext_resource type="Texture2D" uid="uid://dy06wibd73sxu" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 2.png" id="3_87cyt"]
 [ext_resource type="Texture2D" uid="uid://b5i3e346b6pvg" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond.png" id="3_m84tq"]
-[ext_resource type="PackedScene" uid="uid://cu6c17iwu5lee" path="res://scenes/ui/loadoutMenu/loadout_menu.tscn" id="3_yi8yh"]
 [ext_resource type="Texture2D" uid="uid://c8euvbkk0y356" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_pressed.png" id="4_7v36u"]
+[ext_resource type="PackedScene" uid="uid://m03fqlq7hd6n" path="res://scenes/ui/cluesMenu/clues_menu.tscn" id="5_iiblx"]
 [ext_resource type="Texture2D" uid="uid://wcwbjjjr6avd" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_hover.png" id="5_ldqd7"]
+[ext_resource type="PackedScene" uid="uid://cu6c17iwu5lee" path="res://scenes/ui/loadoutMenu/loadout_menu.tscn" id="6_sfwn6"]
 
 [sub_resource type="SystemFont" id="SystemFont_yyaxe"]
 
@@ -179,7 +180,10 @@ toggle_mode = true
 text = "Exit Kindom of
 Frogs"
 
-[node name="LoadoutMenu" parent="." instance=ExtResource("3_yi8yh")]
+[node name="LoadoutMenu" parent="." instance=ExtResource("6_sfwn6")]
+layout_mode = 1
+
+[node name="CluesMenu" parent="." instance=ExtResource("5_iiblx")]
 layout_mode = 1
 
 [node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]

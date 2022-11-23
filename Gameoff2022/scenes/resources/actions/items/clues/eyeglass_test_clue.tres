@@ -7,3 +7,4 @@ script = ExtResource("1_hdumc")
 discrtiption = "a spy glass. "
 cost = 5.0
 dialog_pool = ["Hes just an actor"]
+name = "test_spy_glass"

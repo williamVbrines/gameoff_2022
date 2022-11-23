@@ -16,6 +16,9 @@ var open : bool = false : get = is_open;
 func is_open() -> bool:
 	return open;
 	
+func set_open(val : bool) -> void:
+	open = val;
+	
 func _ready() -> void:
 	_make_connections();
 	for slot in slots.get_children():
@@ -71,9 +74,9 @@ func _open_anim() -> void:
 		for child in t.get_children():
 			tween.tween_property(child, "modulate", Color(Color.WHITE, 1.0), 0.1);
 			
-			
+	tween.tween_callback(set_open.bind(true));
 	tween.play();
-	open = true;
+	
 
 func _close_anim() -> void:
 	var tween = create_tween();
@@ -103,9 +106,9 @@ func _close_anim() -> void:
 	tween.tween_property(back_ground,"scale", Vector2(0,1), 0.2);
 	tween.tween_callback(back_ground.hide);
 	tween.tween_callback(call_deferred.bind("emit_signal", "closed"));
-
+	tween.tween_callback(set_open.bind(false));
 	tween.play();
-	open = false;
+	
 	
 func gen_dragables()->void:
 	for t in dragables.get_children():

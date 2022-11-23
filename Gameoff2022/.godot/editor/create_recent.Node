@@ -1,12 +1,12 @@
+Control
 ColorRect
+Label
 VBoxContainer
 Node
 VoiceBoxPlayer (voice_box.gd)
 RichTextLabel
-Control
 TextureButton
 TextureRect
-Label
 HBoxContainer
 Button
 HSeparator

@@ -9,6 +9,9 @@ extends Control
 @onready var load_out_button: Button = $SideBar/Selection/LoadOutButton
 @onready var loadout_menu: Control = $LoadoutMenu
 
+@onready var clues_button: Button = $SideBar/Selection/CluesButton
+@onready var clues_menu: Control = $CluesMenu
+
 func _ready() -> void:
 	_make_connections();
 	process_mode = Node.PROCESS_MODE_ALWAYS;
@@ -24,6 +27,7 @@ func _make_connections() -> void:
 	EventManager.start_dialog.connect(_on_start_dialog);
 	EventManager.dialog_ended.connect(_show_anim);
 	
+	clues_button.toggled.connect(_on_clue_toggled);
 	
 func _on_start_combat(_cam : Camera3D) -> void:
 	if get_tree().paused == false:
@@ -53,6 +57,7 @@ func _show_anim() -> void:
 	tween.play();
 	
 	
+
 func _on_pause_pressed() -> void:
 	get_tree().paused = true;
 	
@@ -95,6 +100,15 @@ func _on_resume_pressed() ->void:
 	elif loadout_menu.closed.is_connected(_on_resume_pressed):
 		loadout_menu.closed.disconnect(_on_resume_pressed);
 	
+	if clues_menu.is_open():
+		clues_menu.close_loadout();
+		clues_button.set_pressed_no_signal(false);
+		if !clues_menu.closed.is_connected(_on_resume_pressed):
+			clues_menu.closed.connect(_on_resume_pressed);
+		return;
+	elif clues_menu.closed.is_connected(_on_resume_pressed):
+		clues_menu.closed.disconnect(_on_resume_pressed);
+		
 	var tween = create_tween();
 	
 	back_ground.scale.y = 1;
@@ -128,9 +142,49 @@ func set_sidebar_buttons_to_deafult() -> void:
 		if button is Button:
 			button.set_disabled(false);
 	
-	
 func _on_loadout_toggled(button_pressed: bool) -> void:
-	if button_pressed:
-		loadout_menu.open_loadout();
-	else:
+	if button_pressed && !loadout_menu.is_open():
+		_open_loadout();
+		
+	elif loadout_menu.is_open():
+		
 		loadout_menu.close_loadout();
+	else:
+		load_out_button.set_pressed_no_signal(!button_pressed)
+
+func _on_clue_toggled(button_pressed: bool) -> void:
+	if button_pressed && !clues_menu.is_open():
+		_open_cluse();
+		
+	elif clues_menu.is_open():
+		clues_menu.close_loadout();
+	else:
+		clues_button.set_pressed_no_signal(button_pressed)
+	
+	
+func _open_loadout()->void:
+	
+	if clues_menu.is_open():
+		clues_menu.close_loadout();
+		clues_button.set_pressed_no_signal(false);
+		if !clues_menu.closed.is_connected(_open_loadout):
+			clues_menu.closed.connect(_open_loadout);
+		return;
+	elif clues_menu.closed.is_connected(_open_loadout):
+		clues_menu.closed.disconnect(_open_loadout);
+		
+		
+	loadout_menu.open_loadout();
+
+
+func _open_cluse() -> void:
+	if loadout_menu.is_open():
+		loadout_menu.close_loadout();
+		load_out_button.set_pressed_no_signal(false);
+		if !loadout_menu.closed.is_connected(_open_cluse):
+			loadout_menu.closed.connect(_open_cluse);
+		return;
+	elif loadout_menu.closed.is_connected(_open_cluse):
+		loadout_menu.closed.disconnect(_open_cluse);
+	
+	clues_menu.open_loadout();

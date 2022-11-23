@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://cfws3n4tfqjlh"]
+
+[ext_resource type="Script" path="res://scenes/ui/clueSelectable/clue_selectable.gd" id="1_t7hl1"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="2_1vlvm"]
+[ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_sa7b4"]
+[ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="3_0ejpv"]
+[ext_resource type="Texture2D" uid="uid://d72wcglmseqx" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Clues_Icon_TimeCost.png" id="4_0v40l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35o75"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5x8o"]
+bg_color = Color(0.117647, 0.109804, 0.211765, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc8vm"]
+bg_color = Color(0.0901961, 0.0823529, 0.168627, 0.972549)
+border_color = Color(0.8, 0.8, 0.8, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgxek"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[node name="ClueSelectable" type="Control"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2i(0, 36)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1013.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t7hl1")
+
+[node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.133333)
+position = Vector2(-463, -204)
+texture = ExtResource("2_sa7b4")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2i(0, 36)
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 1373.0
+offset_bottom = 51.0
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0.647059, 0.164706, 0.164706, 1)
+theme_override_fonts/font = ExtResource("2_1vlvm")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_35o75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v5x8o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lc8vm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qgxek")
+text = "Clues Lorem Ipsum"
+alignment = 0
+icon_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Button"]
+custom_minimum_size = Vector2i(0, 4)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CostLabel" type="Label" parent="Button"]
+texture_filter = 1
+offset_left = 1343.0
+offset_top = 7.0
+offset_right = 1358.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_0ejpv")
+theme_override_font_sizes/font_size = 26
+text = "0"
+visible_characters = 1
+
+[node name="BattleMenuSubmenuCluesIconTimeCost" type="TextureRect" parent="Button"]
+offset_left = 1322.0
+offset_top = 18.0
+offset_right = 1338.0
+offset_bottom = 36.0
+texture = ExtResource("4_0v40l")

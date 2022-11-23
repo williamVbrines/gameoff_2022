@@ -1,3 +1,5 @@
+res://scenes/ui/cluesMenu
+res://scenes/ui/clueSelectable
 res://scenes/ui/stressIndicator
 res://scenes/ui/pauseMenu/tatic_darg_able
 res://scenes/ui/pauseMenu
@@ -18,5 +20,3 @@ res://scenes/resources/actions/items
 res://scenes/systemGlobals
 res://scenes/ui/combatActionSelection
 res://scenes/ui/combateDialogDisplay
-res://scenes/resources/npc
-res://scenes/resources
