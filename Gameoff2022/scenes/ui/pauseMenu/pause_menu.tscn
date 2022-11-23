@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dm2llsrqhkg3t"]
+[gd_scene load_steps=17 format=3 uid="uid://dm2llsrqhkg3t"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/pause_menu.gd" id="1_po6cs"]
 [ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_ufott"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://m03fqlq7hd6n" path="res://scenes/ui/cluesMenu/clues_menu.tscn" id="5_iiblx"]
 [ext_resource type="Texture2D" uid="uid://wcwbjjjr6avd" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_hover.png" id="5_ldqd7"]
 [ext_resource type="PackedScene" uid="uid://cu6c17iwu5lee" path="res://scenes/ui/loadoutMenu/loadout_menu.tscn" id="6_sfwn6"]
+[ext_resource type="PackedScene" uid="uid://bw254wnisp7ip" path="res://scenes/ui/itemsMenu/items_menu.tscn" id="7_t0rmp"]
 
 [sub_resource type="SystemFont" id="SystemFont_yyaxe"]
 
@@ -134,7 +135,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_oucv7")
 toggle_mode = true
 text = "Loadout"
 
-[node name="ItmesButton" type="Button" parent="SideBar/Selection"]
+[node name="ItemsButton" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
 layout_mode = 2
 offset_top = 142.0
@@ -184,6 +185,9 @@ Frogs"
 layout_mode = 1
 
 [node name="CluesMenu" parent="." instance=ExtResource("5_iiblx")]
+layout_mode = 1
+
+[node name="ItemsMenu" parent="." instance=ExtResource("7_t0rmp")]
 layout_mode = 1
 
 [node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]

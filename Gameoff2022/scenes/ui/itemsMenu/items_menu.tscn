@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw254wnisp7ip"]
+
+[ext_resource type="Script" path="res://scenes/ui/itemsMenu/items_menu.gd" id="1_0q3rw"]
+[ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="2_yngwi"]
+
+[node name="ItemsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0q3rw")
+
+[node name="BackGround" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 0
+offset_left = 288.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(1e-05, 1)
+mouse_filter = 2
+
+[node name="Back" type="ColorRect" parent="BackGround"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.145098, 0.137255, 0.25098, 0.74902)
+
+[node name="Labels" type="Control" parent="BackGround"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="BackGround/Labels"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 85.0
+offset_right = 192.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("2_yngwi")
+theme_override_font_sizes/font_size = 40
+text = "Items"
+
+[node name="ColorRect" type="ColorRect" parent="BackGround/Labels/Title"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 61.0
+offset_right = 1470.0
+offset_bottom = 65.0
+
+[node name="Selection" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 196.0
+offset_right = 450.0
+offset_bottom = 236.0
+theme_override_constants/separation = 20

@@ -12,6 +12,9 @@ extends Control
 @onready var clues_button: Button = $SideBar/Selection/CluesButton
 @onready var clues_menu: Control = $CluesMenu
 
+@onready var items_menu: Control = $ItemsMenu
+@onready var items_button: Button = $SideBar/Selection/ItemsButton
+
 func _ready() -> void:
 	_make_connections();
 	process_mode = Node.PROCESS_MODE_ALWAYS;
@@ -28,7 +31,7 @@ func _make_connections() -> void:
 	EventManager.dialog_ended.connect(_show_anim);
 	
 	clues_button.toggled.connect(_on_clue_toggled);
-	
+	items_button.toggled.connect(_on_items_toggled);
 func _on_start_combat(_cam : Camera3D) -> void:
 	if get_tree().paused == false:
 		_hide_anim();
@@ -109,6 +112,15 @@ func _on_resume_pressed() ->void:
 	elif clues_menu.closed.is_connected(_on_resume_pressed):
 		clues_menu.closed.disconnect(_on_resume_pressed);
 		
+	if items_menu.is_open():
+		items_menu.close_loadout();
+		items_button.set_pressed_no_signal(false);
+		if !items_menu.closed.is_connected(_on_resume_pressed):
+			items_menu.closed.connect(_on_resume_pressed);
+		return;
+	elif items_menu.closed.is_connected(_on_resume_pressed):
+		items_menu.closed.disconnect(_on_resume_pressed);
+		
 	var tween = create_tween();
 	
 	back_ground.scale.y = 1;
@@ -162,6 +174,40 @@ func _on_clue_toggled(button_pressed: bool) -> void:
 		clues_button.set_pressed_no_signal(button_pressed)
 	
 	
+func _on_items_toggled(button_pressed: bool) -> void:
+	if button_pressed && !items_menu.is_open():
+		_open_items();
+		
+	elif items_menu.is_open():
+		items_menu.close_loadout();
+	else:
+		items_button.set_pressed_no_signal(button_pressed)
+		
+		
+		
+func _open_items() -> void:
+	
+	if clues_menu.is_open():
+		clues_menu.close_loadout();
+		clues_button.set_pressed_no_signal(false);
+		if !clues_menu.closed.is_connected(_open_items):
+			clues_menu.closed.connect(_open_items);
+		return;
+	elif clues_menu.closed.is_connected(_open_items):
+		clues_menu.closed.disconnect(_open_items);
+		
+	if loadout_menu.is_open():
+		loadout_menu.close_loadout();
+		load_out_button.set_pressed_no_signal(false);
+		if !loadout_menu.closed.is_connected(_open_items):
+			loadout_menu.closed.connect(_open_items);
+		return;
+	elif loadout_menu.closed.is_connected(_open_items):
+		loadout_menu.closed.disconnect(_open_items);
+		
+	items_menu.open_loadout();
+	
+	
 func _open_loadout()->void:
 	
 	if clues_menu.is_open():
@@ -172,6 +218,15 @@ func _open_loadout()->void:
 		return;
 	elif clues_menu.closed.is_connected(_open_loadout):
 		clues_menu.closed.disconnect(_open_loadout);
+		
+	if items_menu.is_open():
+		items_menu.close_loadout();
+		items_button.set_pressed_no_signal(false);
+		if !items_menu.closed.is_connected(_open_loadout):
+			items_menu.closed.connect(_open_loadout);
+		return;
+	elif items_menu.closed.is_connected(_open_loadout):
+		items_menu.closed.disconnect(_open_loadout);
 		
 		
 	loadout_menu.open_loadout();
@@ -187,4 +242,14 @@ func _open_cluse() -> void:
 	elif loadout_menu.closed.is_connected(_open_cluse):
 		loadout_menu.closed.disconnect(_open_cluse);
 	
+	if items_menu.is_open():
+		items_menu.close_loadout();
+		items_button.set_pressed_no_signal(false);
+		if !items_menu.closed.is_connected(_open_cluse):
+			items_menu.closed.connect(_open_cluse);
+		return;
+	elif items_menu.closed.is_connected(_open_cluse):
+		items_menu.closed.disconnect(_open_cluse);
+		
+		
 	clues_menu.open_loadout();
