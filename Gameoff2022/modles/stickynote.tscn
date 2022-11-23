@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://2uan0c1ga2gc"]
+
+[ext_resource type="ArrayMesh" uid="uid://c3505ggo31f3n" path="res://meshes/StickyNoteMesh.obj" id="1_xfjpg"]
+[ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_r2o6q"]
+[ext_resource type="Texture2D" uid="uid://dgvawn03egilu" path="res://textures/StickyNoteTexture.png" id="3_qfoc0"]
+[ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_0brrp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_esy4p"]
+render_priority = 0
+shader = ExtResource("2_r2o6q")
+shader_parameter/albedo_texture = ExtResource("3_qfoc0")
+shader_parameter/animated = null
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(0.34902, 0.34902, 0.34902, 1)
+shader_parameter/metallic = null
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("4_0brrp")
+shader_parameter/rimlight_blend = null
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = null
+shader_parameter/shadow_blend = null
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = null
+shader_parameter/shadow_size = null
+shader_parameter/time_scale = null
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = null
+shader_parameter/use_view = null
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = null
+
+[node name="stickynote" type="Node3D"]
+
+[node name="StickyNoteMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_xfjpg")
+surface_material_override/0 = SubResource("ShaderMaterial_esy4p")
