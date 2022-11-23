@@ -1,12 +1,7 @@
-res://scenes/levels/room/room.tscn
+res://modles/monitor.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
 res://shaders/artshader_noisetexture.tres
-res://scenes/levels/room/bed_test.gd
-res://scenes/levels/room/room_interactable_3D.gd
+res://scenes/levels/room/room.tscn
 res://scenes/main/main.tscn
-res://modles/door.tscn
-res://shaders/fresnel_highlight.gdshader
-res://modles/bed.tscn
-res://scenes/levels/room/tooltip.gd
-res://modles/monitor.tscn
+res://scenes/levels/room/conferm_box.gd

@@ -1,3 +1,5 @@
+Control
+ColorRect
 CollisionShape3D
 Area3D
 RoomInteractable3D (room_interactable_3D.gd)
@@ -5,11 +7,9 @@ Node3D
 Button
 Label
 RichTextLabel
-Control
 Node
 InteractableArea3D (interactableArea3D.gd)
 Camera3D
-ColorRect
 VBoxContainer
 VoiceBoxPlayer (voice_box.gd)
 TextureButton

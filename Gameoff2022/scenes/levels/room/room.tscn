@@ -1,10 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://mftqjfa6h1jw"]
+[gd_scene load_steps=47 format=3 uid="uid://mftqjfa6h1jw"]
 
-[ext_resource type="Texture2D" uid="uid://dvva2m855qikg" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom Tooltip Spacing Guide.png" id="1_ps7ld"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
 [ext_resource type="Script" path="res://scenes/levels/room/conferm_box.gd" id="2_its4j"]
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
-[ext_resource type="Texture2D" uid="uid://cmxkhatsbfdnl" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom Tooltip Behavior.png" id="2_uonhq"]
 [ext_resource type="PackedScene" uid="uid://csl5u8uumwyx2" path="res://modles/book.tscn" id="3_7uc24"]
 [ext_resource type="Script" path="res://scenes/levels/room/tooltip.gd" id="3_gugj3"]
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
@@ -206,116 +204,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="BedroomTooltipSpacingGuide" type="TextureRect" parent="GUI"]
-visible = false
-layout_mode = 0
-offset_left = -7.0
-offset_top = 2.0
-offset_right = 1913.0
-offset_bottom = 1082.0
-texture = ExtResource("1_ps7ld")
-
-[node name="ConfirmBox" type="Control" parent="GUI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_its4j")
-hovor_color = Color(0.392157, 0.392157, 0.392157, 0.968627)
-normal_color = Color(1, 1, 1, 0.968627)
-pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
-
-[node name="Label" type="Label" parent="GUI/ConfirmBox"]
-layout_mode = 0
-offset_left = 850.0
-offset_top = 505.0
-offset_right = 1062.0
-offset_bottom = 533.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Label"]
-modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
-show_behind_parent = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_3ixq7")
-patch_margin_left = 18
-patch_margin_top = 18
-patch_margin_right = 17
-patch_margin_bottom = 17
-
-[node name="Button" type="Button" parent="GUI/ConfirmBox/Label/Background"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-flat = true
-
-[node name="CancelTexy" type="Label" parent="GUI/ConfirmBox"]
-layout_mode = 0
-offset_left = 918.0
-offset_top = 590.0
-offset_right = 1002.0
-offset_bottom = 619.0
-text = "Cancel"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/CancelTexy"]
-modulate = Color(1, 1, 1, 0.968627)
-show_behind_parent = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_3ixq7")
-patch_margin_left = 18
-patch_margin_top = 18
-patch_margin_right = 17
-patch_margin_bottom = 17
-
-[node name="Button" type="Button" parent="GUI/ConfirmBox/CancelTexy/Background"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-flat = true
-
-[node name="BedroomTooltipBehavior" type="TextureRect" parent="GUI"]
-visible = false
-layout_mode = 0
-offset_left = 601.0
-offset_top = 980.0
-offset_right = 6594.0
-offset_bottom = 2210.0
-texture = ExtResource("2_uonhq")
-
 [node name="Tooltip" type="Control" parent="GUI"]
 layout_mode = 1
 anchors_preset = 0
@@ -352,6 +240,115 @@ patch_margin_top = 18
 patch_margin_right = 17
 patch_margin_bottom = 17
 
+[node name="ConfirmBox" type="Control" parent="GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_its4j")
+hovor_color = Color(0.392157, 0.392157, 0.392157, 0.968627)
+normal_color = Color(1, 1, 1, 0.968627)
+pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
+
+[node name="Options" type="Control" parent="GUI/ConfirmBox"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 505.0
+offset_right = 1062.0
+offset_bottom = 533.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/Label"]
+modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 20.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3ixq7")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="CancelTexy" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
+offset_left = 918.0
+offset_top = 590.0
+offset_right = 1002.0
+offset_bottom = 619.0
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/CancelTexy"]
+modulate = Color(1, 1, 1, 0.968627)
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 20.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3ixq7")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelTexy/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Room3D" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Room3D"]
@@ -362,6 +359,7 @@ transform = Transform3D(0.719468, 0.360127, -0.593864, 0.00521976, 0.852236, 0.5
 fov = 49.8757
 
 [node name="MonitorCamera" type="Camera3D" parent="Room3D"]
+transform = Transform3D(0.901077, 0, 0.433659, 0, 1, 0, -0.433659, 0, 0.901077, 5.20867, -0.906738, -3.76325)
 
 [node name="Room" type="Node3D" parent="Room3D"]
 
@@ -573,6 +571,120 @@ skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("31")
 
 [node name="Wall2" type="MeshInstance3D" parent="Room3D/Room/Walls"]
+transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.83376, -9.90186e-23, 1, -1.23868e-07, -4.519, 2.837, 0.068)
+mesh = SubResource("17")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("18")
+
+[node name="Room2" type="Node3D" parent="Room3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7999, -3.29087, -5.44433)
+
+[node name="GeneralRoomLight" type="SpotLight3D" parent="Room3D/Room2"]
+transform = Transform3D(1, 0, 0, 0, -9.8568e-08, 1, 0, -1, -9.8568e-08, -4.75893, 9.32859, 5.48163)
+light_color = Color(0.458824, 1, 0.8, 1)
+light_indirect_energy = 8.0
+light_specular = 16.0
+spot_range = 18.2852
+spot_angle = 47.5255
+
+[node name="WindowLight" type="SpotLight3D" parent="Room3D/Room2"]
+transform = Transform3D(0.683725, -0.0233154, -0.729367, 0.729566, -6.75743e-08, 0.683911, -0.0159457, -0.999728, 0.01701, -15.576, 5.87959, 4.17372)
+light_color = Color(0, 0.376471, 0.647059, 1)
+light_energy = 10.455
+light_indirect_energy = 9.0
+light_specular = 16.0
+shadow_enabled = true
+spot_range = 18.2852
+spot_angle = 23.0883
+
+[node name="StackedBook2" parent="Room3D/Room2/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
+transparency = 1.0
+skeleton = NodePath("../..")
+
+[node name="StackedBook3" parent="Room3D/Room2/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
+transparency = 1.0
+skeleton = NodePath("../..")
+
+[node name="DeskGroup" type="Node3D" parent="Room3D/Room2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)
+
+[node name="Desk" parent="Room3D/Room2/DeskGroup" instance=ExtResource("5_8jjll")]
+skeleton = NodePath("../..")
+
+[node name="DeskPaper1" parent="Room3D/Room2/DeskGroup" instance=ExtResource("7_iycir")]
+transform = Transform3D(0.927419, 0, -0.374024, 0, 1, 0, 0.374024, 0, 0.927419, 1.08067, 1.90476, -0.212475)
+skeleton = NodePath("../..")
+
+[node name="DeskPaper2" parent="Room3D/Room2/DeskGroup" instance=ExtResource("7_iycir")]
+transform = Transform3D(0.967317, 0, 0.253572, 0, 1, 0, -0.253572, 0, 0.967317, 0.853072, 1.89694, -0.312819)
+skeleton = NodePath("../..")
+
+[node name="Mouse" parent="Room3D/Room2/DeskGroup" instance=ExtResource("12_fl6cs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.850761, 1.88739, 0.589468)
+skeleton = NodePath("../..")
+
+[node name="KeyBoard" parent="Room3D/Room2/DeskGroup" instance=ExtResource("11_y8fwa")]
+transform = Transform3D(-2.6235e-08, -2.03637e-13, -0.6, -0.0149629, 0.599813, 6.54049e-10, 0.599813, 0.0149629, -2.62268e-08, -0.16791, 1.88664, 0.470445)
+skeleton = NodePath("../..")
+
+[node name="stickynote3" parent="Room3D/Room2/DeskGroup" instance=ExtResource("24_j2n3a")]
+transform = Transform3D(0.0787039, -0.232011, 0.969524, -0.974939, 0.185087, 0.123436, -0.208085, -0.954942, -0.21163, 0.77364, 1.91343, -0.122927)
+
+[node name="Monitor" type="Node3D" parent="Room3D/Room2/DeskGroup"]
+
+[node name="ComputerLight" type="OmniLight3D" parent="Room3D/Room2/DeskGroup/Monitor"]
+transform = Transform3D(0.939824, 0, 0.341659, 0, 1, 0, -0.341659, 0, 0.939824, -0.142045, 2.55748, 0.168262)
+light_color = Color(0.72549, 0.980392, 1, 1)
+light_energy = 2.0
+omni_range = 1.25447
+
+[node name="MonitorMesh" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("16_xh2ma")]
+transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.423819)
+skeleton = NodePath("../../..")
+
+[node name="stickynote" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("24_j2n3a")]
+transform = Transform3D(-0.449809, -0.0797052, 0.889561, -0.18058, 0.983555, -0.00318352, -0.874679, -0.162069, -0.456805, -0.24116, 2.73596, -0.122927)
+
+[node name="stickynote2" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("25_q7wdj")]
+transform = Transform3D(-0.30922, 0.0519462, 0.949571, -0.269939, 0.952642, -0.140018, -0.911875, -0.299623, -0.280554, -0.17947, 2.46457, -0.133586)
+
+[node name="Lamp" type="Node3D" parent="Room3D/Room2"]
+transform = Transform3D(1, -3.3303e-15, 0, -1.85243e-22, 1, -3.55271e-15, -2.98023e-08, -2.69206e-15, 1, -9.53674e-07, 1.19209e-07, 0)
+
+[node name="LampLight" type="SpotLight3D" parent="Room3D/Room2/Lamp"]
+transform = Transform3D(1, -1.45572e-22, 3.3303e-15, 2.91122e-22, -4.37114e-08, 1, 2.98023e-08, -1, -4.37114e-08, -8.17385, 3.83939, 1.08878)
+light_color = Color(1, 0.984314, 0.811765, 1)
+light_energy = 2.22
+shadow_enabled = true
+distance_fade_begin = 2.0
+spot_range = 5.86071
+spot_angle = 46.4063
+
+[node name="LampMesh" parent="Room3D/Room2/Lamp" instance=ExtResource("13_ao8j1")]
+transform = Transform3D(1, 3.3303e-15, 1.18316e-29, 2.91122e-22, 1, 3.55271e-15, 2.98023e-08, 2.69206e-15, 1, -8.10671, -1.19209e-07, 1.00407)
+skeleton = NodePath("../..")
+
+[node name="Rug" parent="Room3D/Room2" instance=ExtResource("14_6xceb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74221, -0.0635431, 5.01533)
+surface_material_override/0 = SubResource("StandardMaterial3D_sl82f")
+
+[node name="Walls" type="Node3D" parent="Room3D/Room2"]
+
+[node name="Floor" type="MeshInstance3D" parent="Room3D/Room2/Walls"]
+transform = Transform3D(0.912377, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4.46038, 0, 5.54615)
+mesh = SubResource("QuadMesh_c1e8n")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("ShaderMaterial_ry8ee")
+
+[node name="Wall" type="MeshInstance3D" parent="Room3D/Room2/Walls"]
+transform = Transform3D(-4.37114e-08, -1, 0, 2.84073, -1.24172e-07, 0, 0, 0, 5.50491, 0.0415249, 2.814, 5.54493)
+mesh = SubResource("32")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("31")
+
+[node name="Wall2" type="MeshInstance3D" parent="Room3D/Room2/Walls"]
 transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.83376, -9.90186e-23, 1, -1.23868e-07, -4.519, 2.837, 0.068)
 mesh = SubResource("17")
 skeleton = NodePath("../../..")

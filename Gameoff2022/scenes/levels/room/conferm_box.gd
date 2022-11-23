@@ -1,15 +1,21 @@
 extends Control
 
-@onready var label: Label = $Label
-@onready var label_button: Button = $Label/Background/Button
-@onready var label_background: NinePatchRect = $Label/Background
+@onready var label: Label = $Options/Label
+@onready var label_button: Button = $Options/Label/Background/Button
+@onready var label_background: NinePatchRect = $Options/Label/Background
 
-@onready var cancel_button: Button = $CancelTexy/Background/Button
-@onready var cancel_background: NinePatchRect = $CancelTexy/Background
+@onready var cancel_button: Button = $Options/CancelTexy/Background/Button
+@onready var cancel_background: NinePatchRect = $Options/CancelTexy/Background
+
+@onready var fade: ColorRect = $Fade
 
 @export var hovor_color : Color = Color.WHITE;
 @export var normal_color : Color  = Color.WHITE;
 @export var pressed_color : Color  = Color.WHITE;
+@onready var options: Control = $Options
+
+@onready var monitor_camera: Camera3D = $"../../Room3D/MonitorCamera"
+@onready var room_camera: Camera3D = $"../../Room3D/RoomCamera"
 
 var action : String = "";
 const FADE_TIME : float = 0.5;
@@ -17,8 +23,8 @@ const FADE_TIME : float = 0.5;
 func _ready() -> void:
 	_make_connections();
 	
-	modulate = Color(Color.WHITE, 0.0);
-	hide();
+	options.modulate = Color(Color.WHITE, 0.0);
+	options.hide();
 	
 	cancel_background.modulate = normal_color;
 	label_background.modulate = normal_color;
@@ -73,11 +79,11 @@ func _on_cancel_pressed() -> void:
 	
 func _show_anim() -> void:
 	var tween = create_tween();
-	tween.tween_callback(show);
+	tween.tween_callback(options.show);
 	
 	tween.stop();
 	tween.tween_callback(on_label_resized);
-	tween.tween_property(self, "modulate",Color(Color.WHITE, 1.0), FADE_TIME);
+	tween.tween_property(options, "modulate",Color(Color.WHITE, 1.0), FADE_TIME);
 	
 	tween.play();
 	
@@ -86,8 +92,8 @@ func _hide_anim() -> void:
 	var tween = create_tween();
 	tween.stop();
 	
-	tween.tween_property(self, "modulate",Color(Color.WHITE, 0.0), FADE_TIME)
-	tween.tween_callback(hide);
+	tween.tween_property(options, "modulate",Color(Color.WHITE, 0.0), FADE_TIME)
+	tween.tween_callback(options.hide);
 	tween.play();
 	
 	
@@ -96,6 +102,8 @@ func _parce_action():
 	match action.to_upper():
 		"SLEEP":
 			pass
+		"MONITOR":
+			_trans_to_monitor();
 			
 	action = "";
 	_hide_anim()
@@ -109,3 +117,32 @@ func _on_show_confirm(text : String, new_action : String) -> void:
 
 func on_label_resized() -> void:
 	label.position.x = (1920/2) - (label.size.x / 2);
+	
+	
+func _fade_out():
+	var tween = create_tween();
+	tween.stop();
+	fade.show();
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 1.0), FADE_TIME)
+	tween.play();
+	
+	
+func _fade_in():
+	var tween = create_tween();
+	tween.stop();
+
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 0.0), FADE_TIME)
+	tween.tween_callback(fade.hide);
+	tween.play();
+	
+	
+	
+func _trans_to_monitor() -> void:
+	var tween = create_tween();
+	
+	tween.stop();
+	tween.tween_callback(_fade_out);
+	tween.tween_interval(FADE_TIME);
+	tween.tween_callback(monitor_camera.set_current.bind(true));
+	tween.tween_callback(_fade_in);
+	tween.play();

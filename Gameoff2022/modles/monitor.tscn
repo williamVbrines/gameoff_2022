@@ -10,7 +10,7 @@
 render_priority = 0
 shader = ExtResource("2_tlnha")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
-shader_parameter/str = 1.8
+shader_parameter/str = 300.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m1kbq"]
 render_priority = 0
