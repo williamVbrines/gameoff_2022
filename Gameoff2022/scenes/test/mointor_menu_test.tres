@@ -1,9 +1,0 @@
-[gd_resource type="VisualShader" format=3 uid="uid://chn5fikgfg51c"]
-
-[resource]
-code = "shader_type canvas_item;
-
-
-"
-mode = 1
-flags/light_only = false
