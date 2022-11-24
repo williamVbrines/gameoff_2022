@@ -2,7 +2,6 @@ extends Node
 
 signal start_exploration();
 
-
 #Dialog Combat signals##########################################################
 signal start_combat(camera : Camera3D);
 signal combat_state_changed(state : String);
@@ -49,3 +48,8 @@ signal room_hide_tooltip();
 signal room_show_confirm(text : String, action : String);
 signal room_hide_confirm();
 
+#Mouse##########################################################################
+signal hide_mosue();
+signal show_mosue();
+
+signal icon_pressed(action : String);

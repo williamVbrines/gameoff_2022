@@ -1,13 +1,14 @@
+Timer
+Control
+Label
+Button
+ColorRect
 CanvasLayer
 Node
-Control
-ColorRect
 CollisionShape3D
 Area3D
 RoomInteractable3D (room_interactable_3D.gd)
 Node3D
-Button
-Label
 RichTextLabel
 InteractableArea3D (interactableArea3D.gd)
 Camera3D
@@ -29,4 +30,3 @@ MenuButton
 StaticBody3D
 LineEdit
 InteractableArea3D (InteractableArea3D.gd)
-Sprite3D

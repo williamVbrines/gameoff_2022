@@ -1,18 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8afyqlu8x4m2"]
+[gd_scene load_steps=8 format=3 uid="uid://cp3nfl53wksws"]
 
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="1_xr4h5"]
 [ext_resource type="Script" path="res://scenes/canvas3D/canvas3D.gd" id="2_3gbrw"]
-[ext_resource type="PackedScene" uid="uid://dqacqb7mtsnrp" path="res://scenes/ui/loginScreen/login_screen.tscn" id="3_0x6ns"]
-[ext_resource type="Shader" path="res://shaders/mointor_effect.gdshader" id="4_l6aec"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6kwup"]
-shader = ExtResource("4_l6aec")
-shader_parameter/curve = 5.0
-shader_parameter/scanline_count = 86.0
-shader_parameter/scanline_opacity = 0.04
-shader_parameter/vignette_cutoff = 0.48
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.52
+[ext_resource type="PackedScene" uid="uid://io0qs0ny8h3q" path="res://scenes/ui/computer/computer.tscn" id="3_rkgx7"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_7bimk"]
 size = Vector2(0.68, 0.68)
@@ -44,13 +34,7 @@ render_target_update_mode = 4
 [node name="CanvasLayer" type="CanvasLayer" parent="Canvas3D/SubViewport"]
 layer = 2
 
-[node name="LoginScreen" parent="Canvas3D/SubViewport/CanvasLayer" instance=ExtResource("3_0x6ns")]
-
-[node name="ScreenEffect" type="ColorRect" parent="Canvas3D/SubViewport/CanvasLayer"]
-material = SubResource("ShaderMaterial_6kwup")
-offset_right = 1080.0
-offset_bottom = 1080.0
-mouse_filter = 2
+[node name="Computer" parent="Canvas3D/SubViewport/CanvasLayer" instance=ExtResource("3_rkgx7")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Canvas3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.087619)

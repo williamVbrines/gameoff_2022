@@ -1,3 +1,6 @@
+res://scenes/ui/computer/desktop/desktopIcon
+res://scenes/ui/computer/desktop
+res://scenes/ui/computer
 res://scenes/levels/room/roomTooltip
 res://scenes/ui/cluesMenu
 res://scenes/ui/clueSelectable
@@ -17,6 +20,3 @@ res://scenes/ui/loadoutMenu
 res://scenes/resourceManager
 res://scenes/levels
 res://scenes/resources/actions/items/clues
-res://scenes/resources/actions/items
-res://scenes/systemGlobals
-res://scenes/ui/combatActionSelection

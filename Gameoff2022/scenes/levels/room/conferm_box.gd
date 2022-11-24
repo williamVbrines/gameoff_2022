@@ -103,6 +103,7 @@ func _parce_action():
 		"SLEEP":
 			pass
 		"MONITOR":
+			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN;
 			_trans_to_monitor();
 			
 	action = "";

@@ -15,6 +15,7 @@ var last_mosue_pos2D = Vector2.ZERO;
 
 func _ready() -> void:
 	area_3d.mouse_entered.connect(_mouse_entered_area);
+	area_3d.mouse_exited.connect(_mouse_exited_area);
 	
 	for node in get_children():
 		if !(node in [viewport,mesh]):
@@ -27,8 +28,13 @@ func _ready() -> void:
 	
 func _mouse_entered_area():
 	is_mouse_inside = true;
+	EventManager.hide_mosue.emit();#TODO: Replace above with this line
 
 
+func _mouse_exited_area():
+	EventManager.show_mosue.emit()#TODO: Replace above with this line
+
+	
 func set_is_mouse_inside(val):
 	is_mouse_inside = val;
 
