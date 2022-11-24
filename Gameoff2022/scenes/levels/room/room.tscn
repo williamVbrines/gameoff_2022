@@ -1,6 +1,6 @@
-[gd_scene load_steps=48 format=3 uid="uid://bb43a0j8pld4e"]
+[gd_scene load_steps=49 format=3 uid="uid://bb43a0j8pld4e"]
 
-[ext_resource type="PackedScene" uid="uid://c5ocydj8v7ivw" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
+[ext_resource type="PackedScene" uid="uid://7molkd4islo1" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
 [ext_resource type="Script" path="res://scenes/levels/room/conferm_box.gd" id="2_its4j"]
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
 [ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
 [ext_resource type="PackedScene" uid="uid://dohk55w2v4jar" path="res://modles/desk.tscn" id="5_8jjll"]
+[ext_resource type="Script" path="res://scenes/levels/room/subtel_camera.gd" id="5_li5sl"]
 [ext_resource type="PackedScene" uid="uid://cnntxn1gqo2l5" path="res://modles/desk_chair.tscn" id="6_1pfs0"]
 [ext_resource type="PackedScene" uid="uid://di2yossccrpdk" path="res://modles/desk_paper.tscn" id="7_iycir"]
 [ext_resource type="PackedScene" uid="uid://f3olkhor585g" path="res://modles/dresser.tscn" id="8_fj1gn"]
@@ -318,9 +319,11 @@ environment = SubResource("34")
 [node name="RoomCamera" type="Camera3D" parent="Room3D"]
 transform = Transform3D(0.719468, 0.360127, -0.593864, 0.00521976, 0.852236, 0.523131, 0.694506, -0.379476, 0.611277, -13.3396, 9.00808, 16.2482)
 fov = 49.8757
+script = ExtResource("5_li5sl")
 
 [node name="MonitorCamera" type="Camera3D" parent="Room3D"]
 transform = Transform3D(0.901077, 0, 0.433659, 0, 1, 0, -0.433659, 0, 0.901077, 5.20867, -0.906738, -3.76325)
+script = ExtResource("5_li5sl")
 
 [node name="Room" type="Node3D" parent="Room3D"]
 

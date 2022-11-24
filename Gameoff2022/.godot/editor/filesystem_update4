@@ -6,3 +6,7 @@ res://shaders/artshader_noisetexture.tres
 res://shaders/mointor_effect.gdshader
 res://scenes/main/main.tscn
 res://scenes/levels/room/room.tscn
+res://scenes/levels/room/roomTooltip/tooltip.tscn
+res://scenes/player/player.tscn
+res://scenes/levels/room/subtel_camera.gd
+res://scenes/player/player.gd

@@ -118,7 +118,7 @@ func camera_event(event : InputEvent) -> void:
 			
 			boomarm.rotation.y -= (get_viewport().get_mouse_position() - drag_orgin ).x / 100;
 			boomarm.rotation.x -= (get_viewport().get_mouse_position() - drag_orgin ).y / 100;
-			drag_orgin = get_viewport().get_mouse_position();
+		drag_orgin = get_viewport().get_mouse_position();
 	
 	
 func look_event(event : InputEvent) -> void:

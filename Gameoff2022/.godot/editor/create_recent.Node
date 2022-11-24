@@ -30,4 +30,3 @@ StaticBody3D
 LineEdit
 InteractableArea3D (InteractableArea3D.gd)
 Sprite3D
-InteractableArea3D (InteractablesTest.gd)

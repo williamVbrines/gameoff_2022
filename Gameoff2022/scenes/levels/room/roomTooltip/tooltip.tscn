@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5ocydj8v7ivw"]
+[gd_scene load_steps=3 format=3 uid="uid://7molkd4islo1"]
 
-[ext_resource type="Script" path="res://scenes/levels/room/tooltip.gd" id="1_y21un"]
+[ext_resource type="Script" path="res://scenes/levels/room/roomTooltip/tooltip.gd" id="1_y21un"]
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="2_o02aj"]
 
 [node name="Tooltip" type="Control"]
@@ -10,6 +10,7 @@ mouse_filter = 2
 script = ExtResource("1_y21un")
 
 [node name="RichTextLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = -99.0
 offset_top = 64.0
 offset_right = 113.0
@@ -22,6 +23,7 @@ vertical_alignment = 1
 modulate = Color(1, 1, 1, 0.968627)
 show_behind_parent = true
 texture_filter = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
