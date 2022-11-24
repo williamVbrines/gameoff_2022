@@ -4,23 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://rk7yml6iml3r" path="res://textures/ui/Login Screen/Login_SiriusLogo.png" id="2_wp3oy"]
 [ext_resource type="FontFile" uid="uid://wqifgih3iu3c" path="res://textures/ui/Login Screen/HelveticaNeue.ttc" id="3_qxtym"]
 [ext_resource type="Texture2D" uid="uid://dvvdd1hj8ht7h" path="res://textures/ui/Login Screen/Login_TextInput.png" id="4_1m6h0"]
-[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="5_54hx1"]
+[ext_resource type="FontFile" uid="uid://ck6aeikl4kkwa" path="res://textures/ui/Font/OpenSans-ExtraBold.ttf" id="5_faayd"]
 [ext_resource type="Texture2D" uid="uid://cqhl5g0kjkq10" path="res://textures/ui/Login Screen/Login_StartButton.png" id="6_qm81n"]
 
 [node name="LoginScreen" type="Control"]
-custom_minimum_size = Vector2i(1080, 1080)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -840.0
+anchors_preset = 0
 
 [node name="Background" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1080.0
+offset_bottom = 1080.0
 color = Color(0.0117647, 0.133333, 0.219608, 1)
 
 [node name="PanelBackground" type="NinePatchRect" parent="Background"]
@@ -69,7 +62,7 @@ offset_top = -38.0
 offset_right = 98.0
 offset_bottom = -4.0
 theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_fonts/font = ExtResource("5_faayd")
 theme_override_font_sizes/font_size = 22
 text = "Password"
 
@@ -80,7 +73,7 @@ offset_top = 17.0
 offset_right = 302.0
 offset_bottom = 54.0
 theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_fonts/font = ExtResource("5_faayd")
 theme_override_font_sizes/font_size = 24
 text = "**********************"
 
@@ -98,7 +91,7 @@ offset_top = -38.0
 offset_right = 56.0
 offset_bottom = -4.0
 theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_fonts/font = ExtResource("5_faayd")
 theme_override_font_sizes/font_size = 22
 text = "Email"
 
@@ -109,7 +102,7 @@ offset_top = 16.0
 offset_right = 310.0
 offset_bottom = 53.0
 theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
-theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_fonts/font = ExtResource("5_faayd")
 theme_override_font_sizes/font_size = 24
 text = "user@siriussoftworks.com"
 
@@ -125,6 +118,6 @@ offset_left = 167.0
 offset_top = 18.0
 offset_right = 234.0
 offset_bottom = 63.0
-theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_fonts/font = ExtResource("5_faayd")
 theme_override_font_sizes/font_size = 30
 text = "Start"

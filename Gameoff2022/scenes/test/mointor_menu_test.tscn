@@ -1,17 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckxpw75hl3v3f"]
+[gd_scene load_steps=10 format=3 uid="uid://ckxpw75hl3v3f"]
 
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="1_mktg4"]
 [ext_resource type="Script" path="res://scenes/canvas3D/canvas3D.gd" id="2_08lh4"]
 [ext_resource type="Shader" path="res://scenes/test/mointor_menu_test.gdshader" id="3_xknom"]
+[ext_resource type="PackedScene" uid="uid://dqacqb7mtsnrp" path="res://scenes/ui/loginScreen/login_screen.tscn" id="4_13abo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xa6t8"]
 shader = ExtResource("3_xknom")
-shader_parameter/scanline_count = 0.0
-shader_parameter/vignette_intensity = 10.0
-shader_parameter/vignette_opacity = 0.0
+shader_parameter/curve = 5.0
+shader_parameter/scanline_count = 67.29
+shader_parameter/scanline_opacity = 0.047
+shader_parameter/vignette_cutoff = 0.0
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.728
 
 [sub_resource type="QuadMesh" id="QuadMesh_7bimk"]
-size = Vector2(0.65, 0.65)
+size = Vector2(0.68, 0.68)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_3f17l"]
 viewport_path = NodePath("Canvas3D/SubViewport")
@@ -31,31 +35,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.505584)
 [node name="Canvas3D" type="Node3D" parent="."]
 script = ExtResource("2_08lh4")
 
-[node name="ColorRect" type="ColorRect" parent="Canvas3D"]
-custom_minimum_size = Vector2i(500, 500)
-offset_right = 500.0
-offset_bottom = 500.0
-color = Color(0.0196078, 0.827451, 0.827451, 1)
-
-[node name="Button" type="Button" parent="Canvas3D/ColorRect"]
-layout_mode = 0
-offset_left = 125.0
-offset_top = 150.0
-offset_right = 366.0
-offset_bottom = 348.0
-text = "Pressme"
-
-[node name="ColorRect2" type="ColorRect" parent="Canvas3D"]
-material = SubResource("ShaderMaterial_xa6t8")
-offset_right = 500.0
-offset_bottom = 500.0
-mouse_filter = 2
-
 [node name="SubViewport" type="SubViewport" parent="Canvas3D"]
 disable_3d = true
-size = Vector2i(500, 500)
-size_2d_override = Vector2i(500, 500)
+size = Vector2i(1080, 1080)
+size_2d_override = Vector2i(1080, 1080)
 render_target_update_mode = 4
+
+[node name="LoginScreen" parent="Canvas3D/SubViewport" instance=ExtResource("4_13abo")]
+
+[node name="ScreenEffect" type="ColorRect" parent="Canvas3D/SubViewport"]
+material = SubResource("ShaderMaterial_xa6t8")
+offset_right = 1080.0
+offset_bottom = 1080.0
+mouse_filter = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Canvas3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.087619)
@@ -73,10 +65,11 @@ shape = SubResource("BoxShape3D_8tc77")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.644085)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.331209)
+visible = false
 light_color = Color(0.0196078, 0.827451, 0.827451, 1)
-light_energy = 1.1
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0

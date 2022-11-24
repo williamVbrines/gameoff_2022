@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ocydj8v7ivw"]
+
+[ext_resource type="Script" path="res://scenes/levels/room/tooltip.gd" id="1_y21un"]
+[ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="2_o02aj"]
+
+[node name="Tooltip" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_y21un")
+
+[node name="RichTextLabel" type="Label" parent="."]
+offset_left = -99.0
+offset_top = 64.0
+offset_right = 113.0
+offset_bottom = 92.0
+text = "Sleep for the rest of the day"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BedroomTooltipBackground" type="NinePatchRect" parent="RichTextLabel"]
+modulate = Color(1, 1, 1, 0.968627)
+show_behind_parent = true
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 20.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o02aj")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17

@@ -1,3 +1,5 @@
+CanvasLayer
+Node
 Control
 ColorRect
 CollisionShape3D
@@ -7,7 +9,6 @@ Node3D
 Button
 Label
 RichTextLabel
-Node
 InteractableArea3D (interactableArea3D.gd)
 Camera3D
 VBoxContainer

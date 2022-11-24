@@ -2,7 +2,7 @@ extends Control
 
 @onready var label: Label = $RichTextLabel
 
-var fallow : bool = false;
+var fallow : bool = true;
 const FADE_TIME : float = 0.2;
 
 func _ready() -> void:
@@ -24,7 +24,6 @@ func _on_show_tooltip(text : String) -> void:
 	label.set_text("");
 	label.size.x = 1;
 	label.set_text(text);
-	call_deferred("on_label_resized" )
 	fallow = true;
 	_show_anim();
 	
@@ -47,7 +46,7 @@ func _show_anim() -> void:
 	tween.stop();
 	
 	tween.tween_property(self, "modulate",Color(Color.WHITE, 1.0), FADE_TIME);
-	
+	tween.tween_callback(on_label_resized);
 	tween.play();
 	
 	
@@ -56,7 +55,7 @@ func _hide_anim() -> void:
 	tween.stop();
 	
 	tween.tween_property(self, "modulate",Color(Color.WHITE, 0.0), FADE_TIME)
-
+	
 	tween.play();
 	
 	

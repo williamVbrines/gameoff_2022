@@ -1,7 +1,13 @@
-res://modles/monitor.tscn
+res://scenes/main/main.tscn
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://scenes/resources/npc/test_npc_resource.tres
 res://shaders/artshader_noisetexture.tres
+res://modles/monitor.tscn
 res://scenes/levels/room/room.tscn
-res://scenes/main/main.tscn
+res://scenes/ui/loginScreen/login_screen.tscn
+res://scenes/test/mointor_menu_test.tscn
+res://scenes/canvas3D/canvas3D.gd
+res://scenes/test/mointor_menu_test.gdshader
 res://scenes/levels/room/conferm_box.gd
+res://scenes/levels/room/tooltip.gd
+res://scenes/levels/room/roomTooltip/tooltip.tscn

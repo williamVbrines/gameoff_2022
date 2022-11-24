@@ -1,10 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://mftqjfa6h1jw"]
+[gd_scene load_steps=48 format=3 uid="uid://mftqjfa6h1jw"]
 
+[ext_resource type="PackedScene" uid="uid://c5ocydj8v7ivw" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
 [ext_resource type="Script" path="res://scenes/levels/room/conferm_box.gd" id="2_its4j"]
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
 [ext_resource type="PackedScene" uid="uid://csl5u8uumwyx2" path="res://modles/book.tscn" id="3_7uc24"]
-[ext_resource type="Script" path="res://scenes/levels/room/tooltip.gd" id="3_gugj3"]
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
 [ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
 [ext_resource type="PackedScene" uid="uid://dohk55w2v4jar" path="res://modles/desk.tscn" id="5_8jjll"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_ao8j1"]
 [ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="14_6xceb"]
 [ext_resource type="Texture2D" uid="uid://csughb021ergy" path="res://textures/RugforRoomTexture.png" id="15_gm4mk"]
+[ext_resource type="PackedScene" uid="uid://ckxpw75hl3v3f" path="res://scenes/test/mointor_menu_test.tscn" id="16_drgw7"]
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="16_xh2ma"]
 [ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_xi7mj"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="20_hik4s"]
@@ -195,53 +196,12 @@ collision_mode = 2
 
 [node name="Room" type="Node"]
 
-[node name="GUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+[node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="Tooltip" type="Control" parent="GUI"]
-layout_mode = 1
-anchors_preset = 0
-mouse_filter = 2
-script = ExtResource("3_gugj3")
-
-[node name="RichTextLabel" type="Label" parent="GUI/Tooltip"]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 66.0
-offset_right = 340.0
-offset_bottom = 94.0
-text = "Sleep for the rest of the day"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BedroomTooltipBackground" type="NinePatchRect" parent="GUI/Tooltip/RichTextLabel"]
-modulate = Color(1, 1, 1, 0.968627)
-show_behind_parent = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_3ixq7")
-patch_margin_left = 18
-patch_margin_top = 18
-patch_margin_right = 17
-patch_margin_bottom = 17
+[node name="Tooltip" parent="GUI" instance=ExtResource("1_jjkga")]
 
 [node name="ConfirmBox" type="Control" parent="GUI"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -254,6 +214,7 @@ normal_color = Color(1, 1, 1, 0.968627)
 pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
 
 [node name="Options" type="Control" parent="GUI/ConfirmBox"]
+layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -298,7 +259,7 @@ grow_vertical = 2
 focus_mode = 0
 flat = true
 
-[node name="CancelTexy" type="Label" parent="GUI/ConfirmBox/Options"]
+[node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
 layout_mode = 0
 offset_left = 918.0
 offset_top = 590.0
@@ -308,7 +269,7 @@ text = "Cancel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/CancelTexy"]
+[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/CancelText"]
 modulate = Color(1, 1, 1, 0.968627)
 show_behind_parent = true
 texture_filter = 1
@@ -328,7 +289,7 @@ patch_margin_top = 18
 patch_margin_right = 17
 patch_margin_bottom = 17
 
-[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelTexy/Background"]
+[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -641,8 +602,12 @@ light_energy = 2.0
 omni_range = 1.25447
 
 [node name="MonitorMesh" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("16_xh2ma")]
-transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.423819)
+transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.79017, 2.3552, -0.442788)
+visible = false
 skeleton = NodePath("../../..")
+
+[node name="Monitor20" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("16_drgw7")]
+transform = Transform3D(0.892476, 0, 0.451096, 0, 1, 0, -0.451096, 0, 0.892476, -0.576554, 2.3552, 0.0400443)
 
 [node name="stickynote" parent="Room3D/Room2/DeskGroup/Monitor" instance=ExtResource("24_j2n3a")]
 transform = Transform3D(-0.449809, -0.0797052, 0.889561, -0.18058, 0.983555, -0.00318352, -0.874679, -0.162069, -0.456805, -0.24116, 2.73596, -0.122927)

@@ -1,3 +1,4 @@
+res://scenes/levels/room/roomTooltip
 res://scenes/ui/cluesMenu
 res://scenes/ui/clueSelectable
 res://scenes/ui/stressIndicator
@@ -19,4 +20,3 @@ res://scenes/resources/actions/items/clues
 res://scenes/resources/actions/items
 res://scenes/systemGlobals
 res://scenes/ui/combatActionSelection
-res://scenes/ui/combateDialogDisplay

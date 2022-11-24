@@ -4,8 +4,8 @@ extends Control
 @onready var label_button: Button = $Options/Label/Background/Button
 @onready var label_background: NinePatchRect = $Options/Label/Background
 
-@onready var cancel_button: Button = $Options/CancelTexy/Background/Button
-@onready var cancel_background: NinePatchRect = $Options/CancelTexy/Background
+@onready var cancel_button: Button = $Options/CancelText/Background/Button
+@onready var cancel_background: NinePatchRect = $Options/CancelText/Background
 
 @onready var fade: ColorRect = $Fade
 
@@ -116,7 +116,7 @@ func _on_show_confirm(text : String, new_action : String) -> void:
 	_show_anim();
 
 func on_label_resized() -> void:
-	label.position.x = (1920/2) - (label.size.x / 2);
+	label.position.x = (1920/2.0) - (label.size.x / 2.0);
 	
 	
 func _fade_out():
