@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqacqb7mtsnrp"]
+
+[ext_resource type="Texture2D" uid="uid://bnfluww2tew1w" path="res://textures/ui/Login Screen/Login_CardBackground.png" id="1_omsiy"]
+[ext_resource type="Texture2D" uid="uid://rk7yml6iml3r" path="res://textures/ui/Login Screen/Login_SiriusLogo.png" id="2_wp3oy"]
+[ext_resource type="FontFile" uid="uid://wqifgih3iu3c" path="res://textures/ui/Login Screen/HelveticaNeue.ttc" id="3_qxtym"]
+[ext_resource type="Texture2D" uid="uid://dvvdd1hj8ht7h" path="res://textures/ui/Login Screen/Login_TextInput.png" id="4_1m6h0"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="5_54hx1"]
+[ext_resource type="Texture2D" uid="uid://cqhl5g0kjkq10" path="res://textures/ui/Login Screen/Login_StartButton.png" id="6_qm81n"]
+
+[node name="LoginScreen" type="Control"]
+custom_minimum_size = Vector2i(1080, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -840.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0117647, 0.133333, 0.219608, 1)
+
+[node name="PanelBackground" type="NinePatchRect" parent="Background"]
+texture_filter = 1
+offset_left = 276.0
+offset_top = 224.0
+offset_right = 804.0
+offset_bottom = 850.0
+texture = ExtResource("1_omsiy")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="LoginSiriusLogo" type="TextureRect" parent="Background"]
+texture_filter = 1
+offset_left = 340.0
+offset_top = 288.0
+offset_right = 424.0
+offset_bottom = 372.0
+texture = ExtResource("2_wp3oy")
+
+[node name="Title" type="Label" parent="Background"]
+offset_left = 440.0
+offset_top = 294.0
+offset_right = 584.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qxtym")
+theme_override_font_sizes/font_size = 32
+text = "Sirius
+Softworks"
+
+[node name="LoginTextInput" type="TextureRect" parent="Background"]
+texture_filter = 1
+offset_left = 341.0
+offset_top = 577.0
+offset_right = 741.0
+offset_bottom = 641.0
+texture = ExtResource("4_1m6h0")
+
+[node name="Label1" type="Label" parent="Background/LoginTextInput"]
+texture_filter = 1
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 98.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
+theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_font_sizes/font_size = 22
+text = "Password"
+
+[node name="Label2" type="Label" parent="Background/LoginTextInput"]
+texture_filter = 1
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 302.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
+theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_font_sizes/font_size = 24
+text = "**********************"
+
+[node name="LoginTextInput2" type="TextureRect" parent="Background"]
+texture_filter = 1
+offset_left = 340.0
+offset_top = 442.0
+offset_right = 740.0
+offset_bottom = 506.0
+texture = ExtResource("4_1m6h0")
+
+[node name="Label" type="Label" parent="Background/LoginTextInput2"]
+texture_filter = 1
+offset_top = -38.0
+offset_right = 56.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
+theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_font_sizes/font_size = 22
+text = "Email"
+
+[node name="Label3" type="Label" parent="Background/LoginTextInput2"]
+texture_filter = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 310.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.305882, 0.305882, 0.305882, 1)
+theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_font_sizes/font_size = 24
+text = "user@siriussoftworks.com"
+
+[node name="LoginStartButton" type="TextureButton" parent="."]
+offset_left = 340.0
+offset_top = 706.0
+offset_right = 740.0
+offset_bottom = 786.0
+texture_normal = ExtResource("6_qm81n")
+
+[node name="Label" type="Label" parent="LoginStartButton"]
+offset_left = 167.0
+offset_top = 18.0
+offset_right = 234.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("5_54hx1")
+theme_override_font_sizes/font_size = 30
+text = "Start"
