@@ -1,6 +1,9 @@
+SpringArm3D
+Camera3D
+XRCamera3D
+Label
 Timer
 Control
-Label
 Button
 ColorRect
 CanvasLayer
@@ -11,7 +14,6 @@ RoomInteractable3D (room_interactable_3D.gd)
 Node3D
 RichTextLabel
 InteractableArea3D (interactableArea3D.gd)
-Camera3D
 VBoxContainer
 VoiceBoxPlayer (voice_box.gd)
 TextureButton
@@ -29,4 +31,3 @@ PopupMenu
 MenuButton
 StaticBody3D
 LineEdit
-InteractableArea3D (InteractableArea3D.gd)

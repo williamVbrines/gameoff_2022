@@ -1,6 +1,7 @@
 extends Control
 
 @onready var screen_effect: ColorRect = $ScreenEffect
+@onready var login_screen: Control = $LoginScreen
 
 func _ready() -> void:
 	_make_connections();
@@ -8,7 +9,7 @@ func _ready() -> void:
 	
 func _make_connections() -> void:
 	EventManager.icon_pressed.connect(_on_icon_pressed);
-	
+	login_screen.start_pressed.connect(_on_start_pressed)
 	
 	
 func _on_icon_pressed(action : String) -> void:
@@ -30,5 +31,6 @@ func _play_quit_animation() -> void:
 	tween.play();
 	
 	
-	
+func _on_start_pressed() -> void:
+	print("hello")
 	
