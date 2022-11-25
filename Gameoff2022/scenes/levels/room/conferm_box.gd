@@ -19,6 +19,7 @@ extends Control
 
 var action : String = "";
 const FADE_TIME : float = 0.5;
+var in_use : bool = false;
 
 func _ready() -> void:
 	_make_connections();
@@ -94,8 +95,11 @@ func _hide_anim() -> void:
 	
 	tween.tween_property(options, "modulate",Color(Color.WHITE, 0.0), FADE_TIME)
 	tween.tween_callback(options.hide);
+	tween.tween_callback(set_in_use.bind(false));
 	tween.play();
 	
+func set_in_use(val : bool) ->void:
+	in_use = val;
 	
 func _parce_action():
 	
@@ -109,12 +113,15 @@ func _parce_action():
 	action = "";
 	_hide_anim()
 	
+	
 func _on_show_confirm(text : String, new_action : String) -> void:
-	action = new_action;
-	label.set_text("");
-	label.size.x = 1;
-	label.set_text(text);
-	_show_anim();
+	if in_use == false:
+		action = new_action;
+		label.set_text("");
+		label.size.x = 1;
+		label.set_text(text);
+		_show_anim();
+		in_use = true;
 
 func on_label_resized() -> void:
 	label.position.x = (1920/2.0) - (label.size.x / 2.0);
@@ -137,7 +144,6 @@ func _fade_in():
 	tween.play();
 	
 	
-	
 func _trans_to_monitor() -> void:
 	var tween = create_tween();
 	
@@ -145,5 +151,8 @@ func _trans_to_monitor() -> void:
 	tween.tween_callback(_fade_out);
 	tween.tween_interval(FADE_TIME);
 	tween.tween_callback(monitor_camera.set_current.bind(true));
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "moved_to_monitor"));
 	tween.tween_callback(_fade_in);
+	tween.tween_callback(set_in_use.bind(false));
 	tween.play();
+	

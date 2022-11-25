@@ -51,7 +51,6 @@ func _on_button_mouse_exited() -> void:
 func _on_button_pressed() -> void:
 	button.disabled = true;
 	_start_loading_anim();
-	start_pressed.emit();
 	
 	
 func _start_loading_anim() -> void:
@@ -119,5 +118,5 @@ func _close_anim() -> void:
 	tween.tween_interval(0.1);
 	tween.tween_callback(set_modulate.bind(Color(Color.WHITE,0.0)))
 	tween.tween_callback(hide);
-	
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "monitor_startup_complete"));
 	tween.play();

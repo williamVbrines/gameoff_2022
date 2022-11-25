@@ -53,6 +53,9 @@ signal room_hide_tooltip();
 signal room_show_confirm(text : String, action : String);
 signal room_hide_confirm();
 
+signal monitor_startup_complete();
+signal moved_to_monitor();
+
 #Mouse##########################################################################
 signal hide_mosue();
 signal show_mosue();

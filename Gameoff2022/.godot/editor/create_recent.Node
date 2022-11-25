@@ -1,11 +1,11 @@
 ColorRect
+Button
 Timer
 SpringArm3D
 Camera3D
 XRCamera3D
 Label
 Control
-Button
 CanvasLayer
 Node
 CollisionShape3D
