@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0o64ahibmher"]
+
+[ext_resource type="Script" path="res://scenes/sceneChanger/scene_changer.gd" id="1_ex7cw"]
+[ext_resource type="Shader" path="res://scenes/sceneChanger/transitions.gdshader" id="2_00xr1"]
+
+[sub_resource type="Gradient" id="Gradient_8qj5h"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5l421"]
+gradient = SubResource("Gradient_8qj5h")
+fill_from = Vector2(1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_164m8"]
+shader = ExtResource("2_00xr1")
+shader_parameter/cuttoff = 1.0
+shader_parameter/filter = SubResource("GradientTexture2D_5l421")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ex7cw")
+
+[node name="BG" type="ColorRect" parent="."]
+process_mode = 3
+material = SubResource("ShaderMaterial_164m8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

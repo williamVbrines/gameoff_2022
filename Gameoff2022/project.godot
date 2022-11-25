@@ -115,6 +115,7 @@ EventManager="*res://scenes/eventManager/event_manager.gd"
 SystemGlobals="*res://scenes/systemGlobals/system_globals.gd"
 ResourceManager="*res://scenes/resourceManager/resource_manager.gd"
 SystemSave="*res://scenes/systemSave/system_save.gd"
+SceneChanger="*res://scenes/sceneChanger/SceneChanger.tscn"
 
 [display]
 

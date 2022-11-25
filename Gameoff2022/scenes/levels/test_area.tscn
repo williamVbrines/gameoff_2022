@@ -1,7 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://c25dap1wya5s2"]
+[gd_scene load_steps=36 format=3 uid="uid://c25dap1wya5s2"]
 
+[ext_resource type="PackedScene" uid="uid://iy86trujqevt" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="1_m0888"]
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_oa2cw"]
+[ext_resource type="PackedScene" uid="uid://bhcfyawh66n7t" path="res://scenes/ui/explorationHUD/exploration_hud.tscn" id="2_016c5"]
 [ext_resource type="Texture2D" uid="uid://cisgxwxj5w5h4" path="res://textures/kenney_prototypetextures/PNG/Dark/texture_01.png" id="2_iukt8"]
+[ext_resource type="PackedScene" uid="uid://ga2iolih30e1" path="res://scenes/ui/dialogWindow/dialog_window.tscn" id="3_gnw8r"]
 [ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="3_j736l"]
 [ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="4_s40om"]
 [ext_resource type="Resource" uid="uid://cc8sl1bonoce0" path="res://scenes/resources/npc/test_npc_resource.tres" id="5_om3ok"]
@@ -9,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="7_krp7g"]
 [ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="8_hfxv5"]
 [ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="9_f6stk"]
+[ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="13_0fte5"]
+[ext_resource type="PackedScene" uid="uid://w8grd7k40rhy" path="res://scenes/npc/npcDialogTest/dialog_test_npc.tscn" id="14_cpcfw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6tvoo"]
 size = Vector3(3, 2, 1)
@@ -80,133 +85,149 @@ height = 0.001
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15tw"]
 albedo_texture = ExtResource("9_f6stk")
 
-[node name="TestArea" type="Node3D"]
+[node name="TestArea" type="Node"]
 
-[node name="Wall" type="MeshInstance3D" parent="."]
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="CombatScreen" parent="GUI" instance=ExtResource("1_m0888")]
+
+[node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_016c5")]
+
+[node name="DialogWindow" parent="GUI" instance=ExtResource("3_gnw8r")]
+visible = false
+
+[node name="TestArea" type="Node3D" parent="."]
+
+[node name="Wall" type="MeshInstance3D" parent="TestArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.311254, 1, -10.8739)
 mesh = SubResource("BoxMesh_6tvoo")
 surface_material_override/0 = SubResource("StandardMaterial3D_1ierd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Wall"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Wall/StaticBody3D"]
 shape = SubResource("BoxShape3D_2rdxs")
 
-[node name="Ground" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="TestArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh = SubResource("BoxMesh_xau24")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_1l11e")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Ground"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_411px")
 
-[node name="Inclines" type="Node3D" parent="."]
+[node name="Inclines" type="Node3D" parent="TestArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97325, -0.00337744, 2.34157)
 metadata/_edit_group_ = true
 
-[node name="60_Incline" type="MeshInstance3D" parent="Inclines"]
+[node name="60_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, 3.444, 0.685, -5)
 mesh = SubResource("BoxMesh_5oor7")
 surface_material_override/0 = SubResource("StandardMaterial3D_un1ec")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Inclines/60_Incline"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/60_Incline"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Inclines/60_Incline/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/60_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="45_Incline" type="MeshInstance3D" parent="Inclines"]
+[node name="45_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 3.444, 0.685, -3)
 mesh = SubResource("BoxMesh_5oor7")
 surface_material_override/0 = SubResource("StandardMaterial3D_un1ec")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Inclines/45_Incline"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/45_Incline"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Inclines/45_Incline/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/45_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="30_Incline" type="MeshInstance3D" parent="Inclines"]
+[node name="30_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 3.444, 0.284, -1)
 mesh = SubResource("BoxMesh_5oor7")
 surface_material_override/0 = SubResource("StandardMaterial3D_un1ec")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Inclines/30_Incline"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/30_Incline"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Inclines/30_Incline/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/30_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="20_Incline" type="MeshInstance3D" parent="Inclines"]
+[node name="20_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 3.444, -0.027, 1)
 mesh = SubResource("BoxMesh_5oor7")
 surface_material_override/0 = SubResource("StandardMaterial3D_un1ec")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Inclines/20_Incline"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/20_Incline"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Inclines/20_Incline/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/20_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="10_Incline" type="MeshInstance3D" parent="Inclines"]
+[node name="10_Incline" type="MeshInstance3D" parent="TestArea/Inclines"]
 transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 3.444, -0.252, 3)
 mesh = SubResource("BoxMesh_5oor7")
 surface_material_override/0 = SubResource("StandardMaterial3D_un1ec")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Inclines/10_Incline"]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestArea/Inclines/10_Incline"]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Inclines/10_Incline/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/Inclines/10_Incline/StaticBody3D"]
 shape = SubResource("BoxShape3D_f6wxw")
 
-[node name="ScreenFrame" type="Node3D" parent="."]
+[node name="ScreenFrame" type="Node3D" parent="TestArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.323954, 1.60488, -10.3513)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ScreenFrame"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505156, 0, 0.0260954)
 mesh = SubResource("BoxMesh_ubijr")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="ScreenFrame"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501145, 0, 0.0336633)
 mesh = SubResource("BoxMesh_vsuqc")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="ScreenFrame"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000521407, -0.318482, 0.0299761)
 mesh = SubResource("BoxMesh_04hax")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="ScreenFrame"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="TestArea/ScreenFrame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00850236, 0.318214, 0.0293298)
 mesh = SubResource("BoxMesh_inp17")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_52l4d")
 
-[node name="MainMenu" parent="ScreenFrame" instance=ExtResource("3_j736l")]
+[node name="MainMenu" parent="TestArea/ScreenFrame" instance=ExtResource("3_j736l")]
 visible = false
 
-[node name="NPC" type="Node3D" parent="."]
+[node name="NPC" type="Node3D" parent="TestArea"]
 process_mode = 1
 transform = Transform3D(0.887815, 0, 0.4602, 0, 1, 0, -0.4602, 0, 0.887815, -3.86354, 0, 0.020031)
 script = ExtResource("4_s40om")
@@ -215,7 +236,7 @@ npc_mesh = NodePath("NpcMesh")
 interactable_area = NodePath("InteractableArea3D")
 camera = NodePath("Camera")
 
-[node name="InteractableArea3D" type="Area3D" parent="NPC"]
+[node name="InteractableArea3D" type="Area3D" parent="TestArea/NPC"]
 process_mode = 1
 process_priority = 1
 collision_layer = 4
@@ -223,33 +244,39 @@ collision_mask = 5
 script = ExtResource("6_q4npx")
 detection_groups = ["PickupPointer"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC/InteractableArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea/NPC/InteractableArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ihbgs")
 
-[node name="NpcMesh" type="MeshInstance3D" parent="NPC"]
+[node name="NpcMesh" type="MeshInstance3D" parent="TestArea/NPC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_epeb6")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_aqb8a")
 
-[node name="PlayerPose" type="Node3D" parent="NPC"]
+[node name="PlayerPose" type="Node3D" parent="TestArea/NPC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.13414)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="NPC/PlayerPose"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="TestArea/NPC/PlayerPose"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_epeb6")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_n1mwx")
 
-[node name="PointMesh" type="MeshInstance3D" parent="NPC/PlayerPose"]
+[node name="PointMesh" type="MeshInstance3D" parent="TestArea/NPC/PlayerPose"]
 mesh = SubResource("CylinderMesh_2phym")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_u15tw")
 
-[node name="Camera" type="Camera3D" parent="NPC"]
+[node name="Camera" type="Camera3D" parent="TestArea/NPC"]
 transform = Transform3D(0.370541, -0.579343, 0.72599, 2.51807e-08, 0.781629, 0.623744, -0.928816, -0.231123, 0.289626, 1.5214, 3.13559, 2.35337)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="TestArea"]
 transform = Transform3D(1, 0, 0, 0, 0.607001, 0.794701, 0, -0.794701, 0.607001, 0, 10.0199, 0)
 shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("13_0fte5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97967, 0.0439042, 5.28352)
+
+[node name="DialogTestNPC" parent="." instance=ExtResource("14_cpcfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12634, 0, 4.19584)

@@ -1,13 +1,13 @@
+Label
 ColorRect
+Control
+Node
+CanvasLayer
 Button
 Timer
 SpringArm3D
 Camera3D
 XRCamera3D
-Label
-Control
-CanvasLayer
-Node
 CollisionShape3D
 Area3D
 RoomInteractable3D (room_interactable_3D.gd)
