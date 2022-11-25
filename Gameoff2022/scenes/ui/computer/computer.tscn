@@ -28,7 +28,6 @@ mouse_filter = 2
 script = ExtResource("1_c8i4b")
 
 [node name="Desktop" parent="." instance=ExtResource("1_6q1ss")]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,11 +1,11 @@
+ColorRect
+Timer
 SpringArm3D
 Camera3D
 XRCamera3D
 Label
-Timer
 Control
 Button
-ColorRect
 CanvasLayer
 Node
 CollisionShape3D
@@ -30,4 +30,3 @@ Panel
 PopupMenu
 MenuButton
 StaticBody3D
-LineEdit

@@ -28,8 +28,13 @@ signal enemy_portrait_changed(tex : Texture);
 
 #Saveing signals################################################################
 signal store_data();#Tells the system to store all its data, perparinging it to be saved
-signal save_data();#Tells the system to save all its data
-signal load_data(data : Dictionary);
+signal load_data(data : Dictionary);#Tells the system to pull all its data that it needs from data
+
+signal save_file_data();
+signal load_file_data();
+
+signal loading_complete();
+signal saving_complete();
 
 #Dialog Window signals#################################################################
 signal start_dialog(id : String);

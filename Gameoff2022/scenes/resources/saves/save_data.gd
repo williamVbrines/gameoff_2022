@@ -20,7 +20,7 @@ func _gather_data() -> void:
 
 func laod_data() -> void:
 	if str(data).hash() == data_hash:
-		user_message == "This is a normal file";
+		user_message = "This is a normal file";
 		EventManager.load_data.emit(data);
 		return;
 		
