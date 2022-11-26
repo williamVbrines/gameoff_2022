@@ -1,15 +1,2 @@
-res://scenes/main/main.tscn
-res://scenes/ui/dialogWindow/dialog_window.gd
-res://scenes/resources/npc/test_npc_resource.tres
-res://shaders/artshader_noisetexture.tres
-res://scenes/systemSave/system_save.gd
 res://scenes/ui/computer/computer.tscn
-res://scenes/ui/computer/desktop/desktop.tscn
-res://scenes/ui/computer/loginScreen/login_screen.tscn
-res://scenes/levels/test_area.tscn
-res://scenes/ui/explorationHUD/exploration_hud.tscn
-res://scenes/levels/room/room.tscn
-res://scenes/ui/mouse.tscn
-res://scenes/ui/pauseMenu/pause_menu.tscn
-res://scenes/resources/saves/save_data.gd
-res://scenes/systemGlobals/system_globals.gd
+res://scenes/ui/computer/computer.gd

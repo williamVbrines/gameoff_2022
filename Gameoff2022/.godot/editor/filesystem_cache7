@@ -1,10 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1669433103
+::res://::1669434281
 export_presets.cfg::TextFile::-1::1668936590::0::1::::<><>::
 icon.svg::CompressedTexture2D::4080943282524572270::1668221551::1668221551::1::::<><>::
 ::res://audio/::1669432988
 ::res://audio/music/::1669433005
-::res://audio/music/Apt Room Music_Background/::1669432994
+::res://audio/music/Apt Room Music_Background/::1669433111
 Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::5298152473546692801::1669432994::1669433111::1::::<><>::
 Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::4111625107234714650::1669432994::1669433111::1::::<><>::
 Sad Apt LoFi demo.mp3::AudioStreamMP3::6868124180018637691::1669432994::1669433111::1::::<><>::
@@ -23,62 +23,62 @@ Inkeeper NEU 9.mp3::AudioStreamMP3::5168540540572339438::1669432264::1669432264:
 Inkeeper NEU 10.mp3::AudioStreamMP3::4308257201023711720::1669432263::1669432263::1::::<><>::
 ::res://audio/sfx/::1669433057
 ::res://audio/sfx/Bedroom Sounds/::1669433043
-::res://audio/sfx/Bedroom Sounds/Apt Room Music_Background/::1669433042
+::res://audio/sfx/Bedroom Sounds/Apt Room Music_Background/::1669433111
 Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::3795249186542072775::1669433042::1669433111::1::::<><>::
 Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::3663208848761533308::1669433042::1669433111::1::::<><>::
 Sad Apt LoFi demo.mp3::AudioStreamMP3::641242014786599154::1669433042::1669433111::1::::<><>::
 ::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/::1669433043
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/::1669433043
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/::1669433111
 Computer Off 1.mp3::AudioStreamMP3::4306296722949129527::1669433043::1669433111::1::::<><>::
 Computer Off 2.mp3::AudioStreamMP3::4562801500154048633::1669433043::1669433111::1::::<><>::
 Computer Off 3.mp3::AudioStreamMP3::9108599489012689263::1669433043::1669433111::1::::<><>::
 Computer On 1.mp3::AudioStreamMP3::1126207889612464753::1669433043::1669433111::1::::<><>::
 Computer On 2.mp3::AudioStreamMP3::3886360790309019287::1669433043::1669433111::1::::<><>::
 Computer On 3.mp3::AudioStreamMP3::4213723399436060337::1669433043::1669433111::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/::1669433043
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/::1669433112
 Open Close Door Turning Doorknob 1.wav::AudioStreamWAV::4751346997362998575::1669433043::1669433112::1::::<><>::
 Open Door Turning Doorknob 3.wav::AudioStreamWAV::8204331657595912954::1669433043::1669433112::1::::<><>::
 Open Door Turning Doorknob 5.wav::AudioStreamWAV::4675222862185208443::1669433043::1669433112::1::::<><>::
 Open Door Turning Doorknob Unlock 1.wav::AudioStreamWAV::3312984181614584813::1669433043::1669433112::1::::<><>::
 Open Door Turning Doorknob Unlock 2.wav::AudioStreamWAV::1845071894574075209::1669433043::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/::1669433043
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/::1669433111
 Go To Sleep 1 short.mp3::AudioStreamMP3::7581194219813276206::1669433043::1669433111::1::::<><>::
 Go To Sleep 1.mp3::AudioStreamMP3::9192571103313400711::1669433043::1669433111::1::::<><>::
 Go To Sleep 2.mp3::AudioStreamMP3::1480674242219687583::1669433043::1669433111::1::::<><>::
 ::res://audio/sfx/Bedroom Sounds/Bedroom UI/::1669433043
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Back Cancel/::1669433043
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Back Cancel/::1669433111
 UI Back Cancel 1.mp3::AudioStreamMP3::2180296160717566658::1669433043::1669433111::1::::<><>::
 UI Back Cancel 2.mp3::AudioStreamMP3::5533341748417149088::1669433043::1669433111::1::::<><>::
 UI Back Cancel 3.mp3::AudioStreamMP3::4450488477479618105::1669433043::1669433110::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Confirm Click/::1669433043
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Confirm Click/::1669433112
 UI Confirm Click 1.mp3::AudioStreamMP3::4506347128888381373::1669433043::1669433110::1::::<><>::
 UI Confirm Click 2.mp3::AudioStreamMP3::1088927130236481073::1669433043::1669433110::1::::<><>::
 UI Confirm Click 3.mp3::AudioStreamMP3::3078457162774078641::1669433043::1669433110::1::::<><>::
 UI Confirm Click 4.mp3::AudioStreamMP3::1507540593341000478::1669433043::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Hover/::1669433042
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Hover/::1669433112
 UI Hover 1.mp3::AudioStreamMP3::4839418731474566001::1669433042::1669433112::1::::<><>::
 UI Hover 2.mp3::AudioStreamMP3::1804141888495791725::1669433043::1669433112::1::::<><>::
 UI Hover 3.mp3::AudioStreamMP3::508591029147510868::1669433042::1669433112::1::::<><>::
 UI Hover 4.mp3::AudioStreamMP3::3277098639258937290::1669433042::1669433112::1::::<><>::
 UI Hover 5.mp3::AudioStreamMP3::3844235708891077120::1669433042::1669433112::1::::<><>::
 ::res://audio/sfx/Bedroom Sounds/Computer Sounds/::1669433042
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669433042
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669433112
 Typing 1.mp3::AudioStreamMP3::8863266739006282460::1669433042::1669433112::1::::<><>::
 Typing 2.mp3::AudioStreamMP3::757769982610158302::1669433042::1669433112::1::::<><>::
 Typing 3.mp3::AudioStreamMP3::2758178881518683820::1669433042::1669433112::1::::<><>::
 Typing 4.mp3::AudioStreamMP3::9199509099641085029::1669433042::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/::1669433042
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/::1669433112
 Mouse Click Select 1.mp3::AudioStreamMP3::6788631172915945006::1669433042::1669433112::1::::<><>::
 Mouse Click Select 2.mp3::AudioStreamMP3::4912319137755430913::1669433042::1669433112::1::::<><>::
 Mouse Click Select 3.mp3::AudioStreamMP3::6723722687487729741::1669433042::1669433112::1::::<><>::
 Mouse Click Select 4.mp3::AudioStreamMP3::7754419202794328672::1669433042::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Game On Off/::1669433042
-Game Begin 1 longer buzz.mp3::AudioStreamMP3::421793934738191825::1669433042::1669433112::1::::<><>::
-Game Begin 1.mp3::AudioStreamMP3::6120868425255608322::1669433042::1669433112::1::::<><>::
-Game Turns Off 1.mp3::AudioStreamMP3::2587735078103032692::1669433042::1669433112::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Game On Off/::1669435280
+Game Begin 1 longer buzz.mp3::AudioStreamMP3::421793934738191825::1669433042::1669435441::1::::<><>::
+Game Begin 1.mp3::AudioStreamMP3::8466530530565393555::1669433042::1669435441::1::::<><>::
+Game Turns Off 1.mp3::AudioStreamMP3::2587735078103032692::1669433042::1669435441::1::::<><>::
 ::res://audio/sfx/Inner Game/::1669432950
 ::res://audio/sfx/Inner Game/Inner Game UI_Buttons/::1669432951
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/::1669432952
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/::1669433112
 Battle Timeline Shift 1.1.mp3::AudioStreamMP3::2414703665651669708::1669432952::1669433112::1::::<><>::
 Battle Timeline Shift 1.2.mp3::AudioStreamMP3::4945724618843070989::1669432952::1669433112::1::::<><>::
 Battle Timeline Shift 1.3.mp3::AudioStreamMP3::3488888883096011668::1669432952::1669433111::1::::<><>::
@@ -87,7 +87,7 @@ Battle Timeline Shift 2.1.mp3::AudioStreamMP3::7152420038770267484::1669432951::
 Battle Timeline Shift 2.2.mp3::AudioStreamMP3::5667313313682497306::1669432952::1669433109::1::::<><>::
 Battle Timeline Shift 2.3.mp3::AudioStreamMP3::4279576680408629133::1669432951::1669433109::1::::<><>::
 Battle Timeline Shift 2.4.mp3::AudioStreamMP3::8707424208024423142::1669432952::1669433109::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/::1669432951
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/::1669433109
 Menu Close 1.1.mp3::AudioStreamMP3::6717432393761833530::1669432951::1669433109::1::::<><>::
 Menu Close 1.2.mp3::AudioStreamMP3::4776749576857429070::1669432951::1669433109::1::::<><>::
 Menu Close 1.3.mp3::AudioStreamMP3::2803133572157572591::1669432951::1669433109::1::::<><>::
@@ -96,7 +96,7 @@ Menu Close 2.1.mp3::AudioStreamMP3::1092124755107333199::1669432951::1669433109:
 Menu Close 2.2.mp3::AudioStreamMP3::5565197921232854855::1669432951::1669433109::1::::<><>::
 Menu Close 2.3.mp3::AudioStreamMP3::2714819571238422553::1669432951::1669433109::1::::<><>::
 Menu Close 2.4.mp3::AudioStreamMP3::4405218105084650641::1669432951::1669433109::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/::1669432951
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/::1669433109
 Menu Open 1.1.mp3::AudioStreamMP3::6790563012722576455::1669432951::1669433109::1::::<><>::
 Menu Open 1.2.mp3::AudioStreamMP3::2919662028555307349::1669432951::1669433109::1::::<><>::
 Menu Open 1.3.mp3::AudioStreamMP3::7625095310717073417::1669432951::1669433109::1::::<><>::
@@ -105,36 +105,36 @@ Menu Open 2.1.mp3::AudioStreamMP3::5760571915096243817::1669432951::1669433109::
 Menu Open 2.2.mp3::AudioStreamMP3::6662886379777418540::1669432951::1669433109::1::::<><>::
 Menu Open 2.3.mp3::AudioStreamMP3::1165653768499233992::1669432951::1669433109::1::::<><>::
 Menu Open 2.4.mp3::AudioStreamMP3::6307690322292865741::1669432951::1669433109::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/::1669432951
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/::1669433110
 Pick Up Icon 1.mp3::AudioStreamMP3::5729081687023481155::1669432951::1669433109::1::::<><>::
 Pick Up Icon 2.mp3::AudioStreamMP3::4570300189478471481::1669432951::1669433109::1::::<><>::
 Pick Up Icon 3.mp3::AudioStreamMP3::7255353629987287691::1669432951::1669433109::1::::<><>::
 Pick Up Icon 4.mp3::AudioStreamMP3::1013644716149276172::1669432951::1669433110::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/::1669432951
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/::1669433110
 Place Icon 1.mp3::AudioStreamMP3::3311614259418872337::1669432951::1669433110::1::::<><>::
 Place Icon 2.mp3::AudioStreamMP3::1787743630247455711::1669432951::1669433110::1::::<><>::
 Place Icon 3.mp3::AudioStreamMP3::1555894269133098625::1669432951::1669433110::1::::<><>::
 Place Icon 4.mp3::AudioStreamMP3::7816639938228882462::1669432951::1669433110::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/::1669432951
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/::1669433110
 Select Exit KOF 1.mp3::AudioStreamMP3::7517753909979763377::1669432951::1669433110::1::::<><>::
 Select Exit KOF 2.mp3::AudioStreamMP3::7293255958745689289::1669432951::1669433110::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/::1669432950
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/::1669433110
 Select Menu Option 1.mp3::AudioStreamMP3::876649883570364088::1669432950::1669433110::1::::<><>::
 Select Menu Option 2.mp3::AudioStreamMP3::4058501084078385780::1669432950::1669433110::1::::<><>::
 ::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/::1669432950
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.1/::1669432950
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.1/::1669433110
 BeeptextV1 1.mp3::AudioStreamMP3::1711269193420356187::1669432950::1669433110::1::::<><>::
 BeeptextV1 2.mp3::AudioStreamMP3::8175724804280899045::1669432950::1669433110::1::::<><>::
 BeeptextV1 3.mp3::AudioStreamMP3::8241171786908925304::1669432950::1669433110::1::::<><>::
 BeeptextV1 4.mp3::AudioStreamMP3::5685686475302663003::1669432950::1669433110::1::::<><>::
 BeeptextV1 5.mp3::AudioStreamMP3::911323208435532719::1669432950::1669433110::1::::<><>::
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/::1669432950
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/::1669433110
 BeeptextV2 1.mp3::AudioStreamMP3::554782710577236187::1669432950::1669433110::1::::<><>::
 BeeptextV2 2.mp3::AudioStreamMP3::4998933141726107838::1669432950::1669433110::1::::<><>::
 BeeptextV2 3.mp3::AudioStreamMP3::1828577283944084980::1669432950::1669433110::1::::<><>::
 BeeptextV2 4.mp3::AudioStreamMP3::2874510763917284401::1669432950::1669433110::1::::<><>::
 BeeptextV2 5.mp3::AudioStreamMP3::5732049677194719308::1669432950::1669433110::1::::<><>::
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.3/::1669432950
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.3/::1669433110
 BeeptextV3 1.mp3::AudioStreamMP3::5809182415544722544::1669432950::1669433110::1::::<><>::
 BeeptextV3 2.mp3::AudioStreamMP3::6300411101723219296::1669432950::1669433110::1::::<><>::
 BeeptextV3 3.mp3::AudioStreamMP3::1203815594979633212::1669432950::1669433109::1::::<><>::
@@ -325,9 +325,9 @@ combate_dialog_display.tscn::PackedScene::8190081777958508951::1669432266::0::1:
 ::res://scenes/ui/combatScreen/::1669432266
 combat_screen.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 combat_screen.tscn::PackedScene::613115860700736317::1669432266::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://5aktl5smo5ms<>uid://ua5g0lc8aoie<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
-::res://scenes/ui/computer/::1669432360
-computer.gd::GDScript::-1::1669432360::0::1::::<>Control<>::
-computer.tscn::PackedScene::591959519847187532::1669432266::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd
+::res://scenes/ui/computer/::1669435419
+computer.gd::GDScript::-1::1669435400::0::1::::<>Control<>::
+computer.tscn::PackedScene::591959519847187532::1669435419::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://dsviryd80dv28
 mouse.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 trans_computer.gdshader::Shader::-1::1669432266::0::1::::<><>::
 ::res://scenes/ui/computer/desktop/::1669432360

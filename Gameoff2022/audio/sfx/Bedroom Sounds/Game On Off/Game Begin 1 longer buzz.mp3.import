@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Game Begin 1 longer buzz.mp3-994af301adf80abe
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

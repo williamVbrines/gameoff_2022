@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Game Turns Off 1.mp3-2e66d03698696b944bbcace6
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

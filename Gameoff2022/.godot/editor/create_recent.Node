@@ -1,5 +1,6 @@
-Label
 ColorRect
+AudioStreamPlayer
+Label
 Control
 Node
 CanvasLayer
@@ -29,4 +30,3 @@ MeshInstance3D
 Panel
 PopupMenu
 MenuButton
-StaticBody3D

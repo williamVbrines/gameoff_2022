@@ -2,6 +2,9 @@ extends Control
 
 @onready var screen_effect: ColorRect = $ScreenEffect
 @onready var login_screen: Control = $LoginScreen
+@onready var turn_on_audio: AudioStreamPlayer = $TurnOnAudio
+@onready var turn_off_audio: AudioStreamPlayer = $TurnOffAudio
+@onready var input_stoper: ColorRect = $InputStoper
 
 func _ready() -> void:
 	_make_connections();
@@ -27,10 +30,13 @@ func _on_icon_pressed(action : String) -> void:
 func _play_quit_animation() -> void:
 	var tween = create_tween();
 	tween.stop();
+	tween.tween_callback(input_stoper.show);
+	tween.tween_callback(turn_off_audio.play)
+	tween.tween_interval(1)
 	tween.tween_property(screen_effect.material, "shader_parameter/curve", 0.28, 0.5);
 	tween.tween_interval(0.05)
 	tween.tween_property(screen_effect.material, "shader_parameter/curve", 0.00, 0.1);
-	tween.tween_interval(0.5)
+	tween.tween_interval(1)
 	tween.tween_callback(get_tree().quit)
 	tween.play();
 	
@@ -38,7 +44,10 @@ func _play_quit_animation() -> void:
 func _start_anim() -> void:
 	var tween = create_tween();
 	tween.stop();
+	tween.tween_callback(input_stoper.show);
 	tween.tween_interval(1.0)
+	tween.tween_callback(turn_on_audio.play);
 	tween.tween_property(screen_effect.material, "shader_parameter/curve", 5.0, 0.5);
 	tween.tween_interval(0.5)
+	tween.tween_callback(input_stoper.hide);
 	tween.play();
