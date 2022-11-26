@@ -25,15 +25,21 @@ func _set_up()->void:
 func _on_load()->void:
 	var path = OS.get_executable_path();
 	path = path.substr(0,path.rfind("/")+1) + save_name + ".tres"
+	
+	
 	if FileAccess.file_exists(path):
+		print(path)
 		save_data = load(path);
 	else:
 		save_data = SaveData.new();
+		
 	save_data.laod_data();
 	
 	EventManager.call_deferred("emit_signal" , "loading_complete" );
 		
 func _on_save()->void:
+	
+	print("Hello")
 	var path = OS.get_executable_path();
 	path = path.substr(0,path.rfind("/")+1) + save_name + ".tres"
 	if FileAccess.file_exists(path):

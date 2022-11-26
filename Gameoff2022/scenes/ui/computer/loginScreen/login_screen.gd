@@ -19,6 +19,11 @@ func _ready() -> void:
 	
 	button.modulate = normal_color;
 	
+	if SystemGlobals.play_start_anim == false:
+		panel.set_modulate(Color(Color.WHITE,0.0))
+		panel.hide();
+		_start_saveing_anim();
+	
 func _make_connections() -> void:
 	button.pressed.connect(_on_button_pressed);
 	button.mouse_entered.connect(_on_button_mouse_entered);
@@ -26,7 +31,7 @@ func _make_connections() -> void:
 	button.button_down.connect(_on_button_down);
 	button.button_up.connect(_on_button_up);
 	EventManager.loading_complete.connect(_on_loading_complete);
-	
+	EventManager.saving_complete.connect(_on_loading_complete);
 	
 func _on_loading_complete() -> void:
 	is_loading_complete = true;
@@ -100,6 +105,49 @@ func _loading_anim() -> void:
 func _loading_anim_finnished() -> void:
 	if min_anim_timer.is_stopped() == false || is_loading_complete == false:
 		_loading_anim();
+	else:
+		_close_anim();
+	
+func _start_saveing_anim() -> void:
+	
+	var tween = create_tween();
+	
+	is_loading_complete = false;
+	min_anim_timer.start(3.0);
+	
+	tween.stop();
+	tween.tween_callback(loading_lable.set_text.bind("Saveing"));
+	tween.tween_callback(loading_lable.show)
+	
+	tween.tween_callback(_saveing_anim);
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal","save_file_data"))
+	tween.play();
+	
+	
+func _saveing_anim() -> void:
+	var tween = create_tween();
+	
+	tween.finished.connect(_saveing_anim_finnished);
+	var speed = 0.5;
+	tween.stop();
+	tween.tween_callback(loading_lable.set_text.bind("Saveing"));
+	tween.tween_interval(speed);
+	tween.tween_callback(loading_lable.set_text.bind("Saveing."));
+	tween.tween_interval(speed);
+	tween.tween_callback(loading_lable.set_text.bind("Saveing.."));
+	tween.tween_interval(speed);
+	tween.tween_callback(loading_lable.set_text.bind("Saveing..."));
+	tween.tween_interval(speed);
+	tween.tween_callback(loading_lable.set_text.bind("Saveing .."));
+	tween.tween_interval(speed);
+	tween.tween_callback(loading_lable.set_text.bind("Saveing  ."));
+	tween.tween_interval(speed);
+	tween.play();
+	
+	
+func _saveing_anim_finnished() -> void:
+	if min_anim_timer.is_stopped() == false || is_loading_complete == false:
+		_saveing_anim();
 	else:
 		_close_anim();
 	

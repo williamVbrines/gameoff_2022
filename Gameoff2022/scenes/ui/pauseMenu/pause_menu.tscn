@@ -46,7 +46,6 @@ script = ExtResource("1_po6cs")
 
 [node name="PauseButton" type="TextureButton" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 97.0
 offset_top = 228.0
 offset_right = 171.0
@@ -58,7 +57,7 @@ texture_hover = ExtResource("5_ldqd7")
 [node name="SideBar" type="Control" parent="."]
 clip_contents = true
 custom_minimum_size = Vector2i(288, 0)
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -67,7 +66,7 @@ mouse_filter = 2
 [node name="BackGround" type="Control" parent="SideBar"]
 visible = false
 clip_contents = true
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 1081.0
@@ -75,7 +74,6 @@ mouse_filter = 2
 
 [node name="mid" type="ColorRect" parent="SideBar/BackGround"]
 custom_minimum_size = Vector2i(248, 0)
-layout_mode = 0
 offset_left = 20.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -84,14 +82,12 @@ color = Color(0.145098, 0.137255, 0.25098, 0.741176)
 
 [node name="Side" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
-layout_mode = 0
 offset_left = -20.0
 offset_bottom = 1080.0
 color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Side2" type="ColorRect" parent="SideBar/BackGround/mid"]
 custom_minimum_size = Vector2i(20, 0)
-layout_mode = 0
 offset_left = 248.0
 offset_right = 268.0
 offset_bottom = 1080.0
@@ -99,7 +95,6 @@ color = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Selection" type="VBoxContainer" parent="SideBar"]
 visible = false
-layout_mode = 0
 offset_left = 44.0
 offset_top = 381.0
 offset_right = 248.0
@@ -109,7 +104,6 @@ theme_override_constants/separation = 26
 
 [node name="ResumeButton" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
-layout_mode = 2
 offset_right = 204.0
 offset_bottom = 45.0
 theme_override_fonts/font = SubResource("SystemFont_yyaxe")
@@ -122,7 +116,6 @@ text = "Resume"
 
 [node name="LoadOutButton" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
-layout_mode = 2
 offset_top = 71.0
 offset_right = 204.0
 offset_bottom = 116.0
@@ -137,7 +130,6 @@ text = "Loadout"
 
 [node name="ItemsButton" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
-layout_mode = 2
 offset_top = 142.0
 offset_right = 204.0
 offset_bottom = 187.0
@@ -152,7 +144,6 @@ text = "Items"
 
 [node name="CluesButton" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
-layout_mode = 2
 offset_top = 213.0
 offset_right = 204.0
 offset_bottom = 258.0
@@ -167,7 +158,6 @@ text = "Clues"
 
 [node name="Exit Kingdom Of Frogs" type="Button" parent="SideBar/Selection"]
 custom_minimum_size = Vector2i(0, 45)
-layout_mode = 2
 offset_top = 284.0
 offset_right = 204.0
 offset_bottom = 362.0
@@ -182,13 +172,10 @@ text = "Exit Kindom of
 Frogs"
 
 [node name="LoadoutMenu" parent="." instance=ExtResource("6_sfwn6")]
-layout_mode = 1
 
 [node name="CluesMenu" parent="." instance=ExtResource("5_iiblx")]
-layout_mode = 1
 
 [node name="ItemsMenu" parent="." instance=ExtResource("7_t0rmp")]
-layout_mode = 1
 
 [node name="LoadoutScreenMeasurementGuide1" type="Sprite2D" parent="."]
 visible = false

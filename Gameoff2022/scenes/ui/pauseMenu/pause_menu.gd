@@ -14,6 +14,7 @@ extends Control
 
 @onready var items_menu: Control = $ItemsMenu
 @onready var items_button: Button = $SideBar/Selection/ItemsButton
+@onready var exit: Button = $"SideBar/Selection/Exit Kingdom Of Frogs"
 
 func _ready() -> void:
 	_make_connections();
@@ -32,6 +33,15 @@ func _make_connections() -> void:
 	
 	clues_button.toggled.connect(_on_clue_toggled);
 	items_button.toggled.connect(_on_items_toggled);
+
+	exit.pressed.connect(_on_exit_pressed);
+	
+func _on_exit_pressed() -> void:
+	exit.disabled = true;
+	EventManager.store_data.emit();
+	SceneChanger.call_deferred("load_level" , "res://scenes/levels/room/room.tscn");
+	
+	
 func _on_start_combat(_cam : Camera3D) -> void:
 	if get_tree().paused == false:
 		_hide_anim();

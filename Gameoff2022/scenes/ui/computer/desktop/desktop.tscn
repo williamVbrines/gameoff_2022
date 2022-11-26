@@ -55,6 +55,7 @@ offset_left = 125.0
 offset_top = 557.0
 offset_right = 133.0
 offset_bottom = 565.0
+action = "FAKE_GAME"
 icon_texture = ExtResource("7_n2rl5")
 label_text = "Kingdom of Frogs"
 

@@ -4,7 +4,7 @@ var current_save_file : String = "null";
 var stress = 0;
 var persuasion = 0;
 var opponent : String = "";
-
+var play_start_anim : bool = true;#Do not save this data
 var player_stats : Dictionary = {
 	"CHARM" : 50,
 	"LOGIC" : 50,
@@ -40,6 +40,7 @@ func data_dump() -> Dictionary:
 	return save_dic;
 
 func load_data(data : Dictionary) -> void:
+	print("ooo")
 	if data.has("SystemGlobals"):
 		var dic : Dictionary = data.SystemGlobals;
 		if dic.has_all(["player_stats","player_tactics","player_items","player_clues","dialog_profiles"]):

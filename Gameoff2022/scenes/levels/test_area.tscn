@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://c25dap1wya5s2"]
+[gd_scene load_steps=37 format=3 uid="uid://c25dap1wya5s2"]
 
 [ext_resource type="PackedScene" uid="uid://iy86trujqevt" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="1_m0888"]
 [ext_resource type="Texture2D" uid="uid://c6gpe0v66rslx" path="res://textures/kenney_prototypetextures/PNG/Orange/texture_01.png" id="1_oa2cw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ga2iolih30e1" path="res://scenes/ui/dialogWindow/dialog_window.tscn" id="3_gnw8r"]
 [ext_resource type="PackedScene" path="res://scenes/ui/mainMenu/main_menu.tscn" id="3_j736l"]
 [ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="4_s40om"]
+[ext_resource type="PackedScene" uid="uid://d22gfyio4xrgp" path="res://scenes/ui/mouse.tscn" id="4_ty73u"]
 [ext_resource type="Resource" uid="uid://cc8sl1bonoce0" path="res://scenes/resources/npc/test_npc_resource.tres" id="5_om3ok"]
 [ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="6_q4npx"]
 [ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="7_krp7g"]
@@ -95,11 +96,18 @@ offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_m0888")]
+layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_016c5")]
+layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("3_gnw8r")]
 visible = false
+layout_mode = 1
+
+[node name="Mouse" parent="GUI" instance=ExtResource("4_ty73u")]
+process_mode = 3
+layout_mode = 1
 
 [node name="TestArea" type="Node3D" parent="."]
 

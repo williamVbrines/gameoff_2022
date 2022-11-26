@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d22gfyio4xrgp"]
+
+[ext_resource type="Script" path="res://scenes/levels/room/WorldMouse.gd" id="1_0x3ev"]
+[ext_resource type="Texture2D" uid="uid://bu00ur4al2rsp" path="res://textures/ui/MousePointers_World.png" id="2_1qlo2"]
+
+[node name="Mouse" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_0x3ev")
+
+[node name="MousePointersWorld" type="TextureRect" parent="."]
+offset_left = -12.0
+offset_top = -3.0
+offset_right = 36.0
+offset_bottom = 45.0
+mouse_filter = 2
+texture = ExtResource("2_1qlo2")

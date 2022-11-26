@@ -5,8 +5,13 @@ extends Control
 
 func _ready() -> void:
 	_make_connections();
-	_start_anim();
-	
+	if SystemGlobals.play_start_anim == true:
+		SystemGlobals.play_start_anim = false;
+		_start_anim();
+	else:
+		screen_effect.material.set("shader_parameter/curve", 5.0);
+		
+		
 func _make_connections() -> void:
 	EventManager.icon_pressed.connect(_on_icon_pressed);
 	
@@ -15,6 +20,8 @@ func _on_icon_pressed(action : String) -> void:
 	match  action.to_upper():
 		"QUIT":
 			_play_quit_animation();
+		"FAKE_GAME":
+			SceneChanger.load_level("res://scenes/levels/test_area.tscn")
 	
 	
 func _play_quit_animation() -> void:

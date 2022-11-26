@@ -12,6 +12,7 @@ func save_data(file_name : String = PREFIX + "1") -> void:
 	path = path.substr(0,path.rfind("/")+1) + file_name + ".tres"
 	_gather_data();
 	data_hash = str(data).hash();
+	print(data)
 	ResourceSaver.save(self,path);
 	
 	
@@ -19,11 +20,13 @@ func _gather_data() -> void:
 	data["SystemGlobals"] = SystemGlobals.data_dump();
 
 func laod_data() -> void:
-	if str(data).hash() == data_hash:
-		user_message = "This is a normal file";
-		EventManager.load_data.emit(data);
-		return;
-		
+	prints("LAoding data",data)
+#	if str(data).hash() == data_hash:
+	user_message = "This is a normal file";
+	EventManager.load_data.emit(data);
+	print("LAoding data")
+	return;
+	
 	if user_message == "This is a normal file": user_message = "Warning if you do mess with this file you may cause strange behavior";
 	else: hiden();
 		

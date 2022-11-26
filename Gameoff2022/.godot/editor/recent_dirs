@@ -1,3 +1,4 @@
+res://scenes/ui
 res://scenes/sceneChanger
 res://scenes/systemSave
 res://scenes/ui/computer/desktop/desktopIcon
@@ -19,4 +20,3 @@ res://scenes/ui/tagButton
 res://scenes/test
 res://scenes/ui/dialogWindow
 res://scenes/ui/loadoutMenu
-res://scenes/resourceManager
