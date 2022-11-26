@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cocp1pfdtmbyf"
+path="res://.godot/imported/Menu Open 2.1.mp3-9f0db6e6f23f0d4b0946c202bfacbc21.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 2.1.mp3"
+dest_files=["res://.godot/imported/Menu Open 2.1.mp3-9f0db6e6f23f0d4b0946c202bfacbc21.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4cktn37udkg0"
+path="res://.godot/imported/Typing 4.mp3-1d31771e0bc3cfb4dded04baa35a70c8.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/Typing 4.mp3"
+dest_files=["res://.godot/imported/Typing 4.mp3-1d31771e0bc3cfb4dded04baa35a70c8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

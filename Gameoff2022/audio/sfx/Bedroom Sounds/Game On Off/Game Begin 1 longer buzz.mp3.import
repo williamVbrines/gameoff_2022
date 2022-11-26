@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gak5cpu3hp74"
+path="res://.godot/imported/Game Begin 1 longer buzz.mp3-994af301adf80abe7b6f66d68bd0ef29.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Game On Off/Game Begin 1 longer buzz.mp3"
+dest_files=["res://.godot/imported/Game Begin 1 longer buzz.mp3-994af301adf80abe7b6f66d68bd0ef29.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

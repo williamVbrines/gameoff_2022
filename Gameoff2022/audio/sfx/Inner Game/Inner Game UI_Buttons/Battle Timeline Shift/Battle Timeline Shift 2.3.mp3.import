@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b18caddbfpi3n"
+path="res://.godot/imported/Battle Timeline Shift 2.3.mp3-65c089ff9997f9a01ab329502ce24720.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/Battle Timeline Shift 2.3.mp3"
+dest_files=["res://.godot/imported/Battle Timeline Shift 2.3.mp3-65c089ff9997f9a01ab329502ce24720.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

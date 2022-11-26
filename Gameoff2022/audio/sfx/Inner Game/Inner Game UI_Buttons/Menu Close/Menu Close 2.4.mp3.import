@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b306kffnvvo86"
+path="res://.godot/imported/Menu Close 2.4.mp3-b57c988b2e87b8d59e9d7260cb3219d0.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 2.4.mp3"
+dest_files=["res://.godot/imported/Menu Close 2.4.mp3-b57c988b2e87b8d59e9d7260cb3219d0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

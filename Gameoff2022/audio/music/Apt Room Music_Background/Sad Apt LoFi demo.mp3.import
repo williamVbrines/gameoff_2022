@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c438accyu1st4"
+path="res://.godot/imported/Sad Apt LoFi demo.mp3-e67b9327fdc759ed9e391e5c81298dba.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Apt Room Music_Background/Sad Apt LoFi demo.mp3"
+dest_files=["res://.godot/imported/Sad Apt LoFi demo.mp3-e67b9327fdc759ed9e391e5c81298dba.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

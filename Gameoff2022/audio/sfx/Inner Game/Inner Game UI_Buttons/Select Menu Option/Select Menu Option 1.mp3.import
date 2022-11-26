@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mqwkbuokfl1q"
+path="res://.godot/imported/Select Menu Option 1.mp3-096a9e25bb2fb08fc5d2b8ea89faf9d8.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3"
+dest_files=["res://.godot/imported/Select Menu Option 1.mp3-096a9e25bb2fb08fc5d2b8ea89faf9d8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

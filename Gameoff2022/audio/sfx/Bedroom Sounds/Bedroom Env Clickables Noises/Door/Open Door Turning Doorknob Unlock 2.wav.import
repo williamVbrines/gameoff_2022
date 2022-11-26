@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1j1cguq115c4"
+path="res://.godot/imported/Open Door Turning Doorknob Unlock 2.wav-63572f01fe55ebbb203fdaaaf4d1619b.sample"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/Open Door Turning Doorknob Unlock 2.wav"
+dest_files=["res://.godot/imported/Open Door Turning Doorknob Unlock 2.wav-63572f01fe55ebbb203fdaaaf4d1619b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

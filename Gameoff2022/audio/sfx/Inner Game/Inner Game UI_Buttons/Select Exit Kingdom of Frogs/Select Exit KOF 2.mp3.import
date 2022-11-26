@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db554iixhsj7f"
+path="res://.godot/imported/Select Exit KOF 2.mp3-e7ade879024f74dcbc2be110b30a4ca5.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/Select Exit KOF 2.mp3"
+dest_files=["res://.godot/imported/Select Exit KOF 2.mp3-e7ade879024f74dcbc2be110b30a4ca5.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

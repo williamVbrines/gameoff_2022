@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dganfqk1upft3"
+path="res://.godot/imported/Go To Sleep 1 short.mp3-63d2adf4b352141b831d051c217bec72.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/Go To Sleep 1 short.mp3"
+dest_files=["res://.godot/imported/Go To Sleep 1 short.mp3-63d2adf4b352141b831d051c217bec72.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

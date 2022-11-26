@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0p842d6u3s0f"
+path="res://.godot/imported/Place Icon 2.mp3-f05f0b7c28b26f65c82872ee9744aa72.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/Place Icon 2.mp3"
+dest_files=["res://.godot/imported/Place Icon 2.mp3-f05f0b7c28b26f65c82872ee9744aa72.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

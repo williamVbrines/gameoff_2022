@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://h50gp4fwl6jv"
+path="res://.godot/imported/BeeptextV2 1.mp3-43ecf294beb959a9407a8d9d05ce32e0.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 1.mp3"
+dest_files=["res://.godot/imported/BeeptextV2 1.mp3-43ecf294beb959a9407a8d9d05ce32e0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

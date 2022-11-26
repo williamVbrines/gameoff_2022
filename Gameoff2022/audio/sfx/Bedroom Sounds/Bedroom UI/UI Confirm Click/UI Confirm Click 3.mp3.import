@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj4h0fdjkng22"
+path="res://.godot/imported/UI Confirm Click 3.mp3-481231582dc8e4ae7b271f9ff020b309.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Confirm Click/UI Confirm Click 3.mp3"
+dest_files=["res://.godot/imported/UI Confirm Click 3.mp3-481231582dc8e4ae7b271f9ff020b309.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

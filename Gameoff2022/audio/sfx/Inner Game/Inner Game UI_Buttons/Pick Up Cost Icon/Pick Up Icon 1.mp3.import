@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnvhex67castv"
+path="res://.godot/imported/Pick Up Icon 1.mp3-da15906adcdf6b4e0cf063f06c685172.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 1.mp3"
+dest_files=["res://.godot/imported/Pick Up Icon 1.mp3-da15906adcdf6b4e0cf063f06c685172.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

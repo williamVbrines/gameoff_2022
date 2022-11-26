@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca7irwq3m34kj"
+path="res://.godot/imported/UI Hover 1.mp3-f63406a4cb94f0cc7dd1473a5693c1dd.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Hover/UI Hover 1.mp3"
+dest_files=["res://.godot/imported/UI Hover 1.mp3-f63406a4cb94f0cc7dd1473a5693c1dd.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
