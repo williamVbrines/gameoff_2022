@@ -1,7 +1,7 @@
+StaticBody3D
 MeshInstance3D
 Camera3D
 GPUParticles3D
-StaticBody3D
 RigidBody3D
 DirectionalLight3D
 DirectionalLight2D
