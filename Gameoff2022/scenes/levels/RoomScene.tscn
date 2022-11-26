@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://2an54g77dr47"]
+[gd_scene load_steps=46 format=3 uid="uid://2an54g77dr47"]
 
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="20_hik4s"]
 [ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="21_kfrrn"]
 [ext_resource type="PackedScene" uid="uid://cpc7t82lkl8xu" path="res://modles/pizza.tscn" id="22_garrg"]
+[ext_resource type="Texture2D" uid="uid://dxhm4itmlk0fq" path="res://textures/DustParticleTexture.png" id="23_ausgx"]
+[ext_resource type="PackedScene" uid="uid://2uan0c1ga2gc" path="res://modles/stickynote.tscn" id="24_j2n3a"]
+[ext_resource type="PackedScene" uid="uid://cvgb16mc0ig7t" path="res://modles/stickynoteblue.tscn" id="25_q7wdj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tk41j"]
 panorama = ExtResource("1_w4l0p")
@@ -34,10 +37,10 @@ radiance_size = 2
 background_mode = 2
 background_energy_multiplier = 0.0
 sky = SubResource("33")
-ambient_light_source = 2
+ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.2
-ambient_light_energy = 0.15
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.45
 glow_strength = 1.79
 glow_bloom = 0.44
 
@@ -218,6 +221,32 @@ shader_parameter/use_view = true
 shader_parameter/view_bias = Color(1, 0, 1, 1)
 shader_parameter/view_multiplier = -1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qie2"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("23_ausgx")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n61j3"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(5, 1, 5)
+flatness = 1.0
+gravity = Vector3(0, 0.3, 0)
+scale_min = 0.1
+scale_max = 0.2
+color = Color(0.486275, 0.486275, 0.486275, 1)
+anim_speed_min = 0.1
+anim_speed_max = 0.2
+collision_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_4a8s2"]
+
 [node name="Practice" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -236,6 +265,26 @@ light_indirect_energy = 8.0
 light_specular = 16.0
 spot_range = 18.2852
 spot_angle = 47.5255
+
+[node name="WindowLight" type="SpotLight3D" parent="Room"]
+transform = Transform3D(0.683725, -0.0233154, -0.729367, 0.729566, -6.75743e-08, 0.683911, -0.0159457, -0.999728, 0.01701, -15.576, 5.87959, 4.17372)
+light_color = Color(0, 0.376471, 0.647059, 1)
+light_energy = 10.455
+light_indirect_energy = 9.0
+light_specular = 16.0
+shadow_enabled = true
+spot_range = 18.2852
+spot_angle = 23.0883
+
+[node name="StackedBook2" parent="Room/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
+transparency = 1.0
+skeleton = NodePath("../..")
+
+[node name="StackedBook3" parent="Room/WindowLight" instance=ExtResource("3_7uc24")]
+transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
+transparency = 1.0
+skeleton = NodePath("../..")
 
 [node name="Bed" parent="Room" instance=ExtResource("4_grb64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
@@ -300,11 +349,11 @@ omni_range = 0.367801
 transform = Transform3D(-1.00255, 0, -1.37442e-07, 0, 0.596537, 0, 8.76455e-08, 0, -1.57215, -8.0942, 0, 8.97187)
 
 [node name="StackedBook1" parent="Room/WideDresser" instance=ExtResource("3_7uc24")]
-transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, -0.0517902, 2.6054, -0.930151)
+transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, -0.0517902, 2.6054, -0.961423)
 skeleton = NodePath("../..")
 
 [node name="StackedBook2" parent="Room/WideDresser/StackedBook1" instance=ExtResource("3_7uc24")]
-transform = Transform3D(0.952129, 0.305695, 3.55271e-15, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.3831, 0, 0)
+transform = Transform3D(0.952129, 0.305695, 0, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.383101, 0, 0)
 skeleton = NodePath("../../..")
 
 [node name="LayingBook1" parent="Room/WideDresser" instance=ExtResource("3_7uc24")]
@@ -321,6 +370,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10671, 0, 1.00407)
 [node name="LampLight" type="SpotLight3D" parent="Room/Lamp"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0671444, 3.83939, 0.0847137)
 light_color = Color(1, 0.984314, 0.811765, 1)
+light_energy = 2.22
+shadow_enabled = true
+distance_fade_begin = 2.0
 spot_range = 5.86071
 spot_angle = 46.4063
 
@@ -352,3 +404,26 @@ transform = Transform3D(4.55255, 2.17501e-23, -2.69414e-30, 0, -4.37114e-08, -2.
 mesh = SubResource("17")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("18")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69653, 2.5999, 5.43361)
+material_override = SubResource("StandardMaterial3D_4qie2")
+transparency = 0.92
+cast_shadow = 0
+amount = 20
+lifetime = 10.0
+preprocess = 6.0
+speed_scale = 0.15
+randomness = 1.0
+visibility_aabb = AABB(-4, -2.58548, -5.18234, 8, 5.17096, 10.3647)
+process_material = SubResource("ParticleProcessMaterial_n61j3")
+draw_pass_1 = SubResource("QuadMesh_4a8s2")
+
+[node name="stickynote" parent="." instance=ExtResource("24_j2n3a")]
+transform = Transform3D(-0.449809, -0.0797052, 0.889561, -0.18058, 0.983555, -0.00318352, -0.874679, -0.162069, -0.456805, -5.5574, 2.73596, 0.991873)
+
+[node name="stickynote3" parent="." instance=ExtResource("24_j2n3a")]
+transform = Transform3D(0.0787039, -0.232011, 0.969524, -0.974939, 0.185087, 0.123436, -0.208085, -0.954942, -0.21163, -4.5426, 1.91343, 0.991873)
+
+[node name="stickynote2" parent="." instance=ExtResource("25_q7wdj")]
+transform = Transform3D(-0.30922, 0.0519462, 0.949571, -0.269939, 0.952642, -0.140018, -0.911875, -0.299623, -0.280554, -5.49571, 2.46457, 0.981214)
