@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Mouse Click Select 4.mp3-1e4f21c6ad367f3865f7
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

@@ -51,3 +51,5 @@ func _start_anim() -> void:
 	tween.tween_interval(0.5)
 	tween.tween_callback(input_stoper.hide);
 	tween.play();
+	
+

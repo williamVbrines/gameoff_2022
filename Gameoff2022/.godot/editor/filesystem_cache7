@@ -62,17 +62,17 @@ UI Hover 3.mp3::AudioStreamMP3::508591029147510868::1669433042::1669433112::1:::
 UI Hover 4.mp3::AudioStreamMP3::3277098639258937290::1669433042::1669433112::1::::<><>::
 UI Hover 5.mp3::AudioStreamMP3::3844235708891077120::1669433042::1669433112::1::::<><>::
 ::res://audio/sfx/Bedroom Sounds/Computer Sounds/::1669433042
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669433112
-Typing 1.mp3::AudioStreamMP3::8863266739006282460::1669433042::1669433112::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669436401
+Typing 1.mp3::AudioStreamMP3::3704495813602094691::1669433042::1669436401::1::::<><>::
 Typing 2.mp3::AudioStreamMP3::757769982610158302::1669433042::1669433112::1::::<><>::
 Typing 3.mp3::AudioStreamMP3::2758178881518683820::1669433042::1669433112::1::::<><>::
 Typing 4.mp3::AudioStreamMP3::9199509099641085029::1669433042::1669433112::1::::<><>::
 ::res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/::1669433112
-Mouse Click Select 1.mp3::AudioStreamMP3::6788631172915945006::1669433042::1669433112::1::::<><>::
-Mouse Click Select 2.mp3::AudioStreamMP3::4912319137755430913::1669433042::1669433112::1::::<><>::
-Mouse Click Select 3.mp3::AudioStreamMP3::6723722687487729741::1669433042::1669433112::1::::<><>::
-Mouse Click Select 4.mp3::AudioStreamMP3::7754419202794328672::1669433042::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Game On Off/::1669435280
+Mouse Click Select 1.mp3::AudioStreamMP3::6788631172915945006::1669433042::1669436687::1::::<><>::
+Mouse Click Select 2.mp3::AudioStreamMP3::4912319137755430913::1669433042::1669436687::1::::<><>::
+Mouse Click Select 3.mp3::AudioStreamMP3::6723722687487729741::1669433042::1669436687::1::::<><>::
+Mouse Click Select 4.mp3::AudioStreamMP3::7754419202794328672::1669433042::1669436687::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Game On Off/::1669435441
 Game Begin 1 longer buzz.mp3::AudioStreamMP3::421793934738191825::1669433042::1669435441::1::::<><>::
 Game Begin 1.mp3::AudioStreamMP3::8466530530565393555::1669433042::1669435441::1::::<><>::
 Game Turns Off 1.mp3::AudioStreamMP3::2587735078103032692::1669433042::1669435441::1::::<><>::
@@ -325,9 +325,9 @@ combate_dialog_display.tscn::PackedScene::8190081777958508951::1669432266::0::1:
 ::res://scenes/ui/combatScreen/::1669432266
 combat_screen.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 combat_screen.tscn::PackedScene::613115860700736317::1669432266::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://5aktl5smo5ms<>uid://ua5g0lc8aoie<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
-::res://scenes/ui/computer/::1669435419
-computer.gd::GDScript::-1::1669435400::0::1::::<>Control<>::
-computer.tscn::PackedScene::591959519847187532::1669435419::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://dsviryd80dv28
+::res://scenes/ui/computer/::1669435944
+computer.gd::GDScript::-1::1669436682::0::1::::<>Control<>::
+computer.tscn::PackedScene::591959519847187532::1669436682::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://c3yp07yaek3x7<>uid://dsviryd80dv28<>uid://bc4rvbf7l24m7
 mouse.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 trans_computer.gdshader::Shader::-1::1669432266::0::1::::<><>::
 ::res://scenes/ui/computer/desktop/::1669432360

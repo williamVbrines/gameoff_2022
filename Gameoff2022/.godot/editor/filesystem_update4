@@ -1,2 +1,3 @@
 res://scenes/ui/computer/computer.tscn
 res://scenes/ui/computer/computer.gd
+res://scenes/ui/computer/mouse.gd
