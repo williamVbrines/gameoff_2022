@@ -2,6 +2,7 @@ extends Button
 
 @export var cam : Camera3D;
 @onready var fade: ColorRect = $Fade
+@onready var computer_off_audio: AudioStreamPlayer = $ComputerOffAudio
 
 const FADE_SPEED : float = 0.5;
 
@@ -31,7 +32,7 @@ func _show_anim() -> void:
 func _on_pressed() -> void:
 	disabled = true;
 	_trans_to_room_anim();
-	
+	computer_off_audio.play_rand();
 	
 func _trans_to_room_anim() -> void:
 	var tween = create_tween();

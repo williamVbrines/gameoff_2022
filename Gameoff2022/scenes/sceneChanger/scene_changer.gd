@@ -27,15 +27,27 @@ func _on_level_ready():
 			current_scene.ready.disconnect(_on_level_ready);
 			
 	get_tree().paused = true;
+	var tween_s = create_tween();
+	tween_s.stop();
+	var end = 0;
+	var val = -20.0 ;
+	var current =AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"));
+	
+	for i in 50:
+		val = current - (i * ((current- end)/50))
+		print(val)
+		tween_s.tween_callback(AudioServer.call_deferred.bind("set_bus_volume_db",AudioServer.get_bus_index("Master"), val));
+		tween_s.tween_interval(0.05);
 	
 	var tween = create_tween();
 	tween.stop();
 	tween.tween_property(bg.material,"shader_parameter/cuttoff", 1.0, 1);
 	tween.tween_callback(bg.hide);
 	tween.play();
-	
+	tween_s.play();
 	await tween.finished;
 	get_tree().paused = false;
+	
 	finished_loading.emit();
 	
 	
@@ -92,22 +104,38 @@ func load_level(path : String) -> void:
 	
 	res_path = path;
 	
-	get_tree().paused = true;
+	
+	
+	var tween_s = create_tween();
+	tween_s.stop();
+	var end = -80.0;
+	var val = -20.0 ;
+	var current =AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"));
+	
+	for i in 50:
+		val = current - (i * ((current- end)/50))
+		print(val)
+		tween_s.tween_callback(AudioServer.call_deferred.bind("set_bus_volume_db",AudioServer.get_bus_index("Master"), val));
+		tween_s.tween_interval(0.05);
+		
+	tween_s.tween_callback(pause);
 	
 	var tween = create_tween();
 	
 	tween.stop();
 	tween.tween_callback(bg.show);
 	tween.tween_property(bg.material,"shader_parameter/cuttoff", 0.0, 1);
+	tween.tween_interval(1)
 	tween.play();
-	
+	tween_s.play();
 	await tween.finished;
 
 #	ResourceLoader.load_threaded_request(res_path,"",true);#This is broken in 4.0 beta right now
 	
 	_is_loading = true;
 	
-	
+func pause():
+	get_tree().paused = true;
 ################################################################################
 #Loads level with a transition 
 ################################################################################

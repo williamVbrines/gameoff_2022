@@ -1,3 +1,13 @@
 res://scenes/ui/computer/computer.tscn
 res://scenes/ui/computer/computer.gd
 res://scenes/ui/computer/mouse.gd
+res://scenes/resources/saves/save_data.gd
+res://scenes/levels/room/room.tscn
+res://shaders/artshader_noisetexture.tres
+res://scenes/levels/room/conferm_box.gd
+res://scenes/rand_audio_stream_player.gd
+res://scenes/levels/room/tab_out_button.gd
+res://scenes/levels/room/roomTooltip/tooltip.tscn
+res://default_bus_layout.tres
+res://scenes/sceneChanger/SceneChanger.tscn
+res://scenes/sceneChanger/scene_changer.gd

@@ -59,6 +59,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scenes/resources/actions/player_action_data.gd"
 }, {
+"base": "AudioStreamPlayer",
+"class": &"RandAudioStreamPlayer",
+"language": &"GDScript",
+"path": "res://scenes/rand_audio_stream_player.gd"
+}, {
 "base": "Node3D",
 "class": &"RoomInteractable3D",
 "language": &"GDScript",
@@ -95,6 +100,7 @@ _global_script_class_icons={
 "NPCData": "",
 "NPCTactics": "",
 "PlayerActionData": "",
+"RandAudioStreamPlayer": "",
 "RoomInteractable3D": "",
 "SaveData": "",
 "TacticsData": "",

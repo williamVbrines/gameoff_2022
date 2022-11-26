@@ -24,8 +24,10 @@ func _on_icon_pressed(action : String) -> void:
 		"QUIT":
 			_play_quit_animation();
 		"FAKE_GAME":
-			SceneChanger.load_level("res://scenes/levels/test_area.tscn")
-	
+			input_stoper.show();
+			SceneChanger.load_level("res://scenes/levels/test_area.tscn");
+			
+
 	
 func _play_quit_animation() -> void:
 	var tween = create_tween();

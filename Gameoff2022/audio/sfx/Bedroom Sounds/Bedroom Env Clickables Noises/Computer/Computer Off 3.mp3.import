@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Computer Off 3.mp3-23bf368f437da39c0c63d91531
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

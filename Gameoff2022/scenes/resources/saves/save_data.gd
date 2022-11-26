@@ -27,8 +27,8 @@ func laod_data() -> void:
 	print("LAoding data")
 	return;
 	
-	if user_message == "This is a normal file": user_message = "Warning if you do mess with this file you may cause strange behavior";
-	else: hiden();
+#	if user_message == "This is a normal file": user_message = "Warning if you do mess with this file you may cause strange behavior";
+#	else: hiden();
 		
 func hiden():
 	var new_hash = 1800;

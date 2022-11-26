@@ -17,6 +17,10 @@ extends Control
 @onready var monitor_camera: Camera3D = $"../../Room3D/MonitorCamera"
 @onready var room_camera: Camera3D = $"../../Room3D/RoomCamera"
 
+@onready var computer_on_audio: AudioStreamPlayer = $ComputerONAudio
+@onready var door_audio: AudioStreamPlayer = $DoorAudio
+@onready var bed_audio: AudioStreamPlayer = $bedAudio
+
 var action : String = "";
 const FADE_TIME : float = 0.5;
 var in_use : bool = false;
@@ -45,6 +49,20 @@ func _make_connections() -> void:
 	label_button.mouse_exited.connect(_on_label_button_mouse_exited);
 	label_button.button_down.connect(_on_label_button_down);
 	label_button.button_up.connect(_on_label_button_up);
+	
+	EventManager.monitor_startup_complete.connect(_on_monitor_startup_complete);
+	
+	
+func _on_monitor_startup_complete() -> void:
+	var tween = create_tween();
+	tween.stop();
+	var end = -20.0;
+	var val = -80.0;
+	for i in 50:
+		val = -80  - (i * ((-80 - end)/50))
+		tween.tween_callback(AudioServer.call_deferred.bind("set_bus_volume_db",AudioServer.get_bus_index("BGM"), val));
+		tween.tween_interval(0.05);
+	tween.play();
 	
 func _on_label_button_down() -> void:
 	label_background.modulate = pressed_color;
@@ -104,12 +122,16 @@ func set_in_use(val : bool) ->void:
 func _parce_action():
 	
 	match action.to_upper():
-		"SLEEP":
-			pass
+		"BED":
+			bed_audio.play_rand();
 		"MONITOR":
-			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN;
-			_trans_to_monitor();
 			
+			computer_on_audio.play_rand();
+			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN;
+			
+			_trans_to_monitor();
+		"DOOR":
+			door_audio.play();
 	action = "";
 	_hide_anim()
 	
@@ -122,7 +144,8 @@ func _on_show_confirm(text : String, new_action : String) -> void:
 		label.set_text(text);
 		_show_anim();
 		in_use = true;
-
+	
+	
 func on_label_resized() -> void:
 	label.position.x = (1920/2.0) - (label.size.x / 2.0);
 	
@@ -145,6 +168,8 @@ func _fade_in():
 	
 	
 func _trans_to_monitor() -> void:
+
+	
 	var tween = create_tween();
 	
 	tween.stop();
@@ -155,4 +180,5 @@ func _trans_to_monitor() -> void:
 	tween.tween_callback(_fade_in);
 	tween.tween_callback(set_in_use.bind(false));
 	tween.play();
+
 	

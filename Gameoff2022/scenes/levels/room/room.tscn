@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bb43a0j8pld4e"]
+[gd_scene load_steps=64 format=3 uid="uid://bb43a0j8pld4e"]
 
 [ext_resource type="PackedScene" uid="uid://7molkd4islo1" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
@@ -8,22 +8,34 @@
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
 [ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
 [ext_resource type="PackedScene" uid="uid://d22gfyio4xrgp" path="res://scenes/ui/mouse.tscn" id="4_ndvkj"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="4_nyfyl"]
 [ext_resource type="PackedScene" uid="uid://dohk55w2v4jar" path="res://modles/desk.tscn" id="5_8jjll"]
 [ext_resource type="Script" path="res://scenes/levels/room/subtel_camera.gd" id="5_li5sl"]
+[ext_resource type="AudioStream" uid="uid://qbsqkgmwq1x2" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 1.mp3" id="5_rpl22"]
 [ext_resource type="PackedScene" uid="uid://cnntxn1gqo2l5" path="res://modles/desk_chair.tscn" id="6_1pfs0"]
 [ext_resource type="Script" path="res://scenes/levels/room/tab_out_button.gd" id="6_bsyxd"]
 [ext_resource type="FontFile" uid="uid://ck6aeikl4kkwa" path="res://textures/ui/Font/OpenSans-ExtraBold.ttf" id="6_j2pln"]
+[ext_resource type="AudioStream" uid="uid://bvmt2altk1qnn" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 2.mp3" id="6_uimrr"]
+[ext_resource type="AudioStream" uid="uid://b1bfn5r0nau6t" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 3.mp3" id="7_hu86j"]
 [ext_resource type="PackedScene" uid="uid://di2yossccrpdk" path="res://modles/desk_paper.tscn" id="7_iycir"]
 [ext_resource type="PackedScene" uid="uid://f3olkhor585g" path="res://modles/dresser.tscn" id="8_fj1gn"]
+[ext_resource type="AudioStream" uid="uid://b8xt8xpaaxfit" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/Open Close Door Turning Doorknob 1.wav" id="8_inwph"]
 [ext_resource type="Script" path="res://scenes/levels/room/room_interactable_3D.gd" id="8_xg4cl"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="9_l43cy"]
+[ext_resource type="AudioStream" uid="uid://dganfqk1upft3" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/Go To Sleep 1 short.mp3" id="9_nyxym"]
 [ext_resource type="Texture2D" uid="uid://bs7n32125yvb" path="res://textures/DresserTexture.png" id="10_flbw3"]
+[ext_resource type="AudioStream" uid="uid://vdiquvwfbthn" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/Go To Sleep 2.mp3" id="11_3girn"]
+[ext_resource type="AudioStream" uid="uid://b2macwatlygy6" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 1.mp3" id="11_htco2"]
 [ext_resource type="PackedScene" uid="uid://bgtu76l55emde" path="res://modles/key_board.tscn" id="11_y8fwa"]
 [ext_resource type="PackedScene" uid="uid://usded07kcbok" path="res://modles/mouse.tscn" id="12_fl6cs"]
+[ext_resource type="AudioStream" uid="uid://b6aiw6h2hh3q8" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 2.mp3" id="12_tdgo2"]
+[ext_resource type="AudioStream" uid="uid://d21jkkbj41iy6" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 3.mp3" id="13_5ltb4"]
 [ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_ao8j1"]
 [ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="14_6xceb"]
 [ext_resource type="Texture2D" uid="uid://csughb021ergy" path="res://textures/RugforRoomTexture.png" id="15_gm4mk"]
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="16_xh2ma"]
+[ext_resource type="AudioStream" uid="uid://c438accyu1st4" path="res://audio/music/Apt Room Music_Background/Sad Apt LoFi demo.mp3" id="17_h4d1n"]
+[ext_resource type="AudioStream" uid="uid://chqp2dr7mrnd6" path="res://audio/music/Apt Room Music_Background/Depressing Apartment Sou_nds (no music) V.1.mp3" id="18_l63lm"]
 [ext_resource type="PackedScene" uid="uid://blfbj6w4wfnt7" path="res://modles/door.tscn" id="18_xi7mj"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="20_hik4s"]
 [ext_resource type="PackedScene" uid="uid://2b5feot0bgh5" path="res://modles/pizza_box.tscn" id="21_kfrrn"]
@@ -307,6 +319,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="ComputerONAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("5_rpl22"), ExtResource("6_uimrr"), ExtResource("7_hu86j")]
+
+[node name="DoorAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+stream = ExtResource("8_inwph")
+
+[node name="bedAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("9_nyxym"), ExtResource("11_3girn")]
+
 [node name="Mouse" parent="GUI" instance=ExtResource("4_ndvkj")]
 
 [node name="TabOutButton" type="Button" parent="GUI" node_paths=PackedStringArray("cam")]
@@ -329,6 +352,22 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ComputerOffAudio" type="AudioStreamPlayer" parent="GUI/TabOutButton"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("11_htco2"), ExtResource("12_tdgo2"), ExtResource("13_5ltb4")]
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="GUI"]
+stream = ExtResource("17_h4d1n")
+autoplay = true
+stream_paused = true
+bus = &"BGM"
+
+[node name="AmAudio" type="AudioStreamPlayer" parent="GUI"]
+stream = ExtResource("18_l63lm")
+volume_db = -9.905
+autoplay = true
+bus = &"SFX"
 
 [node name="Room3D" type="Node3D" parent="."]
 
@@ -382,7 +421,7 @@ mesh = NodePath("BedMesh")
 area = NodePath("Area3D")
 message = "Sleep for the rest of the day"
 tooltip = "Go to bed"
-action = "Sleep_Day"
+action = "BED"
 
 [node name="BedMesh" parent="Room3D/Room/Bed" instance=ExtResource("4_grb64")]
 skeleton = NodePath("../../..")
@@ -528,7 +567,7 @@ mesh = NodePath("DoorMesh")
 area = NodePath("Area3D")
 message = "Have a calming walk for a while"
 tooltip = "Open door"
-action = "Walk"
+action = "DOOR"
 
 [node name="DoorMesh" parent="Room3D/Room/Door" instance=ExtResource("18_xi7mj")]
 skeleton = NodePath("../../..")

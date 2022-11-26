@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://io0qs0ny8h3q"]
+[gd_scene load_steps=15 format=3 uid="uid://io0qs0ny8h3q"]
 
 [ext_resource type="PackedScene" uid="uid://dqacqb7mtsnrp" path="res://scenes/ui/computer/loginScreen/login_screen.tscn" id="1_2vw66"]
 [ext_resource type="PackedScene" uid="uid://d0k2cj7bffthu" path="res://scenes/ui/computer/desktop/desktop.tscn" id="1_6q1ss"]
@@ -8,7 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://dksb3q3n103gd" path="res://textures/ui/Desktop/MousePointers_Computer.png" id="4_0n75y"]
 [ext_resource type="AudioStream" uid="uid://c3yp07yaek3x7" path="res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/Mouse Click Select 1.mp3" id="6_ayegb"]
 [ext_resource type="AudioStream" uid="uid://dsviryd80dv28" path="res://audio/sfx/Bedroom Sounds/Game On Off/Game Begin 1.mp3" id="7_7jut8"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="7_n7wfg"]
+[ext_resource type="AudioStream" uid="uid://qbsqkgmwq1x2" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 1.mp3" id="8_c0b25"]
 [ext_resource type="AudioStream" uid="uid://bc4rvbf7l24m7" path="res://audio/sfx/Bedroom Sounds/Game On Off/Game Turns Off 1.mp3" id="8_dey5w"]
+[ext_resource type="AudioStream" uid="uid://bvmt2altk1qnn" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 2.mp3" id="9_746fh"]
+[ext_resource type="AudioStream" uid="uid://b1bfn5r0nau6t" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 3.mp3" id="10_sumwy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yclvb"]
 shader = ExtResource("2_e5bhr")
@@ -31,7 +35,6 @@ mouse_filter = 2
 script = ExtResource("1_c8i4b")
 
 [node name="Desktop" parent="." instance=ExtResource("1_6q1ss")]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -39,11 +42,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LoginScreen" parent="." instance=ExtResource("1_2vw66")]
-layout_mode = 1
 mouse_filter = 2
 
 [node name="Mouse" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -52,7 +54,6 @@ script = ExtResource("3_2n6yq")
 
 [node name="MousePointersComputer" type="TextureRect" parent="Mouse"]
 texture_filter = 1
-layout_mode = 0
 offset_left = -12.0
 offset_top = -4.0
 offset_right = 36.0
@@ -63,10 +64,11 @@ texture = ExtResource("4_0n75y")
 [node name="MousePressAudio" type="AudioStreamPlayer" parent="Mouse"]
 stream = ExtResource("6_ayegb")
 max_polyphony = 20
+script = ExtResource("7_n7wfg")
+samples = [ExtResource("8_c0b25"), ExtResource("9_746fh"), ExtResource("10_sumwy")]
 
 [node name="ScreenEffect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_yclvb")
-layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 1080.0
 mouse_filter = 2
@@ -74,7 +76,6 @@ mouse_force_pass_scroll_events = false
 
 [node name="InputStoper" type="ColorRect" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
