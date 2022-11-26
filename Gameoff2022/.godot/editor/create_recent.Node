@@ -1,5 +1,5 @@
-StaticBody3D
 MeshInstance3D
+StaticBody3D
 Camera3D
 GPUParticles3D
 RigidBody3D
