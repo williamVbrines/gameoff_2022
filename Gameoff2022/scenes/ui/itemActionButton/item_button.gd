@@ -2,6 +2,9 @@ extends Control
 @export var disabled_color : Color = Color.BROWN
 @export var data : Resource : set = set_data;
 @onready var button: Button = $Button
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
+
+
 var is_used : bool = false;
 
 func _init(new_data : ItemData = null) -> void:
@@ -40,6 +43,7 @@ func set_data(new_data : ItemData) -> void:
 	
 	
 func _on_pressed() -> void:
+	pressed_audio.play_rand();
 	_on_attack();
 	
 	

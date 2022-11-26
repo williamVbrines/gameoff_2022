@@ -4,6 +4,9 @@ extends Control
 @onready var labels: Control = $BackGround/Labels
 @onready var selection: Control = $Selection
 var clue_scene = preload("res://scenes/ui/clueSelectable/clue_selectable.tscn");
+@onready var open_audio: AudioStreamPlayer = $OpenAudio
+@onready var close_audio: AudioStreamPlayer = $CloseAudio
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
 
 signal closed();
 
@@ -50,7 +53,7 @@ func _open_anim() -> void:
 	back_ground.show();
 	
 	tween.stop();
-	
+	tween.tween_callback(open_audio.play_rand)
 	tween.tween_property(back_ground,"scale", Vector2(1,1), 0.2);
 	
 	for label in labels.get_children():
@@ -70,7 +73,6 @@ func _close_anim() -> void:
 	back_ground.show();
 	
 	tween.stop();
-	
 	for type_index in selection.get_child_count():
 		var type = selection.get_child(selection.get_child_count() - type_index -1)
 		for tex_index in type.get_child_count():
@@ -80,7 +82,7 @@ func _close_anim() -> void:
 	for label_index in labels.get_child_count() :
 		var label = labels.get_child(labels.get_child_count() - label_index -1)
 		tween.tween_property(label, "modulate", Color(Color.WHITE,0.0), 0.05);
-		
+	tween.tween_callback(close_audio.play_rand)
 	tween.tween_property(back_ground,"scale", Vector2(0,1), 0.2);
 	tween.tween_callback(back_ground.hide);
 	tween.tween_callback(call_deferred.bind("emit_signal", "closed"));

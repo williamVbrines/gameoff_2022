@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d21sy6nj67q6l"]
+[gd_scene load_steps=12 format=3 uid="uid://d21sy6nj67q6l"]
 
 [ext_resource type="Script" path="res://scenes/ui/battelQueue/battel_queue.gd" id="1_7gq41"]
 [ext_resource type="Texture2D" uid="uid://dr3l8if5am1l0" path="res://textures/ui/Battle/Action Queue/ActionQueue_Back_TurnIndicator.png" id="3_rxyix"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://vkpr8280nvpl" path="res://textures/ui/Battle/Action Queue/ActionQueue_TurnBlock_NPC.png" id="6_kupr6"]
 [ext_resource type="Texture2D" uid="uid://bkovlc322tq4t" path="res://textures/ui/Battle/Action Queue/ActionQueue_TurnBlock_Null.png" id="6_q6fqg"]
 [ext_resource type="Texture2D" uid="uid://c51bmsdvxema8" path="res://textures/ui/Battle/Action Queue/ActionQueue_TurnBlock_Player.png" id="7_kmd7c"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="8_cohpg"]
+[ext_resource type="AudioStream" uid="uid://c85xkv5nhav8w" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/Battle Timeline Shift 2.1.mp3" id="9_oeley"]
+[ext_resource type="AudioStream" uid="uid://cm0j27sta3u5o" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/Battle Timeline Shift 2.2.mp3" id="10_2qlhm"]
+[ext_resource type="AudioStream" uid="uid://dwb7afijbjwpy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/Battle Timeline Shift 2.4.mp3" id="12_lb8qj"]
 
 [node name="BattelQueue" type="Control"]
 layout_mode = 3
@@ -116,3 +120,8 @@ layout_mode = 0
 offset_right = 88.0
 offset_bottom = 36.0
 texture = ExtResource("6_q6fqg")
+
+[node name="ShiftAudio" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+script = ExtResource("8_cohpg")
+samples = [ExtResource("9_oeley"), ExtResource("10_2qlhm"), ExtResource("12_lb8qj")]

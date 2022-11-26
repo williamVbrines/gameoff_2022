@@ -1,9 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddyu66i72fx6o"]
+[gd_scene load_steps=15 format=3 uid="uid://ddyu66i72fx6o"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd" id="1_jilq1"]
 [ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_1wvcl"]
 [ext_resource type="Texture2D" uid="uid://d4053sr81jx7" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png" id="2_vmhr8"]
 [ext_resource type="Texture2D" uid="uid://deaarakxmj1d7" path="res://textures/ui/LoadoutAndPauseMenu/tooltip9patch.png" id="2_wokme"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="5_jrn6f"]
+[ext_resource type="AudioStream" uid="uid://cnvhex67castv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 1.mp3" id="6_1qgqr"]
+[ext_resource type="AudioStream" uid="uid://b6d5f855koerx" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 2.mp3" id="7_fx3v4"]
+[ext_resource type="AudioStream" uid="uid://dbmsu5ddbt4cl" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 3.mp3" id="8_nmgk6"]
+[ext_resource type="AudioStream" uid="uid://opaty6igwxc3" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 4.mp3" id="9_22m7u"]
+[ext_resource type="AudioStream" uid="uid://bngf2kj5f6t82" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/Place Icon 1.mp3" id="10_wihe1"]
+[ext_resource type="AudioStream" uid="uid://0p842d6u3s0f" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/Place Icon 2.mp3" id="11_47phv"]
+[ext_resource type="AudioStream" uid="uid://wfxl7dik1p18" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/Place Icon 3.mp3" id="12_3p2t1"]
+[ext_resource type="AudioStream" uid="uid://djmo6g6sbowyw" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/Place Icon 4.mp3" id="13_wkdy3"]
 
 [sub_resource type="SystemFont" id="SystemFont_dav45"]
 
@@ -71,3 +80,11 @@ offset_right = 110.0
 offset_bottom = 110.0
 mouse_filter = 2
 texture = ExtResource("2_vmhr8")
+
+[node name="DownAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("5_jrn6f")
+samples = [ExtResource("6_1qgqr"), ExtResource("7_fx3v4"), ExtResource("8_nmgk6"), ExtResource("9_22m7u")]
+
+[node name="UpAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("5_jrn6f")
+samples = [ExtResource("10_wihe1"), ExtResource("11_47phv"), ExtResource("12_3p2t1"), ExtResource("13_wkdy3")]

@@ -360,7 +360,6 @@ samples = [ExtResource("11_htco2"), ExtResource("12_tdgo2"), ExtResource("13_5lt
 [node name="BGMusic" type="AudioStreamPlayer" parent="GUI"]
 stream = ExtResource("17_h4d1n")
 autoplay = true
-stream_paused = true
 bus = &"BGM"
 
 [node name="AmAudio" type="AudioStreamPlayer" parent="GUI"]

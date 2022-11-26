@@ -4,6 +4,7 @@ extends Control
 @onready var button: Button = $Button
 @onready var cost_counter_label: Label = $Button/BattleMenuSubmenuCluesIconTimeCost/CostLabel
 @onready var clues_cost_icon: TextureRect = $Button/BattleMenuSubmenuCluesIconTimeCost
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
 
 var is_used : bool = false;
 
@@ -44,6 +45,7 @@ func set_data(new_data : ClueData) -> void:
 	
 	
 func _on_pressed() -> void:
+	pressed_audio.play_rand();
 	_on_attack();
 	
 	

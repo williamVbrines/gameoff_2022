@@ -16,6 +16,12 @@ extends Control
 @onready var items_button: Button = $SideBar/Selection/ItemsButton
 @onready var exit: Button = $"SideBar/Selection/Exit Kingdom Of Frogs"
 
+@onready var open_audio: AudioStreamPlayer = $OpenAudio
+@onready var close_audio: AudioStreamPlayer = $CloseAudio
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
+@onready var exit_audio: AudioStreamPlayer = $ExitAudio
+
+
 func _ready() -> void:
 	_make_connections();
 	process_mode = Node.PROCESS_MODE_ALWAYS;
@@ -37,6 +43,7 @@ func _make_connections() -> void:
 	exit.pressed.connect(_on_exit_pressed);
 	
 func _on_exit_pressed() -> void:
+	exit_audio.play_rand();
 	exit.disabled = true;
 	EventManager.store_data.emit();
 	SceneChanger.call_deferred("load_level" , "res://scenes/levels/room/room.tscn");
@@ -62,6 +69,9 @@ func _hide_anim() -> void:
 	
 	
 func _show_anim() -> void:
+	
+			
+			
 	var tween = create_tween()
 	tween.stop();
 	
@@ -80,7 +90,13 @@ func _on_pause_pressed() -> void:
 	
 #	Engine.time_scale = 0;
 	
-	
+	for child in selection.get_children():
+		if child is Button:
+			
+			child.disabled = false;
+			child.set_pressed_no_signal(false);
+			
+			
 	var tween = create_tween();
 	
 	back_ground.scale.y = 0;
@@ -88,7 +104,8 @@ func _on_pause_pressed() -> void:
 	back_ground.show();
 	
 	tween.stop();
-	
+	tween.tween_callback(pressed_audio.play_rand);
+	tween.tween_callback(open_audio.play_rand);
 	tween.tween_property(back_ground,"scale",Vector2(1, 1), 0.2);
 	tween.tween_callback(set_sidebar_buttons_to_deafult);
 	tween.tween_callback(selection.show);
@@ -101,35 +118,40 @@ func _on_pause_pressed() -> void:
 	
 	
 func _on_resume_pressed() ->void:
+	pressed_audio.play_rand();
+	resume();
+	
+func resume() -> void:
+	
 	resume_button.set_disabled(true);
 	
 	
 	if loadout_menu.is_open():
 		loadout_menu.close_loadout();
 		load_out_button.set_pressed_no_signal(false);
-		if !loadout_menu.closed.is_connected(_on_resume_pressed):
-			loadout_menu.closed.connect(_on_resume_pressed);
+		if !loadout_menu.closed.is_connected(resume):
+			loadout_menu.closed.connect(resume);
 		return;
-	elif loadout_menu.closed.is_connected(_on_resume_pressed):
-		loadout_menu.closed.disconnect(_on_resume_pressed);
+	elif loadout_menu.closed.is_connected(resume):
+		loadout_menu.closed.disconnect(resume);
 	
 	if clues_menu.is_open():
 		clues_menu.close_loadout();
 		clues_button.set_pressed_no_signal(false);
-		if !clues_menu.closed.is_connected(_on_resume_pressed):
-			clues_menu.closed.connect(_on_resume_pressed);
+		if !clues_menu.closed.is_connected(resume):
+			clues_menu.closed.connect(resume);
 		return;
-	elif clues_menu.closed.is_connected(_on_resume_pressed):
-		clues_menu.closed.disconnect(_on_resume_pressed);
+	elif clues_menu.closed.is_connected(resume):
+		clues_menu.closed.disconnect(resume);
 		
 	if items_menu.is_open():
 		items_menu.close_loadout();
 		items_button.set_pressed_no_signal(false);
-		if !items_menu.closed.is_connected(_on_resume_pressed):
-			items_menu.closed.connect(_on_resume_pressed);
+		if !items_menu.closed.is_connected(resume):
+			items_menu.closed.connect(resume);
 		return;
-	elif items_menu.closed.is_connected(_on_resume_pressed):
-		items_menu.closed.disconnect(_on_resume_pressed);
+	elif items_menu.closed.is_connected(resume):
+		items_menu.closed.disconnect(resume);
 		
 	var tween = create_tween();
 	
@@ -143,7 +165,8 @@ func _on_resume_pressed() ->void:
 	for index in selection.get_child_count():
 		tween.tween_property(selection.get_child(selection.get_child_count() - index-1),"modulate",Color(Color.WHITE,0.0), 0.05);
 			
-			
+	tween.tween_callback(close_audio.play_rand);
+	
 	tween.tween_callback(selection.hide);
 	tween.tween_property(back_ground,"scale",Vector2(1, 0), 0.2);
 	
@@ -165,11 +188,12 @@ func set_sidebar_buttons_to_deafult() -> void:
 			button.set_disabled(false);
 	
 func _on_loadout_toggled(button_pressed: bool) -> void:
+
 	if button_pressed && !loadout_menu.is_open():
 		_open_loadout();
-		
+		pressed_audio.play_rand();
 	elif loadout_menu.is_open():
-		
+		pressed_audio.play_rand();
 		loadout_menu.close_loadout();
 	else:
 		load_out_button.set_pressed_no_signal(!button_pressed)
@@ -177,8 +201,9 @@ func _on_loadout_toggled(button_pressed: bool) -> void:
 func _on_clue_toggled(button_pressed: bool) -> void:
 	if button_pressed && !clues_menu.is_open():
 		_open_cluse();
-		
+		pressed_audio.play_rand();
 	elif clues_menu.is_open():
+		pressed_audio.play_rand();
 		clues_menu.close_loadout();
 	else:
 		clues_button.set_pressed_no_signal(button_pressed)
@@ -187,8 +212,9 @@ func _on_clue_toggled(button_pressed: bool) -> void:
 func _on_items_toggled(button_pressed: bool) -> void:
 	if button_pressed && !items_menu.is_open():
 		_open_items();
-		
+		pressed_audio.play_rand();
 	elif items_menu.is_open():
+		pressed_audio.play_rand();
 		items_menu.close_loadout();
 	else:
 		items_button.set_pressed_no_signal(button_pressed)

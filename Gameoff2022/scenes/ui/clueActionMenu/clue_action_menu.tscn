@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxumryqsk6v7n"]
+[gd_scene load_steps=20 format=3 uid="uid://dxumryqsk6v7n"]
 
 [ext_resource type="Script" path="res://scenes/ui/clueActionMenu/clue_action_menu.gd" id="1_7anxj"]
 [ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="2_ul808"]
@@ -7,8 +7,19 @@
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_fwbst"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_808q1"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_hj721"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="8_d3p6m"]
+[ext_resource type="AudioStream" uid="uid://cwuwxpfd10png" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.1.mp3" id="9_fper2"]
+[ext_resource type="AudioStream" uid="uid://bhukn3snlsd8h" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.2.mp3" id="10_8vkhd"]
+[ext_resource type="AudioStream" uid="uid://dgvwg825t8ejp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.3.mp3" id="11_bdex2"]
+[ext_resource type="AudioStream" uid="uid://b55saewa5u3rv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.4.mp3" id="12_pwhbx"]
+[ext_resource type="AudioStream" uid="uid://c2x8eonkds843" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.1.mp3" id="13_gmlap"]
+[ext_resource type="AudioStream" uid="uid://cab5mq8xhuj1g" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.2.mp3" id="14_uk627"]
+[ext_resource type="AudioStream" uid="uid://bf64g2wfbdo8n" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.3.mp3" id="15_hsw70"]
+[ext_resource type="AudioStream" uid="uid://brf4xjy4yi5pu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.4.mp3" id="16_acqfq"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="17_hqe83"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="18_fhu3t"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f411w"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fnutt"]
 resource_local_to_scene = true
 shader = ExtResource("5_fwbst")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -30,7 +41,6 @@ script = ExtResource("1_7anxj")
 [node name="ItemSubmenuSpacingGuide" type="TextureRect" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.494118)
-layout_mode = 0
 offset_left = -100.0
 offset_top = -12.0
 offset_right = 445.0
@@ -41,7 +51,6 @@ texture = ExtResource("2_ul808")
 visible = false
 texture_filter = 1
 clip_contents = true
-layout_mode = 0
 offset_left = -1.0
 offset_top = 48.0
 offset_right = 349.0
@@ -54,7 +63,6 @@ patch_margin_bottom = 2
 
 [node name="Clues" type="VBoxContainer" parent="MenuBackground"]
 custom_minimum_size = Vector2i(314, 0)
-layout_mode = 0
 offset_left = 19.0
 offset_top = 16.0
 offset_right = 333.0
@@ -62,15 +70,13 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_4cptf")]
-material = SubResource("ShaderMaterial_f411w")
-layout_mode = 1
+material = SubResource("ShaderMaterial_fnutt")
 offset_left = 238.0
 offset_right = 411.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
 
 [node name="Label" type="Label" parent="TagButton"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 49.0
 offset_top = 5.0
 offset_right = 140.0
@@ -80,9 +86,20 @@ theme_override_font_sizes/font_size = 26
 text = "Clues"
 
 [node name="BattleMenuListItemDiamondLv1" type="TextureRect" parent="TagButton"]
-layout_mode = 0
 offset_left = -37.0
 offset_top = -14.0
 offset_right = 37.0
 offset_bottom = 60.0
 texture = ExtResource("7_hj721")
+
+[node name="OpenAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("8_d3p6m")
+samples = [ExtResource("9_fper2"), ExtResource("10_8vkhd"), ExtResource("11_bdex2"), ExtResource("12_pwhbx")]
+
+[node name="CloseAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("8_d3p6m")
+samples = [ExtResource("13_gmlap"), ExtResource("14_uk627"), ExtResource("15_hsw70"), ExtResource("16_acqfq")]
+
+[node name="PressedAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("8_d3p6m")
+samples = [ExtResource("17_hqe83"), ExtResource("18_fhu3t")]

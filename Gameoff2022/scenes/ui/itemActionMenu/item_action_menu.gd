@@ -6,6 +6,9 @@ const OPEN_SPEED : float = 0.1;
 @onready var menu_background: NinePatchRect = $MenuBackground
 @onready var tag_button: Button = $TagButton
 @onready var cost_tag: Control = $TagButton/CostCounterTag
+@onready var close_audio: AudioStreamPlayer = $CloseAudio
+@onready var open_audio: AudioStreamPlayer = $OpenAudio
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
 
 var item_button_scene : PackedScene = preload("res://scenes/ui/itemActionButton/item_button.tscn")
 
@@ -51,6 +54,8 @@ func _close() -> void:
 	
 	tween_p.set_parallel();
 	tween_p.stop();
+	tween_p.tween_callback(pressed_audio.play_rand);
+	tween_p.tween_callback(close_audio.play_rand);
 	tween_p.tween_property(menu_background,"size",  Vector2(box_size.x,0), OPEN_SPEED);
 	tween_p.tween_property(menu_background,"position", menu_background.position + Vector2(0,box_size.y),OPEN_SPEED);
 	tween_p.tween_property(tag_button,"position", tag_button.position + Vector2(0,box_size.y), OPEN_SPEED);
@@ -79,8 +84,10 @@ func _open() -> void:
 	var tween = create_tween();
 	tween.stop();
 	#Move Left most
+	tween.tween_callback(pressed_audio.play_rand);
 	tween.tween_property(tag_button,"position", Vector2(0,tag_button.position.y), OPEN_SPEED);
 	#Move to final
+	tween.tween_callback(open_audio.play_rand);
 	tween.tween_property(tag_button,"position", Vector2(0,-box_size.y), OPEN_SPEED);
 	tween.tween_property(menu_background,"position", menu_background.position - Vector2(0,box_size.y), 0);
 #	tween.tween_interval(OPEN_SPEED);

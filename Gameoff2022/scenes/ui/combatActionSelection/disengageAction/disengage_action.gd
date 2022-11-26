@@ -2,6 +2,7 @@ extends Control
 
 @onready var tag_button: Button = $TagButton
 @export var dialog : String = "";
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
 
 func _ready() -> void:
 	_make_connections();
@@ -22,6 +23,7 @@ func _on_pressed() -> void:
 	
 	
 func _on_flee() -> void:
+	pressed_audio.play_rand();
 #	EventManager.combat_state_changed.emit("PLAYER_ACTION_RESOLVE");
 #	EventManager.disengage.emit(dialog);
 	EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");

@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://0w7ambp03kof"]
+[gd_scene load_steps=14 format=3 uid="uid://0w7ambp03kof"]
 
 [ext_resource type="Script" path="res://scenes/ui/cluesActionButton/clue_action_button.gd" id="1_cuete"]
 [ext_resource type="Resource" uid="uid://cmiijlqwn1yyk" path="res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres" id="2_1ea1r"]
 [ext_resource type="Texture2D" uid="uid://d72wcglmseqx" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Clues_Icon_TimeCost.png" id="2_y0wmj"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="3_q2dsb"]
 [ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="5_fey53"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="6_0u2gg"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="7_tscwi"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="8_hs3do"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7mw2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -83,3 +86,7 @@ offset_top = 34.0
 offset_right = 313.0
 offset_bottom = 38.0
 theme_override_styles/separator = SubResource("StyleBoxFlat_nf4d3")
+
+[node name="PressedAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("6_0u2gg")
+samples = [ExtResource("7_tscwi"), ExtResource("8_hs3do")]

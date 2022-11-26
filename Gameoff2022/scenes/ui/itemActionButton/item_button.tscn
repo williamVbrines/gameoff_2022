@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccag0ul8csdht"]
+[gd_scene load_steps=11 format=3 uid="uid://ccag0ul8csdht"]
 
 [ext_resource type="Script" path="res://scenes/ui/itemActionButton/item_button.gd" id="1_a4n43"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="2_lxobl"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="3_85h3j"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="4_itltf"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="5_bfrb8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu2rc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -39,7 +42,6 @@ script = ExtResource("1_a4n43")
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 7.0
 offset_top = 1.0
 offset_right = 305.0
@@ -58,9 +60,12 @@ icon_alignment = 2
 
 [node name="HSeparator2" type="HSeparator" parent="."]
 custom_minimum_size = Vector2i(314, 0)
-layout_mode = 0
 offset_left = -1.0
 offset_top = 34.0
 offset_right = 313.0
 offset_bottom = 38.0
 theme_override_styles/separator = SubResource("StyleBoxFlat_egohk")
+
+[node name="PressedAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_85h3j")
+samples = [ExtResource("4_itltf"), ExtResource("5_bfrb8")]

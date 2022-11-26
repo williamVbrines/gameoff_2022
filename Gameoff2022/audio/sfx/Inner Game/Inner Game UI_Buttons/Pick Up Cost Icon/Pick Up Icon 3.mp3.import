@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Pick Up Icon 3.mp3-a821018b28cc0ffe7579342f44
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

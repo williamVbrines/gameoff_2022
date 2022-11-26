@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Select Menu Option 2.mp3-1b9be6a7a80aa25226f2
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

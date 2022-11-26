@@ -55,7 +55,6 @@ func _gen_sample_q(text: String)->void:
 	if word != "":
 		queue.append(hash(word)  % samples.size());
 	
-	print(queue)
 	
 func play_next()->void:
 	if queue.size() <= 0: return;

@@ -1,13 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://035bk38b0pui"]
+[gd_scene load_steps=11 format=3 uid="uid://035bk38b0pui"]
 
 [ext_resource type="Script" path="res://scenes/ui/taticsActionButton/tactic_action_button.gd" id="1_t2f7p"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="3_37cxj"]
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="3_sfqkw"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="4_tnn87"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="5_4pa8o"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="7_ywrq5"]
 [ext_resource type="Texture2D" uid="uid://cbi7t5s6k8iie" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv3.png" id="8_c6452"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="8_ux0u2"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="9_mrsg3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fk5xl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8mj6s"]
 resource_local_to_scene = true
 shader = ExtResource("3_sfqkw")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -23,19 +26,16 @@ offset_bottom = 50.0
 script = ExtResource("1_t2f7p")
 
 [node name="TagButton" parent="." instance=ExtResource("3_37cxj")]
-material = SubResource("ShaderMaterial_fk5xl")
-layout_mode = 1
+material = SubResource("ShaderMaterial_8mj6s")
 offset_right = 296.0
 
 [node name="CostCounterTag" parent="TagButton" instance=ExtResource("4_tnn87")]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
 grow_horizontal = 0
 
 [node name="TaticDiscriptionLabel" type="Label" parent="."]
-layout_mode = 0
 offset_left = 47.0
 offset_top = 5.0
 offset_right = 271.0
@@ -47,9 +47,12 @@ visible_characters = 14
 
 [node name="Frame" type="TextureRect" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = -37.0
 offset_top = -12.0
 offset_right = 37.0
 offset_bottom = 62.0
 texture = ExtResource("8_c6452")
+
+[node name="OptSelectAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("7_ywrq5")
+samples = [ExtResource("8_ux0u2"), ExtResource("9_mrsg3")]

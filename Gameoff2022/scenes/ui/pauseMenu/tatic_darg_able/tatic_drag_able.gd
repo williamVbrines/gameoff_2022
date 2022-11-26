@@ -5,6 +5,8 @@ const PRESSED_SCALE : Vector2 = Vector2(0.2,0.2)
 @onready var tool_tip: Control = $ToolTip
 @onready var tool_tip_label: Label = $ToolTip/Label
 @onready var texture: TextureRect = $Texture
+@onready var down_audio: AudioStreamPlayer = $DownAudio
+@onready var up_audio: AudioStreamPlayer = $UpAudio
 
 var data_id : String = "test" : set = set_data_id, get = get_data_id;
 var data : Resource = null;
@@ -55,12 +57,16 @@ func _ready() -> void:
 	
 func _make_connections() -> void:
 	button_down.connect(_on_pressed);
-	button_up.connect(_on_released);
+	button_up.connect(_on_up);
 	mouse_entered.connect(_on_show_tooltip);
 	mouse_exited.connect(_on_hide_tooltip);
 	
-	
+func _on_up()->void:
+	up_audio.play_rand();
+	_on_released();
+		
 func _on_pressed() -> void:
+	down_audio.play_rand();
 	is_draging = true;
 	texture.scale += PRESSED_SCALE;
 	texture.position = -(texture.size * texture.scale)/2 + size/2
@@ -68,6 +74,7 @@ func _on_pressed() -> void:
 	
 	
 func _on_released() ->void:
+	
 	is_draging = false;
 	texture.scale = Vector2(1,1);
 	texture.position = -(texture.size * texture.scale)/2 + size/2

@@ -4,6 +4,7 @@ extends Control
 @onready var slots: Control = $Slots
 @onready var npc_block: TextureRect = $Slots/TurnBlockNpc
 @onready var player_block: TextureRect = $Slots/TurnBlockPlayer
+@onready var shift_audio: AudioStreamPlayer = $ShiftAudio
 
 const BLOCK_SEPARATION : float = 8;
 const FADE_TIME : float = 0.2;
@@ -95,7 +96,6 @@ func _set_up()->void:
 	
 func _on_change_queue(_entity : String, pos_change : int) -> void:
 	#1200
-	print(queue); 
 	pos_change = clampi(pos_change,0, queue.size()-1);
 	
 	while queue[pos_change] != 0:
@@ -123,8 +123,6 @@ func _on_change_queue(_entity : String, pos_change : int) -> void:
 	enemy_index = enemy_index - next;
 	player_index = player_index - next;
 	
-	print(queue);
-	
 	_move_front_to(pos_change);
 	
 	
@@ -138,7 +136,7 @@ func _move_front_to(index : int):
 	tween.stop();
 	#Fade out
 	tween.tween_property(block,"self_modulate",Color(Color.WHITE,0.0),FADE_TIME)
-	
+	tween.tween_callback(shift_audio.play_rand);
 	#Swap block
 	slots.move_child(block,index);
 	tween.tween_callback(block.set_position.bind(Vector2((block.size.x + BLOCK_SEPARATION) * (index),0)));

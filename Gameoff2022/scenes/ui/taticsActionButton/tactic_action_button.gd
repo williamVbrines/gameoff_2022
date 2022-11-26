@@ -5,6 +5,7 @@ extends Control
 @onready var tag_button: Button = $TagButton
 @onready var discription_label: Label = $TaticDiscriptionLabel
 @onready var cost_counter_tag: Control = $TagButton/CostCounterTag
+@onready var opt_select_audio: AudioStreamPlayer = $OptSelectAudio
 
 var frames : Array = [
 	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png"),
@@ -58,6 +59,7 @@ func set_data(new_data : TacticsData) -> void:
 	
 	
 func _on_pressed() -> void:
+	opt_select_audio.play_rand();
 	_on_attack();
 	
 	

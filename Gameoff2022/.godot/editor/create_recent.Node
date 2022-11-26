@@ -1,5 +1,5 @@
-AudioStreamPlayer
 RandAudioStreamPlayer (rand_audio_stream_player.gd)
+AudioStreamPlayer
 ColorRect
 Label
 Control

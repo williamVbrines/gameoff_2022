@@ -1,19 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://doxlpksqfs6jj"]
+[gd_scene load_steps=11 format=3 uid="uid://doxlpksqfs6jj"]
 
 [ext_resource type="Script" path="res://scenes/ui/combateDialogDisplay/combate_dialog_display.gd" id="1_1g1sp"]
 [ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="3_7yksq"]
 [ext_resource type="Script" path="res://scenes/voiceBox/voice_box.gd" id="4_2fpfo"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="4_18yiu"]
-[ext_resource type="AudioStream" uid="uid://c7v2gxtau55si" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 1.mp3" id="5_dsggj"]
-[ext_resource type="AudioStream" uid="uid://dgqwsumnoq4fh" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 2.mp3" id="6_liipu"]
-[ext_resource type="AudioStream" uid="uid://2qq4vo14d32m" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 3.mp3" id="7_rb1ua"]
-[ext_resource type="AudioStream" uid="uid://crpkwqvvk2e8v" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 4.mp3" id="8_71p14"]
-[ext_resource type="AudioStream" uid="uid://l1u0jjkuk7vv" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 5.mp3" id="9_bqyy2"]
-[ext_resource type="AudioStream" uid="uid://7hop3d7405ws" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 6.mp3" id="10_y8w8s"]
-[ext_resource type="AudioStream" uid="uid://v71x8755oq63" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 7.mp3" id="11_w4kn3"]
-[ext_resource type="AudioStream" uid="uid://3cmpgkpgrw7c" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 8.mp3" id="12_n1u3q"]
-[ext_resource type="AudioStream" uid="uid://cfvxdwl6wxuks" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 9.mp3" id="13_qpiah"]
-[ext_resource type="AudioStream" uid="uid://b2m7mp4combxw" path="res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/Inkeeper NEU 10.mp3" id="14_5cq3p"]
+[ext_resource type="AudioStream" uid="uid://h50gp4fwl6jv" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 1.mp3" id="5_yc8l2"]
+[ext_resource type="AudioStream" uid="uid://cdhrx0pqu1kyw" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 2.mp3" id="6_hwyg8"]
+[ext_resource type="AudioStream" uid="uid://1b1nvhovi4sm" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 3.mp3" id="7_oqi1a"]
+[ext_resource type="AudioStream" uid="uid://bg7o1i15ii466" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 4.mp3" id="8_7rtdv"]
+[ext_resource type="AudioStream" uid="uid://cnwwax7nq2slw" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 5.mp3" id="9_rrbjd"]
 
 [sub_resource type="SystemFont" id="SystemFont_182fu"]
 
@@ -86,7 +81,7 @@ flat = true
 
 [node name="VoiceBoxPlayer" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("label")]
 script = ExtResource("4_2fpfo")
-samples = [ExtResource("5_dsggj"), ExtResource("6_liipu"), ExtResource("7_rb1ua"), ExtResource("8_71p14"), ExtResource("9_bqyy2"), ExtResource("10_y8w8s"), ExtResource("11_w4kn3"), ExtResource("12_n1u3q"), ExtResource("13_qpiah"), ExtResource("14_5cq3p")]
+samples = [ExtResource("5_yc8l2"), ExtResource("6_hwyg8"), ExtResource("7_oqi1a"), ExtResource("8_7rtdv"), ExtResource("9_rrbjd")]
 label = NodePath("../Background/Text")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

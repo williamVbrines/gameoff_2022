@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/BeeptextV2 3.mp3-e9a284aae20d3b6f970c8c194cc4
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

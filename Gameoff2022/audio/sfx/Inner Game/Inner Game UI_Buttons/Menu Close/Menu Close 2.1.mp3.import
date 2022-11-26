@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Menu Close 2.1.mp3-4dc9ff6c6e1c09a221c62f3a23
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

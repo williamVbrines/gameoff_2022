@@ -35,7 +35,6 @@ func _on_level_ready():
 	
 	for i in 50:
 		val = current - (i * ((current- end)/50))
-		print(val)
 		tween_s.tween_callback(AudioServer.call_deferred.bind("set_bus_volume_db",AudioServer.get_bus_index("Master"), val));
 		tween_s.tween_interval(0.05);
 	
@@ -114,7 +113,6 @@ func load_level(path : String) -> void:
 	
 	for i in 50:
 		val = current - (i * ((current- end)/50))
-		print(val)
 		tween_s.tween_callback(AudioServer.call_deferred.bind("set_bus_volume_db",AudioServer.get_bus_index("Master"), val));
 		tween_s.tween_interval(0.05);
 		

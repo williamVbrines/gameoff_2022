@@ -6,6 +6,9 @@ extends Control
 @onready var selection: Control = $pointTextuers/Selection
 var dragable_scene = preload("res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.tscn")
 @onready var dragables: Control = $Dragables
+@onready var open_audio: AudioStreamPlayer = $OpenAudio
+@onready var close_audio: AudioStreamPlayer = $CloseAudio
+@onready var pressed_audio: AudioStreamPlayer = $PressedAudio
 
 var slot_points : Array[Vector2] = [];
 
@@ -57,7 +60,7 @@ func _open_anim() -> void:
 	back_ground.show();
 	
 	tween.stop();
-	
+	tween.tween_callback(open_audio.play_rand)
 	tween.tween_property(back_ground,"scale", Vector2(1,1), 0.2);
 	
 	for label in labels.get_children():
@@ -84,7 +87,6 @@ func _close_anim() -> void:
 	back_ground.show();
 	
 	tween.stop();
-	
 	for t in dragables.get_children():
 		for child in t.get_children():
 			tween.tween_property(child, "modulate", Color(Color.WHITE, 0.0), 0.1);
@@ -103,6 +105,7 @@ func _close_anim() -> void:
 		var label = labels.get_child(labels.get_child_count() - label_index -1)
 		tween.tween_property(label, "modulate", Color(Color.WHITE,0.0), 0.05);
 		
+	tween.tween_callback(close_audio.play_rand)	
 	tween.tween_property(back_ground,"scale", Vector2(0,1), 0.2);
 	tween.tween_callback(back_ground.hide);
 	tween.tween_callback(call_deferred.bind("emit_signal", "closed"));

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Place Icon 3.mp3-7f3d4819cfb1994ab24e93be9596
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

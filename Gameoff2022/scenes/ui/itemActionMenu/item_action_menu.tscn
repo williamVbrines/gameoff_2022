@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmr5tljni8kwq"]
+[gd_scene load_steps=21 format=3 uid="uid://dmr5tljni8kwq"]
 
 [ext_resource type="Script" path="res://scenes/ui/itemActionMenu/item_action_menu.gd" id="1_ophf3"]
 [ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="2_yp5qp"]
@@ -8,8 +8,19 @@
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_7row5"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_8shqt"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="8_u8fht"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="9_y450l"]
+[ext_resource type="AudioStream" uid="uid://cwuwxpfd10png" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.1.mp3" id="10_6v52w"]
+[ext_resource type="AudioStream" uid="uid://bhukn3snlsd8h" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.2.mp3" id="11_t5h76"]
+[ext_resource type="AudioStream" uid="uid://dgvwg825t8ejp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.3.mp3" id="12_8xrxt"]
+[ext_resource type="AudioStream" uid="uid://b55saewa5u3rv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.4.mp3" id="13_lxeow"]
+[ext_resource type="AudioStream" uid="uid://c2x8eonkds843" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.1.mp3" id="14_iualq"]
+[ext_resource type="AudioStream" uid="uid://cab5mq8xhuj1g" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.2.mp3" id="15_6qaso"]
+[ext_resource type="AudioStream" uid="uid://bf64g2wfbdo8n" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.3.mp3" id="16_ir8v3"]
+[ext_resource type="AudioStream" uid="uid://brf4xjy4yi5pu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.4.mp3" id="17_7cica"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="18_0of6j"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="19_3lf7m"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wp70"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pcil"]
 resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -64,7 +75,7 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_kqxxk")]
-material = SubResource("ShaderMaterial_3wp70")
+material = SubResource("ShaderMaterial_0pcil")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
@@ -89,3 +100,15 @@ texture = ExtResource("7_8shqt")
 modulate = Color(1, 1, 1, 0)
 offset_left = 168.0
 offset_right = 220.0
+
+[node name="OpenAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("9_y450l")
+samples = [ExtResource("10_6v52w"), ExtResource("11_t5h76"), ExtResource("12_8xrxt"), ExtResource("13_lxeow")]
+
+[node name="CloseAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("9_y450l")
+samples = [ExtResource("14_iualq"), ExtResource("15_6qaso"), ExtResource("16_ir8v3"), ExtResource("17_7cica")]
+
+[node name="PressedAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("9_y450l")
+samples = [ExtResource("18_0of6j"), ExtResource("19_3lf7m")]

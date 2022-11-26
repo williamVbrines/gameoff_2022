@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dm2llsrqhkg3t"]
+[gd_scene load_steps=30 format=3 uid="uid://dm2llsrqhkg3t"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/pause_menu.gd" id="1_po6cs"]
 [ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_ufott"]
@@ -9,6 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://wcwbjjjr6avd" path="res://textures/ui/Out of Battle/OutOfBattle_MenuButton_Diamond_hover.png" id="5_ldqd7"]
 [ext_resource type="PackedScene" uid="uid://cu6c17iwu5lee" path="res://scenes/ui/loadoutMenu/loadout_menu.tscn" id="6_sfwn6"]
 [ext_resource type="PackedScene" uid="uid://bw254wnisp7ip" path="res://scenes/ui/itemsMenu/items_menu.tscn" id="7_t0rmp"]
+[ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="10_hvvcf"]
+[ext_resource type="AudioStream" uid="uid://cwuwxpfd10png" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.1.mp3" id="11_7requ"]
+[ext_resource type="AudioStream" uid="uid://bhukn3snlsd8h" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.2.mp3" id="12_btysh"]
+[ext_resource type="AudioStream" uid="uid://dgvwg825t8ejp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.3.mp3" id="13_l3654"]
+[ext_resource type="AudioStream" uid="uid://b55saewa5u3rv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.4.mp3" id="14_a57x6"]
+[ext_resource type="AudioStream" uid="uid://c2x8eonkds843" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.1.mp3" id="15_abru0"]
+[ext_resource type="AudioStream" uid="uid://cab5mq8xhuj1g" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.2.mp3" id="16_lnirv"]
+[ext_resource type="AudioStream" uid="uid://bf64g2wfbdo8n" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.3.mp3" id="17_qumpm"]
+[ext_resource type="AudioStream" uid="uid://brf4xjy4yi5pu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.4.mp3" id="18_i0lsy"]
+[ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="19_2hqf4"]
+[ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="20_7pl4f"]
+[ext_resource type="AudioStream" uid="uid://dfdwkqw32qfwb" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/Select Exit KOF 1.mp3" id="21_extue"]
+[ext_resource type="AudioStream" uid="uid://db554iixhsj7f" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/Select Exit KOF 2.mp3" id="22_76278"]
 
 [sub_resource type="SystemFont" id="SystemFont_yyaxe"]
 
@@ -187,3 +200,19 @@ centered = false
 visible = false
 position = Vector2(960, 531)
 texture = ExtResource("3_87cyt")
+
+[node name="OpenAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("10_hvvcf")
+samples = [ExtResource("11_7requ"), ExtResource("12_btysh"), ExtResource("13_l3654"), ExtResource("14_a57x6")]
+
+[node name="CloseAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("10_hvvcf")
+samples = [ExtResource("15_abru0"), ExtResource("16_lnirv"), ExtResource("17_qumpm"), ExtResource("18_i0lsy")]
+
+[node name="PressedAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("10_hvvcf")
+samples = [ExtResource("19_2hqf4"), ExtResource("20_7pl4f")]
+
+[node name="ExitAudio" type="AudioStreamPlayer" parent="."]
+script = ExtResource("10_hvvcf")
+samples = [ExtResource("21_extue"), ExtResource("22_76278")]

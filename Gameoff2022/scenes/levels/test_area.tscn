@@ -90,9 +90,11 @@ albedo_texture = ExtResource("9_f6stk")
 
 [node name="GUI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_m0888")]
@@ -101,12 +103,11 @@ layout_mode = 1
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_016c5")]
 layout_mode = 1
 
-[node name="DialogWindow" parent="GUI" instance=ExtResource("3_gnw8r")]
-visible = false
-layout_mode = 1
-
 [node name="Mouse" parent="GUI" instance=ExtResource("4_ty73u")]
 process_mode = 3
+layout_mode = 1
+
+[node name="DialogWindow" parent="GUI" instance=ExtResource("3_gnw8r")]
 layout_mode = 1
 
 [node name="TestArea" type="Node3D" parent="."]

@@ -12,7 +12,6 @@ func save_data(file_name : String = PREFIX + "1") -> void:
 	path = path.substr(0,path.rfind("/")+1) + file_name + ".tres"
 	_gather_data();
 	data_hash = str(data).hash();
-	print(data)
 	ResourceSaver.save(self,path);
 	
 	
