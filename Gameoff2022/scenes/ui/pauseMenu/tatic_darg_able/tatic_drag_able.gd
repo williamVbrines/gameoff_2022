@@ -16,12 +16,12 @@ var orgin : Vector2 = Vector2.ZERO;
 
 var slot_points : Array[Vector2] = [Vector2(60,200)] : set = set_slot_points;
 const SLOT_MIN_DIST : float = 100;
-const SLOTED_SCALE : Vector2 = Vector2(0.6,0.6)
+const SLOTED_SCALE : Vector2 = Vector2(0.7,0.7)
 
 var frames : Array = [
-	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png"),
-	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv2.png"),
-	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv3.png")
+	preload("res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png"),
+	preload("res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv2.png"),
+	preload("res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv3.png")
 ]
 
 signal sloted(id : String ,num : int);

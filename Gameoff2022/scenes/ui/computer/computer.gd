@@ -28,7 +28,6 @@ func _on_icon_pressed(action : String) -> void:
 			input_stoper.show();
 			SceneChanger.load_level("res://scenes/levels/test_area.tscn");
 		"TODO":
-			print("Hello")
 			level_select.open_anim();
 
 	

@@ -1,9 +1,3 @@
-res://scenes/ui/dialogWindow/dialog_window.gd
-res://scenes/ui/levelSelect/level_select.tscn
-res://scenes/ui/computer/computer.tscn
-res://scenes/ui/computer/desktop/desktop.tscn
-res://scenes/ui/computer/loginScreen/login_screen.tscn
-res://scenes/ui/levelSelect/level_select.gd
+res://scenes/ui/loadoutMenu/loadout_menu.tscn
+res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.tscn
 res://scenes/ui/computer/computer.gd
-res://scenes/ui/computer/loginScreen/login_screen.gd
-res://scenes/resources/saves/save_data.gd
