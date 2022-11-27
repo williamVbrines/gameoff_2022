@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://io0qs0ny8h3q"]
+[gd_scene load_steps=16 format=3 uid="uid://io0qs0ny8h3q"]
 
 [ext_resource type="PackedScene" uid="uid://dqacqb7mtsnrp" path="res://scenes/ui/computer/loginScreen/login_screen.tscn" id="1_2vw66"]
 [ext_resource type="PackedScene" uid="uid://d0k2cj7bffthu" path="res://scenes/ui/computer/desktop/desktop.tscn" id="1_6q1ss"]
 [ext_resource type="Script" path="res://scenes/ui/computer/computer.gd" id="1_c8i4b"]
+[ext_resource type="PackedScene" uid="uid://c1dr8fotsw8qc" path="res://scenes/ui/levelSelect/level_select.tscn" id="2_6d6bn"]
 [ext_resource type="Shader" path="res://shaders/mointor_effect.gdshader" id="2_e5bhr"]
 [ext_resource type="Script" path="res://scenes/ui/computer/mouse.gd" id="3_2n6yq"]
 [ext_resource type="Texture2D" uid="uid://dksb3q3n103gd" path="res://textures/ui/Desktop/MousePointers_Computer.png" id="4_0n75y"]
@@ -38,6 +39,11 @@ script = ExtResource("1_c8i4b")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelSelect" parent="." instance=ExtResource("2_6d6bn")]
+visible = false
 grow_horizontal = 2
 grow_vertical = 2
 

@@ -297,7 +297,7 @@ system_save.gd::GDScript::-1::1669510009::0::1::::<>Node<>::
 ::res://scenes/test/::1669432265
 save_test.gd::GDScript::-1::1669432265::0::1::::<>Node<>::
 save_test.tscn::PackedScene::7472269401555013596::1669432265::0::1::::<><>::res://scenes/test/save_test.gd
-::res://scenes/ui/::1669432360
+::res://scenes/ui/::1669514893
 mouse.tscn::PackedScene::9110473533186527079::1669432360::0::1::::<><>::res://scenes/levels/room/WorldMouse.gd<>uid://bu00ur4al2rsp
 ::res://scenes/ui/battelQueue/::1669510009
 battel_queue.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
@@ -327,9 +327,9 @@ combate_dialog_display.tscn::PackedScene::8190081777958508951::1669510009::0::1:
 ::res://scenes/ui/combatScreen/::1669510009
 combat_screen.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 combat_screen.tscn::PackedScene::613115860700736317::1669510009::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://ua5g0lc8aoie<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
-::res://scenes/ui/computer/::1669510009
+::res://scenes/ui/computer/::1669515193
 computer.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
-computer.tscn::PackedScene::591959519847187532::1669510009::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://c3yp07yaek3x7<>uid://dsviryd80dv28<>res://scenes/rand_audio_stream_player.gd<>uid://qbsqkgmwq1x2<>uid://bc4rvbf7l24m7<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t
+computer.tscn::PackedScene::591959519847187532::1669515193::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>uid://c1dr8fotsw8qc<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://c3yp07yaek3x7<>uid://dsviryd80dv28<>res://scenes/rand_audio_stream_player.gd<>uid://qbsqkgmwq1x2<>uid://bc4rvbf7l24m7<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t
 mouse.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
 trans_computer.gdshader::Shader::-1::1669432266::0::1::::<><>::
 ::res://scenes/ui/computer/desktop/::1669432360
@@ -343,8 +343,8 @@ login_screen.tscn::PackedScene::8282433658504262597::1669432266::0::1::::<><>::u
 ::res://scenes/ui/costCounterTag/::1669432266
 cost_counter_tag.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 cost_counter_tag.tscn::PackedScene::9208570700023639997::1669432266::0::1::::<><>::res://scenes/ui/tagButton/color_swap.gdshader<>uid://dmqxxsevkfr7h<>res://scenes/ui/costCounterTag/cost_counter_tag.gd<>uid://df3826xj6slyh<>uid://opsohciiyx02<>uid://cgv2x5el18n4j<>uid://dkn1tuxa3ybyj
-::res://scenes/ui/dialogWindow/::1669510009
-dialog_window.gd::GDScript::-1::1669457868::0::1::::<>Control<>::
+::res://scenes/ui/dialogWindow/::1669515016
+dialog_window.gd::GDScript::-1::1669515016::0::1::::<>Control<>::
 dialog_window.tscn::PackedScene::422787459677845910::1669510009::0::1::::<><>::res://scenes/ui/dialogWindow/dialog_window.gd<>uid://rfj18ib1q8ca<>uid://cuidb51mn7j7j<>res://scenes/voiceBox/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw
 ::res://scenes/ui/explorationHUD/::1669455879
 exploration_hud.gd::GDScript::-1::1669432360::0::1::::<>Control<>::
@@ -361,6 +361,8 @@ items_menu.tscn::PackedScene::3988187916879988215::1669510009::0::1::::<><>::res
 ::res://scenes/ui/itemsSelectable/::1669432266
 item_selectable.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 item_selectable.tscn::PackedScene::3256254244125462450::1669432266::0::1::::<><>::res://scenes/ui/itemsSelectable/item_selectable.gd<>uid://brdm2am46cx02<>uid://cuidb51mn7j7j<>uid://dkn1tuxa3ybyj<>uid://d72wcglmseqx
+::res://scenes/ui/levelSelect/::1669518807
+level_select.tscn::PackedScene::6605035840445357910::1669518807::0::1::::<><>::uid://dy73y7r1qb8xh<>uid://c05w8sfi826hy<>uid://dkn1tuxa3ybyj<>uid://ca8uqoonlrcyi<>uid://4gmlh3sxgio5
 ::res://scenes/ui/loadoutMenu/::1669510009
 loadout_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
 loadout_menu.tscn::PackedScene::6240783509282901032::1669510009::0::1::::<><>::res://scenes/ui/loadoutMenu/loadout_menu.gd<>uid://brdm2am46cx02<>uid://dy06wibd73sxu<>uid://d4053sr81jx7<>uid://8vh72q6mr7jt<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
@@ -542,7 +544,7 @@ texture_10.png::CompressedTexture2D::6937716011360806923::1668221556::1669391424
 texture_11.png::CompressedTexture2D::18358689775941004::1668221556::1669391424::1::::<><>::
 texture_12.png::CompressedTexture2D::7743837705027315441::1668221556::1669391424::1::::<><>::
 texture_13.png::CompressedTexture2D::2221482679565715300::1668221556::1669391424::1::::<><>::
-::res://textures/ui/::1669510683
+::res://textures/ui/::1669519820
 MousePointers_World.png::CompressedTexture2D::3843361578714564351::1669432273::1669432273::1::::<><>::
 ::res://textures/ui/Battle/::1669432268
 Dialogue Window Spacing.png::CompressedTexture2D::435611567078988684::1669432267::1669432267::1::::<><>::
@@ -643,7 +645,7 @@ Out Of Battle UI Spacing Guide.png::CompressedTexture2D::548705605033513498::166
 OutOfBattle_MenuButton_Diamond.png::CompressedTexture2D::4510309750703834420::1669432273::1669432273::1::::<><>::
 OutOfBattle_MenuButton_Diamond_hover.png::CompressedTexture2D::1549621362225845813::1669432273::1669432273::1::::<><>::
 OutOfBattle_MenuButton_Diamond_pressed.png::CompressedTexture2D::7098582628444975643::1669432273::1669432273::1::::<><>::
-::res://textures/ui/To Do/::1669510678
+::res://textures/ui/To Do/::1669519820
 To-do list Spacing Guide.png::CompressedTexture2D::8911599029584832033::1669492748::1669510789::1::::<><>::
 ToDo_Checkbox_Checked.png::CompressedTexture2D::726108023931429574::1669484092::1669510789::1::::<><>::
 ToDo_Checkbox_Checked_Small.png::CompressedTexture2D::6478573503220447356::1669485026::1669510790::1::::<><>::
@@ -653,5 +655,9 @@ ToDo_DateSelect_ActiveDay.png::CompressedTexture2D::238658679572016904::16694866
 ToDo_DateSelect_InactiveDay.png::CompressedTexture2D::2048611391440242810::1669486684::1669510790::1::::<><>::
 ToDo_DaySelect_CheckedDay.png::CompressedTexture2D::847468299929808005::1669486246::1669510790::1::::<><>::
 ToDo_StartTaskButton.png::CompressedTexture2D::6988004673469169143::1669492492::1669510790::1::::<><>::
+ToDo_StartTaskButton_Hover.png::CompressedTexture2D::2639151844890709594::1669519428::1669519447::1::::<><>::
+ToDo_StartTaskButton_Pressed.png::CompressedTexture2D::7555506367126712568::1669519440::1669519447::1::::<><>::
 ToDo_Window_Bar.png::CompressedTexture2D::6590889449551533226::1669488434::1669510790::1::::<><>::
 ToDo_Window_Exit.png::CompressedTexture2D::4842209503388177688::1669487200::1669510790::1::::<><>::
+ToDo_Window_Exit_hovered.png::CompressedTexture2D::4614477762229547481::1669519795::1669519826::1::::<><>::
+ToDo_Window_Exit_pressed.png::CompressedTexture2D::5110145546769667385::1669519820::1669519826::1::::<><>::

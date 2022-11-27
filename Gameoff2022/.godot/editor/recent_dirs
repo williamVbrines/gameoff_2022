@@ -1,3 +1,4 @@
+res://scenes/ui/levelSelect
 res://scenes/ui
 res://scenes/sceneChanger
 res://scenes/systemSave
@@ -19,4 +20,3 @@ res://scenes/ui/taticsActionButton
 res://scenes/ui/tagButton
 res://scenes/test
 res://scenes/ui/dialogWindow
-res://scenes/ui/loadoutMenu

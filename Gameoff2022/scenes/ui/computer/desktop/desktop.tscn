@@ -38,6 +38,7 @@ offset_left = 130.0
 offset_top = 346.0
 offset_right = 138.0
 offset_bottom = 354.0
+action = "TODO"
 icon_texture = ExtResource("3_3p661")
 label_text = "ToDo"
 

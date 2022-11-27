@@ -19,11 +19,9 @@ func _gather_data() -> void:
 	data["SystemGlobals"] = SystemGlobals.data_dump();
 
 func laod_data() -> void:
-	prints("LAoding data",data)
 #	if str(data).hash() == data_hash:
 	user_message = "This is a normal file";
 	EventManager.load_data.emit(data);
-	print("LAoding data")
 	return;
 	
 #	if user_message == "This is a normal file": user_message = "Warning if you do mess with this file you may cause strange behavior";

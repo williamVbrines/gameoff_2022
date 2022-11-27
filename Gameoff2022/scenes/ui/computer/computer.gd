@@ -5,6 +5,7 @@ extends Control
 @onready var turn_on_audio: AudioStreamPlayer = $TurnOnAudio
 @onready var turn_off_audio: AudioStreamPlayer = $TurnOffAudio
 @onready var input_stoper: ColorRect = $InputStoper
+@onready var level_select: Control = $LevelSelect
 
 func _ready() -> void:
 	_make_connections();
@@ -26,7 +27,9 @@ func _on_icon_pressed(action : String) -> void:
 		"FAKE_GAME":
 			input_stoper.show();
 			SceneChanger.load_level("res://scenes/levels/test_area.tscn");
-			
+		"TODO":
+			print("Hello")
+			level_select.open_anim();
 
 	
 func _play_quit_animation() -> void:

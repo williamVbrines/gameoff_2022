@@ -130,17 +130,17 @@ func _saveing_anim() -> void:
 	tween.finished.connect(_saveing_anim_finnished);
 	var speed = 0.5;
 	tween.stop();
-	tween.tween_callback(loading_lable.set_text.bind("Saveing"));
+	tween.tween_callback(loading_lable.set_text.bind("Saving"));
 	tween.tween_interval(speed);
-	tween.tween_callback(loading_lable.set_text.bind("Saveing."));
+	tween.tween_callback(loading_lable.set_text.bind("Saving."));
 	tween.tween_interval(speed);
-	tween.tween_callback(loading_lable.set_text.bind("Saveing.."));
+	tween.tween_callback(loading_lable.set_text.bind("Saving.."));
 	tween.tween_interval(speed);
-	tween.tween_callback(loading_lable.set_text.bind("Saveing..."));
+	tween.tween_callback(loading_lable.set_text.bind("Saving..."));
 	tween.tween_interval(speed);
-	tween.tween_callback(loading_lable.set_text.bind("Saveing .."));
+	tween.tween_callback(loading_lable.set_text.bind("Saving .."));
 	tween.tween_interval(speed);
-	tween.tween_callback(loading_lable.set_text.bind("Saveing  ."));
+	tween.tween_callback(loading_lable.set_text.bind("Saving  ."));
 	tween.tween_interval(speed);
 	tween.play();
 	

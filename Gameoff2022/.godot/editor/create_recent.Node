@@ -1,8 +1,11 @@
-RandAudioStreamPlayer (rand_audio_stream_player.gd)
-AudioStreamPlayer
-ColorRect
+VBoxContainer
 Label
 Control
+ColorRect
+TextureButton
+HBoxContainer
+RandAudioStreamPlayer (rand_audio_stream_player.gd)
+AudioStreamPlayer
 Node
 CanvasLayer
 Button
@@ -16,11 +19,8 @@ RoomInteractable3D (room_interactable_3D.gd)
 Node3D
 RichTextLabel
 InteractableArea3D (interactableArea3D.gd)
-VBoxContainer
 VoiceBoxPlayer (voice_box.gd)
-TextureButton
 TextureRect
-HBoxContainer
 HSeparator
 VSplitContainer
 AnimationPlayer
