@@ -1,3 +1,4 @@
+res://scenes/ui/settings
 res://scenes/ui/credits
 res://scenes/ui/levelSelect
 res://scenes/ui
@@ -19,4 +20,3 @@ res://scenes/ui/clueActionMenu
 res://scenes/ui/costCounterTag
 res://scenes/ui/taticsActionButton
 res://scenes/ui/tagButton
-res://scenes/test

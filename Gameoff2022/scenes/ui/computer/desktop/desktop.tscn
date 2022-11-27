@@ -82,5 +82,6 @@ offset_left = 826.0
 offset_top = 807.0
 offset_right = 834.0
 offset_bottom = 815.0
+action = "SETTINGS"
 icon_texture = ExtResource("6_4jd0m")
 label_text = "Settings"

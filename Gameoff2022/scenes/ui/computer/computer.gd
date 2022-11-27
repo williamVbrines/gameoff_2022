@@ -7,6 +7,7 @@ extends Control
 @onready var input_stoper: ColorRect = $InputStoper
 @onready var level_select: Control = $LevelSelect
 @onready var credits: Control = $Credits
+@onready var settings: Control = $Settings
 
 func _ready() -> void:
 	_make_connections();
@@ -32,7 +33,8 @@ func _on_icon_pressed(action : String) -> void:
 			level_select.open_anim();
 		"CREDITS":
 			credits.open_anim();
-			
+		"SETTINGS":
+			settings.open_anim();
 			
 func _play_quit_animation() -> void:
 	var tween = create_tween();

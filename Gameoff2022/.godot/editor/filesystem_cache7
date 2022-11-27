@@ -1,5 +1,5 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1669563612
+::res://::1669563766
 default_bus_layout.tres::AudioBusLayout::4908088006483557067::1669510009::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1668936590::0::1::::<><>::
 icon.svg::CompressedTexture2D::4080943282524572270::1668221551::1668221551::1::::<><>::
@@ -249,9 +249,9 @@ interactabel_monitor.tscn::PackedScene::5884275474348840054::1669432264::0::1:::
 ::res://scenes/levels/room/roomTooltip/::1669510009
 tooltip.gd::GDScript::-1::1669432264::0::1::::<>Control<>::
 tooltip.tscn::PackedScene::2271685742294391314::1669510009::0::1::::<><>::res://scenes/levels/room/roomTooltip/tooltip.gd<>uid://rfl8qgmawini
-::res://scenes/main/::1669563290
+::res://scenes/main/::1669563630
 main.gd::GDScript::-1::1669432360::0::1::::<>Control<>::
-main.tscn::PackedScene::5729213597354079838::1669563290::0::1::::<><>::res://scenes/main/main.gd<>uid://ck6aeikl4kkwa
+main.tscn::PackedScene::5729213597354079838::1669563630::0::1::::<><>::res://scenes/main/main.gd<>uid://ck6aeikl4kkwa
 ::res://scenes/npc/::1669432265
 Npc.gd::GDScript::-1::1669432265::0::1::::NPC<>Node3D<>::
 text_npc.tscn::PackedScene::2476888271075251610::1669431969::0::1::::<><>::res://scenes/npc/Npc.gd<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap
@@ -652,7 +652,7 @@ OutOfBattle_MenuButton_Diamond.png::CompressedTexture2D::4510309750703834420::16
 OutOfBattle_MenuButton_Diamond_hover.png::CompressedTexture2D::1549621362225845813::1669432273::1669432273::1::::<><>::
 OutOfBattle_MenuButton_Diamond_pressed.png::CompressedTexture2D::7098582628444975643::1669432273::1669432273::1::::<><>::
 ::res://textures/ui/Settings/::1669563578
-::res://textures/ui/Settings/settings/::1669563568
+::res://textures/ui/Settings/settings/::1669563615
 Settings Spacing Guide.png::CompressedTexture2D::387408533856940635::1669560602::1669563615::1::::<><>::
 Settings_VolumeSlider_Handle.png::CompressedTexture2D::8267705811914529873::1669559604::1669563615::1::::<><>::
 Settings_VolumeSlider_Slider.png::CompressedTexture2D::2475115125152241572::1669559738::1669563615::1::::<><>::
