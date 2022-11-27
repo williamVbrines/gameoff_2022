@@ -1,9 +1,1 @@
-res://scenes/ui/computer/desktop/desktop.tscn
 res://scenes/main/main.tscn
-res://scenes/ui/computer/computer.tscn
-res://scenes/ui/computer/computer.gd
-res://scenes/ui/credits/credits.tscn
-res://scenes/ui/credits/credits.gd
-res://scenes/ui/levelSelect/level_select.tscn
-res://scenes/levels/room/room.tscn
-res://shaders/artshader_noisetexture.tres
