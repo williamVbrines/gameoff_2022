@@ -6,6 +6,7 @@ extends Control
 @onready var turn_off_audio: AudioStreamPlayer = $TurnOffAudio
 @onready var input_stoper: ColorRect = $InputStoper
 @onready var level_select: Control = $LevelSelect
+@onready var credits: Control = $Credits
 
 func _ready() -> void:
 	_make_connections();
@@ -29,8 +30,10 @@ func _on_icon_pressed(action : String) -> void:
 			SceneChanger.load_level("res://scenes/levels/test_area.tscn");
 		"TODO":
 			level_select.open_anim();
-
-	
+		"CREDITS":
+			credits.open_anim();
+			
+			
 func _play_quit_animation() -> void:
 	var tween = create_tween();
 	tween.stop();

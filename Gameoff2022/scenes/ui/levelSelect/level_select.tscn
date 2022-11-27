@@ -24,7 +24,6 @@ mouse_filter = 2
 script = ExtResource("1_7l88j")
 
 [node name="BackGround" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 76.0
 offset_top = 94.0
 offset_right = 1156.0
@@ -33,7 +32,6 @@ scale = Vector2(0.85, 0.85)
 color = Color(0.92549, 0.92549, 0.87451, 1)
 
 [node name="LevelTitles" type="HBoxContainer" parent="BackGround"]
-layout_mode = 0
 offset_left = 64.0
 offset_top = 128.0
 offset_right = 1016.0
@@ -42,13 +40,11 @@ theme_override_constants/separation = 18
 
 [node name="Level1" type="TextureRect" parent="BackGround/LevelTitles"]
 texture_filter = 1
-layout_mode = 2
 offset_right = 176.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="Label" type="Label" parent="BackGround/LevelTitles/Level1"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -63,14 +59,12 @@ vertical_alignment = 1
 
 [node name="Level2" type="TextureRect" parent="BackGround/LevelTitles"]
 texture_filter = 1
-layout_mode = 2
 offset_left = 194.0
 offset_right = 370.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="Label" type="Label" parent="BackGround/LevelTitles/Level2"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -85,14 +79,12 @@ vertical_alignment = 1
 
 [node name="Level3" type="TextureRect" parent="BackGround/LevelTitles"]
 texture_filter = 1
-layout_mode = 2
 offset_left = 388.0
 offset_right = 564.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="Label" type="Label" parent="BackGround/LevelTitles/Level3"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -107,14 +99,12 @@ vertical_alignment = 1
 
 [node name="Level4" type="TextureRect" parent="BackGround/LevelTitles"]
 texture_filter = 1
-layout_mode = 2
 offset_left = 582.0
 offset_right = 758.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="Label" type="Label" parent="BackGround/LevelTitles/Level4"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -129,14 +119,12 @@ vertical_alignment = 1
 
 [node name="Level5" type="TextureRect" parent="BackGround/LevelTitles"]
 texture_filter = 1
-layout_mode = 2
 offset_left = 776.0
 offset_right = 952.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="Label" type="Label" parent="BackGround/LevelTitles/Level5"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -150,7 +138,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Complete" type="Control" parent="BackGround"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = 64.0
 offset_top = 128.0
@@ -160,13 +148,11 @@ offset_bottom = 192.0
 [node name="Level1" type="TextureRect" parent="BackGround/Complete"]
 visible = false
 texture_filter = 1
-layout_mode = 1
 offset_right = 176.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="CheckedDay" type="TextureRect" parent="BackGround/Complete/Level1"]
-layout_mode = 0
 offset_left = 20.0
 offset_top = 16.0
 offset_right = 52.0
@@ -174,7 +160,6 @@ offset_bottom = 48.0
 texture = ExtResource("3_xm02n")
 
 [node name="Label" type="Label" parent="BackGround/Complete/Level1"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -194,14 +179,12 @@ vertical_alignment = 1
 [node name="Level2" type="TextureRect" parent="BackGround/Complete"]
 visible = false
 texture_filter = 1
-layout_mode = 1
 offset_left = 194.0
 offset_right = 370.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="CheckedDay" type="TextureRect" parent="BackGround/Complete/Level2"]
-layout_mode = 1
 offset_left = 20.0
 offset_top = 16.0
 offset_right = 52.0
@@ -209,7 +192,6 @@ offset_bottom = 48.0
 texture = ExtResource("3_xm02n")
 
 [node name="Label" type="Label" parent="BackGround/Complete/Level2"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -229,14 +211,12 @@ vertical_alignment = 1
 [node name="Level3" type="TextureRect" parent="BackGround/Complete"]
 visible = false
 texture_filter = 1
-layout_mode = 1
 offset_left = 388.0
 offset_right = 564.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="CheckedDay" type="TextureRect" parent="BackGround/Complete/Level3"]
-layout_mode = 1
 offset_left = 20.0
 offset_top = 16.0
 offset_right = 52.0
@@ -244,7 +224,6 @@ offset_bottom = 48.0
 texture = ExtResource("3_xm02n")
 
 [node name="Label" type="Label" parent="BackGround/Complete/Level3"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -264,14 +243,12 @@ vertical_alignment = 1
 [node name="Level4" type="TextureRect" parent="BackGround/Complete"]
 visible = false
 texture_filter = 1
-layout_mode = 1
 offset_left = 582.0
 offset_right = 758.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="CheckedDay" type="TextureRect" parent="BackGround/Complete/Level4"]
-layout_mode = 1
 offset_left = 20.0
 offset_top = 16.0
 offset_right = 52.0
@@ -279,7 +256,6 @@ offset_bottom = 48.0
 texture = ExtResource("3_xm02n")
 
 [node name="Label" type="Label" parent="BackGround/Complete/Level4"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -299,14 +275,12 @@ vertical_alignment = 1
 [node name="Level5" type="TextureRect" parent="BackGround/Complete"]
 visible = false
 texture_filter = 1
-layout_mode = 1
 offset_left = 776.0
 offset_right = 952.0
 offset_bottom = 64.0
 texture = ExtResource("5_8o8gf")
 
 [node name="CheckedDay" type="TextureRect" parent="BackGround/Complete/Level5"]
-layout_mode = 1
 offset_left = 20.0
 offset_top = 16.0
 offset_right = 52.0
@@ -314,7 +288,6 @@ offset_bottom = 48.0
 texture = ExtResource("3_xm02n")
 
 [node name="Label" type="Label" parent="BackGround/Complete/Level5"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -333,13 +306,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="WindowBar" type="TextureRect" parent="BackGround"]
-layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 84.0
 texture = ExtResource("2_ur3ki")
 
 [node name="Title" type="Label" parent="BackGround/WindowBar"]
-layout_mode = 0
 offset_left = 67.0588
 offset_top = 23.5294
 offset_right = 352.059
@@ -350,18 +321,19 @@ theme_override_font_sizes/font_size = 34
 text = "QA Task Manager"
 
 [node name="ActiveLevels" type="Control" parent="BackGround"]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level1" type="Control" parent="BackGround/ActiveLevels"]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="LevelTag" type="TextureRect" parent="BackGround/ActiveLevels/Level1"]
 texture_filter = 1
-layout_mode = 1
 offset_left = 64.0
 offset_top = 128.0
 offset_right = 240.0
@@ -369,7 +341,6 @@ offset_bottom = 192.0
 texture = ExtResource("5_bxhck")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/LevelTag"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -384,7 +355,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1"]
-layout_mode = 0
 offset_left = 64.0
 offset_top = 234.0
 offset_right = 285.0
@@ -395,7 +365,6 @@ theme_override_font_sizes/font_size = 28
 text = "Level 1 QA Tasks"
 
 [node name="Label2" type="Label" parent="BackGround/ActiveLevels/Level1"]
-layout_mode = 0
 offset_left = 66.0
 offset_top = 293.0
 offset_right = 155.0
@@ -408,6 +377,7 @@ text = "TODO:"
 [node name="Task" type="Control" parent="BackGround/ActiveLevels/Level1"]
 visible = false
 texture_filter = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = 95.0
 offset_top = 355.0
@@ -416,13 +386,11 @@ offset_bottom = 355.0
 
 [node name="CheckboxChecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Task"]
 visible = false
-layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("6_iatqu")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Task/CheckboxChecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -432,13 +400,11 @@ theme_override_font_sizes/font_size = 22
 text = "Do this thing "
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Task"]
-layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("7_58dtw")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Task/CheckboxUnchecked"]
-layout_mode = 0
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -448,7 +414,6 @@ theme_override_font_sizes/font_size = 22
 text = "Do this thing "
 
 [node name="Tasks" type="VBoxContainer" parent="BackGround/ActiveLevels/Level1"]
-layout_mode = 0
 offset_left = 95.0
 offset_top = 355.0
 offset_right = 135.0
@@ -457,18 +422,16 @@ theme_override_constants/separation = 53
 
 [node name="Task" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 
 [node name="CheckboxChecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task"]
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("6_iatqu")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task/CheckboxChecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -479,14 +442,12 @@ text = "Clock in "
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task"]
 visible = false
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("7_58dtw")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task/CheckboxUnchecked"]
 visible = false
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -497,7 +458,7 @@ text = "Do this thing "
 
 [node name="Task2" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 3
 anchors_preset = 0
 offset_top = 53.0
 offset_right = 40.0
@@ -505,13 +466,11 @@ offset_bottom = 53.0
 
 [node name="CheckboxChecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task2"]
 visible = false
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("6_iatqu")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task2/CheckboxChecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -521,13 +480,11 @@ theme_override_font_sizes/font_size = 25
 text = "Do this thing "
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task2"]
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("7_58dtw")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task2/CheckboxUnchecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -538,20 +495,18 @@ text = "BUGFIX: NPC in village not operating to set script"
 
 [node name="Task3" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 3
 anchors_preset = 0
 offset_top = 106.0
 offset_right = 40.0
 offset_bottom = 106.0
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task3"]
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("7_58dtw")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task3/CheckboxUnchecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -562,20 +517,18 @@ text = "Write Report"
 
 [node name="Task4" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 3
 anchors_preset = 0
 offset_top = 159.0
 offset_right = 40.0
 offset_bottom = 159.0
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task4"]
-layout_mode = 1
 offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("7_58dtw")
 
 [node name="Label" type="Label" parent="BackGround/ActiveLevels/Level1/Tasks/Task4/CheckboxUnchecked"]
-layout_mode = 1
 offset_left = 52.0
 offset_right = 194.0
 offset_bottom = 34.0
@@ -586,7 +539,6 @@ text = "Check in with art team about that assets"
 
 [node name="ExitButton" type="TextureButton" parent="BackGround"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 965.882
 offset_top = 17.6471
 offset_right = 1017.88
@@ -597,7 +549,6 @@ texture_hover = ExtResource("10_kx7y2")
 
 [node name="StartButton" type="TextureButton" parent="BackGround"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 64.0
 offset_top = 869.0
 offset_right = 312.0
@@ -608,7 +559,6 @@ texture_hover = ExtResource("13_7uosg")
 
 [node name="Label" type="Label" parent="BackGround/StartButton"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 44.0
 offset_top = 10.0
 offset_right = 202.0

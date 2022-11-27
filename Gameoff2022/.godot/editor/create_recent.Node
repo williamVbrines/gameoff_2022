@@ -1,3 +1,4 @@
+RichTextLabel
 VBoxContainer
 Label
 Control
@@ -17,7 +18,6 @@ CollisionShape3D
 Area3D
 RoomInteractable3D (room_interactable_3D.gd)
 Node3D
-RichTextLabel
 InteractableArea3D (interactableArea3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 TextureRect
