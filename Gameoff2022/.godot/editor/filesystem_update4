@@ -1,1 +1,8 @@
+res://default_bus_layout.tres
 res://scenes/ui/settings/settings.tscn
+res://scenes/ui/settings/settings.gd
+res://scenes/systemGlobals/system_globals.gd
+res://scenes/main/main.gd
+res://scenes/sceneChanger/SceneChanger.tscn
+res://scenes/sceneChanger/scene_changer.gd
+res://scenes/main/main.tscn

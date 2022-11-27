@@ -1,10 +1,10 @@
+Label
+Control
 CheckBox
 HSlider
-Control
 TextureRect
 RichTextLabel
 VBoxContainer
-Label
 ColorRect
 TextureButton
 HBoxContainer
@@ -30,4 +30,3 @@ WorldEnvironment
 OmniLight3D
 SubViewport
 MeshInstance3D
-Panel

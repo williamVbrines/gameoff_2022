@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dgf5duxvirupx"]
+[gd_scene load_steps=15 format=3 uid="uid://dgf5duxvirupx"]
 
 [ext_resource type="Script" path="res://scenes/ui/settings/settings.gd" id="1_5p0r8"]
 [ext_resource type="Texture2D" uid="uid://frwtdu7b8bnf" path="res://textures/ui/Settings/settings/Settings Spacing Guide.png" id="2_fgjby"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="2_j7jhr"]
 [ext_resource type="Texture2D" uid="uid://c05w8sfi826hy" path="res://textures/ui/To Do/ToDo_Window_Bar.png" id="2_ooob7"]
 [ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="3_52j6c"]
 [ext_resource type="Texture2D" uid="uid://ca8uqoonlrcyi" path="res://textures/ui/To Do/ToDo_Window_Exit.png" id="4_m177t"]
@@ -39,7 +40,6 @@ grow_vertical = 2
 script = ExtResource("1_5p0r8")
 
 [node name="BackGround" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 76.0
 offset_top = 94.0
 offset_right = 1156.0
@@ -47,63 +47,30 @@ offset_bottom = 1174.0
 scale = Vector2(0.85, 0.85)
 color = Color(0.92549, 0.92549, 0.87451, 1)
 
-[node name="SettingsSpacingGuide" type="TextureRect" parent="BackGround"]
-visible = false
-layout_mode = 0
-offset_right = 1080.0
-offset_bottom = 1080.0
-texture = ExtResource("2_fgjby")
+[node name="Display" type="Control" parent="BackGround"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="WindowBar" type="TextureRect" parent="BackGround"]
-layout_mode = 0
-offset_right = 1080.0
-offset_bottom = 84.0
-texture = ExtResource("2_ooob7")
+[node name="Label" type="Label" parent="BackGround/Display"]
+offset_left = 63.5294
+offset_top = 135.294
+offset_right = 118.529
+offset_bottom = 161.294
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j7jhr")
+theme_override_font_sizes/font_size = 26
+text = "Display"
 
-[node name="Title" type="Label" parent="BackGround/WindowBar"]
-layout_mode = 0
-offset_left = 67.0588
-offset_top = 23.5294
-offset_right = 352.059
-offset_bottom = 73.5294
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_52j6c")
-theme_override_font_sizes/font_size = 34
-text = "Settings"
-
-[node name="ExitButton" type="TextureButton" parent="BackGround"]
+[node name="FullScreenedBox" type="CheckBox" parent="BackGround/Display"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 965.882
-offset_top = 17.6471
-offset_right = 1017.88
-offset_bottom = 69.6471
-texture_normal = ExtResource("4_m177t")
-texture_pressed = ExtResource("5_7kskk")
-texture_hover = ExtResource("6_i552m")
-
-[node name="Slider2" type="HSlider" parent="BackGround"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 92.9412
-offset_top = 387.059
-offset_right = 476.941
-offset_bottom = 431.059
-theme_override_icons/grabber = ExtResource("8_dkwri")
-theme_override_icons/grabber_highlight = ExtResource("8_dkwri")
-theme_override_icons/grabber_disabled = ExtResource("8_dkwri")
-theme_override_styles/slider = SubResource("StyleBoxTexture_6exam")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_40xva")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_40xva")
-value = 55.0
-
-[node name="CheckBox" type="CheckBox" parent="BackGround"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 91.7647
-offset_top = 194.118
-offset_right = 249.765
-offset_bottom = 234.118
+offset_left = 56.4706
+offset_top = 189.412
+offset_right = 214.471
+offset_bottom = 229.412
 scale = Vector2(1.18823, 1.14118)
 focus_mode = 0
 theme_override_colors/font_color = Color(0.266667, 0.266667, 0.266667, 1)
@@ -121,3 +88,107 @@ theme_override_icons/unchecked = ExtResource("11_a0ikh")
 theme_override_icons/unchecked_disabled = ExtResource("11_a0ikh")
 button_pressed = true
 text = "Full screen"
+
+[node name="WindowedCheckBox2" type="CheckBox" parent="BackGround/Display"]
+texture_filter = 1
+offset_left = 262.353
+offset_top = 189.412
+offset_right = 420.353
+offset_bottom = 229.412
+scale = Vector2(1.18823, 1.14118)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_52j6c")
+theme_override_font_sizes/font_size = 22
+theme_override_icons/checked = ExtResource("10_mrss7")
+theme_override_icons/checked_disabled = ExtResource("11_a0ikh")
+theme_override_icons/unchecked = ExtResource("11_a0ikh")
+theme_override_icons/unchecked_disabled = ExtResource("11_a0ikh")
+button_pressed = true
+text = "Windowed"
+
+[node name="Audio" type="Control" parent="BackGround"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="BackGround/Audio"]
+offset_left = 63.5294
+offset_top = 278.824
+offset_right = 151.529
+offset_bottom = 317.824
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j7jhr")
+theme_override_font_sizes/font_size = 26
+text = "Audio"
+
+[node name="Label2" type="Label" parent="BackGround/Audio"]
+offset_left = 62.3529
+offset_top = 329.412
+offset_right = 218.353
+offset_bottom = 368.412
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j7jhr")
+theme_override_font_sizes/font_size = 22
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="BackGround/Audio"]
+texture_filter = 1
+offset_left = 63.5294
+offset_top = 384.706
+offset_right = 447.529
+offset_bottom = 428.706
+theme_override_icons/grabber = ExtResource("8_dkwri")
+theme_override_icons/grabber_highlight = ExtResource("8_dkwri")
+theme_override_icons/grabber_disabled = ExtResource("8_dkwri")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6exam")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_40xva")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_40xva")
+min_value = -80.0
+max_value = 0.0
+step = 0.1
+
+[node name="WindowBar" type="TextureRect" parent="BackGround"]
+offset_right = 1080.0
+offset_bottom = 84.0
+texture = ExtResource("2_ooob7")
+
+[node name="Title" type="Label" parent="BackGround/WindowBar"]
+offset_left = 67.0588
+offset_top = 23.5294
+offset_right = 352.059
+offset_bottom = 73.5294
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_52j6c")
+theme_override_font_sizes/font_size = 34
+text = "Settings"
+
+[node name="ExitButton" type="TextureButton" parent="BackGround/WindowBar"]
+texture_filter = 1
+offset_left = 965.882
+offset_top = 17.6471
+offset_right = 1017.88
+offset_bottom = 69.6471
+texture_normal = ExtResource("4_m177t")
+texture_pressed = ExtResource("5_7kskk")
+texture_hover = ExtResource("6_i552m")
+
+[node name="SettingsSpacingGuide" type="TextureRect" parent="BackGround"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.415686)
+offset_right = 1080.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fgjby")
+
+[connection signal="value_changed" from="BackGround/Audio/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]

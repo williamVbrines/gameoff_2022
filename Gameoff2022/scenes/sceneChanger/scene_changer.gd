@@ -29,7 +29,7 @@ func _on_level_ready():
 	get_tree().paused = true;
 	var tween_s = create_tween();
 	tween_s.stop();
-	var end = 0;
+	var end = SystemGlobals.masterVol;
 	var val = -20.0 ;
 	var current =AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"));
 	

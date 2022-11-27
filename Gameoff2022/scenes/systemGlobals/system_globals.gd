@@ -5,6 +5,11 @@ var stress = 0;
 var persuasion = 0;
 var opponent : String = "";
 var play_start_anim : bool = true;#Do not save this data
+
+var windowed : bool = true;
+var masterVol : float = 0.0;
+
+
 var player_stats : Dictionary = {
 	"CHARM" : 50,
 	"LOGIC" : 50,
@@ -37,14 +42,26 @@ func data_dump() -> Dictionary:
 	save_dic["player_items"] = player_items;
 	save_dic["player_clues"] = player_clues;
 	save_dic["dialog_profiles"] = dialog_profiles;
+	save_dic["windowed"] = windowed;
+	save_dic["masterVol"] = masterVol;
+	
 	return save_dic;
 
 func load_data(data : Dictionary) -> void:
 	if data.has("SystemGlobals"):
 		var dic : Dictionary = data.SystemGlobals;
-		if dic.has_all(["player_stats","player_tactics","player_items","player_clues","dialog_profiles"]):
+		if dic.has_all(["masterVol","windowed","player_stats","player_tactics","player_items","player_clues","dialog_profiles"]):
 			player_stats = dic.player_stats;
 			player_tactics = dic.player_tactics;
 			player_items = dic.player_items;
 			player_clues = dic.player_clues;
 			dialog_profiles = dic.dialog_profiles;
+			windowed = dic.windowed
+			masterVol = dic.masterVol
+			
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), masterVol);
+			
+			if !SystemGlobals.windowed:
+				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			else:
+				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
