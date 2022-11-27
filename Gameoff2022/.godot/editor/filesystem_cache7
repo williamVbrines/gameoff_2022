@@ -1,14 +1,14 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1669446212
-default_bus_layout.tres::AudioBusLayout::4908088006483557067::1669442386::0::1::::<><>::
+::res://::1669510392
+default_bus_layout.tres::AudioBusLayout::4908088006483557067::1669510009::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1668936590::0::1::::<><>::
 icon.svg::CompressedTexture2D::4080943282524572270::1668221551::1668221551::1::::<><>::
-::res://audio/::1669432988
-::res://audio/music/::1669433005
-::res://audio/music/Apt Room Music_Background/::1669433111
-Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::5298152473546692801::1669432994::1669433111::1::::<><>::
-Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::4111625107234714650::1669432994::1669433111::1::::<><>::
-Sad Apt LoFi demo.mp3::AudioStreamMP3::6868124180018637691::1669432994::1669433111::1::::<><>::
+::res://audio/::1669510009
+::res://audio/music/::1669510009
+::res://audio/music/Apt Room Music_Background/::1669510009
+Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::5298152473546692801::1669510009::1669510009::1::::<><>::
+Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::4111625107234714650::1669510009::1669510009::1::::<><>::
+Sad Apt LoFi demo.mp3::AudioStreamMP3::6868124180018637691::1669510009::1669510009::1::::<><>::
 ::res://audio/npcs/::1669432263
 ::res://audio/npcs/inkeeper/::1669432263
 ::res://audio/npcs/inkeeper/Inkeeper NEU 11 21 22/::1669432264
@@ -22,125 +22,125 @@ Inkeeper NEU 7.mp3::AudioStreamMP3::1541647303708352266::1669432264::1669432264:
 Inkeeper NEU 8.mp3::AudioStreamMP3::1970172099473186402::1669432264::1669432264::1::::<><>::
 Inkeeper NEU 9.mp3::AudioStreamMP3::5168540540572339438::1669432264::1669432264::1::::<><>::
 Inkeeper NEU 10.mp3::AudioStreamMP3::4308257201023711720::1669432263::1669432263::1::::<><>::
-::res://audio/sfx/::1669433057
-::res://audio/sfx/Bedroom Sounds/::1669433043
-::res://audio/sfx/Bedroom Sounds/Apt Room Music_Background/::1669433111
-Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::3795249186542072775::1669433042::1669433111::1::::<><>::
-Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::3663208848761533308::1669433042::1669433111::1::::<><>::
-Sad Apt LoFi demo.mp3::AudioStreamMP3::641242014786599154::1669433042::1669433111::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/::1669439387
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/::1669439591
-Computer Off 1.mp3::AudioStreamMP3::4306296722949129527::1669433043::1669439591::1::::<><>::
-Computer Off 2.mp3::AudioStreamMP3::4562801500154048633::1669433043::1669439591::1::::<><>::
-Computer Off 3.mp3::AudioStreamMP3::9108599489012689263::1669433043::1669439591::1::::<><>::
-Computer On 1.mp3::AudioStreamMP3::1126207889612464753::1669433043::1669439591::1::::<><>::
-Computer On 2.mp3::AudioStreamMP3::3886360790309019287::1669433043::1669439591::1::::<><>::
-Computer On 3.mp3::AudioStreamMP3::4213723399436060337::1669433043::1669439591::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/::1669433112
-Open Close Door Turning Doorknob 1.wav::AudioStreamWAV::4751346997362998575::1669433043::1669433112::1::::<><>::
-Open Door Turning Doorknob 3.wav::AudioStreamWAV::8204331657595912954::1669433043::1669433112::1::::<><>::
-Open Door Turning Doorknob 5.wav::AudioStreamWAV::4675222862185208443::1669433043::1669433112::1::::<><>::
-Open Door Turning Doorknob Unlock 1.wav::AudioStreamWAV::3312984181614584813::1669433043::1669433112::1::::<><>::
-Open Door Turning Doorknob Unlock 2.wav::AudioStreamWAV::1845071894574075209::1669433043::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/::1669440377
-Go To Sleep 1 short.mp3::AudioStreamMP3::7581194219813276206::1669433043::1669440377::1::::<><>::
-Go To Sleep 1.mp3::AudioStreamMP3::9192571103313400711::1669433043::1669440377::1::::<><>::
-Go To Sleep 2.mp3::AudioStreamMP3::1480674242219687583::1669433043::1669440377::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/::1669433043
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Back Cancel/::1669433111
-UI Back Cancel 1.mp3::AudioStreamMP3::2180296160717566658::1669433043::1669433111::1::::<><>::
-UI Back Cancel 2.mp3::AudioStreamMP3::5533341748417149088::1669433043::1669433111::1::::<><>::
-UI Back Cancel 3.mp3::AudioStreamMP3::4450488477479618105::1669433043::1669433110::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Confirm Click/::1669433112
-UI Confirm Click 1.mp3::AudioStreamMP3::4506347128888381373::1669433043::1669433110::1::::<><>::
-UI Confirm Click 2.mp3::AudioStreamMP3::1088927130236481073::1669433043::1669433110::1::::<><>::
-UI Confirm Click 3.mp3::AudioStreamMP3::3078457162774078641::1669433043::1669433110::1::::<><>::
-UI Confirm Click 4.mp3::AudioStreamMP3::1507540593341000478::1669433043::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Hover/::1669433112
-UI Hover 1.mp3::AudioStreamMP3::4839418731474566001::1669433042::1669433112::1::::<><>::
-UI Hover 2.mp3::AudioStreamMP3::1804141888495791725::1669433043::1669433112::1::::<><>::
-UI Hover 3.mp3::AudioStreamMP3::508591029147510868::1669433042::1669433112::1::::<><>::
-UI Hover 4.mp3::AudioStreamMP3::3277098639258937290::1669433042::1669433112::1::::<><>::
-UI Hover 5.mp3::AudioStreamMP3::3844235708891077120::1669433042::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/::1669433042
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669436401
-Typing 1.mp3::AudioStreamMP3::3704495813602094691::1669433042::1669436401::1::::<><>::
-Typing 2.mp3::AudioStreamMP3::757769982610158302::1669433042::1669433112::1::::<><>::
-Typing 3.mp3::AudioStreamMP3::2758178881518683820::1669433042::1669433112::1::::<><>::
-Typing 4.mp3::AudioStreamMP3::9199509099641085029::1669433042::1669433112::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/::1669436687
-Mouse Click Select 1.mp3::AudioStreamMP3::6788631172915945006::1669433042::1669436687::1::::<><>::
-Mouse Click Select 2.mp3::AudioStreamMP3::4912319137755430913::1669433042::1669436687::1::::<><>::
-Mouse Click Select 3.mp3::AudioStreamMP3::6723722687487729741::1669433042::1669436687::1::::<><>::
-Mouse Click Select 4.mp3::AudioStreamMP3::7754419202794328672::1669433042::1669436687::1::::<><>::
-::res://audio/sfx/Bedroom Sounds/Game On Off/::1669435441
-Game Begin 1 longer buzz.mp3::AudioStreamMP3::421793934738191825::1669433042::1669435441::1::::<><>::
-Game Begin 1.mp3::AudioStreamMP3::8466530530565393555::1669433042::1669435441::1::::<><>::
-Game Turns Off 1.mp3::AudioStreamMP3::2587735078103032692::1669433042::1669435441::1::::<><>::
-::res://audio/sfx/Inner Game/::1669432950
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/::1669432951
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/::1669449569
-Battle Timeline Shift 1.1.mp3::AudioStreamMP3::2414703665651669708::1669432952::1669449568::1::::<><>::
-Battle Timeline Shift 1.2.mp3::AudioStreamMP3::4945724618843070989::1669432952::1669449568::1::::<><>::
-Battle Timeline Shift 1.3.mp3::AudioStreamMP3::3488888883096011668::1669432952::1669449569::1::::<><>::
-Battle Timeline Shift 1.4.mp3::AudioStreamMP3::2722950966033234043::1669432952::1669449569::1::::<><>::
-Battle Timeline Shift 2.1.mp3::AudioStreamMP3::7152420038770267484::1669432951::1669449569::1::::<><>::
-Battle Timeline Shift 2.2.mp3::AudioStreamMP3::5667313313682497306::1669432952::1669449569::1::::<><>::
-Battle Timeline Shift 2.3.mp3::AudioStreamMP3::4279576680408629133::1669432951::1669449569::1::::<><>::
-Battle Timeline Shift 2.4.mp3::AudioStreamMP3::8707424208024423142::1669432952::1669449569::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/::1669452905
-Menu Close 1.1.mp3::AudioStreamMP3::6717432393761833530::1669432951::1669452904::1::::<><>::
-Menu Close 1.2.mp3::AudioStreamMP3::4776749576857429070::1669432951::1669452904::1::::<><>::
-Menu Close 1.3.mp3::AudioStreamMP3::2803133572157572591::1669432951::1669452904::1::::<><>::
-Menu Close 1.4.mp3::AudioStreamMP3::3591755291495496810::1669432951::1669452904::1::::<><>::
-Menu Close 2.1.mp3::AudioStreamMP3::1092124755107333199::1669432951::1669452904::1::::<><>::
-Menu Close 2.2.mp3::AudioStreamMP3::5565197921232854855::1669432951::1669452904::1::::<><>::
-Menu Close 2.3.mp3::AudioStreamMP3::2714819571238422553::1669432951::1669452904::1::::<><>::
-Menu Close 2.4.mp3::AudioStreamMP3::4405218105084650641::1669432951::1669452905::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/::1669452914
-Menu Open 1.1.mp3::AudioStreamMP3::6359661125351110532::1669432951::1669452914::1::::<><>::
-Menu Open 1.2.mp3::AudioStreamMP3::2919662028555307349::1669432951::1669452914::1::::<><>::
-Menu Open 1.3.mp3::AudioStreamMP3::7625095310717073417::1669432951::1669452914::1::::<><>::
-Menu Open 1.4.mp3::AudioStreamMP3::4555110475445669063::1669432951::1669452914::1::::<><>::
-Menu Open 2.1.mp3::AudioStreamMP3::5760571915096243817::1669432951::1669452914::1::::<><>::
-Menu Open 2.2.mp3::AudioStreamMP3::6662886379777418540::1669432951::1669452914::1::::<><>::
-Menu Open 2.3.mp3::AudioStreamMP3::1165653768499233992::1669432951::1669452914::1::::<><>::
-Menu Open 2.4.mp3::AudioStreamMP3::6307690322292865741::1669432951::1669452914::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/::1669457595
-Pick Up Icon 1.mp3::AudioStreamMP3::5729081687023481155::1669432951::1669457595::1::::<><>::
-Pick Up Icon 2.mp3::AudioStreamMP3::4570300189478471481::1669432951::1669457595::1::::<><>::
-Pick Up Icon 3.mp3::AudioStreamMP3::7255353629987287691::1669432951::1669457595::1::::<><>::
-Pick Up Icon 4.mp3::AudioStreamMP3::1013644716149276172::1669432951::1669457595::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/::1669457589
-Place Icon 1.mp3::AudioStreamMP3::3311614259418872337::1669432951::1669457588::1::::<><>::
-Place Icon 2.mp3::AudioStreamMP3::1787743630247455711::1669432951::1669457588::1::::<><>::
-Place Icon 3.mp3::AudioStreamMP3::1555894269133098625::1669432951::1669457588::1::::<><>::
-Place Icon 4.mp3::AudioStreamMP3::7816639938228882462::1669432951::1669457589::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/::1669454551
-Select Exit KOF 1.mp3::AudioStreamMP3::7517753909979763377::1669432951::1669454551::1::::<><>::
-Select Exit KOF 2.mp3::AudioStreamMP3::7293255958745689289::1669432951::1669454551::1::::<><>::
-::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/::1669450314
-Select Menu Option 1.mp3::AudioStreamMP3::876649883570364088::1669432950::1669450314::1::::<><>::
-Select Menu Option 2.mp3::AudioStreamMP3::4058501084078385780::1669432950::1669450314::1::::<><>::
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/::1669432950
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.1/::1669458056
-BeeptextV1 1.mp3::AudioStreamMP3::1711269193420356187::1669432950::1669458056::1::::<><>::
-BeeptextV1 2.mp3::AudioStreamMP3::8175724804280899045::1669432950::1669458056::1::::<><>::
-BeeptextV1 3.mp3::AudioStreamMP3::8241171786908925304::1669432950::1669458056::1::::<><>::
-BeeptextV1 4.mp3::AudioStreamMP3::5685686475302663003::1669432950::1669458056::1::::<><>::
-BeeptextV1 5.mp3::AudioStreamMP3::911323208435532719::1669432950::1669458056::1::::<><>::
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/::1669433110
-BeeptextV2 1.mp3::AudioStreamMP3::554782710577236187::1669432950::1669458136::1::::<><>::
-BeeptextV2 2.mp3::AudioStreamMP3::4998933141726107838::1669432950::1669458136::1::::<><>::
-BeeptextV2 3.mp3::AudioStreamMP3::1828577283944084980::1669432950::1669458136::1::::<><>::
-BeeptextV2 4.mp3::AudioStreamMP3::2874510763917284401::1669432950::1669458136::1::::<><>::
-BeeptextV2 5.mp3::AudioStreamMP3::5732049677194719308::1669432950::1669458136::1::::<><>::
-::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.3/::1669433110
-BeeptextV3 1.mp3::AudioStreamMP3::5809182415544722544::1669432950::1669433110::1::::<><>::
-BeeptextV3 2.mp3::AudioStreamMP3::6300411101723219296::1669432950::1669433110::1::::<><>::
-BeeptextV3 3.mp3::AudioStreamMP3::1203815594979633212::1669432950::1669433109::1::::<><>::
-BeeptextV3 4.mp3::AudioStreamMP3::8251763324327906309::1669432950::1669433109::1::::<><>::
-BeeptextV3 5.mp3::AudioStreamMP3::8432575735441756903::1669432950::1669433109::1::::<><>::
+::res://audio/sfx/::1669510009
+::res://audio/sfx/Bedroom Sounds/::1669510009
+::res://audio/sfx/Bedroom Sounds/Apt Room Music_Background/::1669510009
+Depressing Apartment Sou_nds (no music) V.1.mp3::AudioStreamMP3::3795249186542072775::1669510009::1669510009::1::::<><>::
+Depressing Apartment Sou_nds V.1.mp3::AudioStreamMP3::3663208848761533308::1669510009::1669510009::1::::<><>::
+Sad Apt LoFi demo.mp3::AudioStreamMP3::641242014786599154::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/::1669510009
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/::1669510009
+Computer Off 1.mp3::AudioStreamMP3::4306296722949129527::1669510009::1669510009::1::::<><>::
+Computer Off 2.mp3::AudioStreamMP3::4562801500154048633::1669510009::1669510009::1::::<><>::
+Computer Off 3.mp3::AudioStreamMP3::9108599489012689263::1669510009::1669510009::1::::<><>::
+Computer On 1.mp3::AudioStreamMP3::1126207889612464753::1669510009::1669510009::1::::<><>::
+Computer On 2.mp3::AudioStreamMP3::3886360790309019287::1669510009::1669510009::1::::<><>::
+Computer On 3.mp3::AudioStreamMP3::4213723399436060337::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Door/::1669510009
+Open Close Door Turning Doorknob 1.wav::AudioStreamWAV::4751346997362998575::1669510009::1669510009::1::::<><>::
+Open Door Turning Doorknob 3.wav::AudioStreamWAV::8204331657595912954::1669510009::1669510009::1::::<><>::
+Open Door Turning Doorknob 5.wav::AudioStreamWAV::4675222862185208443::1669510009::1669510009::1::::<><>::
+Open Door Turning Doorknob Unlock 1.wav::AudioStreamWAV::3312984181614584813::1669510009::1669510009::1::::<><>::
+Open Door Turning Doorknob Unlock 2.wav::AudioStreamWAV::1845071894574075209::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Sleep in Bed/::1669510009
+Go To Sleep 1 short.mp3::AudioStreamMP3::7581194219813276206::1669510009::1669510009::1::::<><>::
+Go To Sleep 1.mp3::AudioStreamMP3::9192571103313400711::1669510009::1669510009::1::::<><>::
+Go To Sleep 2.mp3::AudioStreamMP3::1480674242219687583::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/::1669510009
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Back Cancel/::1669510009
+UI Back Cancel 1.mp3::AudioStreamMP3::2180296160717566658::1669510009::1669510009::1::::<><>::
+UI Back Cancel 2.mp3::AudioStreamMP3::5533341748417149088::1669510009::1669510009::1::::<><>::
+UI Back Cancel 3.mp3::AudioStreamMP3::4450488477479618105::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Confirm Click/::1669510009
+UI Confirm Click 1.mp3::AudioStreamMP3::4506347128888381373::1669510009::1669510009::1::::<><>::
+UI Confirm Click 2.mp3::AudioStreamMP3::1088927130236481073::1669510009::1669510009::1::::<><>::
+UI Confirm Click 3.mp3::AudioStreamMP3::3078457162774078641::1669510009::1669510009::1::::<><>::
+UI Confirm Click 4.mp3::AudioStreamMP3::1507540593341000478::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Bedroom UI/UI Hover/::1669510009
+UI Hover 1.mp3::AudioStreamMP3::4839418731474566001::1669510009::1669510009::1::::<><>::
+UI Hover 2.mp3::AudioStreamMP3::1804141888495791725::1669510009::1669510009::1::::<><>::
+UI Hover 3.mp3::AudioStreamMP3::508591029147510868::1669510009::1669510009::1::::<><>::
+UI Hover 4.mp3::AudioStreamMP3::3277098639258937290::1669510009::1669510009::1::::<><>::
+UI Hover 5.mp3::AudioStreamMP3::3844235708891077120::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/::1669510009
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/Keyboard Typing/::1669510009
+Typing 1.mp3::AudioStreamMP3::3704495813602094691::1669510009::1669510009::1::::<><>::
+Typing 2.mp3::AudioStreamMP3::757769982610158302::1669510009::1669510009::1::::<><>::
+Typing 3.mp3::AudioStreamMP3::2758178881518683820::1669510009::1669510009::1::::<><>::
+Typing 4.mp3::AudioStreamMP3::9199509099641085029::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Computer Sounds/Mouse Clicks or Select/::1669510009
+Mouse Click Select 1.mp3::AudioStreamMP3::6788631172915945006::1669510009::1669510009::1::::<><>::
+Mouse Click Select 2.mp3::AudioStreamMP3::4912319137755430913::1669510009::1669510009::1::::<><>::
+Mouse Click Select 3.mp3::AudioStreamMP3::6723722687487729741::1669510009::1669510009::1::::<><>::
+Mouse Click Select 4.mp3::AudioStreamMP3::7754419202794328672::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Bedroom Sounds/Game On Off/::1669510009
+Game Begin 1 longer buzz.mp3::AudioStreamMP3::421793934738191825::1669510009::1669510009::1::::<><>::
+Game Begin 1.mp3::AudioStreamMP3::8466530530565393555::1669510009::1669510009::1::::<><>::
+Game Turns Off 1.mp3::AudioStreamMP3::2587735078103032692::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/::1669510009
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/::1669510009
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Timeline Shift/::1669510009
+Battle Timeline Shift 1.1.mp3::AudioStreamMP3::2414703665651669708::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 1.2.mp3::AudioStreamMP3::4945724618843070989::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 1.3.mp3::AudioStreamMP3::3488888883096011668::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 1.4.mp3::AudioStreamMP3::2722950966033234043::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 2.1.mp3::AudioStreamMP3::7152420038770267484::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 2.2.mp3::AudioStreamMP3::5667313313682497306::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 2.3.mp3::AudioStreamMP3::4279576680408629133::1669510009::1669510009::1::::<><>::
+Battle Timeline Shift 2.4.mp3::AudioStreamMP3::8707424208024423142::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/::1669510009
+Menu Close 1.1.mp3::AudioStreamMP3::6717432393761833530::1669510009::1669510009::1::::<><>::
+Menu Close 1.2.mp3::AudioStreamMP3::4776749576857429070::1669510009::1669510009::1::::<><>::
+Menu Close 1.3.mp3::AudioStreamMP3::2803133572157572591::1669510009::1669510009::1::::<><>::
+Menu Close 1.4.mp3::AudioStreamMP3::3591755291495496810::1669510009::1669510009::1::::<><>::
+Menu Close 2.1.mp3::AudioStreamMP3::1092124755107333199::1669510009::1669510009::1::::<><>::
+Menu Close 2.2.mp3::AudioStreamMP3::5565197921232854855::1669510009::1669510009::1::::<><>::
+Menu Close 2.3.mp3::AudioStreamMP3::2714819571238422553::1669510009::1669510009::1::::<><>::
+Menu Close 2.4.mp3::AudioStreamMP3::4405218105084650641::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/::1669510009
+Menu Open 1.1.mp3::AudioStreamMP3::6359661125351110532::1669510009::1669510009::1::::<><>::
+Menu Open 1.2.mp3::AudioStreamMP3::2919662028555307349::1669510009::1669510009::1::::<><>::
+Menu Open 1.3.mp3::AudioStreamMP3::7625095310717073417::1669510009::1669510009::1::::<><>::
+Menu Open 1.4.mp3::AudioStreamMP3::4555110475445669063::1669510009::1669510009::1::::<><>::
+Menu Open 2.1.mp3::AudioStreamMP3::5760571915096243817::1669510009::1669510009::1::::<><>::
+Menu Open 2.2.mp3::AudioStreamMP3::6662886379777418540::1669510009::1669510009::1::::<><>::
+Menu Open 2.3.mp3::AudioStreamMP3::1165653768499233992::1669510009::1669510009::1::::<><>::
+Menu Open 2.4.mp3::AudioStreamMP3::6307690322292865741::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/::1669510009
+Pick Up Icon 1.mp3::AudioStreamMP3::5729081687023481155::1669510009::1669510009::1::::<><>::
+Pick Up Icon 2.mp3::AudioStreamMP3::4570300189478471481::1669510009::1669510009::1::::<><>::
+Pick Up Icon 3.mp3::AudioStreamMP3::7255353629987287691::1669510009::1669510009::1::::<><>::
+Pick Up Icon 4.mp3::AudioStreamMP3::1013644716149276172::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Place Cost Icon/::1669510009
+Place Icon 1.mp3::AudioStreamMP3::3311614259418872337::1669510009::1669510009::1::::<><>::
+Place Icon 2.mp3::AudioStreamMP3::1787743630247455711::1669510009::1669510009::1::::<><>::
+Place Icon 3.mp3::AudioStreamMP3::1555894269133098625::1669510009::1669510009::1::::<><>::
+Place Icon 4.mp3::AudioStreamMP3::7816639938228882462::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Exit Kingdom of Frogs/::1669510009
+Select Exit KOF 1.mp3::AudioStreamMP3::7517753909979763377::1669510009::1669510009::1::::<><>::
+Select Exit KOF 2.mp3::AudioStreamMP3::7293255958745689289::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/::1669510009
+Select Menu Option 1.mp3::AudioStreamMP3::876649883570364088::1669510009::1669510009::1::::<><>::
+Select Menu Option 2.mp3::AudioStreamMP3::4058501084078385780::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/::1669510009
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.1/::1669510009
+BeeptextV1 1.mp3::AudioStreamMP3::1711269193420356187::1669510009::1669510009::1::::<><>::
+BeeptextV1 2.mp3::AudioStreamMP3::8175724804280899045::1669510009::1669510009::1::::<><>::
+BeeptextV1 3.mp3::AudioStreamMP3::8241171786908925304::1669510009::1669510009::1::::<><>::
+BeeptextV1 4.mp3::AudioStreamMP3::5685686475302663003::1669510009::1669510009::1::::<><>::
+BeeptextV1 5.mp3::AudioStreamMP3::911323208435532719::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/::1669510009
+BeeptextV2 1.mp3::AudioStreamMP3::554782710577236187::1669510009::1669510009::1::::<><>::
+BeeptextV2 2.mp3::AudioStreamMP3::4998933141726107838::1669510009::1669510009::1::::<><>::
+BeeptextV2 3.mp3::AudioStreamMP3::1828577283944084980::1669510009::1669510009::1::::<><>::
+BeeptextV2 4.mp3::AudioStreamMP3::2874510763917284401::1669510009::1669510009::1::::<><>::
+BeeptextV2 5.mp3::AudioStreamMP3::5732049677194719308::1669510009::1669510009::1::::<><>::
+::res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.3/::1669510009
+BeeptextV3 1.mp3::AudioStreamMP3::5809182415544722544::1669510009::1669510009::1::::<><>::
+BeeptextV3 2.mp3::AudioStreamMP3::6300411101723219296::1669510009::1669510009::1::::<><>::
+BeeptextV3 3.mp3::AudioStreamMP3::1203815594979633212::1669510009::1669510009::1::::<><>::
+BeeptextV3 4.mp3::AudioStreamMP3::8251763324327906309::1669510009::1669510009::1::::<><>::
+BeeptextV3 5.mp3::AudioStreamMP3::8432575735441756903::1669510009::1669510009::1::::<><>::
 ::res://meshes/::1669432243
 AlarmClockMesh.obj::Mesh::666901171431798425::1668221551::1669391601::1::::<><>::
 BedMesh.obj::Mesh::4782747171501330232::1668221551::1669391601::1::::<><>::
@@ -220,8 +220,8 @@ villageporch.tscn::PackedScene::4761138416045155851::1668221552::0::1::::<><>::u
 wizardtower.tscn::PackedScene::4870319733979487301::1669431983::0::1::::<><>::uid://b7gkdxy2wwn7a<>res://shaders/ArtShader.gdshader<>uid://37x4382oo80g<>uid://b3hpjriuttwf5
 woodplank.tscn::PackedScene::3578127978099136305::1668221552::0::1::::<><>::uid://bxeq7itoslvtd<>res://shaders/ArtShader.gdshader<>uid://c820l6wognwb2<>uid://b3hpjriuttwf5
 woodpost.tscn::PackedScene::3309557272410361047::1668221552::0::1::::<><>::uid://bw6j8vcm8jmbi<>res://shaders/ArtShader.gdshader<>uid://xrttkbndxkto<>uid://b3hpjriuttwf5
-::res://scenes/::1669439839
-rand_audio_stream_player.gd::GDScript::-1::1669439839::0::1::::RandAudioStreamPlayer<>AudioStreamPlayer<>::
+::res://scenes/::1669510009
+rand_audio_stream_player.gd::GDScript::-1::1669510009::0::1::::RandAudioStreamPlayer<>AudioStreamPlayer<>::
 ::res://scenes/canvas3D/::1669432264
 canvas3D.gd::GDScript::-1::1669432264::0::1::::<>Node3D<>::
 canvas3D.tscn::PackedScene::4844765004618244457::1669431969::0::1::::<><>::res://scenes/canvas3D/canvas3D.gd
@@ -232,23 +232,23 @@ event_manager.tscn::PackedScene::983989294905901704::1669431969::0::1::::<><>::r
 interactableArea3D.gd::GDScript::-1::1669432264::0::1::::InteractableArea3D<>Area3D<>::
 interactablesTest.gd::GDScript::-1::1669432264::0::1::::<>InteractableArea3D<>::
 interactablesTest.tscn::PackedScene::5041008288886388532::1669432264::0::1::::<><>::res://scenes/interactableArea3D/interactablesTest.gd<>uid://pesrx20hc7vx
-::res://scenes/levels/::1669458059
+::res://scenes/levels/::1669510009
 DungeonScene.tscn::PackedScene::5011740928977661278::1668221552::0::1::::<><>::
 RoomScene.tscn::PackedScene::1895943206892800854::1669431983::0::1::::<><>::uid://t7veo7ara27a<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://bu2yj26dvmjoo<>uid://dohk55w2v4jar<>uid://cnntxn1gqo2l5<>uid://di2yossccrpdk<>uid://f3olkhor585g<>res://shaders/ArtShader.gdshader<>uid://bs7n32125yvb<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://yllcxgk88mvt<>uid://blfbj6w4wfnt7<>uid://biqnqga1dlvta<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu<>uid://dxhm4itmlk0fq<>uid://2uan0c1ga2gc<>uid://cvgb16mc0ig7t
-test_area.tscn::PackedScene::6730054458260022839::1669458059::0::1::::<><>::uid://iy86trujqevt<>uid://c6gpe0v66rslx<>uid://bhcfyawh66n7t<>uid://cisgxwxj5w5h4<>uid://ga2iolih30e1<>res://scenes/ui/mainMenu/main_menu.tscn<>res://scenes/npc/Npc.gd<>uid://d22gfyio4xrgp<>uid://cc8sl1bonoce0<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap<>uid://c1ynlnisg2qox<>uid://w8grd7k40rhy
+test_area.tscn::PackedScene::6730054458260022839::1669510009::0::1::::<><>::uid://iy86trujqevt<>uid://c6gpe0v66rslx<>uid://bhcfyawh66n7t<>uid://cisgxwxj5w5h4<>uid://ga2iolih30e1<>res://scenes/ui/mainMenu/main_menu.tscn<>res://scenes/npc/Npc.gd<>uid://d22gfyio4xrgp<>uid://cc8sl1bonoce0<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap<>uid://c1ynlnisg2qox<>uid://w8grd7k40rhy
 VillageScene.tscn::PackedScene::1465518839451642061::1669432264::0::1::::<><>::uid://do66mehml4abx<>uid://d000toy1c1400<>res://shaders/ArtShader.gdshader<>uid://d6t6aevet6j4<>uid://bye3sl2u4rd7k<>uid://cvkbkuv2ch0jk<>uid://b83liv0gvm2hb<>uid://d2088j2i35ij3<>uid://dx40fhvq7xq4m<>uid://8f54kt0m0nku<>uid://bq8jiliucs2l6<>uid://cfmnbk2r5ajeh<>uid://bnff6pafaf1e6<>uid://bxk526ikuqwq<>uid://dk6q2e0vkitc8<>uid://ddnu2xd4xodou<>uid://c7rfbbdj0tkqk<>uid://pgiirmgenq8c<>uid://d1cxdlb2ns13m<>uid://bifwck4si2ayq<>uid://b707k3rkcx0dq<>uid://cbpms42oraq6n<>uid://b8h4cvh3bfyxe<>uid://cbnhppl67epy0
-::res://scenes/levels/room/::1669446631
-conferm_box.gd::GDScript::-1::1669444918::0::1::::<>Control<>::
-room.tscn::PackedScene::2518177886503172114::1669446631::0::1::::<><>::uid://7molkd4islo1<>uid://t7veo7ara27a<>res://scenes/levels/room/conferm_box.gd<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://rfl8qgmawini<>uid://bu2yj26dvmjoo<>uid://d22gfyio4xrgp<>res://scenes/rand_audio_stream_player.gd<>uid://dohk55w2v4jar<>res://scenes/levels/room/subtel_camera.gd<>uid://qbsqkgmwq1x2<>uid://cnntxn1gqo2l5<>res://scenes/levels/room/tab_out_button.gd<>uid://ck6aeikl4kkwa<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t<>uid://di2yossccrpdk<>uid://f3olkhor585g<>uid://b8xt8xpaaxfit<>res://scenes/levels/room/room_interactable_3D.gd<>res://shaders/ArtShader.gdshader<>uid://dganfqk1upft3<>uid://bs7n32125yvb<>uid://vdiquvwfbthn<>uid://b2macwatlygy6<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://b6aiw6h2hh3q8<>uid://d21jkkbj41iy6<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://c438accyu1st4<>uid://chqp2dr7mrnd6<>uid://blfbj6w4wfnt7<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu<>uid://dxhm4itmlk0fq<>uid://2uan0c1ga2gc<>uid://cvgb16mc0ig7t<>uid://cp3nfl53wksws
+::res://scenes/levels/room/::1669510009
+conferm_box.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+room.tscn::PackedScene::2518177886503172114::1669510009::0::1::::<><>::uid://7molkd4islo1<>uid://t7veo7ara27a<>res://scenes/levels/room/conferm_box.gd<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://rfl8qgmawini<>uid://bu2yj26dvmjoo<>uid://d22gfyio4xrgp<>res://scenes/rand_audio_stream_player.gd<>uid://dohk55w2v4jar<>res://scenes/levels/room/subtel_camera.gd<>uid://qbsqkgmwq1x2<>uid://cnntxn1gqo2l5<>res://scenes/levels/room/tab_out_button.gd<>uid://ck6aeikl4kkwa<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t<>uid://di2yossccrpdk<>uid://f3olkhor585g<>uid://b8xt8xpaaxfit<>res://scenes/levels/room/room_interactable_3D.gd<>res://shaders/ArtShader.gdshader<>uid://dganfqk1upft3<>uid://bs7n32125yvb<>uid://vdiquvwfbthn<>uid://b2macwatlygy6<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://b6aiw6h2hh3q8<>uid://d21jkkbj41iy6<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://c438accyu1st4<>uid://chqp2dr7mrnd6<>uid://blfbj6w4wfnt7<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu<>uid://dxhm4itmlk0fq<>uid://2uan0c1ga2gc<>uid://cvgb16mc0ig7t<>uid://cp3nfl53wksws
 room_interactable_3D.gd::GDScript::-1::1669432264::0::1::::RoomInteractable3D<>Node3D<>::
 subtel_camera.gd::GDScript::-1::1669432265::0::1::::<>Camera3D<>::
-tab_out_button.gd::GDScript::-1::1669439779::0::1::::<>Button<>::
+tab_out_button.gd::GDScript::-1::1669510009::0::1::::<>Button<>::
 WorldMouse.gd::GDScript::-1::1669432264::0::1::::<>Control<>::
 ::res://scenes/levels/room/iteractableMonitor/::1669432264
 interactabel_monitor.tscn::PackedScene::5884275474348840054::1669432264::0::1::::<><>::uid://dhvgh7gmhxyci<>res://scenes/canvas3D/canvas3D.gd<>uid://io0qs0ny8h3q
-::res://scenes/levels/room/roomTooltip/::1669440079
+::res://scenes/levels/room/roomTooltip/::1669510009
 tooltip.gd::GDScript::-1::1669432264::0::1::::<>Control<>::
-tooltip.tscn::PackedScene::2271685742294391314::1669440079::0::1::::<><>::res://scenes/levels/room/roomTooltip/tooltip.gd<>uid://rfl8qgmawini
+tooltip.tscn::PackedScene::2271685742294391314::1669510009::0::1::::<><>::res://scenes/levels/room/roomTooltip/tooltip.gd<>uid://rfl8qgmawini
 ::res://scenes/main/::1669432360
 main.gd::GDScript::-1::1669432360::0::1::::<>Control<>::
 main.tscn::PackedScene::5729213597354079838::1669432360::0::1::::<><>::res://scenes/main/main.gd<>uid://ck6aeikl4kkwa
@@ -258,9 +258,9 @@ text_npc.tscn::PackedScene::2476888271075251610::1669431969::0::1::::<><>::res:/
 ::res://scenes/npc/npcDialogTest/::1669432265
 dialog_test_npc.gd::GDScript::-1::1669432265::0::1::::<>Node3D<>::
 dialog_test_npc.tscn::PackedScene::1612673893871569314::1669432265::0::1::::<><>::res://scenes/npc/npcDialogTest/dialog_test_npc.gd<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader
-::res://scenes/player/::1669453093
+::res://scenes/player/::1669510009
 player.gd::GDScript::-1::1669432265::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::6648106028700319659::1669453093::0::1::::<><>::res://scenes/player/player.gd<>uid://c2mc33gk55p47<>uid://bbuev6ybnit55
+player.tscn::PackedScene::6648106028700319659::1669510009::0::1::::<><>::res://scenes/player/player.gd<>uid://c2mc33gk55p47<>uid://bbuev6ybnit55
 ::res://scenes/resourceManager/::1669432265
 resource_manager.gd::GDScript::-1::1669432265::0::1::::<>Node<>::
 ::res://scenes/resources/::1669432265
@@ -284,53 +284,53 @@ test_dialog.tres::Resource::8960582136764982305::1669432265::0::1::::<><>::res:/
 npc_data.gd::GDScript::-1::1669432265::0::1::::NPCData<>Resource<>::
 npc_tactics_resource.gd::GDScript::-1::1669431969::0::1::::NPCTactics<>Resource<>::
 test_npc_resource.tres::Resource::4982457437954918889::1669448561::0::1::::<><>::res://scenes/resources/npc/npc_data.gd<>res://scenes/resources/npc/npc_tactics_resource.gd
-::res://scenes/resources/saves/::1669438707
-save_data.gd::GDScript::-1::1669438707::0::1::::SaveData<>Resource<>::
-::res://scenes/sceneChanger/::1669450273
-SceneChanger.tscn::PackedScene::4171977089178680421::1669450273::0::1::::<><>::res://scenes/sceneChanger/scene_changer.gd<>res://scenes/sceneChanger/transitions.gdshader
-scene_changer.gd::GDScript::-1::1669446068::0::1::::<>CanvasLayer<>::
+::res://scenes/resources/saves/::1669510009
+save_data.gd::GDScript::-1::1669510009::0::1::::SaveData<>Resource<>::
+::res://scenes/sceneChanger/::1669510009
+SceneChanger.tscn::PackedScene::4171977089178680421::1669510009::0::1::::<><>::res://scenes/sceneChanger/scene_changer.gd<>res://scenes/sceneChanger/transitions.gdshader
+scene_changer.gd::GDScript::-1::1669510009::0::1::::<>CanvasLayer<>::
 transitions.gdshader::Shader::-1::1669432360::0::1::::<><>::
-::res://scenes/systemGlobals/::1669432360
-system_globals.gd::GDScript::-1::1669432360::0::1::::<>Node<>::
-::res://scenes/systemSave/::1669432360
-system_save.gd::GDScript::-1::1669432360::0::1::::<>Node<>::
+::res://scenes/systemGlobals/::1669510009
+system_globals.gd::GDScript::-1::1669510009::0::1::::<>Node<>::
+::res://scenes/systemSave/::1669510009
+system_save.gd::GDScript::-1::1669510009::0::1::::<>Node<>::
 ::res://scenes/test/::1669432265
 save_test.gd::GDScript::-1::1669432265::0::1::::<>Node<>::
 save_test.tscn::PackedScene::7472269401555013596::1669432265::0::1::::<><>::res://scenes/test/save_test.gd
 ::res://scenes/ui/::1669432360
 mouse.tscn::PackedScene::9110473533186527079::1669432360::0::1::::<><>::res://scenes/levels/room/WorldMouse.gd<>uid://bu00ur4al2rsp
-::res://scenes/ui/battelQueue/::1669450353
-battel_queue.gd::GDScript::-1::1669449571::0::1::::<>Control<>::
-battel_queue.tscn::PackedScene::9109172064593179961::1669450353::0::1::::<><>::res://scenes/ui/battelQueue/battel_queue.gd<>uid://dr3l8if5am1l0<>uid://d4jw1nsuebve1<>uid://7rjavflk8rb6<>uid://vkpr8280nvpl<>uid://bkovlc322tq4t<>uid://c51bmsdvxema8<>res://scenes/rand_audio_stream_player.gd<>uid://c85xkv5nhav8w<>uid://cm0j27sta3u5o<>uid://dwb7afijbjwpy
-::res://scenes/ui/clueActionMenu/::1669453525
-clue_action_menu.gd::GDScript::-1::1669453524::0::1::::<>Control<>::
-clue_action_menu.tscn::PackedScene::8815653258354543225::1669453525::0::1::::<><>::res://scenes/ui/clueActionMenu/clue_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://cuidb51mn7j7j<>uid://csa4vgi6yin3c<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
-::res://scenes/ui/cluesActionButton/::1669453525
-clue_action_button.gd::GDScript::-1::1669453485::0::1::::<>Control<>::
-clue_action_button.tscn::PackedScene::1802080977849709977::1669453525::0::1::::<><>::res://scenes/ui/cluesActionButton/clue_action_button.gd<>uid://cmiijlqwn1yyk<>uid://d72wcglmseqx<>uid://cuidb51mn7j7j<>uid://dkn1tuxa3ybyj<>res://scenes/rand_audio_stream_player.gd<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/battelQueue/::1669510009
+battel_queue.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+battel_queue.tscn::PackedScene::9109172064593179961::1669510009::0::1::::<><>::res://scenes/ui/battelQueue/battel_queue.gd<>uid://dr3l8if5am1l0<>uid://d4jw1nsuebve1<>uid://7rjavflk8rb6<>uid://vkpr8280nvpl<>uid://bkovlc322tq4t<>uid://c51bmsdvxema8<>res://scenes/rand_audio_stream_player.gd<>uid://c85xkv5nhav8w<>uid://cm0j27sta3u5o<>uid://dwb7afijbjwpy
+::res://scenes/ui/clueActionMenu/::1669510009
+clue_action_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+clue_action_menu.tscn::PackedScene::8815653258354543225::1669510009::0::1::::<><>::res://scenes/ui/clueActionMenu/clue_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://cuidb51mn7j7j<>uid://csa4vgi6yin3c<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/cluesActionButton/::1669510009
+clue_action_button.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+clue_action_button.tscn::PackedScene::1802080977849709977::1669510009::0::1::::<><>::res://scenes/ui/cluesActionButton/clue_action_button.gd<>uid://cmiijlqwn1yyk<>uid://d72wcglmseqx<>uid://cuidb51mn7j7j<>uid://dkn1tuxa3ybyj<>res://scenes/rand_audio_stream_player.gd<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
 ::res://scenes/ui/clueSelectable/::1669432266
 clue_selectable.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 clue_selectable.tscn::PackedScene::5170345532738286865::1669432266::0::1::::<><>::res://scenes/ui/clueSelectable/clue_selectable.gd<>uid://cuidb51mn7j7j<>uid://brdm2am46cx02<>uid://dkn1tuxa3ybyj<>uid://d72wcglmseqx
-::res://scenes/ui/cluesMenu/::1669458059
-clues_menu.gd::GDScript::-1::1669456382::0::1::::<>Control<>::
-clues_menu.tscn::PackedScene::895585430411328559::1669458059::0::1::::<><>::res://scenes/ui/cluesMenu/clues_menu.gd<>res://scenes/rand_audio_stream_player.gd<>uid://dkn1tuxa3ybyj<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
-::res://scenes/ui/combatActionSelection/::1669453524
+::res://scenes/ui/cluesMenu/::1669510009
+clues_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+clues_menu.tscn::PackedScene::895585430411328559::1669510009::0::1::::<><>::res://scenes/ui/cluesMenu/clues_menu.gd<>res://scenes/rand_audio_stream_player.gd<>uid://dkn1tuxa3ybyj<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/combatActionSelection/::1669510009
 combat_action_selection.gd::GDScript::-1::1669450165::0::1::::<>Control<>::
-combat_action_selection.tscn::PackedScene::3497753059972141604::1669453524::0::1::::<><>::res://scenes/ui/combatActionSelection/combat_action_selection.gd<>uid://dxumryqsk6v7n<>uid://dmr5tljni8kwq<>res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd<>uid://dh7gplf3sc6be<>res://scenes/rand_audio_stream_player.gd<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy<>uid://csa4vgi6yin3c<>uid://cuidb51mn7j7j
-::res://scenes/ui/combatActionSelection/disengageAction/::1669450273
-disengage_action.gd::GDScript::-1::1669450273::0::1::::<>Control<>::
+combat_action_selection.tscn::PackedScene::3497753059972141604::1669510009::0::1::::<><>::res://scenes/ui/combatActionSelection/combat_action_selection.gd<>uid://dxumryqsk6v7n<>uid://dmr5tljni8kwq<>res://scenes/ui/combatActionSelection/disengageAction/disengage_action.gd<>uid://dh7gplf3sc6be<>res://scenes/rand_audio_stream_player.gd<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy<>uid://csa4vgi6yin3c<>uid://cuidb51mn7j7j
+::res://scenes/ui/combatActionSelection/disengageAction/::1669510009
+disengage_action.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
 ::res://scenes/ui/combatActionSelection/itemAction/::1669432266
 item_action.gd::GDScript::-1::1669432266::0::1::::<>Button<>::
-::res://scenes/ui/combateDialogDisplay/::1669458059
+::res://scenes/ui/combateDialogDisplay/::1669510009
 combate_dialog_display.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
-combate_dialog_display.tscn::PackedScene::8190081777958508951::1669458059::0::1::::<><>::res://scenes/ui/combateDialogDisplay/combate_dialog_display.gd<>uid://rfj18ib1q8ca<>res://scenes/voiceBox/voice_box.gd<>uid://cuidb51mn7j7j<>uid://ym7ma00fukv0<>uid://doqm807mwagsj<>uid://dpoc5o7db861q<>uid://cnagop7f4vt1d<>uid://m8pmijiroumh
-::res://scenes/ui/combatScreen/::1669458059
+combate_dialog_display.tscn::PackedScene::8190081777958508951::1669510009::0::1::::<><>::res://scenes/ui/combateDialogDisplay/combate_dialog_display.gd<>uid://rfj18ib1q8ca<>res://scenes/voiceBox/voice_box.gd<>uid://cuidb51mn7j7j<>uid://h50gp4fwl6jv<>uid://cdhrx0pqu1kyw<>uid://1b1nvhovi4sm<>uid://bg7o1i15ii466<>uid://cnwwax7nq2slw
+::res://scenes/ui/combatScreen/::1669510009
 combat_screen.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
-combat_screen.tscn::PackedScene::613115860700736317::1669458059::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://ua5g0lc8aoie<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
-::res://scenes/ui/computer/::1669446631
-computer.gd::GDScript::-1::1669445350::0::1::::<>Control<>::
-computer.tscn::PackedScene::591959519847187532::1669446631::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://c3yp07yaek3x7<>uid://dsviryd80dv28<>res://scenes/rand_audio_stream_player.gd<>uid://qbsqkgmwq1x2<>uid://bc4rvbf7l24m7<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t
-mouse.gd::GDScript::-1::1669437100::0::1::::<>Control<>::
+combat_screen.tscn::PackedScene::613115860700736317::1669510009::0::1::::<><>::res://scenes/ui/combatScreen/combat_screen.gd<>uid://d21sy6nj67q6l<>uid://ua5g0lc8aoie<>uid://bp3lqnbnywpvo<>uid://doxlpksqfs6jj
+::res://scenes/ui/computer/::1669510009
+computer.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+computer.tscn::PackedScene::591959519847187532::1669510009::0::1::::<><>::uid://dqacqb7mtsnrp<>uid://d0k2cj7bffthu<>res://scenes/ui/computer/computer.gd<>res://shaders/mointor_effect.gdshader<>res://scenes/ui/computer/mouse.gd<>uid://dksb3q3n103gd<>uid://c3yp07yaek3x7<>uid://dsviryd80dv28<>res://scenes/rand_audio_stream_player.gd<>uid://qbsqkgmwq1x2<>uid://bc4rvbf7l24m7<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t
+mouse.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
 trans_computer.gdshader::Shader::-1::1669432266::0::1::::<><>::
 ::res://scenes/ui/computer/desktop/::1669432360
 desktop.tscn::PackedScene::8936270372159443302::1669432360::0::1::::<><>::uid://c4hnj3px3hjje<>uid://c4vpfydakknmj<>uid://xewovq5prsv7<>uid://b61bsmarc3uvr<>uid://cocym7x02724c<>uid://cfjj88mhssoyw<>uid://cr17jni87abj5<>uid://b6dlhjjwgiks2
@@ -343,36 +343,36 @@ login_screen.tscn::PackedScene::8282433658504262597::1669432266::0::1::::<><>::u
 ::res://scenes/ui/costCounterTag/::1669432266
 cost_counter_tag.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 cost_counter_tag.tscn::PackedScene::9208570700023639997::1669432266::0::1::::<><>::res://scenes/ui/tagButton/color_swap.gdshader<>uid://dmqxxsevkfr7h<>res://scenes/ui/costCounterTag/cost_counter_tag.gd<>uid://df3826xj6slyh<>uid://opsohciiyx02<>uid://cgv2x5el18n4j<>uid://dkn1tuxa3ybyj
-::res://scenes/ui/dialogWindow/::1669457869
+::res://scenes/ui/dialogWindow/::1669510009
 dialog_window.gd::GDScript::-1::1669457868::0::1::::<>Control<>::
-dialog_window.tscn::PackedScene::422787459677845910::1669432266::0::1::::<><>::res://scenes/ui/dialogWindow/dialog_window.gd<>uid://rfj18ib1q8ca<>uid://cuidb51mn7j7j<>res://scenes/voiceBox/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw
+dialog_window.tscn::PackedScene::422787459677845910::1669510009::0::1::::<><>::res://scenes/ui/dialogWindow/dialog_window.gd<>uid://rfj18ib1q8ca<>uid://cuidb51mn7j7j<>res://scenes/voiceBox/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw
 ::res://scenes/ui/explorationHUD/::1669455879
 exploration_hud.gd::GDScript::-1::1669432360::0::1::::<>Control<>::
 exploration_hud.tscn::PackedScene::2882217823031403215::1669455879::0::1::::<><>::res://scenes/ui/explorationHUD/exploration_hud.gd<>uid://gqajo2cvvlal<>uid://dm2llsrqhkg3t
-::res://scenes/ui/itemActionButton/::1669453094
-item_button.gd::GDScript::-1::1669453062::0::1::::<>Control<>::
-item_button.tscn::PackedScene::4913629070429092381::1669453094::0::1::::<><>::res://scenes/ui/itemActionButton/item_button.gd<>uid://cuidb51mn7j7j<>res://scenes/rand_audio_stream_player.gd<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
-::res://scenes/ui/itemActionMenu/::1669455874
-item_action_menu.gd::GDScript::-1::1669455874::0::1::::<>Control<>::
-item_action_menu.tscn::PackedScene::8038478628684646796::1669454696::0::1::::<><>::res://scenes/ui/itemActionMenu/item_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://cuidb51mn7j7j<>uid://csa4vgi6yin3c<>uid://d4gx2xbbpqju8<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
-::res://scenes/ui/itemsMenu/::1669458059
-items_menu.gd::GDScript::-1::1669456382::0::1::::<>Control<>::
-items_menu.tscn::PackedScene::3988187916879988215::1669458059::0::1::::<><>::res://scenes/ui/itemsMenu/items_menu.gd<>uid://dkn1tuxa3ybyj<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/itemActionButton/::1669510009
+item_button.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+item_button.tscn::PackedScene::4913629070429092381::1669510009::0::1::::<><>::res://scenes/ui/itemActionButton/item_button.gd<>uid://cuidb51mn7j7j<>res://scenes/rand_audio_stream_player.gd<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/itemActionMenu/::1669510009
+item_action_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+item_action_menu.tscn::PackedScene::8038478628684646796::1669510009::0::1::::<><>::res://scenes/ui/itemActionMenu/item_action_menu.gd<>uid://cu36rerivg1yh<>uid://rfj18ib1q8ca<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://cuidb51mn7j7j<>uid://csa4vgi6yin3c<>uid://d4gx2xbbpqju8<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/itemsMenu/::1669510009
+items_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+items_menu.tscn::PackedScene::3988187916879988215::1669510009::0::1::::<><>::res://scenes/ui/itemsMenu/items_menu.gd<>uid://dkn1tuxa3ybyj<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
 ::res://scenes/ui/itemsSelectable/::1669432266
 item_selectable.gd::GDScript::-1::1669432266::0::1::::<>Control<>::
 item_selectable.tscn::PackedScene::3256254244125462450::1669432266::0::1::::<><>::res://scenes/ui/itemsSelectable/item_selectable.gd<>uid://brdm2am46cx02<>uid://cuidb51mn7j7j<>uid://dkn1tuxa3ybyj<>uid://d72wcglmseqx
-::res://scenes/ui/loadoutMenu/::1669458059
-loadout_menu.gd::GDScript::-1::1669456374::0::1::::<>Control<>::
-loadout_menu.tscn::PackedScene::6240783509282901032::1669458059::0::1::::<><>::res://scenes/ui/loadoutMenu/loadout_menu.gd<>uid://brdm2am46cx02<>uid://dy06wibd73sxu<>uid://d4053sr81jx7<>uid://8vh72q6mr7jt<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/loadoutMenu/::1669510009
+loadout_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+loadout_menu.tscn::PackedScene::6240783509282901032::1669510009::0::1::::<><>::res://scenes/ui/loadoutMenu/loadout_menu.gd<>uid://brdm2am46cx02<>uid://dy06wibd73sxu<>uid://d4053sr81jx7<>uid://8vh72q6mr7jt<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
 ::res://scenes/ui/mainMenu/::1669431969
 main_menu.gd::GDScript::-1::1669431969::0::1::::<>Control<>::
 main_menu.tscn::PackedScene::-1::1669431969::0::1::::<><>::res://scenes/ui/mainMenu/main_menu.gd
-::res://scenes/ui/pauseMenu/::1669458059
-pause_menu.gd::GDScript::-1::1669457377::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::8057954877167390435::1669458059::0::1::::<><>::res://scenes/ui/pauseMenu/pause_menu.gd<>uid://brdm2am46cx02<>uid://dy06wibd73sxu<>uid://b5i3e346b6pvg<>uid://c8euvbkk0y356<>uid://m03fqlq7hd6n<>uid://wcwbjjjr6avd<>uid://cu6c17iwu5lee<>uid://bw254wnisp7ip<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy<>uid://dfdwkqw32qfwb<>uid://db554iixhsj7f
-::res://scenes/ui/pauseMenu/tatic_darg_able/::1669458059
-tatic_drag_able.gd::GDScript::-1::1669457731::0::1::::<>Button<>::
-tatic_drag_able.tscn::PackedScene::7420644989629744608::1669458059::0::1::::<><>::res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd<>uid://brdm2am46cx02<>uid://d4053sr81jx7<>uid://deaarakxmj1d7<>res://scenes/rand_audio_stream_player.gd<>uid://cnvhex67castv<>uid://b6d5f855koerx<>uid://dbmsu5ddbt4cl<>uid://opaty6igwxc3<>uid://bngf2kj5f6t82<>uid://0p842d6u3s0f<>uid://wfxl7dik1p18<>uid://djmo6g6sbowyw
+::res://scenes/ui/pauseMenu/::1669510009
+pause_menu.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::8057954877167390435::1669510009::0::1::::<><>::res://scenes/ui/pauseMenu/pause_menu.gd<>uid://brdm2am46cx02<>uid://dy06wibd73sxu<>uid://b5i3e346b6pvg<>uid://c8euvbkk0y356<>uid://m03fqlq7hd6n<>uid://wcwbjjjr6avd<>uid://cu6c17iwu5lee<>uid://bw254wnisp7ip<>res://scenes/rand_audio_stream_player.gd<>uid://cwuwxpfd10png<>uid://bhukn3snlsd8h<>uid://dgvwg825t8ejp<>uid://b55saewa5u3rv<>uid://c2x8eonkds843<>uid://cab5mq8xhuj1g<>uid://bf64g2wfbdo8n<>uid://brf4xjy4yi5pu<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy<>uid://dfdwkqw32qfwb<>uid://db554iixhsj7f
+::res://scenes/ui/pauseMenu/tatic_darg_able/::1669510009
+tatic_drag_able.gd::GDScript::-1::1669510009::0::1::::<>Button<>::
+tatic_drag_able.tscn::PackedScene::7420644989629744608::1669510009::0::1::::<><>::res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd<>uid://brdm2am46cx02<>uid://d4053sr81jx7<>uid://deaarakxmj1d7<>res://scenes/rand_audio_stream_player.gd<>uid://cnvhex67castv<>uid://b6d5f855koerx<>uid://dbmsu5ddbt4cl<>uid://opaty6igwxc3<>uid://bngf2kj5f6t82<>uid://0p842d6u3s0f<>uid://wfxl7dik1p18<>uid://djmo6g6sbowyw
 ::res://scenes/ui/persuasionDisplay/::1669432266
 persuasion_display.gd::GDScript::-1::1669432266::0::1::::<>Label<>::
 persuasion_display.tscn::PackedScene::2743794902300443434::1669431969::0::1::::<><>::res://scenes/ui/persuasionDisplay/persuasion_display.gd
@@ -387,14 +387,14 @@ stress_indicator.tscn::PackedScene::454179955194688047::1669432267::0::1::::<><>
 color_swap.gdshader::Shader::-1::1669432267::0::1::::<><>::
 tag_button.gd::GDScript::-1::1669432267::0::1::::UITagButton<>Button<>::
 tag_button.tscn::PackedScene::7717035720317848978::1669432267::0::1::::<><>::res://scenes/ui/tagButton/color_swap.gdshader<>res://scenes/ui/tagButton/tag_button.gd<>uid://opsohciiyx02<>uid://dmqxxsevkfr7h
-::res://scenes/ui/taticsActionButton/::1669452926
-tactic_action_button.gd::GDScript::-1::1669450165::0::1::::<>Control<>::
-tactic_button.tscn::PackedScene::1814347533631113188::1669452926::0::1::::<><>::res://scenes/ui/taticsActionButton/tactic_action_button.gd<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://d4gx2xbbpqju8<>uid://cuidb51mn7j7j<>res://scenes/rand_audio_stream_player.gd<>uid://cbi7t5s6k8iie<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
+::res://scenes/ui/taticsActionButton/::1669510009
+tactic_action_button.gd::GDScript::-1::1669510009::0::1::::<>Control<>::
+tactic_button.tscn::PackedScene::1814347533631113188::1669510009::0::1::::<><>::res://scenes/ui/taticsActionButton/tactic_action_button.gd<>uid://dh7gplf3sc6be<>res://scenes/ui/tagButton/color_swap.gdshader<>uid://d4gx2xbbpqju8<>uid://cuidb51mn7j7j<>res://scenes/rand_audio_stream_player.gd<>uid://cbi7t5s6k8iie<>uid://mqwkbuokfl1q<>uid://bx276jn07ckcy
 ::res://scenes/voiceBox/::1669432267
 voice_box.gd::GDScript::-1::1669432267::0::1::::VoiceBoxPlayer<>AudioStreamPlayer<>::
 voice_box.tscn::PackedScene::1954315101111762409::1669432267::0::1::::<><>::res://scenes/voiceBox/voice_box.gd<>uid://02irn3hmx2wt
-::res://scenes/voiceBoxTesting/::1669432267
-voice_box.gd::GDScript::-1::1669432267::0::1::::<>AudioStreamPlayer<>::
+::res://scenes/voiceBoxTesting/::1669510009
+voice_box.gd::GDScript::-1::1669510009::0::1::::<>AudioStreamPlayer<>::
 voice_box.tscn::PackedScene::1954315101111762409::1669432267::0::1::::<><>::res://scenes/voiceBoxTesting/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw<>uid://02irn3hmx2wt
 ::res://shaders/::1669446216
 ArtShader.gdshader::Shader::-1::1668221553::0::1::::<><>::
@@ -542,7 +542,7 @@ texture_10.png::CompressedTexture2D::6937716011360806923::1668221556::1669391424
 texture_11.png::CompressedTexture2D::18358689775941004::1668221556::1669391424::1::::<><>::
 texture_12.png::CompressedTexture2D::7743837705027315441::1668221556::1669391424::1::::<><>::
 texture_13.png::CompressedTexture2D::2221482679565715300::1668221556::1669391424::1::::<><>::
-::res://textures/ui/::1669432273
+::res://textures/ui/::1669510683
 MousePointers_World.png::CompressedTexture2D::3843361578714564351::1669432273::1669432273::1::::<><>::
 ::res://textures/ui/Battle/::1669432268
 Dialogue Window Spacing.png::CompressedTexture2D::435611567078988684::1669432267::1669432267::1::::<><>::
@@ -643,3 +643,15 @@ Out Of Battle UI Spacing Guide.png::CompressedTexture2D::548705605033513498::166
 OutOfBattle_MenuButton_Diamond.png::CompressedTexture2D::4510309750703834420::1669432273::1669432273::1::::<><>::
 OutOfBattle_MenuButton_Diamond_hover.png::CompressedTexture2D::1549621362225845813::1669432273::1669432273::1::::<><>::
 OutOfBattle_MenuButton_Diamond_pressed.png::CompressedTexture2D::7098582628444975643::1669432273::1669432273::1::::<><>::
+::res://textures/ui/To Do/::1669510678
+To-do list Spacing Guide.png::CompressedTexture2D::8911599029584832033::1669492748::1669510789::1::::<><>::
+ToDo_Checkbox_Checked.png::CompressedTexture2D::726108023931429574::1669484092::1669510789::1::::<><>::
+ToDo_Checkbox_Checked_Small.png::CompressedTexture2D::6478573503220447356::1669485026::1669510790::1::::<><>::
+ToDo_Checkbox_Unchecked.png::CompressedTexture2D::3950541822929943491::1669483444::1669510790::1::::<><>::
+ToDo_Checkbox_Unchecked_Small.png::CompressedTexture2D::8552430770833644315::1669484826::1669510790::1::::<><>::
+ToDo_DateSelect_ActiveDay.png::CompressedTexture2D::238658679572016904::1669486670::1669510790::1::::<><>::
+ToDo_DateSelect_InactiveDay.png::CompressedTexture2D::2048611391440242810::1669486684::1669510790::1::::<><>::
+ToDo_DaySelect_CheckedDay.png::CompressedTexture2D::847468299929808005::1669486246::1669510790::1::::<><>::
+ToDo_StartTaskButton.png::CompressedTexture2D::6988004673469169143::1669492492::1669510790::1::::<><>::
+ToDo_Window_Bar.png::CompressedTexture2D::6590889449551533226::1669488434::1669510790::1::::<><>::
+ToDo_Window_Exit.png::CompressedTexture2D::4842209503388177688::1669487200::1669510790::1::::<><>::
