@@ -1,7 +1,10 @@
+CheckBox
+HSlider
+Control
+TextureRect
 RichTextLabel
 VBoxContainer
 Label
-Control
 ColorRect
 TextureButton
 HBoxContainer
@@ -20,7 +23,6 @@ RoomInteractable3D (room_interactable_3D.gd)
 Node3D
 InteractableArea3D (interactableArea3D.gd)
 VoiceBoxPlayer (voice_box.gd)
-TextureRect
 HSeparator
 VSplitContainer
 AnimationPlayer
@@ -29,4 +31,3 @@ OmniLight3D
 SubViewport
 MeshInstance3D
 Panel
-PopupMenu

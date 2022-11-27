@@ -1,20 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgf5duxvirupx"]
+[gd_scene load_steps=14 format=3 uid="uid://dgf5duxvirupx"]
 
 [ext_resource type="Script" path="res://scenes/ui/settings/settings.gd" id="1_5p0r8"]
+[ext_resource type="Texture2D" uid="uid://frwtdu7b8bnf" path="res://textures/ui/Settings/settings/Settings Spacing Guide.png" id="2_fgjby"]
 [ext_resource type="Texture2D" uid="uid://c05w8sfi826hy" path="res://textures/ui/To Do/ToDo_Window_Bar.png" id="2_ooob7"]
 [ext_resource type="FontFile" uid="uid://dkn1tuxa3ybyj" path="res://textures/ui/Font/OpenSans-Semibold.ttf" id="3_52j6c"]
 [ext_resource type="Texture2D" uid="uid://ca8uqoonlrcyi" path="res://textures/ui/To Do/ToDo_Window_Exit.png" id="4_m177t"]
 [ext_resource type="Texture2D" uid="uid://ce2nl6ifrp0x6" path="res://textures/ui/To Do/ToDo_Window_Exit_pressed.png" id="5_7kskk"]
 [ext_resource type="Texture2D" uid="uid://b60j1lnk13mi0" path="res://textures/ui/To Do/ToDo_Window_Exit_hovered.png" id="6_i552m"]
+[ext_resource type="Texture2D" uid="uid://dp1653ixg0vo0" path="res://textures/ui/Settings/settings/Settings_VolumeSlider_Handle.png" id="8_dkwri"]
+[ext_resource type="Texture2D" uid="uid://bbi71w4xpmlls" path="res://textures/ui/Settings/settings/Settings_VolumeSlider_Slider.png" id="9_l6ymu"]
+[ext_resource type="Texture2D" uid="uid://kly5mnfri7xi" path="res://textures/ui/To Do/ToDo_Checkbox_Checked.png" id="10_mrss7"]
+[ext_resource type="Texture2D" uid="uid://bwjw31yosvgt4" path="res://textures/ui/To Do/ToDo_Checkbox_Unchecked.png" id="11_a0ikh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6exam"]
+texture = ExtResource("9_l6ymu")
+region_rect = Rect2(0, 0, 384, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40xva"]
+bg_color = Color(0, 0, 0.992157, 0.756863)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.290196, 0.294118, 0.313726, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_5p0r8")
 
 [node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 76.0
 offset_top = 94.0
 offset_right = 1156.0
@@ -22,12 +47,21 @@ offset_bottom = 1174.0
 scale = Vector2(0.85, 0.85)
 color = Color(0.92549, 0.92549, 0.87451, 1)
 
+[node name="SettingsSpacingGuide" type="TextureRect" parent="BackGround"]
+visible = false
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1080.0
+texture = ExtResource("2_fgjby")
+
 [node name="WindowBar" type="TextureRect" parent="BackGround"]
+layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 84.0
 texture = ExtResource("2_ooob7")
 
 [node name="Title" type="Label" parent="BackGround/WindowBar"]
+layout_mode = 0
 offset_left = 67.0588
 offset_top = 23.5294
 offset_right = 352.059
@@ -39,6 +73,7 @@ text = "Settings"
 
 [node name="ExitButton" type="TextureButton" parent="BackGround"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 965.882
 offset_top = 17.6471
 offset_right = 1017.88
@@ -46,3 +81,43 @@ offset_bottom = 69.6471
 texture_normal = ExtResource("4_m177t")
 texture_pressed = ExtResource("5_7kskk")
 texture_hover = ExtResource("6_i552m")
+
+[node name="Slider2" type="HSlider" parent="BackGround"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 92.9412
+offset_top = 387.059
+offset_right = 476.941
+offset_bottom = 431.059
+theme_override_icons/grabber = ExtResource("8_dkwri")
+theme_override_icons/grabber_highlight = ExtResource("8_dkwri")
+theme_override_icons/grabber_disabled = ExtResource("8_dkwri")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6exam")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_40xva")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_40xva")
+value = 55.0
+
+[node name="CheckBox" type="CheckBox" parent="BackGround"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 91.7647
+offset_top = 194.118
+offset_right = 249.765
+offset_bottom = 234.118
+scale = Vector2(1.18823, 1.14118)
+focus_mode = 0
+theme_override_colors/font_color = Color(0.266667, 0.266667, 0.266667, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_52j6c")
+theme_override_font_sizes/font_size = 22
+theme_override_icons/checked = ExtResource("10_mrss7")
+theme_override_icons/checked_disabled = ExtResource("11_a0ikh")
+theme_override_icons/unchecked = ExtResource("11_a0ikh")
+theme_override_icons/unchecked_disabled = ExtResource("11_a0ikh")
+button_pressed = true
+text = "Full screen"
