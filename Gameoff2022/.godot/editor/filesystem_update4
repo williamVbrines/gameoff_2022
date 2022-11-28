@@ -1,8 +1,7 @@
-res://modles/well.tscn
+res://scenes/levels/VillageScene.tscn
 res://shaders/artshader_noisetexture.tres
 res://shaders/Pixelation.tres
 res://shaders/water.tres
 res://scenes/main.tscn
-res://scenes/levels/VillageScene.tscn
 res://modles/fishinghut.tscn
-res://modles/villageporch.tscn
+res://modles/flowers.tscn
