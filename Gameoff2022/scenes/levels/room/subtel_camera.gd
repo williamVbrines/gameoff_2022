@@ -1,5 +1,6 @@
 extends Camera3D
 
+@export var amount : float = 10000;
 var drag_orgin : Vector2 = Vector2.ZERO;
 var next_rot : Vector2 = Vector2.ZERO;
 var rot : Vector2 = Vector2.ZERO;
@@ -16,8 +17,8 @@ func _input(event: InputEvent) -> void:
 	
 func camera_event(event : InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		next_rot.x = rot.x - ((get_viewport().get_mouse_position().y - drag_orgin.y) / 10000);
-		next_rot.y = rot.y - ((get_viewport().get_mouse_position().x - drag_orgin.x) / 10000);
+		next_rot.x = rot.x - ((get_viewport().get_mouse_position().y - drag_orgin.y) / amount);
+		next_rot.y = rot.y - ((get_viewport().get_mouse_position().x - drag_orgin.x) / amount);
 	
 func _process(delta: float) -> void:
 	rotation.x = lerp_angle(rotation.x,next_rot.x,SOMTHING * delta);

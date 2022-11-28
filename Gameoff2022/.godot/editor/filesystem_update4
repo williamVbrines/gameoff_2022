@@ -1,6 +1,15 @@
-res://scenes/main/main.tscn
 res://shaders/artshader_noisetexture.tres
+res://scenes/levels/village/village.tscn
 res://shaders/Pixelation.tres
 res://shaders/water.tres
+res://scenes/main/main.tscn
 res://scenes/levels/VillageScene.tscn
-res://modles/wizardtower.tscn
+res://scenes/ui/dialogWindow/dialog_window.gd
+res://scenes/resources/npc/test_npc_resource.tres
+res://scenes/levels/test_area.tscn
+res://scenes/ui/computer/computer.gd
+res://scenes/ui/computer/computer.tscn
+res://scenes/ui/computer/desktop/desktop.tscn
+res://scenes/player/player.tscn
+res://scenes/player/player.gd
+res://scenes/levels/room/subtel_camera.gd

@@ -98,17 +98,13 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_m0888")]
-layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_016c5")]
-layout_mode = 1
 
 [node name="Mouse" parent="GUI" instance=ExtResource("4_ty73u")]
 process_mode = 3
-layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("3_gnw8r")]
-layout_mode = 1
 
 [node name="TestArea" type="Node3D" parent="."]
 

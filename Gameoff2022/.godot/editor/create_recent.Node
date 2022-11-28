@@ -1,5 +1,9 @@
-Label
+CollisionShape3D
+StaticBody3D
+Node3D
 Control
+Node
+Label
 CheckBox
 HSlider
 TextureRect
@@ -10,17 +14,14 @@ TextureButton
 HBoxContainer
 RandAudioStreamPlayer (rand_audio_stream_player.gd)
 AudioStreamPlayer
-Node
 CanvasLayer
 Button
 Timer
 SpringArm3D
 Camera3D
 XRCamera3D
-CollisionShape3D
 Area3D
 RoomInteractable3D (room_interactable_3D.gd)
-Node3D
 InteractableArea3D (interactableArea3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 HSeparator
@@ -29,4 +30,3 @@ AnimationPlayer
 WorldEnvironment
 OmniLight3D
 SubViewport
-MeshInstance3D

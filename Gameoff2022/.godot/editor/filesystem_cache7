@@ -1,5 +1,5 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1669613268
+::res://::1669614273
 default_bus_layout.tres::AudioBusLayout::4908088006483557067::1669593088::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1668936590::0::1::::<><>::
 icon.svg::CompressedTexture2D::4080943282524572270::1668221551::1668221551::1::::<><>::
@@ -141,7 +141,7 @@ BeeptextV3 2.mp3::AudioStreamMP3::6300411101723219296::1669593088::1669593088::1
 BeeptextV3 3.mp3::AudioStreamMP3::1203815594979633212::1669593088::1669593088::1::::<><>::
 BeeptextV3 4.mp3::AudioStreamMP3::8251763324327906309::1669593088::1669593088::1::::<><>::
 BeeptextV3 5.mp3::AudioStreamMP3::8432575735441756903::1669593088::1669593088::1::::<><>::
-::res://meshes/::1669613267
+::res://meshes/::1669613332
 AlarmClockMesh.obj::Mesh::666901171431798425::1668221551::1669613329::1::::<><>::
 BedMesh.obj::Mesh::4782747171501330232::1668221551::1669613330::1::::<><>::
 BoatMesh.obj::Mesh::352604014783547128::1668221551::1669613330::1::::<><>::
@@ -182,7 +182,7 @@ wellmesh.obj::Mesh::273879276798971857::1669612760::1669613329::1::::<><>::
 WizardTower.obj::Mesh::4645463720313271268::1669431983::1669613329::1::::<><>::
 Wood PlankMesh.obj::Mesh::4010050665871997397::1668221551::1669613329::1::::<><>::
 WoodPostMesh.obj::Mesh::3995177444909079986::1668221551::1669613329::1::::<><>::
-::res://modles/::1669612760
+::res://modles/::1669613628
 alarm.tscn::PackedScene::7788848179969560838::1668221551::0::1::::<><>::uid://jrb1af8jt22p<>res://shaders/ArtShader.gdshader<>uid://c0gpp7puqfgqk<>uid://b3hpjriuttwf5
 bed.tscn::PackedScene::3847410501969144542::1669593088::0::1::::<><>::uid://cae2fadpgr86o<>res://shaders/ArtShader.gdshader<>res://shaders/fresnel_highlight.gdshader<>uid://b71al1010uojp<>uid://b3hpjriuttwf5
 boat.tscn::PackedScene::7397929263107322684::1668497392::0::1::::<><>::uid://fa2lpeatwkk3<>res://shaders/ArtShader.gdshader<>uid://ced8xnn2i1l3b<>uid://b3hpjriuttwf5
@@ -228,7 +228,7 @@ villagehousegreen.tscn::PackedScene::8207805450158324881::1669612760::0::1::::<>
 villagemeshground.tscn::PackedScene::2475276847262314509::1669612760::0::1::::<><>::uid://bf8bd75qt8283<>res://shaders/ArtShader.gdshader<>uid://hm8y4prqj7mm
 villageporch.tscn::PackedScene::4761138416045155851::1669612760::0::1::::<><>::uid://bknogsetv18b0<>res://shaders/ArtShader.gdshader<>uid://knewbs1jo6yu
 well.tscn::PackedScene::5235828368032590076::1669612760::0::1::::<><>::uid://d5w0s6235d1b<>res://shaders/ArtShader.gdshader<>uid://cvbtip5et0f1u
-wizardtower.tscn::PackedScene::4870319733979487301::1669431983::0::1::::<><>::uid://b7gkdxy2wwn7a<>res://shaders/ArtShader.gdshader<>uid://37x4382oo80g<>uid://b3hpjriuttwf5
+wizardtower.tscn::PackedScene::4870319733979487301::1669613628::0::1::::<><>::uid://b7gkdxy2wwn7a<>res://shaders/ArtShader.gdshader<>uid://cjmekqirmcegs<>uid://b3hpjriuttwf5
 woodplank.tscn::PackedScene::3578127978099136305::1668221552::0::1::::<><>::uid://bxeq7itoslvtd<>res://shaders/ArtShader.gdshader<>uid://c820l6wognwb2<>uid://b3hpjriuttwf5
 woodpost.tscn::PackedScene::3309557272410361047::1668221552::0::1::::<><>::uid://bw6j8vcm8jmbi<>res://shaders/ArtShader.gdshader<>uid://xrttkbndxkto<>uid://b3hpjriuttwf5
 ::res://scenes/::1669593092
@@ -243,11 +243,11 @@ event_manager.tscn::PackedScene::983989294905901704::1669592996::0::1::::<><>::r
 interactableArea3D.gd::GDScript::-1::1669593089::0::1::::InteractableArea3D<>Area3D<>::
 interactablesTest.gd::GDScript::-1::1669593089::0::1::::<>InteractableArea3D<>::
 interactablesTest.tscn::PackedScene::5041008288886388532::1669593089::0::1::::<><>::res://scenes/interactableArea3D/interactablesTest.gd<>uid://pesrx20hc7vx
-::res://scenes/levels/::1669613239
+::res://scenes/levels/::1669613628
 DungeonScene.tscn::PackedScene::5011740928977661278::1668221552::0::1::::<><>::
 RoomScene.tscn::PackedScene::1895943206892800854::1669431983::0::1::::<><>::uid://t7veo7ara27a<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://bu2yj26dvmjoo<>uid://dohk55w2v4jar<>uid://cnntxn1gqo2l5<>uid://di2yossccrpdk<>uid://f3olkhor585g<>res://shaders/ArtShader.gdshader<>uid://bs7n32125yvb<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://yllcxgk88mvt<>uid://blfbj6w4wfnt7<>uid://biqnqga1dlvta<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu<>uid://dxhm4itmlk0fq<>uid://2uan0c1ga2gc<>uid://cvgb16mc0ig7t
 test_area.tscn::PackedScene::6730054458260022839::1669593090::0::1::::<><>::uid://iy86trujqevt<>uid://c6gpe0v66rslx<>uid://bhcfyawh66n7t<>uid://cisgxwxj5w5h4<>uid://ga2iolih30e1<>res://scenes/ui/mainMenu/main_menu.tscn<>res://scenes/npc/Npc.gd<>uid://d22gfyio4xrgp<>uid://cc8sl1bonoce0<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap<>uid://c1ynlnisg2qox<>uid://w8grd7k40rhy
-VillageScene.tscn::PackedScene::1465518839451642061::1669613239::0::1::::<><>::uid://do66mehml4abx<>uid://d000toy1c1400<>uid://d6t6aevet6j4<>uid://bye3sl2u4rd7k<>uid://cvkbkuv2ch0jk<>uid://b83liv0gvm2hb<>uid://d2088j2i35ij3<>uid://dx40fhvq7xq4m<>uid://8f54kt0m0nku<>uid://bnff6pafaf1e6<>uid://dk6q2e0vkitc8<>uid://ddnu2xd4xodou<>uid://c7rfbbdj0tkqk<>uid://bq8jiliucs2l6<>uid://dmn3vhvnuyxgb<>uid://pgiirmgenq8c<>uid://cotp2rqylek85<>uid://ogen0ryaljqc<>uid://bxk526ikuqwq<>uid://cfmnbk2r5ajeh<>uid://bbjbph6pha0tt<>uid://cgujlfp3gdbfw<>uid://cbnhppl67epy0<>uid://cbpms42oraq6n<>uid://denps0ye5r3wr
+VillageScene.tscn::PackedScene::1465518839451642061::1669613628::0::1::::<><>::uid://do66mehml4abx<>uid://d000toy1c1400<>uid://d6t6aevet6j4<>uid://bye3sl2u4rd7k<>uid://cvkbkuv2ch0jk<>uid://b83liv0gvm2hb<>uid://d2088j2i35ij3<>uid://dx40fhvq7xq4m<>uid://8f54kt0m0nku<>uid://bnff6pafaf1e6<>uid://dk6q2e0vkitc8<>uid://ddnu2xd4xodou<>uid://c7rfbbdj0tkqk<>uid://bq8jiliucs2l6<>uid://dmn3vhvnuyxgb<>uid://pgiirmgenq8c<>uid://cotp2rqylek85<>uid://ogen0ryaljqc<>uid://bxk526ikuqwq<>uid://cfmnbk2r5ajeh<>uid://bbjbph6pha0tt<>uid://cgujlfp3gdbfw<>uid://cbnhppl67epy0<>uid://cbpms42oraq6n<>uid://denps0ye5r3wr
 ::res://scenes/levels/room/::1669612540
 conferm_box.gd::GDScript::-1::1669612540::0::1::::<>Control<>::
 room.tscn::PackedScene::2518177886503172114::1669612540::0::1::::<><>::uid://7molkd4islo1<>uid://t7veo7ara27a<>res://scenes/levels/room/conferm_box.gd<>uid://di78grpbmwhes<>uid://csl5u8uumwyx2<>uid://rfl8qgmawini<>uid://bu2yj26dvmjoo<>uid://d22gfyio4xrgp<>res://scenes/rand_audio_stream_player.gd<>uid://dohk55w2v4jar<>res://scenes/levels/room/subtel_camera.gd<>uid://qbsqkgmwq1x2<>uid://cnntxn1gqo2l5<>res://scenes/levels/room/tab_out_button.gd<>uid://ck6aeikl4kkwa<>uid://bvmt2altk1qnn<>uid://b1bfn5r0nau6t<>uid://di2yossccrpdk<>uid://f3olkhor585g<>uid://b8xt8xpaaxfit<>res://scenes/levels/room/room_interactable_3D.gd<>res://shaders/ArtShader.gdshader<>uid://dganfqk1upft3<>uid://bs7n32125yvb<>uid://vdiquvwfbthn<>uid://b2macwatlygy6<>uid://bgtu76l55emde<>uid://usded07kcbok<>uid://b6aiw6h2hh3q8<>uid://d21jkkbj41iy6<>uid://n6g3mwokncgt<>uid://1d2ewfbjoup3<>uid://csughb021ergy<>uid://dhvgh7gmhxyci<>uid://c438accyu1st4<>uid://chqp2dr7mrnd6<>uid://blfbj6w4wfnt7<>uid://b3hpjriuttwf5<>uid://2b5feot0bgh5<>uid://cpc7t82lkl8xu<>uid://dxhm4itmlk0fq<>uid://2uan0c1ga2gc<>uid://cvgb16mc0ig7t<>uid://cp3nfl53wksws
@@ -260,9 +260,9 @@ interactabel_monitor.tscn::PackedScene::5884275474348840054::1669593090::0::1:::
 ::res://scenes/levels/room/roomTooltip/::1669593090
 tooltip.gd::GDScript::-1::1669593090::0::1::::<>Control<>::
 tooltip.tscn::PackedScene::2271685742294391314::1669593090::0::1::::<><>::res://scenes/levels/room/roomTooltip/tooltip.gd<>uid://rfl8qgmawini
-::res://scenes/main/::1669612209
+::res://scenes/main/::1669613628
 main.gd::GDScript::-1::1669612209::0::1::::<>Control<>::
-main.tscn::PackedScene::5729213597354079838::1669612036::0::1::::<><>::res://scenes/main/main.gd<>uid://ck6aeikl4kkwa
+main.tscn::PackedScene::5729213597354079838::1669613628::0::1::::<><>::res://scenes/main/main.gd<>uid://ck6aeikl4kkwa
 ::res://scenes/npc/::1669593090
 Npc.gd::GDScript::-1::1669593090::0::1::::NPC<>Node3D<>::
 text_npc.tscn::PackedScene::2476888271075251610::1669592996::0::1::::<><>::res://scenes/npc/Npc.gd<>res://scenes/interactableArea3D/interactableArea3D.gd<>uid://tel3p2uw0agw<>res://shaders/fresnel_highlight.gdshader<>uid://djqcoqe0yseap
@@ -419,18 +419,18 @@ voice_box.tscn::PackedScene::1954315101111762409::1669593092::0::1::::<><>::res:
 ::res://scenes/voiceBoxTesting/::1669593092
 voice_box.gd::GDScript::-1::1669593092::0::1::::<>AudioStreamPlayer<>::
 voice_box.tscn::PackedScene::1954315101111762409::1669593092::0::1::::<><>::res://scenes/voiceBoxTesting/voice_box.gd<>uid://c7v2gxtau55si<>uid://dgqwsumnoq4fh<>uid://2qq4vo14d32m<>uid://crpkwqvvk2e8v<>uid://l1u0jjkuk7vv<>uid://7hop3d7405ws<>uid://v71x8755oq63<>uid://3cmpgkpgrw7c<>uid://cfvxdwl6wxuks<>uid://b2m7mp4combxw<>uid://02irn3hmx2wt
-::res://shaders/::1669611552
+::res://shaders/::1669613543
 ArtShader.gdshader::Shader::-1::1668221553::0::1::::<><>::
-artshader_noisetexture.tres::NoiseTexture2D::4367086683063326312::1669611552::0::1::::<><>::
+artshader_noisetexture.tres::NoiseTexture2D::4367086683063326312::1669613543::0::1::::<><>::
 ArtShader_Trans.gdshader::Shader::-1::1668221553::0::1::::<><>::
 baseSetup.tres::ShaderMaterial::6152646897472961760::1668221553::0::1::::<><>::res://shaders/ArtShader.gdshader<>uid://b3hpjriuttwf5
 fresnel_highlight.gdshader::Shader::-1::1669592996::0::1::::<><>::
 mointor_effect.gdshader::Shader::-1::1669593092::0::1::::<><>::
 NoiseTextureforWater2.png::CompressedTexture2D::2868537469354580257::1668221553::1668221553::1::::<><>::
 NoiseTextureforWater.png::CompressedTexture2D::1442168873851410465::1668221553::1668221553::1::::<><>::
-Pixelation.tres::VisualShader::275771230903054659::1669394966::0::1::::<><>::
-water.tres::VisualShader::7926166135836530417::1669394567::0::1::::<><>::uid://byv3ie4ttlgjl
-::res://textures/::1669612760
+Pixelation.tres::VisualShader::275771230903054659::1669613543::0::1::::<><>::
+water.tres::VisualShader::7926166135836530417::1669613543::0::1::::<><>::uid://byv3ie4ttlgjl
+::res://textures/::1669613390
 AlarmClockTex.png::CompressedTexture2D::6540887971511005482::1668221553::1669613375::1::::<><>::
 BedTexture.png::CompressedTexture2D::4686158550891391529::1668221553::1669613376::1::::<><>::
 BoatTexture.png::CompressedTexture2D::5061835313346108885::1668221553::1669613376::1::::<><>::

@@ -16,13 +16,17 @@ var acceleration: Vector3 = Vector3.ZERO;
 var drag_orgin =  Vector2.ZERO;
 var disabled = false;
 
+var og : Vector3 = Vector3.ZERO;
+
 func set_disabled(val : bool) -> void:
 	disabled = val;
 	
 	
 func _ready() -> void:
 	_make_connections();
-	
+	og = boomarm.rotation;
+	rotation.y += boomarm.rotation.y;
+	boomarm.rotation.y = 0.0;
 	
 func _make_connections() -> void:
 	EventManager.start_combat.connect(_on_start_combat);
@@ -75,51 +79,59 @@ func _physics_process(delta: float) -> void:
 	
 	
 func turn(delta : float) -> void:
-	var rot_dir : float = \
-	Input.get_action_strength("rotate_anticlockwise") \
-	- Input.get_action_strength("rotate_clockwise");
+#	var rot_dir : float = \
+#	Input.get_action_strength("rotate_anticlockwise") \
+#	- Input.get_action_strength("rotate_clockwise");
 	
-	if !Input.is_action_pressed("mouse_left") && Input.is_action_pressed("foward") &&  boomarm.rotation.y != 0.0:
-		rotation.y += boomarm.rotation.y;
-		boomarm.rotation.y = 0.0;
+#	if !Input.is_action_pressed("mouse_left") && Input.is_action_pressed("foward") &&  boomarm.rotation.y != 0.0:
+#		rotation.y += boomarm.rotation.y;
+#		boomarm.rotation.y = 0.0;
 	
 	
-	rotation.y = lerp(rotation.y , rot_dir * turn_speed + rotation.y, .2  * delta);
-	rotation.y = wrapf(rotation.y, 0, 2 * PI);
-	
+#	rotation.y = lerp(rotation.y , rot_dir * turn_speed + rotation.y, .2  * delta);
+#	rotation.y = wrapf(rotation.y, 0, 2 * PI);
+#	boomarm.global_rotation = og
+	pass
 	
 func movement(_delta : float) -> void:
-	var input_dir := Input.get_vector("left", "right", "foward", "backward")
+	var input_dir := Input.get_vector("rotate_anticlockwise", "rotate_clockwise", "foward", "backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var movment := direction * default_move_speed;
 	
 	# Add the gravity if not on ground
 	if !is_on_floor():
 		movment.y -= gravity ;
-		
-	velocity = lerp(velocity, movment, .2 );
+	
+	
+	velocity = lerp(velocity, movment, 20 * _delta );
+	boomarm.position.x = clamp(boomarm.position.x, -5, 5);
+	boomarm.position.z = clamp(boomarm.position.z, -5,5);
+	boomarm.global_position = lerp(boomarm.global_position, global_position - velocity, _delta );
+	
+	
+	
 	pass
 	
 	
 func camera_event(event : InputEvent) -> void:
-	if event.is_action_pressed("zoom_in"):
-		boomarm.spring_length = max(0,boomarm.spring_length - zoom_step);
+#	if event.is_action_pressed("zoom_in"):
+#		boomarm.spring_length = max(0,boomarm.spring_length - zoom_step);
+#
+#
+#	if event.is_action_pressed("zoom_out"):
+#		boomarm.spring_length += zoom_step;
 		
+#	if event.is_action_pressed("mouse_left"):
+#		drag_orgin = get_viewport().get_mouse_position();
 		
-	if event.is_action_pressed("zoom_out"):
-		boomarm.spring_length += zoom_step;
+#	if event is InputEventMouseMotion:
 		
-	if event.is_action_pressed("mouse_left"):
-		drag_orgin = get_viewport().get_mouse_position();
-		
-	if event is InputEventMouseMotion:
-		
-		if Input.is_action_pressed("mouse_left"): 
+#		if Input.is_action_pressed("mouse_left"): 
 			
-			boomarm.rotation.y -= (get_viewport().get_mouse_position() - drag_orgin ).x / 100;
-			boomarm.rotation.x -= (get_viewport().get_mouse_position() - drag_orgin ).y / 100;
-		drag_orgin = get_viewport().get_mouse_position();
-	
+#			boomarm.rotation.y -= (get_viewport().get_mouse_position() - drag_orgin ).x / 100;
+#			boomarm.rotation.x -= (get_viewport().get_mouse_position() - drag_orgin ).y / 100;
+#		drag_orgin = get_viewport().get_mouse_position();
+	pass
 	
 func look_event(event : InputEvent) -> void:
 	if event is InputEventMouseMotion:
