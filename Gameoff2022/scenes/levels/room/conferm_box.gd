@@ -126,6 +126,8 @@ func _parce_action():
 			bed_audio.play_rand();
 		"MONITOR":
 			
+			EventManager.show_save_screen.emit();
+			
 			computer_on_audio.play_rand();
 			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN;
 			

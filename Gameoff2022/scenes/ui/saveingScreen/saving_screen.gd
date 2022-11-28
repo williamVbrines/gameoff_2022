@@ -9,7 +9,6 @@ var is_loading_complete : bool = false;
 
 func _ready() -> void:
 	_make_connections();
-	_start_saveing_anim();
 	
 func _make_connections() -> void:
 	EventManager.show_save_screen.connect(_start_saveing_anim);
@@ -26,7 +25,7 @@ func _start_saveing_anim() -> void:
 	
 	is_loading_complete = false;
 	min_anim_timer.start(3.0);
-	
+	show();
 	tween.stop();
 	tween.tween_callback(loading_lable.set_text.bind("Saving"));
 	tween.tween_callback(loading_lable.show)

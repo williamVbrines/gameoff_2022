@@ -18,7 +18,7 @@ func _make_connections() -> void:
 	
 func _on_exit_pressed() -> void:
 	exit_button.disabled = true;
-	EventManager.save_file_data.emit();
+	
 	exit_anim();
 	
 	
@@ -27,7 +27,9 @@ func exit_anim() -> void:
 	self.modulate = Color(Color.WHITE, 1.0);
 	show();
 	tween.stop();
+	tween.tween_callback(EventManager.call.bind("emit_signal","show_save_screen"));
 	tween.tween_property(self,"modulate",Color(Color.WHITE, 0.0), 0.5);
+	
 	tween.tween_callback(hide);
 	tween.play();
 	
