@@ -1,14 +1,18 @@
 extends Node
 
-var current_save_file : String = "null";
+var play_start_anim : bool = true;#Do not save this data
+var opponent : String = "";#Do not save this data
+var current_save_file : String = "null";#Do not save this data
+
 var stress = 0;
 var persuasion = 0;
-var opponent : String = "";
-var play_start_anim : bool = true;#Do not save this data
 
 var windowed : bool = true;
 var masterVol : float = 0.0;
+var sfxVol : float = 0.0;
+var bgmVol : float = 0.0;
 
+var day : int = 0;
 
 var player_stats : Dictionary = {
 	"CHARM" : 50,
@@ -44,13 +48,18 @@ func data_dump() -> Dictionary:
 	save_dic["dialog_profiles"] = dialog_profiles;
 	save_dic["windowed"] = windowed;
 	save_dic["masterVol"] = masterVol;
+	save_dic["sfxVol"] = sfxVol;
+	save_dic["bgmVol"] = bgmVol;
+	save_dic["day"] = day;
+	save_dic["stress"] = stress;
+	save_dic["persuasion"] = persuasion;
 	
 	return save_dic;
 
 func load_data(data : Dictionary) -> void:
 	if data.has("SystemGlobals"):
 		var dic : Dictionary = data.SystemGlobals;
-		if dic.has_all(["masterVol","windowed","player_stats","player_tactics","player_items","player_clues","dialog_profiles"]):
+		if dic.has_all(["day","stress","persuasion","masterVol","sfxVol","bgmVol","windowed","player_stats","player_tactics","player_items","player_clues","dialog_profiles"]):
 			player_stats = dic.player_stats;
 			player_tactics = dic.player_tactics;
 			player_items = dic.player_items;
@@ -58,8 +67,16 @@ func load_data(data : Dictionary) -> void:
 			dialog_profiles = dic.dialog_profiles;
 			windowed = dic.windowed
 			masterVol = dic.masterVol
+			sfxVol = dic.sfxVol;
+			bgmVol = dic.bgmVol;
+			
+			day = dic.day;
+			stress = dic.stress;
+			persuasion = dic.persuasion;
 			
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), masterVol);
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), sfxVol);
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), bgmVol);
 			
 			if !SystemGlobals.windowed:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

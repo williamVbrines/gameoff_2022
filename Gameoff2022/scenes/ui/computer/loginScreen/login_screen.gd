@@ -116,7 +116,7 @@ func _start_saveing_anim() -> void:
 	min_anim_timer.start(3.0);
 	
 	tween.stop();
-	tween.tween_callback(loading_lable.set_text.bind("Saveing"));
+	tween.tween_callback(loading_lable.set_text.bind("Saving"));
 	tween.tween_callback(loading_lable.show)
 	
 	tween.tween_callback(_saveing_anim);

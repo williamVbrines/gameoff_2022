@@ -56,7 +56,7 @@ func _make_connections() -> void:
 func _on_monitor_startup_complete() -> void:
 	var tween = create_tween();
 	tween.stop();
-	var end = -20.0;
+	var end = SystemGlobals.bgmVol;
 	var val = -80.0;
 	for i in 50:
 		val = -80  - (i * ((-80 - end)/50))

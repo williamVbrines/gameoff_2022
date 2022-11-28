@@ -56,6 +56,8 @@ signal room_hide_confirm();
 signal monitor_startup_complete();
 signal moved_to_monitor();
 
+signal show_save_screen();
+
 #Mouse##########################################################################
 signal hide_mosue();
 signal show_mosue();
