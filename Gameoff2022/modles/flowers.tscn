@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://denps0ye5r3wr"]
+
+[ext_resource type="Texture2D" uid="uid://rtfifhpi1qev" path="res://textures/flowerstexture.png" id="1_oxhk6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0nw4u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nde3h"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.419608, 0.419608, 0.419608, 1)
+albedo_texture = ExtResource("1_oxhk6")
+
+[node name="flowers" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.537388, -0.843335, 0, 0.843335, 0.537388, 0, 0, 0)
+mesh = SubResource("PlaneMesh_0nw4u")
+surface_material_override/0 = SubResource("StandardMaterial3D_nde3h")

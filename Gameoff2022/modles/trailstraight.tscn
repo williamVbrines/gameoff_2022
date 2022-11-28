@@ -12,5 +12,6 @@ albedo_texture = ExtResource("1_wbfx4")
 [node name="trailstraight" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.17595, 0, 0, 0)
 mesh = SubResource("PlaneMesh_ve1s3")
 surface_material_override/0 = SubResource("StandardMaterial3D_3g3hf")
