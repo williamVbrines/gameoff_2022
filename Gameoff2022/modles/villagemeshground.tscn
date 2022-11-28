@@ -1,25 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbjbph6pha0tt"]
+[gd_scene load_steps=6 format=3 uid="uid://bbjbph6pha0tt"]
 
 [ext_resource type="ArrayMesh" uid="uid://bf8bd75qt8283" path="res://meshes/MeshVillageGround.obj" id="1_e6uc6"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_b6kir"]
+[ext_resource type="Texture2D" uid="uid://hm8y4prqj7mm" path="res://textures/MeshVillageGroundTex.png" id="3_v8lct"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eca5u"]
 render_priority = 0
 shader = ExtResource("2_b6kir")
+shader_parameter/albedo_texture = ExtResource("3_v8lct")
 shader_parameter/animated = null
 shader_parameter/light_bias = null
-shader_parameter/light_tint = Color(0.478431, 0.478431, 0.478431, 1)
+shader_parameter/light_tint = Color(0.796078, 0.796078, 0.796078, 1)
 shader_parameter/metallic = null
 shader_parameter/normal_bias = null
 shader_parameter/rimlight_blend = null
 shader_parameter/rimlight_color = Color(1, 1, 1, 1)
 shader_parameter/rimlight_size = null
 shader_parameter/shadow_blend = null
-shader_parameter/shadow_color = Color(0.913725, 0.913725, 0.913725, 1)
+shader_parameter/shadow_color = Color(0.631373, 0.631373, 0.631373, 1)
 shader_parameter/shadow_extra_intensity = null
 shader_parameter/shadow_size = null
 shader_parameter/time_scale = null
-shader_parameter/tint = Color(0, 0.721569, 0.47451, 1)
+shader_parameter/tint = Color(1, 1, 1, 1)
 shader_parameter/use_normalmap = null
 shader_parameter/use_view = null
 shader_parameter/view_bias = null

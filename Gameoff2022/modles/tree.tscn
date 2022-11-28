@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cliivstvnw6o7" path="res://meshes/Tree01Mesh.obj" id="1_4a3gi"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_6icsy"]
-[ext_resource type="Texture2D" uid="uid://dwkxlo0cus6jl" path="res://Textures/Tree01Texture.png" id="3_q3anb"]
+[ext_resource type="Texture2D" uid="uid://dwkxlo0cus6jl" path="res://textures/Tree01Texture.png" id="3_q3anb"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_bhklh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mjl6x"]

@@ -1,5 +1,6 @@
-StaticBody3D
 MeshInstance3D
+Node3D
+StaticBody3D
 Camera3D
 GPUParticles3D
 RigidBody3D
@@ -9,7 +10,6 @@ SpotLight3D
 OmniLight3D
 WorldEnvironment
 Sprite2D
-Node3D
 SubViewport
 Label
 Sprite3D

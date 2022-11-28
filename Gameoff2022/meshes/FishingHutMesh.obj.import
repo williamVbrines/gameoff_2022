@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clj35g01vahqf"
+path="res://.godot/imported/FishingHutMesh.obj-1fa0c61742f121975051793084daabae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FishingHutMesh.obj-1fa0c61742f121975051793084daabae.mesh"]
+
+source_file="res://meshes/FishingHutMesh.obj"
+dest_files=["res://.godot/imported/FishingHutMesh.obj-1fa0c61742f121975051793084daabae.mesh", "res://.godot/imported/FishingHutMesh.obj-1fa0c61742f121975051793084daabae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
