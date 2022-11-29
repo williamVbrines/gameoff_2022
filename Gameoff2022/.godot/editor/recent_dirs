@@ -1,3 +1,5 @@
+res://scenes/test
+C:/Users/William/Documents/GitHub
 res://scenes/levels/village
 res://scenes/ui/saveingScreen
 res://scenes/ui/settings
@@ -18,5 +20,3 @@ res://scenes/ui/pauseMenu
 res://scenes/ui/itemActionButton
 res://scenes/ui/itemActionMenu
 res://scenes/ui/cluesActionButton
-res://scenes/ui/clueActionMenu
-res://scenes/ui/costCounterTag

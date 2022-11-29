@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=55 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://cbpms42oraq6n" path="res://modles/campfire.tscn" id="24_flb3y"]
 [ext_resource type="PackedScene" uid="uid://denps0ye5r3wr" path="res://modles/flowers.tscn" id="25_k8ked"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="26_2iu2g"]
+[ext_resource type="PackedScene" uid="uid://b64xook6i5gg4" path="res://modles/smith/SmithTalking.tscn" id="27_0kao7"]
 [ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="28_qvvy6"]
 [ext_resource type="Resource" uid="uid://cc8sl1bonoce0" path="res://scenes/resources/npc/test_npc_resource.tres" id="29_jwkuq"]
 [ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="30_63oww"]
@@ -699,6 +700,9 @@ transform = Transform3D(2.99998, 0, -6.82121e-13, 0, 4, 0, 6.82121e-13, 0, 2.999
 [node name="smalltreedarkercolor34" parent="Village3D/Enviroment/Trees(All)" instance=ExtResource("8_vf3gk")]
 transform = Transform3D(3.00519, 0, 2.63985, 0, 5.333, 0, -2.63985, 0, 3.00519, -10.6668, -44.3673, 58.139)
 
+[node name="SmithTalkinganim" parent="Village3D" instance=ExtResource("27_0kao7")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 19.3627, 0.202917, -3.02457)
+
 [node name="Player" parent="Village3D" instance=ExtResource("26_2iu2g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8724, 0.287584, 1.48005)
 
@@ -790,13 +794,17 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_xkpbn")]
+layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_cli8v")]
+layout_mode = 1
 
 [node name="Mouse" parent="GUI" instance=ExtResource("3_gmu7u")]
 process_mode = 3
+layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("4_fyvys")]
+layout_mode = 1
 
 [node name="BGMAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_dyiqh")
