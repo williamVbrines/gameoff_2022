@@ -61,7 +61,7 @@ func _on_persuasion_changed(_val : float) -> void:
 	_change_persuasion_anim();
 	
 	
-func _on_stress_changed(_val : float) -> void:
+func _on_stress_changed() -> void:
 	var p = SystemGlobals.stress / 100.0;
 	
 	if  p > fill_l.scale.x:

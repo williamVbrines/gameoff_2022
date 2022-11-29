@@ -54,7 +54,7 @@ func _on_attacked(target : String,data : Dictionary)->void:
 
 	SystemGlobals.stress += damage;
 
-	EventManager.stress_changed.emit(SystemGlobals.stress);
+	EventManager.stress_changed.emit();
 
 	EventManager.change_battel_queue.emit("NPC", data.cost)
 	

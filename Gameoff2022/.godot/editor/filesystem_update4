@@ -7,3 +7,11 @@ res://scenes/resources/npc/test_npc_resource.tres
 res://modles/smith/SmithTalking.tscn
 res://scenes/levels/village/village.tscn
 res://scenes/levels/room/room.tscn
+res://scenes/ui/roomStressBar/room_stress_bar.tscn
+res://scenes/ui/roomStressBar/room_stress_bar.gd
+res://scenes/ui/explorationHUD/exploration_hud.tscn
+res://scenes/ui/stressIndicator/stress_indicator.tscn
+res://scenes/eventManager/event_manager.gd
+res://scenes/ui/combatScreen/combat_screen.gd
+res://scenes/ui/streesAndPersuaionBattelIndicater/strees_and_persuaion_battel_indicater.gd
+res://scenes/ui/stressIndicator/stress_indicator.gd

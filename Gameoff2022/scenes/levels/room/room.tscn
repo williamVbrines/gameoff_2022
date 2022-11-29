@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bb43a0j8pld4e"]
+[gd_scene load_steps=65 format=3 uid="uid://bb43a0j8pld4e"]
 
 [ext_resource type="PackedScene" uid="uid://7molkd4islo1" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://b2macwatlygy6" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 1.mp3" id="11_htco2"]
 [ext_resource type="PackedScene" uid="uid://bgtu76l55emde" path="res://modles/key_board.tscn" id="11_y8fwa"]
 [ext_resource type="PackedScene" uid="uid://usded07kcbok" path="res://modles/mouse.tscn" id="12_fl6cs"]
+[ext_resource type="PackedScene" uid="uid://bysqiwx1f15hr" path="res://scenes/ui/roomStressBar/room_stress_bar.tscn" id="12_t6tsx"]
 [ext_resource type="AudioStream" uid="uid://b6aiw6h2hh3q8" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 2.mp3" id="12_tdgo2"]
 [ext_resource type="AudioStream" uid="uid://d21jkkbj41iy6" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 3.mp3" id="13_5ltb4"]
 [ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_ao8j1"]
@@ -215,6 +216,7 @@ collision_mode = 2
 [node name="GUI" type="CanvasLayer" parent="."]
 
 [node name="Tooltip" parent="GUI" instance=ExtResource("1_jjkga")]
+visible = false
 
 [node name="ConfirmBox" type="Control" parent="GUI"]
 layout_mode = 3
@@ -339,10 +341,21 @@ samples = [ExtResource("9_nyxym"), ExtResource("11_3girn")]
 
 [node name="Mouse" parent="GUI" instance=ExtResource("4_ndvkj")]
 
+[node name="RoomStressBar" parent="GUI" instance=ExtResource("12_t6tsx")]
+visible = false
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="TabOutButton" type="Button" parent="GUI" node_paths=PackedStringArray("cam")]
 visible = false
-offset_right = 8.0
-offset_bottom = 8.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1826.0
+offset_top = 17.0
+offset_right = -1549.0
+offset_bottom = 67.0
+grow_horizontal = 0
 focus_mode = 0
 mouse_filter = 1
 theme_override_colors/font_color = Color(0.121569, 0.572549, 0.890196, 0.701961)
@@ -355,9 +368,12 @@ script = ExtResource("6_bsyxd")
 cam = NodePath("../../Room3D/RoomCamera")
 
 [node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
+visible = false
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -97.0
+offset_top = -16.0
+offset_right = 1823.0
+offset_bottom = 1064.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 

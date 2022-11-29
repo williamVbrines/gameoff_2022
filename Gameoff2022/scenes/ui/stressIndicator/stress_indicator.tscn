@@ -25,7 +25,6 @@ script = ExtResource("1_2pod7")
 [node name="OutOfBattleUiSpacingGuide" type="TextureRect" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.513726)
-layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
@@ -34,7 +33,6 @@ texture = ExtResource("2_m2sx3")
 [node name="Fill" type="TextureRect" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_k7pny")
-layout_mode = 0
 offset_left = 192.0
 offset_top = 64.0
 offset_right = 722.0
@@ -45,7 +43,6 @@ texture = ExtResource("4_ivarl")
 [node name="HealthBar" type="TextureRect" parent="."]
 texture_filter = 1
 clip_contents = true
-layout_mode = 0
 offset_left = 192.0
 offset_top = 64.0
 offset_right = 722.0
@@ -56,7 +53,6 @@ ignore_texture_size = true
 
 [node name="Portrait" type="TextureRect" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
 offset_right = 204.0

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bysqiwx1f15hr"]
+
+[ext_resource type="Texture2D" uid="uid://cewoebt6qf4dg" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_MiniHealthbar.png" id="1_5krfe"]
+[ext_resource type="Script" path="res://scenes/ui/roomStressBar/room_stress_bar.gd" id="1_hamma"]
+[ext_resource type="Texture2D" uid="uid://b863ru4qh2vpd" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_MiniHealthbar_fill.png" id="3_i3f56"]
+[ext_resource type="Shader" path="res://scenes/ui/stressIndicator/stress_bar.gdshader" id="4_cdt6k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_indkh"]
+shader = ExtResource("4_cdt6k")
+shader_parameter/bar_color = Color(0.996078, 0.0392157, 0.32549, 1)
+shader_parameter/x_cutoff = 0.999
+
+[node name="RoomStressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("1_hamma")
+
+[node name="Fill" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_indkh")
+offset_left = 84.0
+offset_top = 84.0
+offset_right = 383.0
+offset_bottom = 109.0
+mouse_filter = 2
+texture = ExtResource("3_i3f56")
+
+[node name="HealthBar" type="TextureRect" parent="."]
+offset_left = 84.0
+offset_top = 84.0
+offset_right = 383.0
+offset_bottom = 109.0
+texture = ExtResource("1_5krfe")
