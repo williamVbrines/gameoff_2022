@@ -16,7 +16,6 @@ anchors_preset = 0
 script = ExtResource("1_a8gq4")
 
 [node name="Background" type="NinePatchRect" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 clip_contents = true
@@ -30,23 +29,6 @@ patch_margin_left = 30
 patch_margin_top = 30
 patch_margin_right = 30
 patch_margin_bottom = 30
-
-[node name="Control" type="Control" parent="Background"]
-anchors_preset = 0
-offset_left = -448.0
-offset_top = -892.0
-offset_right = 1523.0
-offset_bottom = 250.0
-
-[node name="Button" type="Button" parent="Background"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-flat = true
 
 [node name="Text" type="Label" parent="Background"]
 layout_mode = 1
@@ -65,9 +47,22 @@ text = "You got a new tactic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -79.0
+offset_right = 2004.0
+offset_bottom = 1149.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="VoiceBoxPlayer" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("label")]
 script = ExtResource("4_kfipl")
 samples = [ExtResource("5_gqs07"), ExtResource("6_x1oxf"), ExtResource("7_84l7w"), ExtResource("8_nljt1"), ExtResource("9_mthg6")]
 label = NodePath("../Background/Text")
 
-[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

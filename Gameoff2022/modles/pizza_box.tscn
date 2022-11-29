@@ -1,12 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://2b5feot0bgh5"]
+[gd_scene load_steps=8 format=3 uid="uid://2b5feot0bgh5"]
 
 [ext_resource type="ArrayMesh" uid="uid://bnqj571cstdi0" path="res://meshes/Pizza Box.obj" id="1_stxvv"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="2_8yr4w"]
 [ext_resource type="Shader" path="res://shaders/ArtShader.gdshader" id="2_aaihc"]
 [ext_resource type="Texture2D" uid="uid://dnjais8ockmh8" path="res://textures/PizzaBoxMaya.png" id="3_ibfwp"]
 [ext_resource type="Texture2D" uid="uid://b3hpjriuttwf5" path="res://shaders/artshader_noisetexture.tres" id="4_ypa3l"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fld6w"]
+render_priority = 0
+shader = ExtResource("2_8yr4w")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sjli7"]
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_fld6w")
 shader = ExtResource("2_aaihc")
 shader_parameter/albedo_texture = ExtResource("3_ibfwp")
 shader_parameter/animated = true

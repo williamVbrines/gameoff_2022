@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bb43a0j8pld4e"]
+[gd_scene load_steps=84 format=3 uid="uid://bb43a0j8pld4e"]
 
 [ext_resource type="PackedScene" uid="uid://7molkd4islo1" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://di78grpbmwhes" path="res://modles/alarm.tscn" id="2_r7s0e"]
 [ext_resource type="PackedScene" uid="uid://csl5u8uumwyx2" path="res://modles/book.tscn" id="3_7uc24"]
 [ext_resource type="Texture2D" uid="uid://rfl8qgmawini" path="res://textures/ui/Bedroom + Computer/Bedroom/Bedroom_Tooltip_Background.png" id="4_3ixq7"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="4_66lea"]
 [ext_resource type="PackedScene" uid="uid://bu2yj26dvmjoo" path="res://modles/bed.tscn" id="4_grb64"]
 [ext_resource type="PackedScene" uid="uid://d22gfyio4xrgp" path="res://scenes/ui/mouse.tscn" id="4_ndvkj"]
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="4_nyfyl"]
@@ -14,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://qbsqkgmwq1x2" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 1.mp3" id="5_rpl22"]
 [ext_resource type="PackedScene" uid="uid://cnntxn1gqo2l5" path="res://modles/desk_chair.tscn" id="6_1pfs0"]
 [ext_resource type="Script" path="res://scenes/levels/room/tab_out_button.gd" id="6_bsyxd"]
+[ext_resource type="Texture2D" uid="uid://c1v7iwfs1ybyg" path="res://textures/BookTexture.png" id="6_fthqy"]
 [ext_resource type="FontFile" uid="uid://ck6aeikl4kkwa" path="res://textures/ui/Font/OpenSans-ExtraBold.ttf" id="6_j2pln"]
 [ext_resource type="AudioStream" uid="uid://bvmt2altk1qnn" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 2.mp3" id="6_uimrr"]
 [ext_resource type="AudioStream" uid="uid://b1bfn5r0nau6t" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer On 3.mp3" id="7_hu86j"]
@@ -65,10 +67,79 @@ ambient_light_energy = 0.45
 glow_strength = 1.79
 glow_bloom = 0.44
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hwu0f"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wilgd"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_hwu0f")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_00wfj"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qr8ls"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_00wfj")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_duerd"]
 size = Vector3(5.00362, 1.40432, 2.90848)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nw41d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3lcf"]
+size = Vector3(1.25979, 1, 1.25303)
 
 [sub_resource type="FastNoiseLite" id="1"]
 
@@ -102,6 +173,108 @@ shader_parameter/use_normalmap = true
 shader_parameter/use_view = true
 shader_parameter/view_bias = Color(1, 0, 1, 1)
 shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lmmkk"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u0st3"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_lmmkk")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w73ch"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pho6c"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_w73ch")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnoan"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5sfor"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_nnoan")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uotmj"]
+size = Vector3(1, 1, 0.688939)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sl82f"]
 transparency = 2
@@ -186,6 +359,72 @@ shader_parameter/use_view = true
 shader_parameter/view_bias = Color(1, 0, 1, 1)
 shader_parameter/view_multiplier = -1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d6e5y"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tee6j"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_d6e5y")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xe73q"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_66lea")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e42rk"]
+resource_local_to_scene = true
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_xe73q")
+shader = ExtResource("9_l43cy")
+shader_parameter/albedo_texture = ExtResource("6_fthqy")
+shader_parameter/animated = true
+shader_parameter/light_bias = null
+shader_parameter/light_tint = Color(1, 1, 1, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/normal_bias = null
+shader_parameter/normal_map = ExtResource("20_hik4s")
+shader_parameter/rimlight_blend = 0.01
+shader_parameter/rimlight_color = Color(1, 1, 1, 1)
+shader_parameter/rimlight_size = 0.921
+shader_parameter/shadow_blend = 0.001
+shader_parameter/shadow_color = null
+shader_parameter/shadow_extra_intensity = 0.0
+shader_parameter/shadow_size = 0.045
+shader_parameter/time_scale = 0.02
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/use_normalmap = true
+shader_parameter/use_view = true
+shader_parameter/view_bias = Color(1, 0, 1, 1)
+shader_parameter/view_multiplier = -1.0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qie2"]
 transparency = 1
 blend_mode = 1
@@ -213,179 +452,6 @@ collision_mode = 2
 [sub_resource type="QuadMesh" id="QuadMesh_4a8s2"]
 
 [node name="Room" type="Node"]
-
-[node name="GUI" type="CanvasLayer" parent="."]
-
-[node name="Tooltip" parent="GUI" instance=ExtResource("1_jjkga")]
-visible = false
-
-[node name="ConfirmBox" type="Control" parent="GUI"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("2_its4j")
-hovor_color = Color(0.392157, 0.392157, 0.392157, 0.968627)
-normal_color = Color(1, 1, 1, 0.968627)
-pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
-
-[node name="Options" type="Control" parent="GUI/ConfirmBox"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
-offset_left = 850.0
-offset_top = 505.0
-offset_right = 1062.0
-offset_bottom = 533.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/Label"]
-modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
-show_behind_parent = true
-texture_filter = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_3ixq7")
-patch_margin_left = 18
-patch_margin_top = 18
-patch_margin_right = 17
-patch_margin_bottom = 17
-
-[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
-clip_contents = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-flat = true
-
-[node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
-offset_left = 918.0
-offset_top = 590.0
-offset_right = 1002.0
-offset_bottom = 619.0
-text = "Cancel"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/CancelText"]
-modulate = Color(1, 1, 1, 0.968627)
-show_behind_parent = true
-texture_filter = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -16.0
-offset_right = 20.0
-offset_bottom = 16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_3ixq7")
-patch_margin_left = 18
-patch_margin_top = 18
-patch_margin_right = 17
-patch_margin_bottom = 17
-
-[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-flat = true
-
-[node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
-visible = false
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ComputerONAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
-script = ExtResource("4_nyfyl")
-samples = [ExtResource("5_rpl22"), ExtResource("6_uimrr"), ExtResource("7_hu86j")]
-
-[node name="DoorAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
-stream = ExtResource("8_inwph")
-
-[node name="bedAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
-script = ExtResource("4_nyfyl")
-samples = [ExtResource("9_nyxym"), ExtResource("11_3girn")]
-
-[node name="Mouse" parent="GUI" instance=ExtResource("4_ndvkj")]
-
-[node name="RoomStressBar" parent="GUI" instance=ExtResource("12_t6tsx")]
-visible = false
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RoomDialogBox" parent="GUI" instance=ExtResource("13_o5hh6")]
-
-[node name="TabOutButton" type="Button" parent="GUI" node_paths=PackedStringArray("cam")]
-visible = false
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -1826.0
-offset_top = 17.0
-offset_right = -1549.0
-offset_bottom = 67.0
-grow_horizontal = 0
-focus_mode = 0
-mouse_filter = 1
-theme_override_colors/font_color = Color(0.121569, 0.572549, 0.890196, 0.701961)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.701961)
-theme_override_fonts/font = ExtResource("6_j2pln")
-theme_override_font_sizes/font_size = 30
-text = "TAB TO SEE ROOM"
-flat = true
-script = ExtResource("6_bsyxd")
-cam = NodePath("../../Room3D/RoomCamera")
-
-[node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
-visible = false
-offset_left = -97.0
-offset_top = -16.0
-offset_right = 1823.0
-offset_bottom = 1064.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="ComputerOffAudio" type="AudioStreamPlayer" parent="GUI/TabOutButton"]
-script = ExtResource("4_nyfyl")
-samples = [ExtResource("11_htco2"), ExtResource("12_tdgo2"), ExtResource("13_5ltb4")]
-
-[node name="BGMusic" type="AudioStreamPlayer" parent="GUI"]
-stream = ExtResource("17_h4d1n")
-autoplay = true
-bus = &"BGM"
-
-[node name="AmAudio" type="AudioStreamPlayer" parent="GUI"]
-stream = ExtResource("18_l63lm")
-volume_db = -9.905
-autoplay = true
-bus = &"SFX"
 
 [node name="Room3D" type="Node3D" parent="."]
 
@@ -426,11 +492,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_wilgd")
 
 [node name="StackedBook3" parent="Room3D/Room/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_qr8ls")
 
 [node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
@@ -511,13 +579,27 @@ shape = SubResource("BoxShape3D_nw41d")
 [node name="DresserGroup" type="Node3D" parent="Room3D/Room"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.593158, 0, 6.09851)
 
-[node name="PizzaBox" parent="Room3D/Room/DresserGroup" instance=ExtResource("21_kfrrn")]
-transform = Transform3D(0.556799, 0, -0.22355, 0, 0.6, 0, 0.22355, 0, 0.556799, -0.144279, 2.68022, -0.55816)
-skeleton = NodePath("../../..")
+[node name="Pizza" type="Node3D" parent="Room3D/Room/DresserGroup" node_paths=PackedStringArray("mesh", "area")]
+script = ExtResource("8_xg4cl")
+mesh = NodePath("PizzaBox")
+area = NodePath("Area3D")
+message = "See what is to eat"
+tooltip = "Find some food to eat"
+action = "EAT"
 
-[node name="Pizza" parent="Room3D/Room/DresserGroup/PizzaBox" instance=ExtResource("22_garrg")]
-transform = Transform3D(0.618666, 0, 0.248389, 0, 0.666667, 0, -0.248389, 0, 0.618666, -0.037256, 0.0384307, 0.0523024)
+[node name="PizzaBox" parent="Room3D/Room/DresserGroup/Pizza" instance=ExtResource("21_kfrrn")]
+transform = Transform3D(0.556799, 0, -0.22355, 0, 0.6, 0, 0.22355, 0, 0.556799, -0.144279, 2.68022, -0.55816)
 skeleton = NodePath("../../../..")
+
+[node name="Pizza" parent="Room3D/Room/DresserGroup/Pizza/PizzaBox" instance=ExtResource("22_garrg")]
+transform = Transform3D(0.618666, 0, 0.248389, 0, 0.666667, 0, -0.248389, 0, 0.618666, -0.037256, 0.0384307, 0.0523024)
+skeleton = NodePath("../../../../..")
+
+[node name="Area3D" type="Area3D" parent="Room3D/Room/DresserGroup/Pizza"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room3D/Room/DresserGroup/Pizza/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139827, 2.77504, -0.549132)
+shape = SubResource("BoxShape3D_b3lcf")
 
 [node name="TallDresser" parent="Room3D/Room/DresserGroup" instance=ExtResource("8_fj1gn")]
 skeleton = NodePath("../..")
@@ -543,20 +625,38 @@ transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../..")
 
 [node name="StackedBook1" parent="Room3D/Room/WideDresserGroup" instance=ExtResource("3_7uc24")]
-transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, -0.0517902, 2.6054, -0.961423)
+transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, 0.192085, 2.48122, -0.834729)
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_u0st3")
 
 [node name="StackedBook2" parent="Room3D/Room/WideDresserGroup/StackedBook1" instance=ExtResource("3_7uc24")]
 transform = Transform3D(0.952129, 0.305695, 0, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.383101, 0, 0)
 skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("ShaderMaterial_pho6c")
 
-[node name="LayingBook1" parent="Room3D/Room/WideDresserGroup" instance=ExtResource("3_7uc24")]
+[node name="BookOfBooks" type="Node3D" parent="Room3D/Room/WideDresserGroup" node_paths=PackedStringArray("mesh", "area")]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("8_xg4cl")
+mesh = NodePath("LayingBook1")
+area = NodePath("Area3D")
+message = "Spend some time reading"
+tooltip = "Pick Up Book"
+action = "BOOK"
+
+[node name="LayingBook1" parent="Room3D/Room/WideDresserGroup/BookOfBooks" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-2.11245e-08, -0.483273, -0.872566, 1.67634, -7.32752e-08, -3.54979e-22, -2.43222e-08, -0.556428, 0.308179, 0.0496588, 2.68919, 0.18945)
-skeleton = NodePath("../..")
-
-[node name="BookPaper" parent="Room3D/Room/WideDresserGroup/LayingBook1" instance=ExtResource("7_iycir")]
-transform = Transform3D(-4.10492e-08, 1, 1.50219e-08, -0.939095, -4.37114e-08, 0.34366, 0.34366, -3.13027e-14, 0.939095, 0.060298, 0.662106, -0.0748367)
 skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("ShaderMaterial_5sfor")
+
+[node name="BookPaper" parent="Room3D/Room/WideDresserGroup/BookOfBooks/LayingBook1" instance=ExtResource("7_iycir")]
+transform = Transform3D(-4.10492e-08, 1, 1.50219e-08, -0.939095, -4.37114e-08, 0.34366, 0.34366, -3.13027e-14, 0.939095, 0.060298, 0.662106, -0.0748367)
+skeleton = NodePath("../../../..")
+
+[node name="Area3D" type="Area3D" parent="Room3D/Room/WideDresserGroup/BookOfBooks"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room3D/Room/WideDresserGroup/BookOfBooks/Area3D"]
+transform = Transform3D(1, 0, 5.68434e-14, 0, 1, 0, 3.55271e-15, 0, 1, 0, 2.84415, -0.108136)
+shape = SubResource("BoxShape3D_uotmj")
 
 [node name="Lamp" type="Node3D" parent="Room3D/Room"]
 transform = Transform3D(1, -3.3303e-15, 0, -1.85243e-22, 1, -3.55271e-15, -2.98023e-08, -2.69206e-15, 1, -9.53674e-07, 1.19209e-07, 0)
@@ -642,11 +742,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_tee6j")
 
 [node name="StackedBook3" parent="Room3D/Room2/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_e42rk")
 
 [node name="DeskGroup" type="Node3D" parent="Room3D/Room2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)
@@ -748,3 +850,184 @@ randomness = 1.0
 visibility_aabb = AABB(-4, -2.58548, -5.18234, 8, 5.17096, 10.3647)
 process_material = SubResource("ParticleProcessMaterial_n61j3")
 draw_pass_1 = SubResource("QuadMesh_4a8s2")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Tooltip" parent="GUI" instance=ExtResource("1_jjkga")]
+visible = false
+
+[node name="ConfirmBox" type="Control" parent="GUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_its4j")
+hovor_color = Color(0.392157, 0.392157, 0.392157, 0.968627)
+normal_color = Color(1, 1, 1, 0.968627)
+pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
+
+[node name="Options" type="Control" parent="GUI/ConfirmBox"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 505.0
+offset_right = 1062.0
+offset_bottom = 533.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/Label"]
+modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 20.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3ixq7")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
+offset_left = 918.0
+offset_top = 590.0
+offset_right = 1002.0
+offset_bottom = 619.0
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="NinePatchRect" parent="GUI/ConfirmBox/Options/CancelText"]
+modulate = Color(1, 1, 1, 0.968627)
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 20.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3ixq7")
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17
+
+[node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ComputerONAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("5_rpl22"), ExtResource("6_uimrr"), ExtResource("7_hu86j")]
+
+[node name="DoorAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+stream = ExtResource("8_inwph")
+
+[node name="bedAudio" type="AudioStreamPlayer" parent="GUI/ConfirmBox"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("9_nyxym"), ExtResource("11_3girn")]
+
+[node name="Mouse" parent="GUI" instance=ExtResource("4_ndvkj")]
+
+[node name="RoomStressBar" parent="GUI" instance=ExtResource("12_t6tsx")]
+visible = false
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomDialogBox" parent="GUI" instance=ExtResource("13_o5hh6")]
+
+[node name="TabOutButton" type="Button" parent="GUI" node_paths=PackedStringArray("cam")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1826.0
+offset_top = 17.0
+offset_right = -1549.0
+offset_bottom = 67.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.121569, 0.572549, 0.890196, 0.701961)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.701961)
+theme_override_fonts/font = ExtResource("6_j2pln")
+theme_override_font_sizes/font_size = 30
+text = "TAB TO SEE ROOM"
+flat = true
+script = ExtResource("6_bsyxd")
+cam = NodePath("../../Room3D/RoomCamera")
+
+[node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
+visible = false
+layout_mode = 0
+offset_left = -97.0
+offset_top = -16.0
+offset_right = 1823.0
+offset_bottom = 1064.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ComputerOffAudio" type="AudioStreamPlayer" parent="GUI/TabOutButton"]
+script = ExtResource("4_nyfyl")
+samples = [ExtResource("11_htco2"), ExtResource("12_tdgo2"), ExtResource("13_5ltb4")]
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="GUI"]
+stream = ExtResource("17_h4d1n")
+autoplay = true
+bus = &"BGM"
+
+[node name="AmAudio" type="AudioStreamPlayer" parent="GUI"]
+stream = ExtResource("18_l63lm")
+volume_db = -9.905
+autoplay = true
+bus = &"SFX"

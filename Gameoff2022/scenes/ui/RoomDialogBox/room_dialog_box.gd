@@ -1,6 +1,6 @@
 extends Control
 
-@onready var button: Button = $Background/Button
+@onready var button: Button = $Button
 @onready var text_label: Label = $Background/Text
 @onready var background: NinePatchRect = $Background
 @onready var player: VoiceBoxPlayer = $VoiceBoxPlayer
@@ -13,6 +13,7 @@ var line : int = 0;
 
 func _ready() -> void:
 	make_connections();
+	hide();
 #	_on_display_dialog("ME", {"dialog" : ["Hello there", "Time to get to work"]})#Test
 
 func make_connections()->void:

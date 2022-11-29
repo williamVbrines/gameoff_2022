@@ -24,7 +24,45 @@ extends Control
 var action : String = "";
 const FADE_TIME : float = 0.5;
 var in_use : bool = false;
+var stat_boot : float = 2.0;
+var door_bad : Array = [
+	["You run into thief and lost 100 dollars", "Time passed and you feel more stressd"],
+	["A car nearly hit you", "Time passed and you feel winded and stressd"],
+	["It began to rain and you got soaked on your walk", "Time passed and you feel more stressd"],
+	["Someone fallowed you home and is watching", "Time passed and you feel more stressd and paranoid"],
+	["You stub your tow on a rock", "You feel more stressd and a bit in pain"]
+]
+var door_good : Array = [
+	["You had a pleasant walk","Time passed and you feel less stressd"],
+	["See a cute animal on your walk","Time passed and you feel more happy"],
+	["You went the extra mile","Time passed and you feel accomplished"],
+	["Found some coin on the ground","Time passed and you feel luck and less stressd"],
+	["It was sunny and beautiful out","Time passed and you feel less stressd"]
+]
 
+var bed_dialog : Array = [
+	["You had a good nights sleep","A night passes, you feel rested"],
+	["Dreams of bight days and grassy medows","You wake up, you feel at ease"],
+	["As if binking you wake up","Time sliped by in an instant, you feel rested..","but stange"],
+	["You did it you finished all your work...","You won the game...","Wait what were you doing? Well nevermind must of been a dream","A night passed","you feel rested and like you missed someting"],
+	["A squid like moster makes a deal with you","Time flows like a feeling of vertigo","Your very well rested and powerful?"],
+]
+
+var book_dialog : Array = [
+	["You read, How to Speek to Your Boss","You feel more confident"],
+	["A book called LOGOS, Might as well read it","Your head hurts"],
+	["Titled: Pathos - the way to the heart","Seems to be full of flowery writing","You... Feel?"],
+	["You pick up the book","You glair at the book","You put it back down","You start writing a book instead"],
+	["Ethos, Doctors say its a good book to read","Time passes, you feel like you are more self-aware"]
+]
+
+var eat_dialog : Array = [
+	["You order out tonight","Its Pizza you could not finish it thoe","You feel full"],
+	["Pizza again","There is always leftovers","I should order out less"],
+	["You ate a filling meal"],
+	["After eating you crahed due to the carbs","You feel a bit rested"],
+	["Today you ate at your desk","After an hour you look at your food","and wonder how am I not done with it","You feel puzzled at the pizza"]
+]
 func _ready() -> void:
 	_make_connections();
 	
@@ -123,7 +161,7 @@ func _parce_action():
 	
 	match action.to_upper():
 		"BED":
-			bed_audio.play_rand();
+			_bed_action()
 		"MONITOR":
 			
 			EventManager.show_save_screen.emit();
@@ -133,7 +171,12 @@ func _parce_action():
 			
 			_trans_to_monitor();
 		"DOOR":
-			door_audio.play();
+			_door_action();
+		"BOOK":
+			_book_action();
+		"EAT":
+			_eat_action();
+			
 	action = "";
 	_hide_anim()
 	
@@ -182,5 +225,115 @@ func _trans_to_monitor() -> void:
 	tween.tween_callback(_fade_in);
 	tween.tween_callback(set_in_use.bind(false));
 	tween.play();
-
 	
+	
+func _door_action() -> void:
+	
+	var tween = create_tween();
+	
+	if randi() % 100 <= 30:
+		EventManager.display_dialog.emit("NON", {"dialog" : door_bad[randi() % door_bad.size()] })
+		SystemGlobals.stress += 50;
+		SystemGlobals.player_stats.INTIMIDATION += stat_boot;
+	else:
+		EventManager.display_dialog.emit("NON", {"dialog" : door_good[randi() % door_good.size()]})
+		SystemGlobals.stress -= 50;
+		
+		SystemGlobals.player_stats.CHARM += stat_boot/2.0;
+		
+	SystemGlobals.stress = clamp(SystemGlobals.stress, 0 , 100);
+	
+	SystemGlobals.day += 0.5;
+	
+	
+	
+	door_audio.play();
+	
+	tween.stop();
+	fade.show();
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 1.0), FADE_TIME);
+	tween.tween_interval(1);
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 0.0), FADE_TIME);
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "stress_changed"));
+	tween.tween_callback(fade.hide);
+	
+	tween.play();
+	
+	
+func _bed_action() -> void:
+	var tween = create_tween();
+	
+	EventManager.display_dialog.emit("NON", {"dialog" : bed_dialog[randi() % bed_dialog.size()]})
+	SystemGlobals.stress = clamp(SystemGlobals.stress * 0.20, 0, 100);
+	
+	SystemGlobals.player_stats.DECEPTION += stat_boot/2.0;
+	SystemGlobals.player_stats.CHARM += stat_boot/2.0;
+	
+	SystemGlobals.day += 1;
+	
+	bed_audio.play_rand();
+	
+	tween.stop();
+	fade.show();
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 1.0), FADE_TIME);
+	tween.tween_interval(1);
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 0.0), FADE_TIME);
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "stress_changed"));
+	tween.tween_callback(fade.hide);
+	
+	tween.play();
+	
+	
+func _book_action() -> void:
+	var tween = create_tween();
+	
+
+	EventManager.display_dialog.emit("NON", {"dialog" : book_dialog[randi() % book_dialog.size()] })
+	
+	SystemGlobals.stress = clamp(SystemGlobals.stress - 0.5, 0 , 100);
+	
+	SystemGlobals.day += 0.5;
+	
+	SystemGlobals.player_stats.LOGIC += stat_boot;
+	
+	door_audio.play();
+	
+	tween.stop();
+	fade.show();
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 1.0), FADE_TIME);
+	tween.tween_interval(1);
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 0.0), FADE_TIME);
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "stress_changed"));
+	tween.tween_callback(fade.hide);
+	
+	tween.play();
+	
+	
+func _eat_action() -> void:
+	var tween = create_tween();
+	
+	EventManager.display_dialog.emit("NON", {"dialog" : eat_dialog[randi() % eat_dialog.size()] })
+	
+	SystemGlobals.stress = clamp(SystemGlobals.stress - randf_range(0.3,5), 0 , 100);
+	
+	SystemGlobals.day += 0.5;
+	
+	match randi() % 4:
+		0:
+			SystemGlobals.player_stats.CHARM += stat_boot/2 ;
+		1:
+			SystemGlobals.player_stats.DECEPTION += stat_boot/2;
+		2:
+			SystemGlobals.player_stats.LOGIC += stat_boot/2;
+		3:
+			SystemGlobals.player_stats.INTIMIDATION += stat_boot/2;
+	
+	tween.stop();
+	fade.show();
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 1.0), FADE_TIME);
+	tween.tween_interval(1);
+	tween.tween_property(fade, "modulate",Color(Color.BLACK, 0.0), FADE_TIME);
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "stress_changed"));
+	tween.tween_callback(fade.hide);
+	
+	tween.play();

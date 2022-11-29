@@ -12,7 +12,7 @@ var masterVol : float = 0.0;
 var sfxVol : float = 0.0;
 var bgmVol : float = 0.0;
 
-var day : int = 0;
+var day : float = 0;
 
 var player_stats : Dictionary = {
 	"CHARM" : 50,
