@@ -54,10 +54,6 @@ ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.6
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kppqw"]
-shader = ExtResource("2_l38qc")
-shader_parameter/Pixelation_Amount = 350.0
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi706"]
 size = Vector2(200, 100)
 
@@ -98,6 +94,10 @@ height = 0.001
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8ryd"]
 albedo_texture = ExtResource("33_lcqh1")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kppqw"]
+shader = ExtResource("2_l38qc")
+shader_parameter/Pixelation_Amount = 350.0
+
 [node name="Village" type="Node"]
 script = ExtResource("1_gt86u")
 
@@ -116,21 +116,10 @@ transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.67
 visible = false
 fov = 36.7416
 
-[node name="Pixelation" type="Sprite2D" parent="Village3D/Camera3D"]
-material = SubResource("ShaderMaterial_kppqw")
-position = Vector2(960.5, 542)
-scale = Vector2(15.0078, 8.40625)
-texture = ExtResource("3_j2hif")
-
 [node name="Camera3D Dialogue Example" type="Camera3D" parent="Village3D"]
 transform = Transform3D(0.570532, -0.49426, 0.655896, 0.0428637, 0.815463, 0.577219, -0.820156, -0.301208, 0.486434, 32.7558, 15.9238, 14.6983)
+visible = false
 fov = 35.0649
-
-[node name="Pixelation" type="Sprite2D" parent="Village3D/Camera3D Dialogue Example"]
-material = SubResource("ShaderMaterial_kppqw")
-position = Vector2(960.5, 542)
-scale = Vector2(15.0078, 8.40625)
-texture = ExtResource("3_j2hif")
 
 [node name="Enviroment" type="Node3D" parent="Village3D"]
 
@@ -784,6 +773,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_o8ryd")
 [node name="Camera" type="Camera3D" parent="Village3D/NPC"]
 transform = Transform3D(0.370541, -0.579343, 0.72599, 2.51807e-08, 0.781629, 0.623744, -0.928816, -0.231123, 0.289626, 1.5214, 3.13559, 2.35337)
 
+[node name="Pixelation" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kppqw")
+position = Vector2(960.5, 542)
+scale = Vector2(15.0078, 8.40625)
+texture = ExtResource("3_j2hif")
+
 [node name="GUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -794,17 +789,13 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_xkpbn")]
-layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_cli8v")]
-layout_mode = 1
 
 [node name="Mouse" parent="GUI" instance=ExtResource("3_gmu7u")]
 process_mode = 3
-layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("4_fyvys")]
-layout_mode = 1
 
 [node name="BGMAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_dyiqh")

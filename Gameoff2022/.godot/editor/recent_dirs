@@ -1,3 +1,4 @@
+res://scenes/ui/RoomDialogBox
 res://scenes/ui/roomStressBar
 res://scenes/test
 C:/Users/William/Documents/GitHub
@@ -19,4 +20,3 @@ res://scenes/ui/stressIndicator
 res://scenes/ui/pauseMenu/tatic_darg_able
 res://scenes/ui/pauseMenu
 res://scenes/ui/itemActionButton
-res://scenes/ui/itemActionMenu

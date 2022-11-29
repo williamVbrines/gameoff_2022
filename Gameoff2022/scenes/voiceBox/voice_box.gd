@@ -2,7 +2,7 @@ extends AudioStreamPlayer
 class_name VoiceBoxPlayer
 
 @export var samples : Array[AudioStream]
-@export var label: RichTextLabel;
+@export var label: Control;
 
 @export var short_pause : float = 0.00;
 @export var long_pause : float = 0.000;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bb43a0j8pld4e"]
+[gd_scene load_steps=66 format=3 uid="uid://bb43a0j8pld4e"]
 
 [ext_resource type="PackedScene" uid="uid://7molkd4islo1" path="res://scenes/levels/room/roomTooltip/tooltip.tscn" id="1_jjkga"]
 [ext_resource type="Texture2D" uid="uid://t7veo7ara27a" path="res://textures/RoomSkyTexture.png" id="1_w4l0p"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://b6aiw6h2hh3q8" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 2.mp3" id="12_tdgo2"]
 [ext_resource type="AudioStream" uid="uid://d21jkkbj41iy6" path="res://audio/sfx/Bedroom Sounds/Bedroom Env Clickables Noises/Computer/Computer Off 3.mp3" id="13_5ltb4"]
 [ext_resource type="PackedScene" uid="uid://n6g3mwokncgt" path="res://modles/lamp.tscn" id="13_ao8j1"]
+[ext_resource type="PackedScene" uid="uid://4cucom5wsaxe" path="res://scenes/ui/RoomDialogBox/room_dialog_box.tscn" id="13_o5hh6"]
 [ext_resource type="PackedScene" uid="uid://1d2ewfbjoup3" path="res://modles/rug.tscn" id="14_6xceb"]
 [ext_resource type="Texture2D" uid="uid://csughb021ergy" path="res://textures/RugforRoomTexture.png" id="15_gm4mk"]
 [ext_resource type="PackedScene" uid="uid://dhvgh7gmhxyci" path="res://modles/monitor.tscn" id="16_xh2ma"]
@@ -232,13 +233,12 @@ normal_color = Color(1, 1, 1, 0.968627)
 pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
 
 [node name="Options" type="Control" parent="GUI/ConfirmBox"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
-layout_mode = 0
 offset_left = 850.0
 offset_top = 505.0
 offset_right = 1062.0
@@ -250,7 +250,6 @@ vertical_alignment = 1
 modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
 show_behind_parent = true
 texture_filter = 1
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -268,7 +267,6 @@ patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
 clip_contents = true
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -278,7 +276,6 @@ focus_mode = 0
 flat = true
 
 [node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
-layout_mode = 0
 offset_left = 918.0
 offset_top = 590.0
 offset_right = 1002.0
@@ -291,7 +288,6 @@ vertical_alignment = 1
 modulate = Color(1, 1, 1, 0.968627)
 show_behind_parent = true
 texture_filter = 1
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -308,7 +304,6 @@ patch_margin_right = 17
 patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -320,7 +315,6 @@ flat = true
 [node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -346,6 +340,8 @@ visible = false
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="RoomDialogBox" parent="GUI" instance=ExtResource("13_o5hh6")]
+
 [node name="TabOutButton" type="Button" parent="GUI" node_paths=PackedStringArray("cam")]
 visible = false
 anchors_preset = 1
@@ -369,7 +365,6 @@ cam = NodePath("../../Room3D/RoomCamera")
 
 [node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
 visible = false
-layout_mode = 0
 offset_left = -97.0
 offset_top = -16.0
 offset_right = 1823.0

@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://4cucom5wsaxe"]
+
+[ext_resource type="Script" path="res://scenes/ui/RoomDialogBox/room_dialog_box.gd" id="1_a8gq4"]
+[ext_resource type="Texture2D" uid="uid://bb5ivo1downvx" path="res://textures/ui/Bedroom + Computer/Bedroom/Message_GetItem_9Grid.png" id="2_ecbx4"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="3_r05t7"]
+[ext_resource type="Script" path="res://scenes/voiceBox/voice_box.gd" id="4_kfipl"]
+[ext_resource type="AudioStream" uid="uid://h50gp4fwl6jv" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 1.mp3" id="5_gqs07"]
+[ext_resource type="AudioStream" uid="uid://cdhrx0pqu1kyw" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 2.mp3" id="6_x1oxf"]
+[ext_resource type="AudioStream" uid="uid://1b1nvhovi4sm" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 3.mp3" id="7_84l7w"]
+[ext_resource type="AudioStream" uid="uid://bg7o1i15ii466" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 4.mp3" id="8_nljt1"]
+[ext_resource type="AudioStream" uid="uid://cnwwax7nq2slw" path="res://audio/sfx/Inner Game/Narrator or Non NPC text Audio/On Screen Text V.2/BeeptextV2 5.mp3" id="9_mthg6"]
+
+[node name="RoomDialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a8gq4")
+
+[node name="Background" type="NinePatchRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+offset_left = 433.0
+offset_top = 866.0
+offset_right = 1487.0
+offset_bottom = 1000.0
+texture = ExtResource("2_ecbx4")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Control" type="Control" parent="Background"]
+anchors_preset = 0
+offset_left = -448.0
+offset_top = -892.0
+offset_right = 1523.0
+offset_bottom = 250.0
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+flat = true
+
+[node name="Text" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 45.0
+offset_right = -63.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_r05t7")
+theme_override_font_sizes/font_size = 32
+text = "You got a new tactic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VoiceBoxPlayer" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("label")]
+script = ExtResource("4_kfipl")
+samples = [ExtResource("5_gqs07"), ExtResource("6_x1oxf"), ExtResource("7_84l7w"), ExtResource("8_nljt1"), ExtResource("9_mthg6")]
+label = NodePath("../Background/Text")
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
