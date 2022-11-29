@@ -1,8 +1,2 @@
 res://scenes/levels/room/room.tscn
 res://shaders/artshader_noisetexture.tres
-res://scenes/levels/room/conferm_box.gd
-res://scenes/ui/RoomDialogBox/room_dialog_box.tscn
-res://scenes/ui/RoomDialogBox/room_dialog_box.gd
-res://scenes/systemGlobals/system_globals.gd
-res://modles/book.tscn
-res://modles/pizza_box.tscn
