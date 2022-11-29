@@ -65,14 +65,14 @@ size = Vector3(1, 0.11, 0.2)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_epeb6"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mrhn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2ol2"]
 render_priority = 0
 shader = ExtResource("8_hfxv5")
 shader_parameter/highlight_color = Color(0, 0, 0, 1)
 shader_parameter/str = 300.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aqb8a"]
-next_pass = SubResource("ShaderMaterial_2mrhn")
+next_pass = SubResource("ShaderMaterial_q2ol2")
 albedo_texture = ExtResource("7_krp7g")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1mwx"]

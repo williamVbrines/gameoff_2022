@@ -230,12 +230,13 @@ normal_color = Color(1, 1, 1, 0.968627)
 pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
 
 [node name="Options" type="Control" parent="GUI/ConfirmBox"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
 offset_left = 850.0
 offset_top = 505.0
 offset_right = 1062.0
@@ -247,6 +248,7 @@ vertical_alignment = 1
 modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
 show_behind_parent = true
 texture_filter = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -264,6 +266,7 @@ patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
 clip_contents = true
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -273,6 +276,7 @@ focus_mode = 0
 flat = true
 
 [node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
 offset_left = 918.0
 offset_top = 590.0
 offset_right = 1002.0
@@ -285,6 +289,7 @@ vertical_alignment = 1
 modulate = Color(1, 1, 1, 0.968627)
 show_behind_parent = true
 texture_filter = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -301,6 +306,7 @@ patch_margin_right = 17
 patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -312,6 +318,7 @@ flat = true
 [node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
 visible = false
 modulate = Color(1, 1, 1, 0)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -348,6 +355,7 @@ script = ExtResource("6_bsyxd")
 cam = NodePath("../../Room3D/RoomCamera")
 
 [node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2

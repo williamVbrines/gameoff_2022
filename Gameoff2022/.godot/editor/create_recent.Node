@@ -1,3 +1,4 @@
+AudioStreamPlayer
 CollisionShape3D
 StaticBody3D
 Node3D
@@ -13,7 +14,6 @@ ColorRect
 TextureButton
 HBoxContainer
 RandAudioStreamPlayer (rand_audio_stream_player.gd)
-AudioStreamPlayer
 CanvasLayer
 Button
 Timer

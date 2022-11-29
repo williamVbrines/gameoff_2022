@@ -9,18 +9,18 @@
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_8shqt"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="8_u8fht"]
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="9_y450l"]
-[ext_resource type="AudioStream" uid="uid://cwuwxpfd10png" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.1.mp3" id="10_6v52w"]
-[ext_resource type="AudioStream" uid="uid://bhukn3snlsd8h" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.2.mp3" id="11_t5h76"]
-[ext_resource type="AudioStream" uid="uid://dgvwg825t8ejp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.3.mp3" id="12_8xrxt"]
-[ext_resource type="AudioStream" uid="uid://b55saewa5u3rv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Open/Menu Open 1.4.mp3" id="13_lxeow"]
-[ext_resource type="AudioStream" uid="uid://c2x8eonkds843" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.1.mp3" id="14_iualq"]
-[ext_resource type="AudioStream" uid="uid://cab5mq8xhuj1g" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.2.mp3" id="15_6qaso"]
-[ext_resource type="AudioStream" uid="uid://bf64g2wfbdo8n" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.3.mp3" id="16_ir8v3"]
-[ext_resource type="AudioStream" uid="uid://brf4xjy4yi5pu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Menu Close/Menu Close 1.4.mp3" id="17_7cica"]
+[ext_resource type="AudioStream" uid="uid://lc8o5wqxxsmu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 1.mp3" id="10_c28br"]
+[ext_resource type="AudioStream" uid="uid://ba06ssktif12c" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 2.mp3" id="11_bxauh"]
+[ext_resource type="AudioStream" uid="uid://qt5ld5wcjwsp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 3.mp3" id="12_whggi"]
+[ext_resource type="AudioStream" uid="uid://notvdbc8vs4j" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 4.mp3" id="13_tgpkx"]
+[ext_resource type="AudioStream" uid="uid://c32ef1s13ol4i" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Close/Battle Menu Close 1.mp3" id="14_u4edx"]
+[ext_resource type="AudioStream" uid="uid://yxy4kqsw7tgt" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Close/Battle Menu Close 2.mp3" id="15_00efs"]
+[ext_resource type="AudioStream" uid="uid://blwxm3mw7n2g5" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Close/Battle Menu Close 3.mp3" id="16_kq45i"]
+[ext_resource type="AudioStream" uid="uid://gc18jaxjk7ia" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Close/Battle Menu Close 4.mp3" id="17_ptgsj"]
 [ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="18_0of6j"]
 [ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="19_3lf7m"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pcil"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ls6to"]
 resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -75,7 +75,7 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_kqxxk")]
-material = SubResource("ShaderMaterial_0pcil")
+material = SubResource("ShaderMaterial_ls6to")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
@@ -102,12 +102,14 @@ offset_left = 168.0
 offset_right = 220.0
 
 [node name="OpenAudio" type="AudioStreamPlayer" parent="."]
+volume_db = 12.0
 script = ExtResource("9_y450l")
-samples = [ExtResource("10_6v52w"), ExtResource("11_t5h76"), ExtResource("12_8xrxt"), ExtResource("13_lxeow")]
+samples = [ExtResource("10_c28br"), ExtResource("11_bxauh"), ExtResource("12_whggi"), ExtResource("13_tgpkx")]
 
 [node name="CloseAudio" type="AudioStreamPlayer" parent="."]
+volume_db = 12.0
 script = ExtResource("9_y450l")
-samples = [ExtResource("14_iualq"), ExtResource("15_6qaso"), ExtResource("16_ir8v3"), ExtResource("17_7cica")]
+samples = [ExtResource("14_u4edx"), ExtResource("15_00efs"), ExtResource("16_kq45i"), ExtResource("17_ptgsj")]
 
 [node name="PressedAudio" type="AudioStreamPlayer" parent="."]
 script = ExtResource("9_y450l")

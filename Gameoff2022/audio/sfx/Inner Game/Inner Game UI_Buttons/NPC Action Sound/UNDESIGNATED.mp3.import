@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://choomxqu2widm"
+path="res://.godot/imported/UNDESIGNATED.mp3-9c406a0b22b9994ed40f2f34049f5c62.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/NPC Action Sound/UNDESIGNATED.mp3"
+dest_files=["res://.godot/imported/UNDESIGNATED.mp3-9c406a0b22b9994ed40f2f34049f5c62.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

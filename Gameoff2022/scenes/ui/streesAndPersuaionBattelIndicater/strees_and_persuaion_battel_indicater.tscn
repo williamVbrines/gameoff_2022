@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ua5g0lc8aoie"]
+[gd_scene load_steps=10 format=3 uid="uid://ua5g0lc8aoie"]
 
 [ext_resource type="Script" path="res://scenes/ui/streesAndPersuaionBattelIndicater/strees_and_persuaion_battel_indicater.gd" id="1_pqiru"]
 [ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_cfnu7"]
 [ext_resource type="Texture2D" uid="uid://b2bpl446qd25d" path="res://textures/ui/Battle/Health Bar/HealthBar_HealthBarHalf.png" id="3_vnsyj"]
 [ext_resource type="Texture2D" uid="uid://c77wjev2mu1ap" path="res://textures/ui/Battle/Health Bar/HealthBar_CenterSkull.png" id="4_donwf"]
 [ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="5_8jj4f"]
+[ext_resource type="AudioStream" uid="uid://cdfpntplcr512" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Stress Bar/Stress Up 1.mp3" id="6_uoeki"]
+[ext_resource type="AudioStream" uid="uid://b3pdby26ol7dy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Stress Bar/Stress Down 1.mp3" id="7_dfe2y"]
+[ext_resource type="AudioStream" uid="uid://bkw3i7wu77n87" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Persuasion Bar/Persuasion Up 1.mp3" id="8_i0opn"]
+[ext_resource type="AudioStream" uid="uid://cixvm3qwnfoal" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Persuasion Bar/Persuasion Down 1.mp3" id="9_rbu46"]
 
 [node name="streesAndBersuaionBattelIndicater" type="Control"]
 layout_mode = 3
@@ -20,7 +24,6 @@ script = ExtResource("1_pqiru")
 visible = false
 self_modulate = Color(1, 1, 1, 0.298039)
 texture_filter = 1
-layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_cfnu7")
@@ -28,7 +31,6 @@ texture = ExtResource("2_cfnu7")
 [node name="HealthBar_R" type="TextureRect" parent="."]
 texture_filter = 1
 clip_contents = true
-layout_mode = 0
 offset_left = 960.0
 offset_top = 64.0
 offset_right = 1522.0
@@ -40,7 +42,6 @@ flip_h = true
 
 [node name="Fill_R" type="ColorRect" parent="HealthBar_R"]
 show_behind_parent = true
-layout_mode = 0
 offset_left = 558.0
 offset_top = 80.0
 offset_right = 1095.0
@@ -51,7 +52,6 @@ color = Color(0.996078, 0.0392157, 0.32549, 1)
 [node name="HealthBar_L" type="TextureRect" parent="."]
 texture_filter = 1
 clip_contents = true
-layout_mode = 0
 offset_left = 960.0
 offset_top = 204.0
 offset_right = 1522.0
@@ -65,7 +65,6 @@ flip_v = true
 
 [node name="Fill_L" type="ColorRect" parent="HealthBar_L"]
 show_behind_parent = true
-layout_mode = 0
 offset_left = 558.0
 offset_top = 82.0
 offset_right = 1095.0
@@ -75,7 +74,6 @@ color = Color(0.996078, 0.0392157, 0.32549, 1)
 
 [node name="CenterSkull" type="TextureRect" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 929.0
 offset_top = 103.0
 offset_right = 991.0
@@ -84,7 +82,6 @@ texture = ExtResource("4_donwf")
 
 [node name="PlayerPortrait" type="TextureRect" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 270.0
 offset_top = 64.0
 offset_right = 410.0
@@ -93,10 +90,25 @@ texture = ExtResource("5_8jj4f")
 
 [node name="EnemyPortrait" type="TextureRect" parent="."]
 texture_filter = 1
-layout_mode = 0
 offset_left = 1510.0
 offset_top = 64.0
 offset_right = 1650.0
 offset_bottom = 204.0
 texture = ExtResource("5_8jj4f")
 flip_h = true
+
+[node name="StressUPAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uoeki")
+volume_db = -15.0
+
+[node name="StressDownAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dfe2y")
+volume_db = -15.0
+
+[node name="PerUPAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_i0opn")
+volume_db = -15.0
+
+[node name="PerDownAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rbu46")
+volume_db = -15.0

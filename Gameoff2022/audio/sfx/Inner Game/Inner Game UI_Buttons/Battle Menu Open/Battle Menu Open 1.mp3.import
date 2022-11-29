@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lc8o5wqxxsmu"
+path="res://.godot/imported/Battle Menu Open 1.mp3-137f471b8abf7e7424ccf20cd6619e12.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 1.mp3"
+dest_files=["res://.godot/imported/Battle Menu Open 1.mp3-137f471b8abf7e7424ccf20cd6619e12.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

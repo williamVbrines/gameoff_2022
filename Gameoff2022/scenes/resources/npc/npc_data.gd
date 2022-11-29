@@ -60,7 +60,6 @@ func _on_start_exploration() -> void:
 func _on_start_combat(_cam : Camera3D) -> void:
 	selected = SystemGlobals.opponent == name;
 	SystemGlobals.persuasion = 0;
-	EventManager.persuasion_changed.emit(SystemGlobals.persuasion );
 	
 func _on_combat_state_changed(state : String) -> void:
 	if selected:

@@ -8,6 +8,11 @@ extends Control
 @onready var enemy_portrait: TextureRect = $EnemyPortrait
 @onready var center_skull: TextureRect = $CenterSkull
 
+@onready var stress_up_audio: AudioStreamPlayer = $StressUPAudio
+@onready var stress_down_audio: AudioStreamPlayer = $StressDownAudio
+@onready var per_up_audio: AudioStreamPlayer = $PerUPAudio
+@onready var per_down_audio: AudioStreamPlayer = $PerDownAudio
+
 var or_bar_size : Vector2 = Vector2.ZERO;
 const FILL_SPEED = 2.0;
 
@@ -45,10 +50,25 @@ func _on_enemy_portrait_changed(portrait : Texture) -> void:
 	
 	
 func _on_persuasion_changed(_val : float) -> void:
+	var p = SystemGlobals.persuasion / 100.0;
+	
+	if  p > fill_r.scale.x:
+		per_down_audio.play();
+		
+	if  p < fill_r.scale.x:
+		per_up_audio.play();
+		
 	_change_persuasion_anim();
 	
 	
 func _on_stress_changed(_val : float) -> void:
+	var p = SystemGlobals.stress / 100.0;
+	
+	if  p > fill_l.scale.x:
+		stress_down_audio.play();
+	if  p < fill_l.scale.x:
+		stress_up_audio.play();
+		
 	_change_stress_anim();
 	
 	
@@ -117,7 +137,7 @@ func _change_stress_anim() -> void:
 	tween.stop();
 	
 	var p = SystemGlobals.stress / 100.0;
-	
+		
 	tween.tween_property(fill_l,"scale", Vector2(p,1),FILL_SPEED * p )
 	
 	tween.play();

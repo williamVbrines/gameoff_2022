@@ -78,7 +78,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	
 	
-func turn(delta : float) -> void:
+func turn(_delta : float) -> void:
 #	var rot_dir : float = \
 #	Input.get_action_strength("rotate_anticlockwise") \
 #	- Input.get_action_strength("rotate_clockwise");
@@ -113,7 +113,7 @@ func movement(_delta : float) -> void:
 	pass
 	
 	
-func camera_event(event : InputEvent) -> void:
+func camera_event(_event : InputEvent) -> void:
 #	if event.is_action_pressed("zoom_in"):
 #		boomarm.spring_length = max(0,boomarm.spring_length - zoom_step);
 #

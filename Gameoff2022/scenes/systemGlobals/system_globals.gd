@@ -76,7 +76,7 @@ func load_data(data : Dictionary) -> void:
 			
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), masterVol);
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), sfxVol);
-			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), bgmVol);
+#			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), bgmVol);
 			
 			if !SystemGlobals.windowed:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

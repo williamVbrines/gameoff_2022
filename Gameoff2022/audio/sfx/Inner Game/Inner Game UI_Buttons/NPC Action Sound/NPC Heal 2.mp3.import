@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r7ew2i4gbm7e"
+path="res://.godot/imported/NPC Heal 2.mp3-8762bd43f09d4ec74e3d04136cbc0d9c.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/NPC Action Sound/NPC Heal 2.mp3"
+dest_files=["res://.godot/imported/NPC Heal 2.mp3-8762bd43f09d4ec74e3d04136cbc0d9c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

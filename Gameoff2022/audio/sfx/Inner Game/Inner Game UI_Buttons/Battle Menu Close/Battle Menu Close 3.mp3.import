@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blwxm3mw7n2g5"
+path="res://.godot/imported/Battle Menu Close 3.mp3-ed754e55b918df43b93142f7b83a07ef.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Close/Battle Menu Close 3.mp3"
+dest_files=["res://.godot/imported/Battle Menu Close 3.mp3-ed754e55b918df43b93142f7b83a07ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

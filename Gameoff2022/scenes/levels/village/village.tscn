@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=54 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
+[ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
 [ext_resource type="PackedScene" uid="uid://iy86trujqevt" path="res://scenes/ui/combatScreen/combat_screen.tscn" id="1_xkpbn"]
 [ext_resource type="PackedScene" uid="uid://bhcfyawh66n7t" path="res://scenes/ui/explorationHUD/exploration_hud.tscn" id="2_cli8v"]
 [ext_resource type="Shader" uid="uid://d6t6aevet6j4" path="res://shaders/Pixelation.tres" id="2_l38qc"]
@@ -30,6 +31,13 @@
 [ext_resource type="PackedScene" uid="uid://cbpms42oraq6n" path="res://modles/campfire.tscn" id="24_flb3y"]
 [ext_resource type="PackedScene" uid="uid://denps0ye5r3wr" path="res://modles/flowers.tscn" id="25_k8ked"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="26_2iu2g"]
+[ext_resource type="Script" path="res://scenes/npc/Npc.gd" id="28_qvvy6"]
+[ext_resource type="Resource" uid="uid://cc8sl1bonoce0" path="res://scenes/resources/npc/test_npc_resource.tres" id="29_jwkuq"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="30_63oww"]
+[ext_resource type="Texture2D" uid="uid://tel3p2uw0agw" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_02.png" id="31_7ltcb"]
+[ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="32_s1nwo"]
+[ext_resource type="Texture2D" uid="uid://djqcoqe0yseap" path="res://textures/kenney_prototypetextures/PNG/Purple/texture_01.png" id="33_lcqh1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_snbcf"]
 panorama = ExtResource("1_asubo")
@@ -64,7 +72,33 @@ size = Vector3(150, 20, 10)
 height = 20.0
 radius = 2.5
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4utp4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_16e2k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mrhn"]
+render_priority = 0
+shader = ExtResource("32_s1nwo")
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwuvl"]
+next_pass = SubResource("ShaderMaterial_2mrhn")
+albedo_texture = ExtResource("31_7ltcb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sys0e"]
+albedo_texture = ExtResource("31_7ltcb")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3kwka"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8ryd"]
+albedo_texture = ExtResource("33_lcqh1")
+
 [node name="Village" type="Node"]
+script = ExtResource("1_gt86u")
 
 [node name="Village3D" type="Node3D" parent="."]
 
@@ -666,7 +700,7 @@ transform = Transform3D(2.99998, 0, -6.82121e-13, 0, 4, 0, 6.82121e-13, 0, 2.999
 transform = Transform3D(3.00519, 0, 2.63985, 0, 5.333, 0, -2.63985, 0, 3.00519, -10.6668, -44.3673, 58.139)
 
 [node name="Player" parent="Village3D" instance=ExtResource("26_2iu2g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8724, 3.80261, 1.48005)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8724, 0.287584, 1.48005)
 
 [node name="Colisions" type="Node3D" parent="Village3D"]
 
@@ -702,6 +736,50 @@ shape = SubResource("BoxShape3D_xy5dq")
 transform = Transform3D(0.820721, 0, 0.57133, 0, 1, 0, -0.57133, 0, 0.820721, 52.9753, 4.69257, -52.5555)
 shape = SubResource("CylinderShape3D_jiwod")
 
+[node name="NPC" type="Node3D" parent="Village3D"]
+process_mode = 1
+transform = Transform3D(0.887815, 0, 0.4602, 0, 1, 0, -0.4602, 0, 0.887815, 6.92928, 0, 0.020031)
+script = ExtResource("28_qvvy6")
+npc_res = ExtResource("29_jwkuq")
+npc_mesh = NodePath("NpcMesh")
+interactable_area = NodePath("InteractableArea3D")
+camera = NodePath("Camera")
+
+[node name="InteractableArea3D" type="Area3D" parent="Village3D/NPC"]
+process_mode = 1
+process_priority = 1
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("30_63oww")
+detection_groups = ["PickupPointer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Village3D/NPC/InteractableArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4utp4")
+
+[node name="NpcMesh" type="MeshInstance3D" parent="Village3D/NPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_16e2k")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lwuvl")
+
+[node name="PlayerPose" type="Node3D" parent="Village3D/NPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.13414)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Village3D/NPC/PlayerPose"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_16e2k")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_sys0e")
+
+[node name="PointMesh" type="MeshInstance3D" parent="Village3D/NPC/PlayerPose"]
+mesh = SubResource("CylinderMesh_3kwka")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_o8ryd")
+
+[node name="Camera" type="Camera3D" parent="Village3D/NPC"]
+transform = Transform3D(0.370541, -0.579343, 0.72599, 2.51807e-08, 0.781629, 0.623744, -0.928816, -0.231123, 0.289626, 1.5214, 3.13559, 2.35337)
+
 [node name="GUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -712,14 +790,14 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_xkpbn")]
-layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_cli8v")]
-layout_mode = 1
 
 [node name="Mouse" parent="GUI" instance=ExtResource("3_gmu7u")]
 process_mode = 3
-layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("4_fyvys")]
-layout_mode = 1
+
+[node name="BGMAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_dyiqh")
+bus = &"BGM"
