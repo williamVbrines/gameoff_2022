@@ -1,10 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddyu66i72fx6o"]
+[gd_scene load_steps=19 format=3 uid="uid://ddyu66i72fx6o"]
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd" id="1_jilq1"]
-[ext_resource type="Texture2D" uid="uid://brdm2am46cx02" path="res://textures/ui/LoadoutAndPauseMenu/Loadout Screen Measurement Guide 1.png" id="2_1wvcl"]
+[ext_resource type="Texture2D" uid="uid://drhcqyqlgp6m8" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_SweetTalk.png" id="2_4iqdi"]
 [ext_resource type="Texture2D" uid="uid://d4053sr81jx7" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png" id="2_vmhr8"]
 [ext_resource type="Texture2D" uid="uid://deaarakxmj1d7" path="res://textures/ui/LoadoutAndPauseMenu/tooltip9patch.png" id="2_wokme"]
+[ext_resource type="Texture2D" uid="uid://crokyj76nsrlh" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Deception_BigLie.png" id="3_bx0ah"]
+[ext_resource type="Texture2D" uid="uid://1pdvnwj6dvsf" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Intimidation_VeiledThreat.png" id="4_diijk"]
+[ext_resource type="Texture2D" uid="uid://lvb41nvug7jy" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_backing.png" id="4_sf57t"]
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="5_jrn6f"]
+[ext_resource type="Texture2D" uid="uid://brrfule52ew0i" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Logic_Lecture.png" id="5_pkewo"]
 [ext_resource type="AudioStream" uid="uid://cnvhex67castv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 1.mp3" id="6_1qgqr"]
 [ext_resource type="AudioStream" uid="uid://b6d5f855koerx" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 2.mp3" id="7_fx3v4"]
 [ext_resource type="AudioStream" uid="uid://dbmsu5ddbt4cl" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 3.mp3" id="8_nmgk6"]
@@ -17,7 +21,6 @@
 [sub_resource type="SystemFont" id="SystemFont_dav45"]
 
 [node name="TacticDragAble" type="Button"]
-modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 custom_minimum_size = Vector2i(110, 110)
 offset_left = 1.0
@@ -27,15 +30,30 @@ focus_mode = 0
 shortcut_in_tooltip = false
 flat = true
 script = ExtResource("1_jilq1")
+colors = [Color(0.811765, 0.807843, 0.819608, 1), Color(1, 0.407843, 0.658824, 1), Color(0.647059, 1, 0.439216, 1), Color(1, 0.411765, 0.411765, 1), Color(0.419608, 0.690196, 1, 1)]
+default_icons = [ExtResource("2_4iqdi"), ExtResource("3_bx0ah"), ExtResource("4_diijk"), ExtResource("5_pkewo")]
 
-[node name="LoadoutScreenMeasurementGuide1" type="TextureRect" parent="."]
-visible = false
+[node name="Texture" type="TextureRect" parent="."]
+texture_filter = 2
 layout_mode = 0
-offset_left = -375.0
-offset_top = -237.0
-offset_right = 1545.0
-offset_bottom = 843.0
-texture = ExtResource("2_1wvcl")
+offset_right = 110.0
+offset_bottom = 110.0
+mouse_filter = 2
+texture = ExtResource("2_vmhr8")
+
+[node name="Backing" type="TextureRect" parent="Texture"]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 110.0
+texture = ExtResource("4_sf57t")
+
+[node name="ICON" type="TextureRect" parent="Texture"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 109.0
+offset_bottom = 109.0
+texture = ExtResource("5_pkewo")
 
 [node name="ToolTip" type="Control" parent="."]
 clip_contents = true
@@ -78,14 +96,6 @@ patch_margin_left = 13
 patch_margin_top = 12
 patch_margin_right = 12
 patch_margin_bottom = 13
-
-[node name="Texture" type="TextureRect" parent="."]
-texture_filter = 2
-layout_mode = 0
-offset_right = 110.0
-offset_bottom = 110.0
-mouse_filter = 2
-texture = ExtResource("2_vmhr8")
 
 [node name="DownAudio" type="AudioStreamPlayer" parent="."]
 script = ExtResource("5_jrn6f")

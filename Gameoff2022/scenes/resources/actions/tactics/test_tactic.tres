@@ -1,12 +1,14 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://blnj50581scqy"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://blnj50581scqy"]
 
 [ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_pv1fd"]
+[ext_resource type="Texture2D" uid="uid://bxxpc8ifsi2ke" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_Compliment.png" id="1_sgmoi"]
 
 [resource]
 script = ExtResource("1_pv1fd")
-stat = 0
+stat = 2
 ratting = 60
 variance = 0
+icon = ExtResource("1_sgmoi")
 discrtiption = "This is a test"
 cost = 1.0
 dialog_pool = ["Hello this is a tatics dialog"]

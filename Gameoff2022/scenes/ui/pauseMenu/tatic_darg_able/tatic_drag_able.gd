@@ -7,6 +7,8 @@ const PRESSED_SCALE : Vector2 = Vector2(0.2,0.2)
 @onready var texture: TextureRect = $Texture
 @onready var down_audio: AudioStreamPlayer = $DownAudio
 @onready var up_audio: AudioStreamPlayer = $UpAudio
+@onready var backing: TextureRect = $Texture/Backing
+@onready var tactic_icon: TextureRect = $Texture/ICON
 
 var data_id : String = "test" : set = set_data_id, get = get_data_id;
 var data : Resource = null;
@@ -23,6 +25,9 @@ var frames : Array = [
 	preload("res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv2.png"),
 	preload("res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv3.png")
 ]
+
+@export var colors : Array[Color];
+@export var default_icons : Array[Texture];
 
 signal sloted(id : String ,num : int);
 
@@ -48,6 +53,24 @@ func _ready() -> void:
 			TacticsData.MED: tex = frames[1];
 			TacticsData.HIGH: tex = frames[2];
 		
+		match data.stat:
+			TacticsData.CHARM:
+				backing.modulate = colors[1];
+				tactic_icon.texture = default_icons[0];
+			TacticsData.DECEPTION:
+				backing.modulate = colors[2];
+				tactic_icon.texture = default_icons[1];
+			TacticsData.INTIMIDATION:
+				backing.modulate = colors[3];
+				tactic_icon.texture = default_icons[2];
+			TacticsData.LOGIC:
+				backing.modulate = colors[4];
+				tactic_icon.texture = default_icons[3];
+				
+		if data.icon != null:
+			tactic_icon.texture = data.icon;
+			
+			
 		texture.set_texture(tex);
 	
 		tool_tip_label.set_text(data.discrtiption + " Cost: " + str(data.cost));

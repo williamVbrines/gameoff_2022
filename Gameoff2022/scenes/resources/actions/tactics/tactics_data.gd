@@ -11,6 +11,7 @@ const HIGH : int = 100;
 @export_enum(CHARM,LOGIC,DECEPTION,INTIMIDATION) var stat : int = CHARM;
 @export_enum("LOW:30","MED:60","HIGH:100") var ratting : int = MED;
 @export_range(0,100,0.5) var variance : int = 0;
+@export var icon : Texture = null;
 
 #Override
 func get_amount(stat_val : float = 0.0) -> float:

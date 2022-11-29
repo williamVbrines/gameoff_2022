@@ -1,2 +1,13 @@
-res://scenes/levels/room/room.tscn
+res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.tscn
+res://shaders/Pixelation.tres
+res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
+res://shaders/water.tres
+res://scenes/resources/npc/test_npc_resource.tres
+res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd
+res://scenes/levels/village/village.tscn
+res://scenes/ui/explorationHUD/exploration_hud.tscn
+res://scenes/ui/pauseMenu/pause_menu.tscn
+res://scenes/ui/loadoutMenu/loadout_menu.tscn
+res://scenes/resources/actions/tactics/test_tactic.tres
+res://scenes/resources/actions/tactics/tactics_data.gd
