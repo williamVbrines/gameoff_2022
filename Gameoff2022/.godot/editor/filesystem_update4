@@ -1,8 +1,9 @@
-res://scenes/levels/village/village.tscn
+res://scenes/test/node_3d.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
 res://shaders/water.tres
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/test/node_3d.tscn
 res://modles/smith/SmithTalking.tscn
+res://scenes/levels/village/village.tscn
+res://scenes/levels/room/room.tscn
