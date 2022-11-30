@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scenes/ui/pauseMenu/tatic_darg_able/tatic_drag_able.gd" id="1_jilq1"]
 [ext_resource type="Texture2D" uid="uid://drhcqyqlgp6m8" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_SweetTalk.png" id="2_4iqdi"]
-[ext_resource type="Texture2D" uid="uid://d4053sr81jx7" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv1.png" id="2_vmhr8"]
 [ext_resource type="Texture2D" uid="uid://deaarakxmj1d7" path="res://textures/ui/LoadoutAndPauseMenu/tooltip9patch.png" id="2_wokme"]
 [ext_resource type="Texture2D" uid="uid://crokyj76nsrlh" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Deception_BigLie.png" id="3_bx0ah"]
 [ext_resource type="Texture2D" uid="uid://1pdvnwj6dvsf" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Intimidation_VeiledThreat.png" id="4_diijk"]
@@ -10,6 +9,7 @@
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="5_jrn6f"]
 [ext_resource type="Texture2D" uid="uid://brrfule52ew0i" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Logic_Lecture.png" id="5_pkewo"]
 [ext_resource type="AudioStream" uid="uid://cnvhex67castv" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 1.mp3" id="6_1qgqr"]
+[ext_resource type="Texture2D" uid="uid://bctc14xc7hpc1" path="res://textures/ui/LoadoutAndPauseMenu/Diamond/Tactic List Diamond (Smaller)/Loadout_TacticList_Diamond_Lv2.png" id="6_qgdpm"]
 [ext_resource type="AudioStream" uid="uid://b6d5f855koerx" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 2.mp3" id="7_fx3v4"]
 [ext_resource type="AudioStream" uid="uid://dbmsu5ddbt4cl" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 3.mp3" id="8_nmgk6"]
 [ext_resource type="AudioStream" uid="uid://opaty6igwxc3" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Pick Up Cost Icon/Pick Up Icon 4.mp3" id="9_22m7u"]
@@ -35,20 +35,19 @@ default_icons = [ExtResource("2_4iqdi"), ExtResource("3_bx0ah"), ExtResource("4_
 
 [node name="Texture" type="TextureRect" parent="."]
 texture_filter = 2
-layout_mode = 0
 offset_right = 110.0
 offset_bottom = 110.0
 mouse_filter = 2
-texture = ExtResource("2_vmhr8")
+texture = ExtResource("6_qgdpm")
 
 [node name="Backing" type="TextureRect" parent="Texture"]
-layout_mode = 0
+show_behind_parent = true
+texture_filter = 2
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_sf57t")
 
 [node name="ICON" type="TextureRect" parent="Texture"]
-layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 109.0
@@ -57,7 +56,7 @@ texture = ExtResource("5_pkewo")
 
 [node name="ToolTip" type="Control" parent="."]
 clip_contents = true
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = -119.0
 offset_top = 114.0
@@ -66,7 +65,6 @@ offset_bottom = 220.0
 scale = Vector2(1e-05, 1e-05)
 
 [node name="Label" type="Label" parent="ToolTip"]
-layout_mode = 0
 offset_left = 28.0
 offset_top = 16.0
 offset_right = 333.0
@@ -80,7 +78,6 @@ autowrap_mode = 2
 
 [node name="Packground" type="NinePatchRect" parent="ToolTip/Label"]
 show_behind_parent = true
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0

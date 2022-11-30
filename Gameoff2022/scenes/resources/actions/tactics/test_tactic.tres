@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_pv1fd")
 stat = 2
-ratting = 60
+ratting = 30
 variance = 0
 icon = ExtResource("1_sgmoi")
 discrtiption = "This is a test"

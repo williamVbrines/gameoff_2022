@@ -6,6 +6,11 @@ extends Control
 @onready var discription_label: Label = $TaticDiscriptionLabel
 @onready var cost_counter_tag: Control = $TagButton/CostCounterTag
 @onready var opt_select_audio: AudioStreamPlayer = $OptSelectAudio
+@onready var backing: TextureRect = $Frame/Backing
+@onready var tactic_icon: TextureRect = $Frame/Icon
+
+@export var colors : Array[Color];
+@export var default_icons : Array[Texture];
 
 var frames : Array = [
 	preload("res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png"),
@@ -21,6 +26,25 @@ func _ready() -> void:
 	if !data: 
 		queue_free();
 		return;
+	else:
+		match data.stat:
+			TacticsData.CHARM:
+				backing.modulate = colors[1];
+				tactic_icon.texture = default_icons[0];
+			TacticsData.DECEPTION:
+				backing.modulate = colors[2];
+				tactic_icon.texture = default_icons[1];
+			TacticsData.INTIMIDATION:
+				backing.modulate = colors[3];
+				tactic_icon.texture = default_icons[2];
+			TacticsData.LOGIC:
+				backing.modulate = colors[4];
+				tactic_icon.texture = default_icons[3];
+				
+		if data.icon != null:
+			tactic_icon.texture = data.icon;
+			
+			
 	_make_connections();
 	_set_up();
 	
