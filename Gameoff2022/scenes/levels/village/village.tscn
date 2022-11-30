@@ -734,7 +734,7 @@ process_priority = 1
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("30_63oww")
-detection_groups = ["PickupPointer"]
+detection_groups = ["PickupAera"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Village3D/NPC/InteractableArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -779,13 +779,17 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CombatScreen" parent="GUI" instance=ExtResource("1_xkpbn")]
+layout_mode = 1
 
 [node name="ExplorationHUD" parent="GUI" instance=ExtResource("2_cli8v")]
+layout_mode = 1
 
 [node name="Mouse" parent="GUI" instance=ExtResource("3_gmu7u")]
 process_mode = 3
+layout_mode = 1
 
 [node name="DialogWindow" parent="GUI" instance=ExtResource("4_fyvys")]
+layout_mode = 1
 
 [node name="BGMAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_dyiqh")
