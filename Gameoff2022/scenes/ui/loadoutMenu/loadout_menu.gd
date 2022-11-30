@@ -136,17 +136,17 @@ func set_up_nonsloted(data):
 	
 	match data.stat:
 		TacticsData.CHARM:
-			new_dargable.global_position = selection.get_child(0).get_child(dragables.get_child(1).get_child_count()).global_position
-			dragables.get_child(1).add_child(new_dargable);
+			new_dargable.global_position = selection.get_child(0).get_child($Dragables/Charm.get_child_count()).global_position
+			$Dragables/Charm.add_child(new_dargable);
 		TacticsData.LOGIC:
-			new_dargable.global_position = selection.get_child(1).get_child(dragables.get_child(2).get_child_count()).global_position
-			dragables.get_child(2).add_child(new_dargable);
+			new_dargable.global_position = selection.get_child(1).get_child($Dragables/Logic.get_child_count()).global_position
+			$Dragables/Logic.add_child(new_dargable);
 		TacticsData.DECEPTION:
-			new_dargable.global_position = selection.get_child(2).get_child(dragables.get_child(3).get_child_count()).global_position
-			dragables.get_child(3).add_child(new_dargable);
+			new_dargable.global_position = selection.get_child(2).get_child($Dragables/Deception.get_child_count()).global_position
+			$Dragables/Deception.add_child(new_dargable);
 		TacticsData.INTIMIDATION:
-			new_dargable.global_position = selection.get_child(3).get_child(dragables.get_child(4).get_child_count()).global_position
-			dragables.get_child(4).add_child(new_dargable);
+			new_dargable.global_position = selection.get_child(3).get_child($Dragables/Intimidation.get_child_count()).global_position
+			$Dragables/Intimidation.add_child(new_dargable);
 
 	new_dargable._on_released();
 	

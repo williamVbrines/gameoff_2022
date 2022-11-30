@@ -111,16 +111,6 @@ transform = Transform3D(-0.725602, 0.629743, 0.277354, -0.224831, -0.59791, 0.76
 light_energy = 3.0
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="Village3D"]
-transform = Transform3D(0.562907, -0.555051, 0.612416, -0.0109804, 0.73587, 0.677034, -0.826447, -0.387832, 0.408132, 83.1155, 38.8136, 16.9545)
-visible = false
-fov = 36.7416
-
-[node name="Camera3D Dialogue Example" type="Camera3D" parent="Village3D"]
-transform = Transform3D(0.570532, -0.49426, 0.655896, 0.0428637, 0.815463, 0.577219, -0.820156, -0.301208, 0.486434, 32.7558, 15.9238, 14.6983)
-visible = false
-fov = 35.0649
-
 [node name="Enviroment" type="Node3D" parent="Village3D"]
 
 [node name="Ground" parent="Village3D/Enviroment" instance=ExtResource("15_bgger")]
