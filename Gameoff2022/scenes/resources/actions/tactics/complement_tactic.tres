@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://coipssp2mw1r"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_brb3j"]
+[ext_resource type="Texture2D" uid="uid://bxxpc8ifsi2ke" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_Compliment.png" id="1_y1gfh"]
+
+[resource]
+script = ExtResource("1_brb3j")
+stat = 0
+ratting = 30
+variance = 10.0
+icon = ExtResource("1_y1gfh")
+discrtiption = "Complement"
+cost = 2.0
+dialog_pool = ["\"Great job To  day\"", "they feel pleased "]
+name = "complement"

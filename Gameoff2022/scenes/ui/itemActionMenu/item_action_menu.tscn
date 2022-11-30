@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dmr5tljni8kwq"]
+[gd_scene load_steps=23 format=3 uid="uid://dmr5tljni8kwq"]
 
 [ext_resource type="Script" path="res://scenes/ui/itemActionMenu/item_action_menu.gd" id="1_ophf3"]
 [ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="2_yp5qp"]
@@ -8,6 +8,8 @@
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_7row5"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_8shqt"]
 [ext_resource type="PackedScene" uid="uid://d4gx2xbbpqju8" path="res://scenes/ui/costCounterTag/cost_counter_tag.tscn" id="8_u8fht"]
+[ext_resource type="Texture2D" uid="uid://dfwwhbd8voggj" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Backing.png" id="8_vdu1e"]
+[ext_resource type="Texture2D" uid="uid://cyr87sob3jomn" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Utility_Items.png" id="9_74uty"]
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="9_y450l"]
 [ext_resource type="AudioStream" uid="uid://lc8o5wqxxsmu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 1.mp3" id="10_c28br"]
 [ext_resource type="AudioStream" uid="uid://ba06ssktif12c" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 2.mp3" id="11_bxauh"]
@@ -20,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="18_0of6j"]
 [ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="19_3lf7m"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ls6to"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2jgf3"]
 resource_local_to_scene = true
 shader = ExtResource("5_gck8f")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -75,7 +77,7 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_kqxxk")]
-material = SubResource("ShaderMaterial_ls6to")
+material = SubResource("ShaderMaterial_2jgf3")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 168.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 0.941176)
@@ -95,6 +97,18 @@ offset_top = -14.0
 offset_right = 37.0
 offset_bottom = 60.0
 texture = ExtResource("7_8shqt")
+
+[node name="Backing" type="TextureRect" parent="TagButton/BattleMenuListItemDiamondLv1"]
+show_behind_parent = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_vdu1e")
+
+[node name="Icon" type="TextureRect" parent="TagButton/BattleMenuListItemDiamondLv1"]
+texture_filter = 2
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_74uty")
 
 [node name="CostCounterTag" parent="TagButton" instance=ExtResource("8_u8fht")]
 modulate = Color(1, 1, 1, 0)

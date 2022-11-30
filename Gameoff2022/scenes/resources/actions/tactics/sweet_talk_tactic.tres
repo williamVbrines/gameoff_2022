@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://da0bn6xh4xd6g"]
+
+[ext_resource type="Texture2D" uid="uid://drhcqyqlgp6m8" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_SweetTalk.png" id="1_21i0n"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_jt8e3"]
+
+[resource]
+script = ExtResource("1_jt8e3")
+stat = 0
+ratting = 30
+variance = 10.0
+icon = ExtResource("1_21i0n")
+discrtiption = "Talk sweetly"
+cost = 1
+dialog_pool = ["With a gentle and flowery words you slowly convince them"]
+name = "sweet_talk"

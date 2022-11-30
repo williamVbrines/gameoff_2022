@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d1cqx1t1mw0p"]
+
+[ext_resource type="Texture2D" uid="uid://brrfule52ew0i" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Logic_Lecture.png" id="1_d7lg4"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_ht0i2"]
+
+[resource]
+script = ExtResource("1_ht0i2")
+stat = 1
+ratting = 100
+variance = 0
+icon = ExtResource("1_d7lg4")
+discrtiption = "Lecture them"
+cost = 7.0
+dialog_pool = ["You go over once again what needs to be done", "After a long winded speach they feel weakend"]
+name = "lecture"

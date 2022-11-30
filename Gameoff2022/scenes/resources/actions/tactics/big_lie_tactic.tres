@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://tew35ssoqq2l"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_6h2ww"]
+[ext_resource type="Texture2D" uid="uid://crokyj76nsrlh" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Deception_BigLie.png" id="1_yr8rl"]
+
+[resource]
+script = ExtResource("1_6h2ww")
+stat = 2
+ratting = 100
+variance = 10.0
+icon = ExtResource("1_yr8rl")
+discrtiption = "Big Lie"
+cost = 8.0
+dialog_pool = ["You warn them of their impending doom", "You convince them you are them form the past", "You tell them you buds the upcoming mayor cthulhu."]
+name = "big_lie"

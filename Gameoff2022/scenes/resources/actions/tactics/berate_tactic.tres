@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://xr23kwassl40"]
+
+[ext_resource type="Texture2D" uid="uid://bb1j0v2tm5jq7" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Intimidation_Berate.png" id="1_8lvfv"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_cab3x"]
+
+[resource]
+script = ExtResource("1_cab3x")
+stat = 3
+ratting = 100
+variance = 20.0
+icon = ExtResource("1_8lvfv")
+discrtiption = "Barate Then"
+cost = 5.0
+dialog_pool = [" After a hour they feel mentality exhausted"]
+name = "barate"

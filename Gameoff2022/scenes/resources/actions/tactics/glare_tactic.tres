@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bq1shhydumy0c"]
+
+[ext_resource type="Texture2D" uid="uid://bckjc843mvvd2" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Intimidation_Glare.png" id="1_sfpfq"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_wvn7a"]
+
+[resource]
+script = ExtResource("1_wvn7a")
+stat = 3
+ratting = 60
+variance = 20.0
+icon = ExtResource("1_sfpfq")
+discrtiption = "Glare"
+cost = 4.0
+dialog_pool = ["... stair...", "The seem to get nervous"]
+name = "glare"

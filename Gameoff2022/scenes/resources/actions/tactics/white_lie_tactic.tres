@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dt15qiu27b0v"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_1rt2s"]
+[ext_resource type="Texture2D" uid="uid://dpx6khtoeyxl1" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Deception_WhiteLie.png" id="1_cmnho"]
+
+[resource]
+script = ExtResource("1_1rt2s")
+stat = 2
+ratting = 30
+variance = 10.0
+icon = ExtResource("1_cmnho")
+discrtiption = "Tell a simple lie"
+cost = 1
+dialog_pool = ["You complement them overal regardless of the truth", "You tell them of their great reputation amongst the village "]
+name = "white_lie"

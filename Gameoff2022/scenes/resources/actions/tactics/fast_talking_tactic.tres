@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6unyt1p24eni"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_6isup"]
+[ext_resource type="Texture2D" uid="uid://7iq24482rqne" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Deception_FastTalk.png" id="1_hdger"]
+
+[resource]
+script = ExtResource("1_6isup")
+stat = 2
+ratting = 60
+variance = 10.0
+icon = ExtResource("1_hdger")
+discrtiption = "Fast Talk"
+cost = 3.0
+dialog_pool = ["You confused them", "DidYouknow ThatweAreAll righthere"]
+name = "fast_talking"

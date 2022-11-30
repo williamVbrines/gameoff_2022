@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxumryqsk6v7n"]
+[gd_scene load_steps=21 format=3 uid="uid://dxumryqsk6v7n"]
 
 [ext_resource type="Script" path="res://scenes/ui/clueActionMenu/clue_action_menu.gd" id="1_7anxj"]
-[ext_resource type="Texture2D" uid="uid://cu36rerivg1yh" path="res://textures/ui/Battle/Menu/Item Submenu Spacing Guide.png" id="2_ul808"]
 [ext_resource type="Texture2D" uid="uid://rfj18ib1q8ca" path="res://textures/ui/Battle/Menu/Clues and Items Submenu/BattleMenu_Submenu_Background.png" id="3_clk6p"]
 [ext_resource type="PackedScene" uid="uid://dh7gplf3sc6be" path="res://scenes/ui/tagButton/tag_button.tscn" id="4_4cptf"]
 [ext_resource type="Shader" path="res://scenes/ui/tagButton/color_swap.gdshader" id="5_fwbst"]
 [ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="6_808q1"]
 [ext_resource type="Texture2D" uid="uid://csa4vgi6yin3c" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Lv1.png" id="7_hj721"]
+[ext_resource type="Texture2D" uid="uid://dfwwhbd8voggj" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Backing.png" id="7_odpux"]
 [ext_resource type="Script" path="res://scenes/rand_audio_stream_player.gd" id="8_d3p6m"]
+[ext_resource type="Texture2D" uid="uid://bncpswsyuv4ns" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Utility_Clues.png" id="8_oeh3v"]
 [ext_resource type="AudioStream" uid="uid://lc8o5wqxxsmu" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 1.mp3" id="9_xyh34"]
 [ext_resource type="AudioStream" uid="uid://ba06ssktif12c" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 2.mp3" id="10_k3otn"]
 [ext_resource type="AudioStream" uid="uid://qt5ld5wcjwsp" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Battle Menu Open/Battle Menu Open 3.mp3" id="11_c6m14"]
@@ -19,7 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://mqwkbuokfl1q" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 1.mp3" id="17_hqe83"]
 [ext_resource type="AudioStream" uid="uid://bx276jn07ckcy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Select Menu Option/Select Menu Option 2.mp3" id="18_fhu3t"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ximqa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n7rbr"]
 resource_local_to_scene = true
 shader = ExtResource("5_fwbst")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -37,16 +38,6 @@ offset_right = 242.0
 offset_bottom = 1016.0
 mouse_filter = 2
 script = ExtResource("1_7anxj")
-
-[node name="ItemSubmenuSpacingGuide" type="TextureRect" parent="."]
-visible = false
-self_modulate = Color(1, 1, 1, 0.494118)
-layout_mode = 0
-offset_left = -100.0
-offset_top = -12.0
-offset_right = 445.0
-offset_bottom = 251.0
-texture = ExtResource("2_ul808")
 
 [node name="MenuBackground" type="NinePatchRect" parent="."]
 visible = false
@@ -73,7 +64,7 @@ offset_bottom = 43.0
 theme_override_constants/separation = 3
 
 [node name="TagButton" parent="." instance=ExtResource("4_4cptf")]
-material = SubResource("ShaderMaterial_ximqa")
+material = SubResource("ShaderMaterial_n7rbr")
 layout_mode = 1
 offset_left = 238.0
 offset_right = 411.0
@@ -97,6 +88,19 @@ offset_top = -14.0
 offset_right = 37.0
 offset_bottom = 60.0
 texture = ExtResource("7_hj721")
+
+[node name="Backing" type="TextureRect" parent="TagButton/BattleMenuListItemDiamondLv1"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_odpux")
+
+[node name="Icon" type="TextureRect" parent="TagButton/BattleMenuListItemDiamondLv1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_oeh3v")
 
 [node name="OpenAudio" type="AudioStreamPlayer" parent="."]
 volume_db = 12.0

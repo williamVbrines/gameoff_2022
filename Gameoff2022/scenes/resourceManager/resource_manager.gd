@@ -18,7 +18,20 @@ func get_clue_data(id : String) -> ClueData:
 #Tactics Data###################################################################
 var tactics_data = {
 	#"RefID" : preload(res:path),
-	"test" : preload("res://scenes/resources/actions/tactics/test_tactic.tres")
+	"test" : preload("res://scenes/resources/actions/tactics/test_tactic.tres"),
+	"barate" : preload("res://scenes/resources/actions/tactics/berate_tactic.tres"),
+	"big_lie" : preload("res://scenes/resources/actions/tactics/big_lie_tactic.tres"), 
+	"complement" : preload("res://scenes/resources/actions/tactics/complement_tactic.tres"), 
+	"counter_point" : preload("res://scenes/resources/actions/tactics/counter_point_tactic.tres"), 
+	"fast_talking" : preload("res://scenes/resources/actions/tactics/fast_talking_tactic.tres"), 
+	"glare" : preload("res://scenes/resources/actions/tactics/glare_tactic.tres"), 
+	"incentivize" : preload("res://scenes/resources/actions/tactics/incentivize_tactic.tres"), 
+	"lecture" : preload("res://scenes/resources/actions/tactics/lecture_tactic.tres"), 
+	"listen" : preload("res://scenes/resources/actions/tactics/listen_listen.tres"), 
+	"sweet_talk" : preload("res://scenes/resources/actions/tactics/sweet_talk_tactic.tres"), 
+	"vailed_threat" : preload("res://scenes/resources/actions/tactics/vailed_threat_tactic.tres"), 
+	"white_lie" : preload("res://scenes/resources/actions/tactics/white_lie_tactic.tres"), 
+	"wink" : preload("res://scenes/resources/actions/tactics/wink_tactic.tres")
 }
 func get_tactic(id : String) -> TacticsData:
 	return tactics_data.get(id,null);

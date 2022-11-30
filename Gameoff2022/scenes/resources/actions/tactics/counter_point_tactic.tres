@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dyplvpkkqxoy3"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_qrmbt"]
+[ext_resource type="Texture2D" uid="uid://d15qj6vq7v1t7" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Logic_CounterPoint.png" id="1_xcoth"]
+
+[resource]
+script = ExtResource("1_qrmbt")
+stat = 1
+ratting = 60
+variance = 0
+icon = ExtResource("1_xcoth")
+discrtiption = "Counter Point"
+cost = 5.0
+dialog_pool = ["You point out a flaw in their logic"]
+name = "counter_point"

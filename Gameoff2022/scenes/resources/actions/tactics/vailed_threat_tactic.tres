@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bmfvnlqkwydhl"]
+
+[ext_resource type="Texture2D" uid="uid://1pdvnwj6dvsf" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Intimidation_VeiledThreat.png" id="1_elyu8"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_w383o"]
+
+[resource]
+script = ExtResource("1_w383o")
+stat = 3
+ratting = 60
+variance = 30.0
+icon = ExtResource("1_elyu8")
+discrtiption = "Vailed Threat"
+cost = 5.0
+dialog_pool = ["You strike fear in their hearts as to what might happen", "\"Better watch your step\"", "Tell them of their exsitance, you can see sweat in their brow"]
+name = "vailed_threat"

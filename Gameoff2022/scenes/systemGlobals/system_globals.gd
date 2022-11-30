@@ -26,7 +26,20 @@ var player_tactics : Dictionary = {
 	"SLOT:1" : "",
 	"SLOT:2" : "",
 	"SLOT:3" : "",
-	"AVAILABLE" : ["test"] #List of all available tatictics to the player.
+	"AVAILABLE" : [	"test",
+	"barate",
+	"big_lie", 
+	"complement", 
+	"counter_point", 
+	"fast_talking", 
+	"glare", 
+	"incentivize", 
+	"lecture", 
+	"listen", 
+	"sweet_talk", 
+	"vailed_threat", 
+	"white_lie", 
+	"wink"] #List of all available tatictics to the player.
 }
 	
 	

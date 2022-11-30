@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cmc356h7fom4f"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_mjk41"]
+
+[resource]
+script = ExtResource("1_mjk41")
+stat = 0
+ratting = 30
+variance = 10.0
+discrtiption = "Wink"
+cost = 2.0
+dialog_pool = ["You give a charming wink", "You wink and you feel like they know whats up"]
+name = "wink"

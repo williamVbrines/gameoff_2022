@@ -1,3 +1,4 @@
+res://scenes/resources/actions/tactics
 res://scenes/ui/RoomDialogBox
 res://scenes/ui/roomStressBar
 res://scenes/test
@@ -19,4 +20,3 @@ res://scenes/ui/clueSelectable
 res://scenes/ui/stressIndicator
 res://scenes/ui/pauseMenu/tatic_darg_able
 res://scenes/ui/pauseMenu
-res://scenes/ui/itemActionButton

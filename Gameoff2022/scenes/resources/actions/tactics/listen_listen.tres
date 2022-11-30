@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c3jwpx0kd4tam"]
+
+[ext_resource type="Texture2D" uid="uid://gi6o2k7ypfbg" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Charm_Listen.png" id="1_ff71j"]
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_vbhuf"]
+
+[resource]
+script = ExtResource("1_vbhuf")
+stat = 0
+ratting = 60
+variance = 10.0
+icon = ExtResource("1_ff71j")
+discrtiption = "This is a test"
+cost = 7.0
+dialog_pool = ["...", "You consider what they say", "You let them say what needs to be said"]
+name = "listen"

@@ -132,6 +132,7 @@ func gen_dragables()->void:
 func set_up_nonsloted(data):
 	var new_dargable = dragable_scene.instantiate();
 	new_dargable.slot_points = slot_points;
+	new_dargable.data = data;
 	
 	match data.stat:
 		TacticsData.CHARM:
@@ -152,6 +153,7 @@ func set_up_nonsloted(data):
 func set_up_sloted(data , slot_num):
 	var p = Vector2.ZERO;
 	var new_dargable = dragable_scene.instantiate();
+	new_dargable.data = data;
 	
 	match data.stat:
 		TacticsData.CHARM:

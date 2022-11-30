@@ -44,10 +44,12 @@ func set_slot_points(points : Array[Vector2])->void:
 	
 func _ready() -> void:
 	orgin = global_position;
-	data = ResourceManager.get_tactic(data_id);
-	
+	if data == null:
+		data = ResourceManager.get_tactic(data_id);
+		data_id = data.name
 	var tex = null;
 	if data is TacticsData:
+		print(data.name)
 		match data.ratting:
 			TacticsData.LOW: tex = frames[0];
 			TacticsData.MED: tex = frames[1];

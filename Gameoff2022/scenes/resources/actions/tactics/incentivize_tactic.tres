@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://vyqhj2rsykky"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/tactics/tactics_data.gd" id="1_w37gf"]
+[ext_resource type="Texture2D" uid="uid://jgok55jxwx1k" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Logic_Incentivize.png" id="1_xtx18"]
+
+[resource]
+script = ExtResource("1_w37gf")
+stat = 1
+ratting = 30
+variance = 0
+icon = ExtResource("1_xtx18")
+discrtiption = "Incentivize"
+cost = 1.0
+dialog_pool = ["A buch of gold coins plop on the ground next to your enemy", "Say you can help them out if they can do the same"]
+name = "incentivize"

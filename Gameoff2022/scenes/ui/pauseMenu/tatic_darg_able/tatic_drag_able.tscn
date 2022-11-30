@@ -35,6 +35,7 @@ default_icons = [ExtResource("2_4iqdi"), ExtResource("3_bx0ah"), ExtResource("4_
 
 [node name="Texture" type="TextureRect" parent="."]
 texture_filter = 2
+layout_mode = 0
 offset_right = 110.0
 offset_bottom = 110.0
 mouse_filter = 2
@@ -43,11 +44,13 @@ texture = ExtResource("6_qgdpm")
 [node name="Backing" type="TextureRect" parent="Texture"]
 show_behind_parent = true
 texture_filter = 2
+layout_mode = 0
 offset_right = 110.0
 offset_bottom = 110.0
 texture = ExtResource("4_sf57t")
 
 [node name="ICON" type="TextureRect" parent="Texture"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 109.0
@@ -56,7 +59,7 @@ texture = ExtResource("5_pkewo")
 
 [node name="ToolTip" type="Control" parent="."]
 clip_contents = true
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_left = -119.0
 offset_top = 114.0
@@ -65,6 +68,7 @@ offset_bottom = 220.0
 scale = Vector2(1e-05, 1e-05)
 
 [node name="Label" type="Label" parent="ToolTip"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = 16.0
 offset_right = 333.0
@@ -78,6 +82,7 @@ autowrap_mode = 2
 
 [node name="Packground" type="NinePatchRect" parent="ToolTip/Label"]
 show_behind_parent = true
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
