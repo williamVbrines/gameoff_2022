@@ -5,6 +5,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), SystemGlobals.bgmVol);
+	bgm_audio_normal.play();
+	bgm_audio_battle.play()
 	EventManager.start_combat.connect(_on_start_combat);
 	EventManager.start_exploration.connect(_on_start_exploration);
 	

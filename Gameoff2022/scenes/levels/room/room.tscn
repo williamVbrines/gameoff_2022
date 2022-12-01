@@ -74,7 +74,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1sh7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o27ht"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_hwu0f")
@@ -107,7 +107,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tr2pc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n7pv8"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_00wfj")
@@ -181,7 +181,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iva6m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d628q"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_lmmkk")
@@ -214,7 +214,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgwia"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1hx1h"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_w73ch")
@@ -247,7 +247,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_detqd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5kij"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_nnoan")
@@ -366,7 +366,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vsmtc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s7w67"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_d6e5y")
@@ -399,7 +399,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yh5vl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_06syk"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_xe73q")
@@ -492,13 +492,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_e1sh7")
+surface_material_override/0 = SubResource("ShaderMaterial_o27ht")
 
 [node name="StackedBook3" parent="Room3D/Room/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_tr2pc")
+surface_material_override/0 = SubResource("ShaderMaterial_n7pv8")
 
 [node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
@@ -627,12 +627,12 @@ skeleton = NodePath("../..")
 [node name="StackedBook1" parent="Room3D/Room/WideDresserGroup" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, 0.192085, 2.48122, -0.834729)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_iva6m")
+surface_material_override/0 = SubResource("ShaderMaterial_d628q")
 
 [node name="StackedBook2" parent="Room3D/Room/WideDresserGroup/StackedBook1" instance=ExtResource("3_7uc24")]
 transform = Transform3D(0.952129, 0.305695, 0, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.383101, 0, 0)
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_jgwia")
+surface_material_override/0 = SubResource("ShaderMaterial_1hx1h")
 
 [node name="BookOfBooks" type="Node3D" parent="Room3D/Room/WideDresserGroup" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -646,7 +646,7 @@ action = "BOOK"
 [node name="LayingBook1" parent="Room3D/Room/WideDresserGroup/BookOfBooks" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-2.11245e-08, -0.483273, -0.872566, 1.67634, -7.32752e-08, -3.54979e-22, -2.43222e-08, -0.556428, 0.308179, 0.0496588, 2.68919, 0.18945)
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_detqd")
+surface_material_override/0 = SubResource("ShaderMaterial_c5kij")
 
 [node name="BookPaper" parent="Room3D/Room/WideDresserGroup/BookOfBooks/LayingBook1" instance=ExtResource("7_iycir")]
 transform = Transform3D(-4.10492e-08, 1, 1.50219e-08, -0.939095, -4.37114e-08, 0.34366, 0.34366, -3.13027e-14, 0.939095, 0.060298, 0.662106, -0.0748367)
@@ -742,13 +742,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_vsmtc")
+surface_material_override/0 = SubResource("ShaderMaterial_s7w67")
 
 [node name="StackedBook3" parent="Room3D/Room2/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_yh5vl")
+surface_material_override/0 = SubResource("ShaderMaterial_06syk")
 
 [node name="DeskGroup" type="Node3D" parent="Room3D/Room2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)
@@ -870,12 +870,13 @@ normal_color = Color(1, 1, 1, 0.968627)
 pressed_color = Color(0.588235, 0.588235, 0.588235, 0.968627)
 
 [node name="Options" type="Control" parent="GUI/ConfirmBox"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
 offset_left = 850.0
 offset_top = 505.0
 offset_right = 1062.0
@@ -887,6 +888,7 @@ vertical_alignment = 1
 modulate = Color(0.588235, 0.588235, 0.588235, 0.968627)
 show_behind_parent = true
 texture_filter = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -904,6 +906,7 @@ patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/Label/Background"]
 clip_contents = true
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -913,6 +916,7 @@ focus_mode = 0
 flat = true
 
 [node name="CancelText" type="Label" parent="GUI/ConfirmBox/Options"]
+layout_mode = 0
 offset_left = 918.0
 offset_top = 590.0
 offset_right = 1002.0
@@ -925,6 +929,7 @@ vertical_alignment = 1
 modulate = Color(1, 1, 1, 0.968627)
 show_behind_parent = true
 texture_filter = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -941,6 +946,7 @@ patch_margin_right = 17
 patch_margin_bottom = 17
 
 [node name="Button" type="Button" parent="GUI/ConfirmBox/Options/CancelText/Background"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -952,6 +958,7 @@ flat = true
 [node name="Fade" type="ColorRect" parent="GUI/ConfirmBox"]
 visible = false
 modulate = Color(1, 1, 1, 0)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1002,6 +1009,7 @@ cam = NodePath("../../Room3D/RoomCamera")
 
 [node name="Fade" type="ColorRect" parent="GUI/TabOutButton"]
 visible = false
+layout_mode = 0
 offset_left = -97.0
 offset_top = -16.0
 offset_right = 1823.0

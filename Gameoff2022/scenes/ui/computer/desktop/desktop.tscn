@@ -15,18 +15,20 @@ anchors_preset = 0
 mouse_filter = 2
 
 [node name="DesktopBackground" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 1080.0
 mouse_filter = 2
 texture = ExtResource("2_6u7rr")
 
 [node name="Icons" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ToDo" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 130.0
 offset_top = 346.0
 offset_right = 138.0
@@ -36,6 +38,7 @@ icon_texture = ExtResource("3_3p661")
 label_text = "ToDo"
 
 [node name="Credits" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 822.0
 offset_top = 584.0
 offset_right = 830.0
@@ -45,6 +48,7 @@ icon_texture = ExtResource("5_hk5jg")
 label_text = "Credits"
 
 [node name="Quit" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 133.0
 offset_top = 805.0
 offset_right = 141.0
@@ -54,15 +58,16 @@ icon_texture = ExtResource("5_l5ucg")
 label_text = "Quit"
 
 [node name="GameIcon" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 125.0
 offset_top = 557.0
 offset_right = 133.0
 offset_bottom = 565.0
-action = "FAKE_GAME"
 icon_texture = ExtResource("7_n2rl5")
 label_text = "Kingdom of Frogs"
 
 [node name="Email" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 132.0
 offset_top = 142.0
 offset_right = 140.0
@@ -71,6 +76,7 @@ icon_texture = ExtResource("8_jr3hk")
 label_text = "Email"
 
 [node name="Settings" parent="Icons" instance=ExtResource("3_e4c6p")]
+layout_mode = 0
 offset_left = 826.0
 offset_top = 807.0
 offset_right = 834.0

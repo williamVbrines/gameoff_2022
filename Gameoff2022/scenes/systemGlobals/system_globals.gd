@@ -10,7 +10,7 @@ var persuasion = 0;
 var windowed : bool = true;
 var masterVol : float = 0.0;
 var sfxVol : float = 0.0;
-var bgmVol : float = 0.0;
+var bgmVol : float = -14.0;
 
 var day : float = 0;
 var in_battel : bool = false;

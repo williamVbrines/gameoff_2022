@@ -19,7 +19,7 @@ func _on_exit_pressed() -> void:
 	
 func _on_start_pressed() -> void:
 	start_button.disabled = true;
-	SceneChanger.load_level("res://scenes/levels/test_area.tscn");
+	SceneChanger.load_level("res://scenes/levels/village/village.tscn");
 	
 	
 func exit_anim() -> void:

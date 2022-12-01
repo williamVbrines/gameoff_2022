@@ -1,9 +1,9 @@
+Control
 MeshInstance3D
 CPUParticles3D
 RandAudioStreamPlayer (rand_audio_stream_player.gd)
 ColorRect
 TextureRect
-Control
 AudioStreamPlayer
 AudioStreamPlayer3D
 CollisionShape3D

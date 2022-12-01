@@ -413,12 +413,13 @@ theme_override_fonts/font = ExtResource("3_3ruvt")
 theme_override_font_sizes/font_size = 22
 text = "Do this thing "
 
-[node name="Tasks" type="VBoxContainer" parent="BackGround/ActiveLevels/Level1"]
+[node name="Tasks" type="Control" parent="BackGround/ActiveLevels/Level1"]
+layout_mode = 3
+anchors_preset = 0
 offset_left = 95.0
 offset_top = 355.0
 offset_right = 135.0
 offset_bottom = 395.0
-theme_override_constants/separation = 53
 
 [node name="Task" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
@@ -460,9 +461,10 @@ text = "Do this thing "
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
-offset_top = 53.0
-offset_right = 40.0
-offset_bottom = 53.0
+offset_left = -0.882355
+offset_top = 53.2353
+offset_right = 39.1176
+offset_bottom = 53.2353
 
 [node name="CheckboxChecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task2"]
 visible = false
@@ -491,15 +493,19 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_ywh2y")
 theme_override_font_sizes/font_size = 25
-text = "BUGFIX: NPC in village not operating to set script"
+text = "BUGFIX:The Wizard, Barnabas Bombastus VonRichtenberg,
+ is clean shaven, but a later part of the script says 
+“...his beard, whipping dramatically in the volcan’s updraft…”,
+ so you need to make him grow one."
 
 [node name="Task3" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
-offset_top = 106.0
-offset_right = 40.0
-offset_bottom = 106.0
+offset_left = -3.23529
+offset_top = 262.647
+offset_right = 36.7647
+offset_bottom = 262.647
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task3"]
 offset_right = 32.0
@@ -513,15 +519,17 @@ offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_ywh2y")
 theme_override_font_sizes/font_size = 25
-text = "Write Report"
+text = "BUG: Margo the innkeeper was missing the texture for her texture. 
+I guess just go to the inn and see if she has a texture"
 
 [node name="Task4" type="Control" parent="BackGround/ActiveLevels/Level1/Tasks"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
-offset_top = 159.0
-offset_right = 40.0
-offset_bottom = 159.0
+offset_left = -9.11765
+offset_top = 357.941
+offset_right = 30.8824
+offset_bottom = 357.941
 
 [node name="CheckboxUnchecked" type="TextureRect" parent="BackGround/ActiveLevels/Level1/Tasks/Task4"]
 offset_right = 32.0
