@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pysc1nwq27et"
-path.s3tc="res://.godot/imported/smithmantexture (1).png-bd1ad99ea20649190428a9de8557ce2d.s3tc.ctex"
-path.etc2="res://.godot/imported/smithmantexture (1).png-bd1ad99ea20649190428a9de8557ce2d.etc2.ctex"
+uid="uid://ho1qprstjm0f"
+path.s3tc="res://.godot/imported/Notification.png-2d9fcea7484c430df363d33a19b00b95.s3tc.ctex"
+path.etc2="res://.godot/imported/Notification.png-2d9fcea7484c430df363d33a19b00b95.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://modles/smith/smithmantexture (1).png"
-dest_files=["res://.godot/imported/smithmantexture (1).png-bd1ad99ea20649190428a9de8557ce2d.s3tc.ctex", "res://.godot/imported/smithmantexture (1).png-bd1ad99ea20649190428a9de8557ce2d.etc2.ctex"]
+source_file="res://textures/ui/Notification.png"
+dest_files=["res://.godot/imported/Notification.png-2d9fcea7484c430df363d33a19b00b95.s3tc.ctex", "res://.godot/imported/Notification.png-2d9fcea7484c430df363d33a19b00b95.etc2.ctex"]
 
 [params]
 

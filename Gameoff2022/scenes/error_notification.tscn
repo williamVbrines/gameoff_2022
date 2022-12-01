@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgo2pi8osrcty"]
+
+[ext_resource type="Texture2D" uid="uid://ho1qprstjm0f" path="res://textures/ui/Notification.png" id="1_ntu2u"]
+[ext_resource type="Script" path="res://scenes/npc/smith/Sprite3D.gd" id="2_tjrc1"]
+
+[sub_resource type="Animation" id="Animation_noex2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.502655, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vb2r6"]
+resource_name = "default"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qand"]
+_data = {
+"RESET": SubResource("Animation_noex2"),
+"default": SubResource("Animation_vb2r6")
+}
+
+[node name="ErrorNotification" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.42487, 0)
+pixel_size = 0.02
+texture_filter = 0
+texture = ExtResource("1_ntu2u")
+script = ExtResource("2_tjrc1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_7qand")
+}

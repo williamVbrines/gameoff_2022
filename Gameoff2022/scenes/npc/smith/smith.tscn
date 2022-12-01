@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cimgscmcxv72f"]
+
+[ext_resource type="Script" path="res://scenes/npc/smith/smith.gd" id="1_bt4qg"]
+
+[node name="Smith" type="Node3D"]
+script = ExtResource("1_bt4qg")

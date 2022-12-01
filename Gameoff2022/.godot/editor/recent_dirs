@@ -1,3 +1,7 @@
+res://scenes
+res://scenes/npc/InnKeep
+res://scenes/npc/wizzard
+res://scenes/npc/smith
 res://scenes/resources/actions/tactics
 res://scenes/ui/RoomDialogBox
 res://scenes/ui/roomStressBar
@@ -16,7 +20,3 @@ res://scenes/ui/computer/desktop
 res://scenes/ui/computer
 res://scenes/levels/room/roomTooltip
 res://scenes/ui/cluesMenu
-res://scenes/ui/clueSelectable
-res://scenes/ui/stressIndicator
-res://scenes/ui/pauseMenu/tatic_darg_able
-res://scenes/ui/pauseMenu

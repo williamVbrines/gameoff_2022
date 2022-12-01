@@ -1,0 +1,254 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+data = {
+"0": {
+"act": ["Show[text]", "  Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"1": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"10": {
+"act": ["Say[margo, Aren't they lovely?]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"11": {
+"act": ["Show[text]", " Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"12": {
+"act": ["Opt[Barn, Ask about Barnabas]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"13": {
+"act": ["Opt[Self1, Ask Margo about herself]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"14": {
+"act": ["Show[opt]", " Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"15": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"16": {
+"act": ["Say[margo, You got these for me?]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"17": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"18": {
+"act": ["opt[Gift1, They're a gift from Barnabas]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"19": {
+"act": ["opt[Gift2, They're a gift from me]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"2": {
+"act": ["Say[margo,Will you be wanting a room then?]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"20": {
+"act": ["Show[opt]", " Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"21": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"22": {
+"act": ["Say[margo, I had no idea he felt that way about me.]", "Set[player,GaveFlowers,true]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"23": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"24": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"25": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"26": {
+"act": ["Say[margo,But I won't denigh that he wears that beard of his well]", " Set[player, MargoLike, true]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"27": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"28": {
+"act": ["Opt[Self2, Ask about her]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"29": {
+"act": ["Show[opt]", " Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"3": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"30": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"31": {
+"act": ["Say[margo, If it weren't for runnin the inn i'd be out for a stroll on such a nice day]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"32": {
+"act": ["Show[text]", " wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"33": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"34": {
+"act": ["Say[margo, We don't see much of him, what with him always cooped up studying.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"35": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": []
+},
+"4": {
+"act": ["Say[player,Actually, I have some questions.]", " Set[player,NotFirstVisit,true]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"5": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"6": {
+"act": ["Opt[Area, Ask about the area]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"7": {
+"act": ["Opt[Bail, Leave]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"8": {
+"act": ["Show[opt]", " Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"9": {
+"act": ["Show[text]", " Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Area": {
+"act": ["Say[margo, It's lovely this time of year, the Cherry-Snaps are flowering.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Bail": {
+"act": ["Hide[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Barn": {
+"act": ["Say[margo, He lives in that tower.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"First": {
+"act": ["Say[margo,Hello there Traviler.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Flowers": {
+"act": ["Say[margo, Oh my! My favorite flowers!]", " Set[player,HasFlowers,false]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Folk": {
+"act": ["Opt[Jacques, Ask About Jacques]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Gift1": {
+"act": ["Say[margo, Oh, that's so sweet of him!]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Gift2": {
+"act": ["Say[margo,Why traviler, we've only just met.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Jacques": {
+"act": ["Say[margo, He's our blacksmith, and a bit of a bore.]", " Set[palyer, margo_jacque, true]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Questions": {
+"act": ["Opt[Folk, Ask about the townsfolk]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Self1": {
+"act": ["Opt[Flowers, Give Margo the flowers]", " Line[next]"],
+"con": "player[HasFlowers]",
+"def": ["Line[Self2]"]
+},
+"Self2": {
+"act": ["Say[margo, Not much to tell traviler.]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Start": {
+"act": ["Say[margo,Hello again traviler.]", "  Line[next]"],
+"con": "player[NotFirstVisit]",
+"def": ["Line[First]"]
+},
+"order": ["Start", "0", "First", "1", "2", "3", "4", "5", "Questions", "6", "7", "8", "Area", "9", "10", "11", "Folk", "12", "13", "14", "Flowers", "15", "16", "17", "18", "19", "20", "Gift1", "21", "22", "23", "Gift2", "24", "Jacques", "25", "26", "27", "Bail", "Self1", "28", "29", "Self2", "30", "31", "32", "Barn", "33", "34", "35"]
+}

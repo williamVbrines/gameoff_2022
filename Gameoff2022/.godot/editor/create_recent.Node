@@ -1,3 +1,5 @@
+AnimationPlayer
+Sprite3D
 TextureRect
 CollisionShape3D
 Area3D
@@ -26,7 +28,5 @@ InteractableArea3D (interactableArea3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 HSeparator
 VSplitContainer
-AnimationPlayer
 WorldEnvironment
 OmniLight3D
-SubViewport

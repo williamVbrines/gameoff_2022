@@ -1,0 +1,134 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/resources/dialogs/dialog_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+data = {
+"0": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"1": {
+"act": ["Say[jacques, What brings you here?]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"10": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"11": {
+"act": ["Opt[Questions, Back]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"12": {
+"act": ["Opt[Bail, Leave]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"13": {
+"act": ["Show[opt]", "Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"14": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"15": {
+"act": ["Say[jacques,  Whatever metalworking people need: nails, hoops, horseshoes, I'll make it.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"16": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": []
+},
+"2": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"3": {
+"act": ["Opt[Margo1, Ask if there's somthing between him and Margo]", "Line[next]"],
+"con": "player[margo_jacque]",
+"def": ["Opt[Margo2, Ask about margo]", " Line[next]"]
+},
+"4": {
+"act": ["Opt[More, More]", "Line[More]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"5": {
+"act": ["Show[opt]", "Wait[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"6": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"7": {
+"act": ["Show[text]", "Wait[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"8": {
+"act": ["Say[jacques, but she declined my adances.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"9": {
+"act": ["Show[text]", "Wait[Questions]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Bail": {
+"act": ["Hide[]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Barn": {
+"act": ["Say[jacques, I don't know him all that well, he's always up in that tower]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Margo1": {
+"act": ["Say[jacques, I though there was for a little while...]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Margo2": {
+"act": ["Say[jacques, She runs the inn. She's quite the lady.]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"More": {
+"act": ["Opt[Self, Ask About Jacques]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Questions": {
+"act": ["Opt[Barn, Ask about Barnabas]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Self": {
+"act": ["Say[jacque, I'm a blacksmith by trade...]", "Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"Start": {
+"act": ["Say[jacques,Greetings stranger.]", " Line[next]"],
+"con": "true",
+"def": ["Line[next]"]
+},
+"order": ["Start", "0", "1", "2", "Questions", "3", "4", "5", "Barn", "6", "Margo1", "7", "8", "9", "Margo2", "10", "More", "11", "12", "13", "Bail", "Self", "14", "15", "16"]
+}
