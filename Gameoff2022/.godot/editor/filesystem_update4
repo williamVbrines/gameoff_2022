@@ -3,12 +3,9 @@ res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
 res://shaders/water.tres
-res://scenes/levels/village/village.tscn
-res://scenes/npc/wizzard/wizzard.tscn
-res://scenes/npc/InnKeep/inn_keep.tscn
 res://scenes/npc/smith/smith.gd
-res://scenes/npc/smith/Sprite3D.gd
-res://scenes/ui/battelQueue/battel_queue.gd
-res://scenes/ui/combatScreen/combat_screen.tscn
-res://scenes/ui/battelQueue/battel_queue.tscn
-res://scenes/error_notification.tscn
+res://scenes/resources/npc/test_npc_resource.tres
+res://scenes/resourceManager/resource_manager.gd
+res://scenes/levels/village/village.tscn
+res://scenes/levels/test_area.tscn
+res://scenes/npc/npcDialogTest/dialog_test_npc.tscn

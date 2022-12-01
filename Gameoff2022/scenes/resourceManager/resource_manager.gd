@@ -3,6 +3,7 @@ extends Node
 var item_data = {
 	"rock" : preload("res://scenes/resources/actions/items/rock_item.tres")
 }
+
 func get_item_data(id : String) -> ItemData:
 	return item_data.get(id,null);
 	
@@ -39,8 +40,12 @@ func get_tactic(id : String) -> TacticsData:
 	
 #Dialog Data####################################################################
 var dialog_data = {
-	"test_dialog" = preload("res://scenes/resources/dialogs/test_dialog.tres")
+	"test_dialog" = preload("res://scenes/resources/dialogs/test_dialog.tres"),
+	"wizard" = preload("res://dialog/Barnabas - Sheet1.tres"),
+	"smith" = preload("res://dialog/Jacques - Sheet1.tres"),
+	"innkeeper" = preload("res://dialog/Margo - Sheet1.tres")
 }
+
 func get_dialog_data(id : String) -> DialogData:
 	
 	if FileAccess.file_exists(id):
