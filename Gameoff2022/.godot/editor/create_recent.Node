@@ -1,7 +1,9 @@
+CollisionShape3D
+MeshInstance3D
+InteractableArea3D (interactableArea3D.gd)
 AnimationPlayer
 Sprite3D
 TextureRect
-CollisionShape3D
 Area3D
 Node3D
 Label
@@ -24,9 +26,7 @@ SpringArm3D
 Camera3D
 XRCamera3D
 RoomInteractable3D (room_interactable_3D.gd)
-InteractableArea3D (interactableArea3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 HSeparator
 VSplitContainer
 WorldEnvironment
-OmniLight3D

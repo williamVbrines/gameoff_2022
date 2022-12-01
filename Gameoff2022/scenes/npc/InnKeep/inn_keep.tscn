@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://2g5ikhpynki"]
+[gd_scene load_steps=8 format=3 uid="uid://2g5ikhpynki"]
+
+[ext_resource type="Script" path="res://scenes/npc/InnKeep/inn_keep.gd" id="1_xrb7u"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="2_mmsjj"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="2_mrkfd"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_et0gc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yxchf"]
+render_priority = 0
+shader = ExtResource("2_mmsjj")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_263f2"]
+next_pass = SubResource("ShaderMaterial_yxchf")
+albedo_color = Color(0.352941, 0.345098, 0.239216, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7tsqs"]
 
 [node name="InnKeep" type="Node3D"]
+script = ExtResource("1_xrb7u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_et0gc")
+surface_material_override/0 = SubResource("StandardMaterial3D_263f2")
+
+[node name="InteractableArea3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_mrkfd")
+detection_groups = ["PickupAera"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D"]
+shape = SubResource("CapsuleShape3D_7tsqs")

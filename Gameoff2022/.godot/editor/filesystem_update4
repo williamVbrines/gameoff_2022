@@ -1,11 +1,10 @@
-res://modles/smith/SmithBreathingIdle.tscn
+res://scenes/npc/InnKeep/inn_keep.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
 res://shaders/water.tres
 res://modles/smith/SmithMesh.tres
+res://modles/smith/SmithBreathingIdle.tres
+res://scenes/npc/InnKeep/inn_keep.gd
 res://scenes/levels/village/village.tscn
-res://scenes/npc/npcDialogTest/dialog_test_npc.tscn
-res://modles/smith/SmithBreathingIdle.gd
-res://modles/smith/idel.tres
-res://scenes/player/player.tscn
+res://modles/smith/SmithBreathingIdle.tscn

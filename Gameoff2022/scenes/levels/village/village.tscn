@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=43 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://denps0ye5r3wr" path="res://modles/flowers.tscn" id="25_k8ked"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="26_2iu2g"]
 [ext_resource type="PackedScene" uid="uid://c03dfr8kkygpe" path="res://modles/smith/SmithBreathingIdle.tscn" id="26_v742t"]
+[ext_resource type="PackedScene" uid="uid://2g5ikhpynki" path="res://scenes/npc/InnKeep/inn_keep.tscn" id="27_h1hep"]
 [ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_snbcf"]
@@ -687,6 +688,9 @@ shape = SubResource("CylinderShape3D_jiwod")
 
 [node name="Smith" parent="Village3D" instance=ExtResource("26_v742t")]
 transform = Transform3D(0.570484, 0, 0.821309, 0, 1, 0, -0.821309, 0, 0.570484, 5.41978, 0.224135, -2.28283)
+
+[node name="InnKeep" parent="Village3D" instance=ExtResource("27_h1hep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0658, 0.144207, -32.3303)
 
 [node name="Pixelation" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kppqw")
