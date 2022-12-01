@@ -71,7 +71,7 @@ func _hide_anim() -> void:
 func _show_anim() -> void:
 	
 			
-			
+	if SystemGlobals.in_battel : return;
 	var tween = create_tween()
 	tween.stop();
 	

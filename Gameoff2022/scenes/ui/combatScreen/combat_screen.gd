@@ -38,8 +38,10 @@ func _strat_exploration():
 	
 func _check_win_or_loss():
 	if SystemGlobals.persuasion  >= 100:
+		SystemGlobals.in_battel = false;
 		EventManager.call_deferred("emit_signal", "combat_state_changed","WIN");
 	elif SystemGlobals.stress  >= 100:
+		SystemGlobals.in_battel = false;
 		EventManager.call_deferred("emit_signal", "combat_state_changed","LOSS");
 	else:
 		EventManager.call_deferred("emit_signal", "combat_state_changed","CHECK_Q");

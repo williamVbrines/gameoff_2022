@@ -8,7 +8,7 @@ script = ExtResource("2_xrb1l")
 
 [resource]
 script = ExtResource("1_kgrgx")
-name = "NPC"
+name = "Wizard"
 tatics = SubResource("Resource_0lxdc")
 damage_dist = null
 attack_cost = 2

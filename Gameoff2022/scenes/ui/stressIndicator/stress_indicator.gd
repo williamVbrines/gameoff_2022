@@ -58,6 +58,7 @@ func _hide_anim() -> void:
 	tween.play()
 	
 func _show_anim() -> void:
+	if SystemGlobals.in_battel : return;
 	var p = (SystemGlobals.stress / 100.0 )- 0.001;
 	var tween = create_tween();
 

@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dfwwhbd8voggj" path="res://textures/ui/Battle/Menu/Menu Buttons/Diamond/BattleMenu_ListItem_Diamond_Backing.png" id="12_jvvj8"]
 [ext_resource type="Texture2D" uid="uid://ccoa1ugo1qljs" path="res://textures/ui/LoadoutAndPauseMenu/Menu Icons/MenuIcons_Utility_Flee.png" id="13_lvwvq"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ug54e"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8bq67"]
 resource_local_to_scene = true
 shader = ExtResource("5_ubwu6")
 shader_parameter/from_1 = Color(1, 1, 1, 1)
@@ -73,7 +73,7 @@ script = ExtResource("5_knc7e")
 samples = [ExtResource("6_bl6n2"), ExtResource("7_fdf6m")]
 
 [node name="TagButton" parent="FleeButton" instance=ExtResource("4_fuwor")]
-material = SubResource("ShaderMaterial_ug54e")
+material = SubResource("ShaderMaterial_8bq67")
 custom_minimum_size = Vector2i(173, 50)
 offset_right = 167.0
 normal_color_1 = Color(0.145098, 0.137255, 0.25098, 1)

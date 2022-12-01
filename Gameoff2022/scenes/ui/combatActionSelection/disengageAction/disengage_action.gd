@@ -18,6 +18,7 @@ func _on_start_combat(_cam : Camera3D) -> void:
 	
 	
 func _on_pressed() -> void:
+	SystemGlobals.in_battel = false;
 	tag_button.set_disabled(true);
 	_on_flee();
 	
