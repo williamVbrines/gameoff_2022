@@ -19,9 +19,9 @@ var victory : bool = false;
 
 var player_stats : Dictionary = {
 	"CHARM" : 50,
-	"LOGIC" : 50,
-	"DECEPTION" : 50,
-	"INTIMIDATION" : 50
+	"LOGIC" : 40,
+	"DECEPTION" : 40,
+	"INTIMIDATION" : 35
 }
 	
 	
@@ -46,8 +46,8 @@ var player_tactics : Dictionary = {
 }
 	
 	
-var player_items : Array[String] = ["rock"] #List of refids to all items the player has
-var player_clues : Array[String] = ["test_spy_glass","test_spy_glass","test_spy_glass",] #List of refids to all clues the player has
+var player_items : Array[String] = [] #List of refids to all items the player has
+var player_clues : Array[String] = [] #List of refids to all clues the player has
 
 
 var dialog_profiles : Dictionary = {}

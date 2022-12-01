@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ua5g0lc8aoie"]
+[gd_scene load_steps=11 format=3 uid="uid://ua5g0lc8aoie"]
 
 [ext_resource type="Script" path="res://scenes/ui/streesAndPersuaionBattelIndicater/strees_and_persuaion_battel_indicater.gd" id="1_pqiru"]
 [ext_resource type="Texture2D" uid="uid://5aktl5smo5ms" path="res://textures/ui/Battle/Health Bar/Health Bar Spacing Guide.png" id="2_cfnu7"]
 [ext_resource type="Texture2D" uid="uid://b2bpl446qd25d" path="res://textures/ui/Battle/Health Bar/HealthBar_HealthBarHalf.png" id="3_vnsyj"]
 [ext_resource type="Texture2D" uid="uid://c77wjev2mu1ap" path="res://textures/ui/Battle/Health Bar/HealthBar_CenterSkull.png" id="4_donwf"]
 [ext_resource type="Texture2D" uid="uid://by2cr8bcufbqn" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_Player.png" id="5_8jj4f"]
+[ext_resource type="Texture2D" uid="uid://dwbwvcc6h1pgt" path="res://textures/ui/Battle/Health Bar/HealthBar_Portrait_NPC.png" id="6_kl5vt"]
 [ext_resource type="AudioStream" uid="uid://cdfpntplcr512" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Stress Bar/Stress Up 1.mp3" id="6_uoeki"]
 [ext_resource type="AudioStream" uid="uid://b3pdby26ol7dy" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Stress Bar/Stress Down 1.mp3" id="7_dfe2y"]
 [ext_resource type="AudioStream" uid="uid://bkw3i7wu77n87" path="res://audio/sfx/Inner Game/Inner Game UI_Buttons/Persuasion Bar/Persuasion Up 1.mp3" id="8_i0opn"]
@@ -94,7 +95,7 @@ offset_left = 1510.0
 offset_top = 64.0
 offset_right = 1650.0
 offset_bottom = 204.0
-texture = ExtResource("5_8jj4f")
+texture = ExtResource("6_kl5vt")
 flip_h = true
 
 [node name="StressUPAudio" type="AudioStreamPlayer" parent="."]

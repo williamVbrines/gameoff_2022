@@ -90,6 +90,7 @@ func _close_anim() -> void:
 	for t in dragables.get_children():
 		for child in t.get_children():
 			tween.tween_property(child, "modulate", Color(Color.WHITE, 0.0), 0.1);
+			tween.tween_callback(child.queue_free);
 			
 	for type_index in selection.get_child_count():
 		var type = selection.get_child(selection.get_child_count() - type_index -1)

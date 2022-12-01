@@ -6,5 +6,5 @@
 script = ExtResource("1_bjo1c")
 discrtiption = "A rock. Of power?"
 cost = 1
-dialog_pool = ["You feel an emance poower when you throw this rock"]
+dialog_pool = ["You feel an great power when you throw this rock"]
 name = "rock"

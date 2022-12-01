@@ -49,7 +49,6 @@ func _ready() -> void:
 		data_id = data.name
 	var tex = null;
 	if data is TacticsData:
-		print(data.name)
 		match data.ratting:
 			TacticsData.LOW: tex = frames[0];
 			TacticsData.MED: tex = frames[1];

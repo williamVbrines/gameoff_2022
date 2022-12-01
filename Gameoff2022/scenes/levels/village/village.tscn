@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=49 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://2g5ikhpynki" path="res://scenes/npc/InnKeep/inn_keep.tscn" id="27_h1hep"]
 [ext_resource type="PackedScene" uid="uid://m3knhmycj5x" path="res://scenes/npc/wizzard/wizzard.tscn" id="28_u3bpc"]
 [ext_resource type="PackedScene" uid="uid://cpwbhkqml1ktk" path="res://scenes/chest/flower_chest.tscn" id="29_3dtbh"]
+[ext_resource type="PackedScene" uid="uid://xmuqrjj6lhmo" path="res://scenes/chest/item_chest.tscn" id="32_4sxu0"]
 [ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
 [ext_resource type="AudioStream" uid="uid://duyn1avlc02yt" path="res://audio/Foley/Ocean Waves 1.mp3" id="36_qrfwm"]
 [ext_resource type="AudioStream" uid="uid://8r26tftey4xp" path="res://audio/music/Battle Music/Battle of the Mind.wav" id="37_akhfd"]
@@ -708,6 +709,9 @@ texture = ExtResource("3_j2hif")
 
 [node name="FlowerChest" parent="Village3D" instance=ExtResource("29_3dtbh")]
 transform = Transform3D(-0.878225, 0, 0.478247, 0, 1, 0, -0.478247, 0, -0.878225, 57.1743, 0, 13.9035)
+
+[node name="ItemChest" parent="Village3D" instance=ExtResource("32_4sxu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.867, 11.2663, -38.1299)
 
 [node name="GUI" type="Control" parent="."]
 layout_mode = 3

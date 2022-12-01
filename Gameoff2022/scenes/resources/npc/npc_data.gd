@@ -121,7 +121,8 @@ func _select_action() -> void:
 	
 func heal():
 	
-	SystemGlobals.persuasion = min(0, SystemGlobals.persuasion  * (1.0 - heal_percent) - heal_flat);
+	SystemGlobals.persuasion -= heal_flat;
+	SystemGlobals.persuasion = clamp(SystemGlobals.persuasion, 0, 100);
 	
 	EventManager.persuasion_changed.emit(SystemGlobals.persuasion);
 	

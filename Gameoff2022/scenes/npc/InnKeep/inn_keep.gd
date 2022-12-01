@@ -5,6 +5,7 @@ var dialog_id : String = "innkeeper";
 @onready var interactable_area: Area3D = $InteractableArea3D
 
 var selected : bool = false;
+var had_floawers : bool = false;
 
 func _ready() -> void:
 	if !npc_mesh || !interactable_area:
@@ -22,9 +23,18 @@ func _make_connections() -> void:
 	
 	EventManager.start_exploration.connect(_on_start_exploration);
 	EventManager.dialog_ended.connect(_on_dialog_eneded);
+	EventManager.start_dialog.connect(_on_dialog_start);
 	
-	
+func _on_dialog_start(id) -> void:
+	if SystemGlobals.dialog_profiles.has("player"):
+		if SystemGlobals.dialog_profiles["player"].has("HasFlowers"):
+			had_floawers = SystemGlobals.dialog_profiles["player"].get("HasFlowers");
+				
 func _on_dialog_eneded() -> void:
+	if SystemGlobals.dialog_profiles.has("player"):
+		if SystemGlobals.dialog_profiles["player"].has("HasFlowers"):
+			if SystemGlobals.dialog_profiles["player"].get("HasFlowers") == false && had_floawers:
+				SystemGlobals.player_clues.append("flowers")
 	selected = false;
 	
 	

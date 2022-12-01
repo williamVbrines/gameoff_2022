@@ -15,7 +15,18 @@ const HIGH : int = 100;
 
 #Override
 func get_amount(stat_val : float = 0.0) -> float:
-	return stat_val * (1.0/float(ratting)) + randf_range(0.0, variance);
+	match stat:
+		0:
+			stat_val = SystemGlobals.player_stats.CHARM
+		1:
+			stat_val = SystemGlobals.player_stats.LOGIC
+		2:
+			stat_val = SystemGlobals.player_stats.DECEPTION
+		3:
+			stat_val = SystemGlobals.player_stats.INTIMIDATION
+			
+	var amount = stat_val * (float(ratting)/100.0) + randf_range(0.0, variance)
+	return amount;
 	
 	
 func gen_attack_info() -> Dictionary:

@@ -10,8 +10,10 @@ func get_item_data(id : String) -> ItemData:
 	
 #Clue Data######################################################################
 var clues_data = {
-	"test_spy_glass" = preload("res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres")
+	"test_spy_glass" = preload("res://scenes/resources/actions/items/clues/eyeglass_test_clue.tres"),
+	"flowers" = preload("res://scenes/resources/actions/items/clues/flowers_clue.tres")
 }
+
 func get_clue_data(id : String) -> ClueData:
 	return clues_data.get(id,null);
 	

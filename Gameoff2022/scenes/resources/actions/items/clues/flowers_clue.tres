@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b60s7vl0aen8o"]
+
+[ext_resource type="Script" path="res://scenes/resources/actions/items/clues/epicclasss_test_clue.gd" id="1_nt4k5"]
+
+[resource]
+script = ExtResource("1_nt4k5")
+amount = 20.0
+discrtiption = "Flowers?"
+cost = 1
+dialog_pool = []
+name = "flowers"

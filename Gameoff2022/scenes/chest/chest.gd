@@ -20,6 +20,7 @@ func _make_connections() -> void:
 
 func _on_pressed() -> void:
 	if !is_open:
+		is_open = true;
 		chest_opend.emit();
 	chest_close_mesh.hide();
 	chest_open_mesh.show();

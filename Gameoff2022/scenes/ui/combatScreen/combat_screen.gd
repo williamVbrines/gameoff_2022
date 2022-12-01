@@ -17,7 +17,6 @@ func _make_connetions() -> void:
 	
 	
 func _on_combat_state_changed(state : String) ->void:
-	print(state); #TODO:Remove
 	match state.to_upper():
 		"SET_UP":
 			EventManager.call_deferred("emit_signal", "combat_state_changed", "CHECK_Q")
