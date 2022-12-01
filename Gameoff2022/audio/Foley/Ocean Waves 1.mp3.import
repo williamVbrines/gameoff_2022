@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duyn1avlc02yt"
+path="res://.godot/imported/Ocean Waves 1.mp3-d404980e193e2a73fefeff761da3e6ac.mp3str"
+
+[deps]
+
+source_file="res://audio/Foley/Ocean Waves 1.mp3"
+dest_files=["res://.godot/imported/Ocean Waves 1.mp3-d404980e193e2a73fefeff761da3e6ac.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,5 @@
+AudioStreamPlayer3D
+AudioStreamPlayer
 CollisionShape3D
 InteractableArea3D (interactableArea3D.gd)
 MeshInstance3D
@@ -8,7 +10,6 @@ Area3D
 Node3D
 Label
 Control
-AudioStreamPlayer
 StaticBody3D
 Node
 CheckBox
@@ -29,4 +30,3 @@ RoomInteractable3D (room_interactable_3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 HSeparator
 VSplitContainer
-WorldEnvironment

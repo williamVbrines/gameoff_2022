@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=47 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -36,6 +36,8 @@
 [ext_resource type="PackedScene" uid="uid://m3knhmycj5x" path="res://scenes/npc/wizzard/wizzard.tscn" id="28_u3bpc"]
 [ext_resource type="PackedScene" uid="uid://cpwbhkqml1ktk" path="res://scenes/chest/flower_chest.tscn" id="29_3dtbh"]
 [ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
+[ext_resource type="AudioStream" uid="uid://duyn1avlc02yt" path="res://audio/Foley/Ocean Waves 1.mp3" id="36_qrfwm"]
+[ext_resource type="AudioStream" uid="uid://fhu7qmsxynwg" path="res://audio/Foley/Blacksmith Shop.mp3" id="37_d1ckc"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_snbcf"]
 panorama = ExtResource("1_asubo")
@@ -731,3 +733,19 @@ layout_mode = 1
 [node name="BGMAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_dyiqh")
 bus = &"BGM"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8144, 4.11197, -2.87875)
+stream = ExtResource("37_d1ckc")
+volume_db = -1.0
+unit_size = 6.0
+autoplay = true
+max_distance = 60.0
+bus = &"SFX"
+emission_angle_degrees = 90.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9287, 0, 63.8904)
+stream = ExtResource("36_qrfwm")
+autoplay = true
+max_distance = 80.0

@@ -1,3 +1,5 @@
+res://default_bus_layout.tres
+res://scenes/levels/village/village.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
@@ -5,13 +7,3 @@ res://shaders/water.tres
 res://modles/smith/SmithMesh.tres
 res://modles/smith/SmithBreathingIdle.tres
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/chest/chest.tscn
-res://scenes/levels/village/village.tscn
-res://scenes/chest/chest.gd
-res://modles/smith/SmithBreathingIdle.tscn
-res://modles/chest_close_mesh.tscn
-res://scenes/npc/wizzard/wizzard.gd
-res://scenes/chest/flower_chest.tscn
-res://scenes/chest/flower_chest.gd
-res://scenes/levels/room/room.tscn
-res://scenes/ui/RoomDialogBox/room_dialog_box.tscn
