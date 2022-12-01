@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8r26tftey4xp"
+path="res://.godot/imported/Battle of the Mind.wav-edf13b212f6cffff173e0702750f350d.sample"
+
+[deps]
+
+source_file="res://audio/music/Battle Music/Battle of the Mind.wav"
+dest_files=["res://.godot/imported/Battle of the Mind.wav-edf13b212f6cffff173e0702750f350d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

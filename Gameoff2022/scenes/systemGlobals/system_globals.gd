@@ -15,6 +15,8 @@ var bgmVol : float = 0.0;
 var day : float = 0;
 var in_battel : bool = false;
 
+var victory : bool = false;
+
 var player_stats : Dictionary = {
 	"CHARM" : 50,
 	"LOGIC" : 50,

@@ -1,5 +1,5 @@
-AudioStreamPlayer3D
 AudioStreamPlayer
+AudioStreamPlayer3D
 CollisionShape3D
 InteractableArea3D (interactableArea3D.gd)
 MeshInstance3D

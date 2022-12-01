@@ -2,6 +2,7 @@ extends Control
 
 @export var fade_time : float = 1.0;
 @onready var color_rect: ColorRect = $ColorRect
+@onready var victory_audio: AudioStreamPlayer = $VictoryAudio
 
 func _ready() -> void:
 	_make_connetions();
@@ -21,6 +22,7 @@ func _on_combat_state_changed(state : String) ->void:
 		"CHECK_WIN_OR_LOSS":
 			_check_win_or_loss();
 		"WIN":
+			_on_win();
 			EventManager.call_deferred("emit_signal", "combat_state_changed", "SHUTTING_DOWN_COMBAT")
 		"LOSS":
 			EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");
@@ -31,6 +33,15 @@ func _on_combat_state_changed(state : String) ->void:
 		"SHUTTING_DOWN_COMBAT":
 			_shut_down_combat();
 	
+func _on_win():
+	var tween = create_tween();
+	var hold = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("BGM"));
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), -80);
+	victory_audio.play()
+	tween.stop();
+	tween.tween_interval(victory_audio.stream.get_length());
+	tween.tween_callback(AudioServer.set_bus_volume_db.bind(AudioServer.get_bus_index("BGM"), hold));
+	tween.play();
 	
 func _strat_exploration():
 	EventManager.call_deferred("emit_signal","start_exploration");
