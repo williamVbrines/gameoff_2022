@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwbhkqml1ktk"]
+
+[ext_resource type="Script" path="res://scenes/chest/flower_chest.gd" id="1_gb4oj"]
+[ext_resource type="PackedScene" uid="uid://rel181y7fxmt" path="res://scenes/chest/chest.tscn" id="2_ff2xw"]
+[ext_resource type="Texture2D" uid="uid://bb5ivo1downvx" path="res://textures/ui/Bedroom + Computer/Bedroom/Message_GetItem_9Grid.png" id="3_r4hr6"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="4_l132x"]
+
+[node name="FlowerChest" type="Node3D"]
+script = ExtResource("1_gb4oj")
+
+[node name="Chest" parent="." instance=ExtResource("2_ff2xw")]
+
+[node name="Background" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+clip_contents = true
+offset_left = 433.0
+offset_top = 866.0
+offset_right = 1487.0
+offset_bottom = 1000.0
+texture = ExtResource("3_r4hr6")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Text" type="Label" parent="Background"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 45.0
+offset_right = -63.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_l132x")
+theme_override_font_sizes/font_size = 32
+text = "You have gotten flowers. Maybe these will be useful."
+horizontal_alignment = 1
+vertical_alignment = 1

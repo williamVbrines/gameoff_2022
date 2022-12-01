@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0vvee4xlc67t"]
+
+[ext_resource type="ArrayMesh" uid="uid://d6ycibsq6em3" path="res://meshes/ClosedChestMesh.obj" id="1_2uw3l"]
+[ext_resource type="Texture2D" uid="uid://fld0bqea1s5j" path="res://textures/chest/ChestClosedTex.png" id="2_51msq"]
+[ext_resource type="Shader" path="res://shaders/fresnel_highlight.gdshader" id="3_xi8ne"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q8orx"]
+render_priority = 0
+shader = ExtResource("3_xi8ne")
+shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
+shader_parameter/str = 300.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gf5y"]
+next_pass = SubResource("ShaderMaterial_q8orx")
+albedo_texture = ExtResource("2_51msq")
+
+[node name="ChestCloseMesh" type="MeshInstance3D"]
+mesh = ExtResource("1_2uw3l")
+surface_material_override/0 = SubResource("StandardMaterial3D_0gf5y")

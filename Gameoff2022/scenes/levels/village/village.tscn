@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=45 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c03dfr8kkygpe" path="res://modles/smith/SmithBreathingIdle.tscn" id="26_v742t"]
 [ext_resource type="PackedScene" uid="uid://2g5ikhpynki" path="res://scenes/npc/InnKeep/inn_keep.tscn" id="27_h1hep"]
 [ext_resource type="PackedScene" uid="uid://m3knhmycj5x" path="res://scenes/npc/wizzard/wizzard.tscn" id="28_u3bpc"]
+[ext_resource type="PackedScene" uid="uid://cpwbhkqml1ktk" path="res://scenes/chest/flower_chest.tscn" id="29_3dtbh"]
 [ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_snbcf"]
@@ -696,11 +697,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0658, 0.144207, -32.3303)
 [node name="Wizard" parent="Village3D" instance=ExtResource("28_u3bpc")]
 transform = Transform3D(0.920054, 0, -0.391791, 0, 1, 0, 0.391791, 0, 0.920054, 52.4624, 3.37802, -48.0545)
 
-[node name="Pixelation" type="Sprite2D" parent="."]
+[node name="Pixelation" type="Sprite2D" parent="Village3D"]
 material = SubResource("ShaderMaterial_kppqw")
 position = Vector2(960.5, 542)
 scale = Vector2(15.0078, 8.40625)
 texture = ExtResource("3_j2hif")
+
+[node name="FlowerChest" parent="Village3D" instance=ExtResource("29_3dtbh")]
+transform = Transform3D(-0.878225, 0, 0.478247, 0, 1, 0, -0.478247, 0, -0.878225, 57.1743, 0, 13.9035)
 
 [node name="GUI" type="Control" parent="."]
 layout_mode = 3

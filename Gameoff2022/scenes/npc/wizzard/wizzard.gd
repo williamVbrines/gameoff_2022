@@ -10,6 +10,8 @@ var dialog_id : String = "wizard";
 
 var selected : bool = false;
 
+signal chest_opened();
+
 func _on_dialog_eneded() -> void:
 	if !SystemGlobals.in_battel:
 		selected = false;
@@ -59,10 +61,9 @@ func _unhovered()->void:
 	npc_mesh.get_active_material(0).get("next_pass").set("shader_parameter/str",300.0);
 	
 	
-func _on_dialog_emit(str) -> void:
-	print(str);
+func _on_dialog_emit(cmd) -> void:
 	
-	if str == "StartBattle":
+	if cmd == "StartBattle":
 		SystemGlobals.opponent = name;
 		SystemGlobals.in_battel = true
 	

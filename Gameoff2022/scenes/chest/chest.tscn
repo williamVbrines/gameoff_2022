@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://rel181y7fxmt"]
+
+[ext_resource type="Script" path="res://scenes/chest/chest.gd" id="1_gk0bu"]
+[ext_resource type="Script" path="res://scenes/interactableArea3D/interactableArea3D.gd" id="2_yc3v0"]
+[ext_resource type="PackedScene" uid="uid://bolmxhduetwfl" path="res://modles/chest_open_mesh.tscn" id="3_mmogm"]
+[ext_resource type="PackedScene" uid="uid://b0vvee4xlc67t" path="res://modles/chest_close_mesh.tscn" id="4_2m1ws"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nioel"]
+size = Vector3(2, 2, 2)
+
+[node name="Chest" type="Node3D"]
+script = ExtResource("1_gk0bu")
+
+[node name="InteractableArea3D" type="Area3D" parent="."]
+script = ExtResource("2_yc3v0")
+detection_groups = ["PickupAera"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_nioel")
+
+[node name="ChestOpenMesh" parent="." instance=ExtResource("3_mmogm")]
+visible = false
+
+[node name="ChestCloseMesh" parent="." instance=ExtResource("4_2m1ws")]
