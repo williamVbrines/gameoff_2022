@@ -1,11 +1,11 @@
-res://scenes/npc/smith/smith.tscn
+res://modles/smith/SmithBreathingIdle.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
 res://shaders/water.tres
-res://scenes/npc/smith/smith.gd
-res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/resourceManager/resource_manager.gd
+res://modles/smith/SmithMesh.tres
 res://scenes/levels/village/village.tscn
-res://scenes/levels/test_area.tscn
 res://scenes/npc/npcDialogTest/dialog_test_npc.tscn
+res://modles/smith/SmithBreathingIdle.gd
+res://modles/smith/idel.tres
+res://scenes/player/player.tscn

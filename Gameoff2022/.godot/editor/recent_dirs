@@ -1,3 +1,4 @@
+res://modles/smith
 res://scenes
 res://scenes/npc/InnKeep
 res://scenes/npc/wizzard
@@ -19,4 +20,3 @@ res://scenes/ui/computer/desktop/desktopIcon
 res://scenes/ui/computer/desktop
 res://scenes/ui/computer
 res://scenes/levels/room/roomTooltip
-res://scenes/ui/cluesMenu

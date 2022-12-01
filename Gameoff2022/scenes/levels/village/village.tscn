@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cvus7ejsslejw"]
+[gd_scene load_steps=42 format=3 uid="uid://cvus7ejsslejw"]
 
 [ext_resource type="Texture2D" uid="uid://d000toy1c1400" path="res://textures/VillageSkyTexture.png" id="1_asubo"]
 [ext_resource type="Script" path="res://scenes/levels/village/village.gd" id="1_gt86u"]
@@ -31,9 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://cbpms42oraq6n" path="res://modles/campfire.tscn" id="24_flb3y"]
 [ext_resource type="PackedScene" uid="uid://denps0ye5r3wr" path="res://modles/flowers.tscn" id="25_k8ked"]
 [ext_resource type="PackedScene" uid="uid://c1ynlnisg2qox" path="res://scenes/player/player.tscn" id="26_2iu2g"]
-[ext_resource type="PackedScene" uid="uid://cimgscmcxv72f" path="res://scenes/npc/smith/smith.tscn" id="26_226m0"]
-[ext_resource type="PackedScene" uid="uid://m3knhmycj5x" path="res://scenes/npc/wizzard/wizzard.tscn" id="27_g8hln"]
-[ext_resource type="PackedScene" uid="uid://2g5ikhpynki" path="res://scenes/npc/InnKeep/inn_keep.tscn" id="28_cj657"]
+[ext_resource type="PackedScene" uid="uid://c03dfr8kkygpe" path="res://modles/smith/SmithBreathingIdle.tscn" id="26_v742t"]
 [ext_resource type="AudioStream" uid="uid://ccaimi70n6uuk" path="res://audio/music/Village Theme.wav" id="32_dyiqh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_snbcf"]
@@ -687,14 +685,8 @@ shape = SubResource("BoxShape3D_xy5dq")
 transform = Transform3D(0.820721, 0, 0.57133, 0, 1, 0, -0.57133, 0, 0.820721, 52.9753, 4.69257, -52.5555)
 shape = SubResource("CylinderShape3D_jiwod")
 
-[node name="Smith" parent="Village3D" instance=ExtResource("26_226m0")]
-transform = Transform3D(0.80421, 0, 0.594346, 0, 1, 0, -0.594346, 0, 0.80421, 4.48979, 0, -3.57154)
-
-[node name="Wizzard" parent="Village3D" instance=ExtResource("27_g8hln")]
-transform = Transform3D(-0.141437, 0, -0.989947, 0, 1, 0, 0.989947, 0, -0.141437, 53.6309, 4.11055, -49.4178)
-
-[node name="InnKeep" parent="Village3D" instance=ExtResource("28_cj657")]
-transform = Transform3D(0.998334, 0, -0.0577034, 0, 1, 0, 0.0577034, 0, 0.998334, 22.6071, 0, -32.7644)
+[node name="Smith" parent="Village3D" instance=ExtResource("26_v742t")]
+transform = Transform3D(0.570484, 0, 0.821309, 0, 1, 0, -0.821309, 0, 0.570484, 5.41978, 0.224135, -2.28283)
 
 [node name="Pixelation" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_kppqw")
