@@ -38,6 +38,8 @@ var guard_stack : int = 0;
 
 var selected : bool = false;
 
+signal selected_action(action);
+
 func _init() -> void:
 	tatics = tatics as NPCTactics;
 	
@@ -105,11 +107,15 @@ func _select_action() -> void:
 	var action = tatics.get_action(SystemGlobals.persuasion ,0.0, guard_stack);
 	
 	match action:
+		
 		NPCTactics.HEAL:
+			selected_action.emit(NPCTactics.HEAL);
 			heal();
 		NPCTactics.GUARD:
+			selected_action.emit(NPCTactics.GUARD);
 			guard();
 		NPCTactics.ATTACK:
+			selected_action.emit(NPCTactics.ATTACK);
 			attack();
 	
 	
@@ -119,7 +125,13 @@ func heal():
 	
 	EventManager.persuasion_changed.emit(SystemGlobals.persuasion);
 	
-	EventManager.battel_queue_changed.emit("NPC" , heal_cost);
+	var data = {
+		"type" : "NPC_ATTACK",
+		"amt" : 0,
+		"cost" : heal_cost
+	}
+	
+	EventManager.attack.emit("PLAYER",data);
 	EventManager.combat_state_changed.emit("ADJUST_Q");
 	
 	

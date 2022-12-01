@@ -74,7 +74,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bh0a6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1sh7"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_hwu0f")
@@ -107,7 +107,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkah2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tr2pc"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_00wfj")
@@ -181,7 +181,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3olhl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iva6m"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_lmmkk")
@@ -214,7 +214,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7luit"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgwia"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_w73ch")
@@ -247,7 +247,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfqvx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_detqd"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_nnoan")
@@ -366,7 +366,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kcslj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vsmtc"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_d6e5y")
@@ -399,7 +399,7 @@ shader = ExtResource("4_66lea")
 shader_parameter/highlight_color = Color(0, 1.2, 1.2, 1)
 shader_parameter/str = 300.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_o23di"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yh5vl"]
 resource_local_to_scene = true
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_xe73q")
@@ -492,13 +492,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_bh0a6")
+surface_material_override/0 = SubResource("ShaderMaterial_e1sh7")
 
 [node name="StackedBook3" parent="Room3D/Room/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_lkah2")
+surface_material_override/0 = SubResource("ShaderMaterial_tr2pc")
 
 [node name="Bed" type="Node3D" parent="Room3D/Room" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64755, 0, 9.17949)
@@ -627,12 +627,12 @@ skeleton = NodePath("../..")
 [node name="StackedBook1" parent="Room3D/Room/WideDresserGroup" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.00388215, 0, 0.997451, 0, 1.67634, 0, -0.636066, 0, -0.00247562, 0.192085, 2.48122, -0.834729)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_3olhl")
+surface_material_override/0 = SubResource("ShaderMaterial_iva6m")
 
 [node name="StackedBook2" parent="Room3D/Room/WideDresserGroup/StackedBook1" instance=ExtResource("3_7uc24")]
 transform = Transform3D(0.952129, 0.305695, 0, -0.305639, 0.951954, 0.0191974, 0.00586857, -0.0182784, 0.999816, -0.383101, 0, 0)
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_7luit")
+surface_material_override/0 = SubResource("ShaderMaterial_jgwia")
 
 [node name="BookOfBooks" type="Node3D" parent="Room3D/Room/WideDresserGroup" node_paths=PackedStringArray("mesh", "area")]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -646,7 +646,7 @@ action = "BOOK"
 [node name="LayingBook1" parent="Room3D/Room/WideDresserGroup/BookOfBooks" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-2.11245e-08, -0.483273, -0.872566, 1.67634, -7.32752e-08, -3.54979e-22, -2.43222e-08, -0.556428, 0.308179, 0.0496588, 2.68919, 0.18945)
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("ShaderMaterial_xfqvx")
+surface_material_override/0 = SubResource("ShaderMaterial_detqd")
 
 [node name="BookPaper" parent="Room3D/Room/WideDresserGroup/BookOfBooks/LayingBook1" instance=ExtResource("7_iycir")]
 transform = Transform3D(-4.10492e-08, 1, 1.50219e-08, -0.939095, -4.37114e-08, 0.34366, 0.34366, -3.13027e-14, 0.939095, 0.060298, 0.662106, -0.0748367)
@@ -742,13 +742,13 @@ spot_angle = 23.0883
 transform = Transform3D(0.000961285, 4.84512, -0.246963, -0.999993, 1.97134e-07, -0.00389224, -0.00377166, 1.23483, 0.969018, -1.15882, 0.0112557, -2.19014)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_kcslj")
+surface_material_override/0 = SubResource("ShaderMaterial_vsmtc")
 
 [node name="StackedBook3" parent="Room3D/Room2/WindowLight" instance=ExtResource("3_7uc24")]
 transform = Transform3D(-0.268456, -0.378542, -0.133049, 0.0136887, -7.49044, 0.00647811, -0.133207, -0.00684841, 0.268805, 0.358278, 1.94539, -2.34348)
 transparency = 1.0
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("ShaderMaterial_o23di")
+surface_material_override/0 = SubResource("ShaderMaterial_yh5vl")
 
 [node name="DeskGroup" type="Node3D" parent="Room3D/Room2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31624, 0, 1.1148)

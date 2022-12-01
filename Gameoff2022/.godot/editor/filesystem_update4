@@ -1,4 +1,3 @@
-res://default_bus_layout.tres
 res://scenes/ui/combatScreen/combat_screen.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
@@ -7,6 +6,11 @@ res://shaders/water.tres
 res://modles/smith/SmithMesh.tres
 res://modles/smith/SmithBreathingIdle.tres
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/ui/combatScreen/combat_screen.gd
+res://scenes/npc/wizzard/wizzard.tscn
+res://scenes/resources/npc/npc_data.gd
+res://scenes/npc/wizzard/wizzard.gd
 res://scenes/levels/village/village.tscn
-res://scenes/chest/flower_chest.tscn
+res://scenes/levels/room/room.tscn
+res://scenes/player/player.tscn
+res://scenes/player/player.gd
+res://scenes/resources/npc/npc_tactics_resource.gd

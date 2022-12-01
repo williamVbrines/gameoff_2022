@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byubkkqsdlqd2"
+path="res://.godot/imported/NPC Attack 6.mp3-70f4efd856eb73af07f443aba37c1022.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/NPC Action Sound/NPC Attack 6.mp3"
+dest_files=["res://.godot/imported/NPC Attack 6.mp3-70f4efd856eb73af07f443aba37c1022.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

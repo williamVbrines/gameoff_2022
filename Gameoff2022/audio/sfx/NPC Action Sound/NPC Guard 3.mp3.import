@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cy302rcvt853o"
+path="res://.godot/imported/NPC Guard 3.mp3-a941d18cf9bc5cbc1eaba406923aa6c2.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/NPC Action Sound/NPC Guard 3.mp3"
+dest_files=["res://.godot/imported/NPC Guard 3.mp3-a941d18cf9bc5cbc1eaba406923aa6c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,3 +1,6 @@
+MeshInstance3D
+CPUParticles3D
+RandAudioStreamPlayer (rand_audio_stream_player.gd)
 ColorRect
 TextureRect
 Control
@@ -5,7 +8,6 @@ AudioStreamPlayer
 AudioStreamPlayer3D
 CollisionShape3D
 InteractableArea3D (interactableArea3D.gd)
-MeshInstance3D
 AnimationPlayer
 Sprite3D
 Area3D
@@ -19,7 +21,6 @@ RichTextLabel
 VBoxContainer
 TextureButton
 HBoxContainer
-RandAudioStreamPlayer (rand_audio_stream_player.gd)
 CanvasLayer
 Button
 Timer
@@ -29,4 +30,3 @@ XRCamera3D
 RoomInteractable3D (room_interactable_3D.gd)
 VoiceBoxPlayer (voice_box.gd)
 HSeparator
-VSplitContainer

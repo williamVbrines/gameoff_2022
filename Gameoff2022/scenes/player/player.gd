@@ -49,10 +49,11 @@ func _pause_menu_opened() -> void:
 func _on_start_exploration() -> void:
 	camera.set_current(true);
 	disabled = false;
+	show();
 	
 func _on_start_combat(_cmaera : Camera3D) -> void:
 	disabled = true;
-	
+	hide();
 	
 func _on_start_dialog(_str : String) -> void:
 	disabled = true;
