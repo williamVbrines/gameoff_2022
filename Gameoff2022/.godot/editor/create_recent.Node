@@ -1,3 +1,6 @@
+ColorRect
+TextureRect
+Control
 AudioStreamPlayer
 AudioStreamPlayer3D
 CollisionShape3D
@@ -5,18 +8,15 @@ InteractableArea3D (interactableArea3D.gd)
 MeshInstance3D
 AnimationPlayer
 Sprite3D
-TextureRect
 Area3D
 Node3D
 Label
-Control
 StaticBody3D
 Node
 CheckBox
 HSlider
 RichTextLabel
 VBoxContainer
-ColorRect
 TextureButton
 HBoxContainer
 RandAudioStreamPlayer (rand_audio_stream_player.gd)

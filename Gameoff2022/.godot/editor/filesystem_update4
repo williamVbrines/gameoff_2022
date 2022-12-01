@@ -1,4 +1,5 @@
-res://scenes/levels/village/village.tscn
+res://default_bus_layout.tres
+res://scenes/ui/combatScreen/combat_screen.tscn
 res://shaders/Pixelation.tres
 res://scenes/ui/dialogWindow/dialog_window.gd
 res://shaders/artshader_noisetexture.tres
@@ -6,9 +7,6 @@ res://shaders/water.tres
 res://modles/smith/SmithMesh.tres
 res://modles/smith/SmithBreathingIdle.tres
 res://scenes/resources/npc/test_npc_resource.tres
-res://scenes/systemGlobals/system_globals.gd
-res://scenes/levels/village/village.gd
-res://scenes/ui/combatScreen/combat_screen.tscn
 res://scenes/ui/combatScreen/combat_screen.gd
-res://scenes/npc/wizzard/wizzard.gd
-res://default_bus_layout.tres
+res://scenes/levels/village/village.tscn
+res://scenes/chest/flower_chest.tscn

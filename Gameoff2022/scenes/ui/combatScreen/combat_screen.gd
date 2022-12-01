@@ -3,6 +3,8 @@ extends Control
 @export var fade_time : float = 1.0;
 @onready var color_rect: ColorRect = $ColorRect
 @onready var victory_audio: AudioStreamPlayer = $VictoryAudio
+@onready var victory_screen: Control = $VictoryScreen
+@onready var ui: Control = $UI
 
 func _ready() -> void:
 	_make_connetions();
@@ -23,7 +25,6 @@ func _on_combat_state_changed(state : String) ->void:
 			_check_win_or_loss();
 		"WIN":
 			_on_win();
-			EventManager.call_deferred("emit_signal", "combat_state_changed", "SHUTTING_DOWN_COMBAT")
 		"LOSS":
 			EventManager.call_deferred("emit_signal", "combat_state_changed","SHUTTING_DOWN_COMBAT");
 		"NPC_TURN":
@@ -39,9 +40,19 @@ func _on_win():
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), -80);
 	victory_audio.play()
 	tween.stop();
-	tween.tween_interval(victory_audio.stream.get_length());
+	tween.tween_property(ui, "modulate", Color(Color.WHITE, 0.0), 0.2);
+	tween.tween_property(victory_screen, "modulate", Color(Color.WHITE, 1.0), 0.2);
+	tween.tween_interval(victory_audio.stream.get_length()-2.5);
+	
+	tween.tween_callback(EventManager.call_deferred.bind("emit_signal", "combat_state_changed", "SHUTTING_DOWN_COMBAT"));
+	tween.tween_property(victory_screen, "modulate", Color(Color.WHITE, 0.0), 0.2);
+	tween.tween_property(ui, "modulate", Color(Color.WHITE, 1.0), 0.2);
+	
+	tween.tween_interval(2.3);
 	tween.tween_callback(AudioServer.set_bus_volume_db.bind(AudioServer.get_bus_index("BGM"), hold));
 	tween.play();
+	
+	
 	
 func _strat_exploration():
 	EventManager.call_deferred("emit_signal","start_exploration");

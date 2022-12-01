@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://iy86trujqevt"]
+[gd_scene load_steps=10 format=3 uid="uid://iy86trujqevt"]
 
 [ext_resource type="Script" path="res://scenes/ui/combatScreen/combat_screen.gd" id="1_l1agn"]
 [ext_resource type="PackedScene" uid="uid://d21sy6nj67q6l" path="res://scenes/ui/battelQueue/battel_queue.tscn" id="2_chdcx"]
 [ext_resource type="PackedScene" uid="uid://ua5g0lc8aoie" path="res://scenes/ui/streesAndPersuaionBattelIndicater/strees_and_persuaion_battel_indicater.tscn" id="2_vherf"]
 [ext_resource type="AudioStream" uid="uid://80ifreaym83g" path="res://audio/music/Victory/Victory Stinger.wav" id="6_eifih"]
 [ext_resource type="PackedScene" uid="uid://bp3lqnbnywpvo" path="res://scenes/ui/combatActionSelection/combat_action_selection.tscn" id="6_s7td5"]
+[ext_resource type="Texture2D" uid="uid://cvgfcjnn8mgn5" path="res://textures/ui/Win and Lose State/WinLose_Shield.png" id="7_ov7sd"]
 [ext_resource type="PackedScene" uid="uid://doxlpksqfs6jj" path="res://scenes/ui/combateDialogDisplay/combate_dialog_display.tscn" id="8_b2fph"]
+[ext_resource type="Texture2D" uid="uid://bb5ivo1downvx" path="res://textures/ui/Bedroom + Computer/Bedroom/Message_GetItem_9Grid.png" id="8_v5q3t"]
+[ext_resource type="FontFile" uid="uid://cuidb51mn7j7j" path="res://textures/ui/Font/OpenSans-Regular.ttf" id="9_axj12"]
 
 [node name="CombatScreen" type="Control"]
 layout_mode = 3
@@ -58,3 +61,64 @@ color = Color(0, 0, 0, 0)
 stream = ExtResource("6_eifih")
 volume_db = -6.0
 bus = &"SFX"
+
+[node name="VictoryScreen" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WinLoseShield" type="TextureRect" parent="VictoryScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -435.0
+offset_right = 264.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_ov7sd")
+
+[node name="Background" type="NinePatchRect" parent="VictoryScreen"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+offset_left = -16.0
+offset_top = 753.0
+offset_right = 1943.0
+offset_bottom = 887.0
+texture = ExtResource("8_v5q3t")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Text" type="Label" parent="VictoryScreen/Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = 45.0
+offset_right = -63.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("9_axj12")
+theme_override_font_sizes/font_size = 80
+text = "Victory"
+horizontal_alignment = 1
+vertical_alignment = 1
